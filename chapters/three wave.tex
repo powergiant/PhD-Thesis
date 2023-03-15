@@ -1,0 +1,261 @@
+\chapter{Analysis of three wave models}
+
+\section{Introduction}
+
+\subsection{Statement of the results} We define $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$. Under this new notations the ZK equation becomes,
+\[
+\partial_t\psi(t,x)=i\Lambda(\nabla)\psi(t,x)+\nu \Delta \psi(t,x)+\lambda \partial_{x_1}(\psi^2(t,x)).
+\]
+Now we introduce the main theorem of this paper.
+
+
+\begin{thm}\label{th.main}
+Let $d\ge 3$ and $L$ be a large number. Suppose that $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported in a domain whose diameter is bounded by $D$. Assume that $\psi$ is a solution of \eqref{eq.MKDV} with randomized initial data $\psi_{\mathrm{in}}$ given by \eqref{eq.wellprepared}. Set $\alpha=\lambda L^{-\frac{d}{2}}$ to be the strength of the nonlinearity and $T_{\mathrm{kin}}=\frac{1}{8\pi\alpha^2}$ to be the wave kinetic time. Fix a small constant $\varepsilon> 0$, set $T_{\text{max}} = L^{-\varepsilon} \alpha^{-2}=O(L^{-\varepsilon}T_{\mathrm{kin}})$. If $\alpha$ satisfies
+\begin{equation}\label{eq.conditionalpha}
+\alpha^{-1}\le L^{\frac{1}{2}}
+\end{equation}
+and for some small constant $c$, $\nu$ satisfies
+\begin{equation}\label{eq.conditionnu}
+% \nu\ge L^{\frac{1}{2}C\varepsilon}\alpha^{2}
+\nu\ge c^2T^{-1}_{\text{max}}
+\end{equation}
+then for all $L^{\varepsilon} \leq t \leq T_{\text{max}}$, we have the following conclusions
+\begin{enumerate}
+    \item If $\sup_{k}n_{\mathrm{in}}(k)\le C_{\mathrm{in}}$, then $\mathbb E |\widehat \psi(t, k)|^2$ is bounded by $2C_{\mathrm{in}}$ for $t\le T_{\text{max}}$ and for any $M$, we can construct an approximation series 
+    \begin{equation}\label{eq.approx1}
+        \mathbb E |\widehat \psi(t, k)|^2=n_{\mathrm{in}}(k)+n^{(1)}(k)+n^{(2)}(k)+\cdots n^{(N)}(k)+O(L^{-M})
+    \end{equation}
+    where each terms $n^{(i)}(k)$ can be exactly calculated.
+    \item Define $l_{d}=(\nu T_{\mathrm{max}})^{\frac{1}{2}}\ge c$ and  $\theta=C_1\varepsilon$ ($C_1$ just depends on dimension $d$). We assume that $D\le C_2 l_d^{-1}$. Then in the inertial range $|k|\le \epsilon_1 l_{d}^{-1}$ and dissipation range $|k|\ge C_{2}l_d^{-1}$, we have the following estimate respectively
+    \begin{equation}\label{eq.n1}
+        n^{(1)}(k)=\left\{
+        \begin{aligned}
+            &\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)+O_{\ell^\infty_k}\left(L^{-\theta}\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)+\widetilde{O}_{\ell^\infty_k}\left(\epsilon_1\text{Err}_{D}(k_x)\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)
+            && \text{if } |k|\le \epsilon_1 l_{d}^{-1},
+            \\
+            &0, && \text{if } |k|\ge 2C_{2}  l_{d}^{-1}
+        \end{aligned}\right.
+    \end{equation}%O_{\ell^\infty_k}\left(\frac{T_{\text{max}}}{T_{\mathrm {kin}}}|k|^{-2}\right)
+    and 
+    \begin{equation}\label{eq.n(j)estimate}
+        n^{(j)}(k)=O_{\ell^\infty_k}\left(L^{-\theta}\frac{t}{T_{\mathrm {kin}}}\right), \qquad j>1
+    \end{equation}
+    where $\mathcal K$ is defined in \eqref{eq.WKE}, and $O_{\ell^\infty_k}(A)$ (resp. $\widetilde{O}_{\ell^\infty_k}(A)$) is a quantity that is bounded by $A$ in $\ell^\infty_k$ by some universal constant (resp. constant just depending on $d$). The definition of universal constant can be found in section \ref{sec.notat}. The definition of $\text{Err}_D$ is 
+    \begin{equation}
+        \text{Err}_{D}(k_x)=\left\{\begin{aligned}
+             &D^{d+1}, && \text{if } |k_x|\le D,
+            \\
+            &D^{d-1}(|k_x|^2+D|k_x|), && \text{if } |k_x|\ge D.
+        \end{aligned}
+        \right.
+    \end{equation}
+    
+\end{enumerate}
+
+
+\end{thm}
+
+\begin{rem}
+The condition $d\ge 3$ is essential. When $d=1$, the ZK equation becomes the KdV equation which is an integrable system whose long time behavior is quasi-periodic instead of turbulent \cite{JM}. When $d=2$, as mentioned in Remark \ref{rem.nottrue2d}, the desire number theory result is not true and a major revision to \eqref{eq.WKE} is required to obtain a valid wave kinetic theory.
+\end{rem}
+
+\begin{rem}
+$\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)=O_{\ell^\infty_k}\left(\frac{t}{T_{\mathrm{kin}}}\right)=O_{\ell^\infty_k}\left(\frac{T_{\mathrm{max}}}{T_{\mathrm{kin}}}\right)$ in \eqref{eq.n1} is the largest term in \eqref{eq.n1} and \eqref{eq.n(j)estimate}. Compared to the second term in \eqref{eq.n1} or the first term in \eqref{eq.n(j)estimate}, $\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)$ is larger than them by a factor $L^{\theta}$.  It is also larger than the third term in \eqref{eq.n1} by a factor of $\epsilon_1$.
+\end{rem}
+
+\begin{rem}
+The restriction on $\alpha^{-1}$ is not optimal. The optimal result is expected to be $\alpha^{-1}\le L$ for general torus and $\alpha^{-1}\le L^{d/2}$ for generic torus. Here the torus is general or generic in the sense of \cite{DH}. Except for those in the appendix \ref{sec.numbertheoryA}, all the arguments in this paper work under these stronger assumptions.
+\end{rem}
+
+\begin{rem}
+Due to $\partial_x$ in the nonlinearity, there is a potential risk of loss of derivative. This causes a serious difficulty in controlling the high frequency part. To resolve this difficulty, some regularization to ZK equation is required. In \cite{ST} and this paper, grid discretization and viscosity are introduced respectively. Both of them serve as canonical high frequency truncations.
+\end{rem}
+
+
+
+
+ 
+
+
+
+
+
+\subsection{Ideas of the proof} The basic strategy of proving the main theorem is to construct an approximation series and use probability theory and number theory to control the size and error of this approximation.
+
+
+\subsubsection{The approximate solution}\label{sec.appsol} The equation of Fourier coefficients is
+
+\begin{equation}\label{eq.Fourierintro}
+\dot{\psi}_{k} =  i\Lambda(k) \psi_k -\nu |k|^2 \psi_k
+ +\frac{i\lambda}{L^{d}} \sum\limits_{\substack{(k_1,k_2) \in (\mathbb{Z}^d_L)^2 \\ k_1 + k_2 = k}} k_{x_1}\psi_{k_1} \psi_{k_2}
+\end{equation}
+
+
+
+Define a new dynamical variable $\phi= e^{-it\Lambda(\nabla)} \psi$ and integrate \eqref{eq.Fourierintro} in time. Then (\ref{eq.MKDV}) with initial data (\ref{eq.wellprepared}) becomes
+\begin{equation}\label{eq.intmainintro}
+\begin{split}
+    \phi_k =\xi_k+\frac{i\lambda}{L^{d}} \sum\limits_{k_1 + k_2 = k}\int^{t}_0k_{x_1}\phi_{k_1} \phi_{k_2}e^{i s\Omega(k_1,k_2,k)-\nu(t-s)|k|^2} ds.  
+\end{split}
+\end{equation}
+
+Here $\Omega(k_1,k_2,k) =\Lambda(k_1)+\Lambda(k_2)-\Lambda(k)$ and $\xi_k$ are the Fourier coefficients of the initial data of $\psi$ defined by $\xi_k=\sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega)$.
+
+
+
+Denote the second term of right hand side by $\mathcal{T}(\psi,\psi)_k$ and the right hand side by $\mathcal{F}(\psi)_k=\xi_k+\mathcal{T}(\psi,\psi)_k$. Then the equation becomes $\psi=\mathcal{F}(\psi)_k$. We can construct the approximation by iteration: $\psi=\mathcal{F}(\psi)=\mathcal{F}(\mathcal{F}(\psi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\psi)))=\cdots$. 
+
+Define the approximate solution by $\psi_{app}=\mathcal{F}^{N}(\xi)$. By recursively expanding  $\mathcal{F}^{N}$, we know that $\psi_{app}$ is a polynomial of $\xi$.
+The expansion can be described as the following,
+\begin{equation*}
+\begin{split}
+    \psi_{app}=&\mathcal{F}^{N}(\xi)=\xi+\mathcal{T}(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi))
+    \\
+    =&\xi+\mathcal{T}\Big(\xi+\mathcal{T}(\mathcal{F}^{N-2}(\xi),\mathcal{F}^{N-2}(\xi)),
+    \cdots\Big)=\xi+\mathcal{T}(\xi,\xi)+\cdots
+    \\
+    =&\xi+\mathcal{T}(\xi,\xi)+\mathcal{T}(\mathcal{T}(\xi,\xi),\xi)
+    +\mathcal{T}(\xi,\mathcal{T}(\xi,\xi))+\cdots
+\end{split}    
+\end{equation*}
+In the above iteration, we recursively replace $\mathcal{F}^{l}(\xi)$ by $\xi+\mathcal{T}(\mathcal{F}^{l-1}(\xi),\mathcal{F}^{l-1}(\xi))$.
+
+We need a good upper bound for each terms of $\psi_{app}$. To get this we introduce tree diagrams to represent terms $\xi$, $\mathcal{T}(\xi,\xi)$, $\mathcal{T}(\mathcal{T}(\xi,\xi),\xi)$, $\cdots$. The basic notation of tree diagrams will be introduced in section \ref{sec.appFey}.
+
+\subsubsection{The perturbative analysis}\label{sec.pert intro} To prove the main theorem, we need to bound the approximation error of $\psi_{app}$ defined by $w=\psi-\psi_{app}$. To do this, we use the follow equation of $w$ which can be derived from (\ref{eq.intmainintro}):
+\begin{equation}\label{eq.eqwintro}
+    w= Err(\xi)+Lw+B(w,w)
+\end{equation}
+Here $Err(\xi)$ is a polynomial of $\xi$ whose degree $\le N+1$ monomials vanish. $Lw$, $B(w,w)$ are linear, quadratic in $w$ respectively.
+
+We prove the smallness of $w$ using the bootstrap method.
+
+Define $||w||_{X^p}=\sup_{k} \langle k\rangle^{p} |w_k|$. Starting from the assumption that $\sup_t||w||_{X^p}\le CL^{-M}$ ($C,M\gg 1$), we need to prove that $\sup_t||w||_{X^p}\le (1+C/2)L^{-M}<CL^{-M}$. To prove $||w||_{X^p}\le (1+C/2)L^{-M}$, we use (\ref{eq.eqwintro}), which gives
+\begin{equation}\label{eq.ineqw}
+    ||w||_{X^p}\le ||Err(\xi)||_{X^p}+||Lw||_{X^p}+||B(w,w)||_{X^p}
+\end{equation}
+
+We just need to show that 
+\begin{equation}
+    ||Err(\xi)||_{X^p}\le L^{-M},
+    \quad ||B(w,w)||_{X^p}\le C^2L^{d+O(1)-2M}.
+\end{equation}
+Combining with a special treatment of $Lw$, the above estimates imply that $||w||_{X^p}\le (1+C/2)L^{-M}$ which closes the bootstrap.
+
+
+\subsubsection{Couple diagrams, lattice points counting and $||Err(\xi)||_{X^p}$}\label{sec.latticeintro} In this section we explain the idea of proving upper bound of $||Err(\xi)||_{X^p}$.
+
+$(Err(\xi))_{k}$ is a sum of terms of the form
+\begin{equation}
+\begin{split}
+    &\mathcal{J}_{k}^0(\xi)=  \xi_k, \quad \mathcal{J}_k^1(\xi)=\frac{i\lambda}{L^{d}} \sum_{k_1+k_2-k=0} H^1_{k_1k_2}  \xi_{k_1}\xi_{k_2} , \quad\cdots  \\
+    &\mathcal{J}_{T,k}^l(\xi)=\left(\frac{i\lambda}{L^{d}}\right)^l\sum_{k_1+k_2+\cdots+k_{l+1}-k=0} H^l_{k_1\cdots k_{l+1}}(T)  \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{l+1}}, \quad\cdots 
+\end{split}
+\end{equation}
+According to section \ref{sec.appFey}, each terms correspond to a tree diagram and their coefficients can be calculated from these diagrams. This calculation is done in section \ref{sec.refexp}. As a corollary of tree diagram representation, we know that $H^l$ is large near a surface given by $2l$ equations $S=\{S_{\mathfrak{n}_1}(T)=0,\Omega_{\mathfrak{n}_1}(T)=0,\cdots,S_{\mathfrak{n}_{l}}(T)(T)=0,\Omega_{\mathfrak{n}_l}(T)=0\}$.
+
+By the large deviation principle, to obtain upper bounds of Gaussian polynomials $\mathcal{J}_{T,k}^l(\xi)$, it suffices to calculate their variance. This calculation is done in section \ref{sec.coupwick} using the Wick theorem and we introduce the concept of couple diagrams to represent the final result. 
+
+As a corollary of couple diagram representation, we know that the coefficients of the variance concentrate near a surface given by $n$ equations ($n$ is the number of nodes in the couple) $S=\{S_{\mathfrak{n}_1}(T)=0,\Omega_{\mathfrak{n}_1}(T)=0,\cdots,S_{\mathfrak{n}_{n}}(T)(T)=0,\Omega_{\mathfrak{n}_n}(T)=0\}$. Then in order to estimate the variance it suffices to upper bound the number of lattice points near this surface. This is done in section \ref{sec.numbertheory} using the edge cutting argument to reduce the size of the couple. 
+
+The method in \cite{DH} of getting number theory estimate based on tree diagram does not work in our setting. This is because the energy conservation equation $\Lambda(k_1)+\Lambda(k_2)-\Lambda(k)=0$ of ZK equation degenerates seriously when $k_{x}$ is close to $0$. In \eqref{eq.numbertheory1}, the number of solutions of the diophantine equation $\Lambda(k_1)+\Lambda(k_2)=\Lambda(k)+\sigma+O(T^{-1})$ can only be bounded by $|k_x|^{-1}$ which goes to infinity when $k_{x}\rightarrow 0$. This difficulty is resolved by the fact that the multiplier $k_x$ in the last term of \eqref{eq.Fourierintro} vanishes when $k_{x}\rightarrow 0$. Since multipliers become very complicated in higher order tree terms, we introduce the concept of norm edges to keep track of them. 
+
+In conclusion, combining the above arguments, we can show that, for any $M$, we can take $N$ large enough so that $||Err(\xi)||_{X^p}\le L^{-M}$.
+
+% \begin{equation}
+%     P(T)=\sum_{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{l+1}(T)=0,\Omega_{l+1}(T)=0} \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{l+1}}.
+% \end{equation}
+
+
+
+
+\subsubsection{Upper bounds for $||B(w,w)||_{X^p}$} $||B(w,w)||_{X^p}$ is a sum of terms of the form
+\begin{equation}
+    \frac{i\lambda}{L^{d}} \int^{t}_0\sum_{k_1+k_2-k=0} B_{k_1k_2}(s)  w_{k_1}(\xi)w_{k_2}
+\end{equation}
+
+%By assumptions and proofs in this paper, we know that $t\le \alpha^{-2}\le L^{O(1)}$ ,  $|B_{k_1k_2k_3}(s)|\lesssim 1$ and $|\mathcal{J}^{l}_{k_1}(\xi)|\lesssim \langle k\rangle^{-p}$. By boostrap assumption, $\sup_{k} \langle k\rangle^{p} |w_k|\le CL^{-M}$. Therefore we have following estimate of $||B(w,w)||_{X^p}$
+The upper bound of $||B(w,w)||_{X^p}$ can be obtained by a straight forward estimate
+\begin{equation}
+||B(w,w)||_{X^p}\le L^{O(1)} ||w||_{X^p} \le C^2 L^{O(1)-2M},
+\end{equation}
+
+Therefore, we get the desire upper bounds $||B(w,w)||_{X^p}\ll L^{-M}$ by taking $M> O(1)$.
+
+\subsubsection{A random matrix bound and $Lw$}\label{sec.randmatintro} To obtain a good upper bound for $Lw$, we need to estimate the norm of the random matrix $L$, following the idea in \cite{DH}, \cite{DH2}.
+
+In \cite{DH}, they consider solutions in the Bourgain space $X^{s,b}$ and use $TT^*$ method to get the upper bound for the operator norm of $L$, $||L||_{X^{s,b}\rightarrow X^{s,b}}\ll 1$. But we prefer to work in the simpler functional space $X^p$ which is not a Hilbert space. Although the standard $TT^*$ method is not useful in a non-Hilbert space, we can bypass it using a Neumann series argument.
+
+Let us first explain how $TT^*$ method works. Here we pretend that $||\cdot||_{X^p}$ is a Hilbert norm. The key idea of $TT^*$ method is the inequality $||L||_{X^p\rightarrow X^p}=||(LL^*)^K||_{X^p\rightarrow X^p}^{\frac{1}{K}}\le (L^d\sup_{k,l} ((LL^*)^K)_{k,l})^{1/K}$. To upper bound $||L||_{X^p\rightarrow X^p}$, we just need to estimate $(LL^*)^K)_{k,l}$ which can be calculated by couple diagrams and be estimated by the large deviation inequality. By taking $K$ large, the loss $L^{d/K}$ could be made arbitrarily small.
+
+Unfortunately, $||\cdot||_{X^p}$ is not a Hilbert norm. However, we can bypass the $TT^*$ method using a Neumann series argument. Note that from \eqref{eq.intmainintro} we have the identity
+\begin{equation}
+    w-Lw= Err(\xi)+B(w,w).
+\end{equation}
+We have good upper bounds for all of the three terms on the right hand side. By Neumann series argument we have
+\begin{equation}
+    w= (1-L)^{-1}(\textit{RHS}) =(1-L^K)^{-1}(1+L+\cdots+L^{K-1})(\textit{RHS}).
+\end{equation}
+By calculating $(L^K)_{k,l}$ we can show that $||L^K||_{X^p\rightarrow X^p}\ll 1$. This implies that $||(1-L^K)^{-1}||_{X^p\rightarrow X^p}\lesssim 1$. Therefore, a good upper bound of $\textit{RHS}$ gives us a good upper bound of $(1+L+\cdots+L^{K-1})(\textit{RHS})$. Combining the above arguments, we obtain the desire estimate of $w$. This is done in section \ref{sec.errorw} and \ref{sec.randommatrices}.
+
+One additional difficulty is the unboundedness of $L$ due to the derivative $\partial_x$ in the nonlinearity. This is controlled by the high frequency decay coming from viscosity.
+
+\subsubsection{Proof of the main theorem} In summary, the above arguments in section \ref{sec.appsol}-\ref{sec.randmatintro} prove that when $t\le \alpha^{-2}$, we have $||w||_{X^p}\le L^{-M}$ with high probability ($P(\textit{false})\lesssim e^{-CL^{\theta}}$).   
+
+
+The above inequality is equivalent to $\sup_k\, |\langle k \rangle^s w_k|\le CL^{-M}$. Remember that $w:=\psi-\psi_{app}$, so with high probability we have the following estimate $\sup_k\, \langle k \rangle^s |\psi_k-\psi_{app,k}|\le CL^{-M}$. This implies that $\mathbb E |\widehat \psi(t, k)|^2=\mathbb E |\psi_{app,k}|^2+O(L^{-M})$. This suggests that we may get the approximation of $\mathbb E |\widehat \psi(t, k)|^2$ by calculating $\mathbb E |\psi_{app,k}|^2$. $\mathbb E |\psi_{app,k}|^2$ can be exactly calculated and the theorem can be proved by extract the main term in $\mathbb E |\psi_{app,k}|^2$. This is done in section \ref{sec.proofmain}.
+
+ 
+\subsection{Notations}\label{sec.notat} 
+
+\underline{Universal constants:} In this paper, universal constants are constants that just depend on dimension $d$, diameter $D$ of the support of $n_{\text{in}}$ and the length of the inertial range $l^{-1}_d$. 
+
+\underline{$O(\cdot)$, $\ll$, $\lesssim$, $\sim$:} Throughout this paper, we frequently use the notation, $O(\cdot)$, $\ll$, $\lesssim$. $A=O(B)$ or $A\lesssim B$ means that there exists $C$ such that $A\lesssim CB$. $A\ll B$ means that there exists a small constant $c$ such that $A\lesssim cB$. $A\sim B$ means that there exist two constant $c$, $C$ such that $cB\lesssim A\lesssim CB$. Here the meaning of constant depends on the context. If they appear in conditions involving $k$, $\Lambda$, $\Omega$, etc., like $|k|\lesssim 1$, $\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0$, then they are universal constants. If these constants appear in an estimate which gives upper bound of some quantity, like $||L^K||_{X^p\rightarrow X^p}\ll 1$ or $\sup_t\sup_k  |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$, then in addition to the quantities that universal constants depend, they can also depend on the quantities $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.
+
+\underline{Order of constants:} Here is the order of all constants which can appear in the exponential or superscript of $L$. These constants are $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.%, $D$, $l_{d}$.
+
+All the constants are small compared to $L$ in the sense they are less than $L^{\theta}$ for arbitrarily small $\theta>0$.
+%$D$ is assumed to be less than $10l_{d}^{-1}$ and 
+
+$\varepsilon$ can be an arbitrarily small constant less than $0.5$, the reader is encouraged to assume it to be $0.01$. The order of other constants can be decided by the relations $\theta\ll \varepsilon$, $K=O(\theta^{-1})$, $M\gg K$, $N\ge M/\theta$, here the constants in $\ll$, $O(\cdot)$ are universal. 
+
+\underline{$\mathbb{Z}_L^d$:} $\mathbb{Z}_L^d\defeq \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$
+
+\underline{$k_x$, $k_{\perp}$:} Given any vector $k$, let $k_x$ be its first component and $k_{\perp}$ be the vector formed by the rest components. 
+
+\underline{$\Lambda(k)$, $\Lambda(\nabla)$:} $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$ and $\Lambda(\nabla) = i|\nabla|^2\partial_{x_1}$
+
+\underline{Fourier series:} The spatial Fourier series of a function $u: \T_L^d \to \mathbb C$ is defined on $\Z^d_L:=L^{-1}\Z^{d}$ by
+\begin{equation}\label{fourierset}
+u_k=\int_{\T^d_L} u(x) e^{-2\pi i k\cdot x},\quad \mathrm{\; so \,that \;}\quad u(x)=\frac{1}{L^d}\sum_{k \in \Z^d_L} u_k \,e^{2\pi i k\cdot x}. 
+\end{equation}
+Given any function $F$, let $F_k$ or $(F)_k$ be its Fourier coefficients.
+
+\underline{Order of $L$:} In this paper, $L$ is assumed to be a constant which is much larger than all the universal constants and $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$. 
+
+\underline{$L$-certainty:} If some statement $S$ involving $\omega$ is true with probability $\geq 1-O_{\theta}(e^{-L^\theta})$, then we say this statement $S$ is $L$-certain.
+
+
+\subsection{A short survey of previous papers} (1) \underline{Results about the ZK equation:} ZK equation was introduced in \cite{ZK} as an asymptotic model to describe the propagation of nonlinear ionic-sonic waves in a magnetized plasma. For a good reference about the physical background, see the book \cite{Dbook}. For rigorous results about wellposedness and derivation from the Euler-Poisson system see \cite{LLS} and references therein.
+
+(2) \underline{Previous papers about wave turbulence theory:} There are numerous physics papers about the derivation of wave kinetic equation. In particular, the wave kinetic equation for the ZK equation is derived in \cite{K}. For general references, see the books \cite{ZLFBook} and \cite{Nazarenko}, and the review paper \cite{NR}. 
+
+%Peierls \cite{Peierls1}, \cite{Peierls2}, ZaslavskiiSagdeev [110], Hasselmann [59, 60], Benney-Saffman-Newell [6, 7], 
+
+The WKE was rigorously verified for the Gibbs measure initial data by Lukkarinen and Spohn \cite{LukSpohn}. Then the basic concepts of general wave turbulence were rigorously formulated by Buckmaster, Germain, Hani, Shatah \cite{BGHS2} and a non-trivial result that verified WKE for a short time scale was also proved by them. The WKE was proved for almost sharp time scale independently by Deng and Hani \cite{DH} and Collot and Germain \cite{CG1}, \cite{CG2} using the ideas from the study of randomly initialized PDE. The full WKE for the sharp time was proved independently by the deep works of Deng and Hani \cite{DH2} and Staffilani and Tran \cite{ST} for a four-wave problem and a three-wave problem respectively. One key contribution of \cite{DH2} and \cite{ST} was the classification of Feynman diagrams in the contexts of normal form expansion and Liouville equation respectively. WKE for the space-inhomogeneous case was derived by Ampatzoglou, Collot, and Germain \cite{ACG} for almost sharp time scale. The higher order correlation functions were studied by Deng and Hani \cite{DH3}. A linearized wave kinetic equation near the Rayleigh-Jeans spectrum was derived by Faou \cite{Faou}. The discrete wave turbulence was studied by Dymov and Kuksin \cite{DK1}-\cite{DK4}.
+%But the most physically interesting solution of WKE, the Kolmogorov-Zakharov spectrum, are not Gibbs measure.  
+ 
+
+Among the above papers, \cite{ST} is the only one working on ZK equation. \cite{ST} derived the wave kinetic equation for lattice ZK equation with random force for $t\le T_{\text{kin}}$, while our paper is for dissipative continuous ZK equation for $t\le L^{-\varepsilon}T_{\text{kin}}$.
+
+% Compared to their lattice model case, the degeneracy of resonance surfaces in our dissipative continuous setting can be handled using the multiplier $k_{x_1}$ in the equation. 
+
+% The main conclusion of this paper is similar to the random force free case of the first arXiv version of Staffilani-Tran \cite{ST}. Compared to this version of \cite{ST}, the assumption on dimension $d$ of this paper is better while the time scale is shorter. We also mention that a few days before the first submission of this paper, Staffilani and Tran also submitted a new arXiv version of \cite{ST} which obtained some results about the low dimensional KZ equation. Compared to our paper, their new results need to add random force into the KZ equation, while our paper does not have this problem. 
+
+(3) \underline{Previous papers about the dynamics of WKE:} There are also many papers about the dynamics of WKE itself. For references, see \cite{GI}, \cite{GST}, \cite{SoT1}, \cite{SoT2} and the reference therein.
+
+%(4) numerical simulation
+
+%(4) about boltzmann equation and randomized initial data
+
+

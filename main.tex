@@ -9,94 +9,74 @@
 
 
 
-\usepackage{amsmath}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsthm,amssymb,color,mathtools,esint}
+% \usepackage[perpage]{footmisc}
+\definecolor{darkgreen}{rgb}{0.0, 0.6, 0.13}
 \usepackage{graphicx}
+\usepackage{caption}
+
+\usepackage{hyperref}
+
+\usepackage{float}
+
+\usepackage{mathrsfs}
 
 \usepackage{import}  
+
+\usepackage{geometry}
+\geometry{
+	%total={170mm,257mm},
+	left=28mm,right=28mm, top=30mm, bottom = 35mm
+}
+
+\usepackage{packages/my_tikz}
+
+\usepackage{bbm}
+
+\usepackage{longtable}
+\usepackage{autobreak}
+
+
+\evensidemargin 0.0in \oddsidemargin 0.0in \textwidth 6.5in
+\topmargin  -0.2in \textheight  9.0in \overfullrule = 0pt
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{claim}[thm]{Claim}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{ex}{Example}
+\numberwithin{equation}{section}
+
 
 
 \title{The wave kinetic theory of three wave and four wave models}
 \author{Xiao Ma}
 \date{\today}
 \adviser{Alexandru Ionescu}
-\abstract{\import{sections/}{abstract.tex}}
-\acknowledgements{\import{sections/}{acknowledgements.tex}}
+\abstract{\import{chapters/}{abstract.tex}}
+\acknowledgements{\import{chapters/}{acknowledgements.tex}}
 
 \begin{document}
 
 
 
-\chapter{Chapter}
+\chapter{Introduction}
 
-\section{Section}
-abc\\
-
-
-
-
-\subsection{Subsection}
-
-Text.
-
-\section{New Section}
-\section{Outline}  
-The following is a possible outline for your paper.
-\subsection{Introduction}
-\begin{itemize}
-\item Motivation and Goal (The goal of this project is...)
-\item Overview of challenge and previous work 
-\item Approach 
-\item Summary of implementation
-\item Summary of results
-\end{itemize}
+\import{chapters/}{introduction.tex}
+\import{chapters/}{three wave.tex}
+\import{chapters/}{four wave.tex}
+\import{chapters/}{number theory.tex}
 
 
 
-
-\subsection{Problem Background and Related Work}
-\begin{itemize}
-\item Survey of prior work with similar goals 
-\item For each previous approach, explain what has been done and why it does not meet your goal
-\end{itemize}
-
-\subsection{Approach}
-\begin{itemize}
-\item Key novel idea
-\item Why it is a good idea
-\end{itemize}
-\section{section}
-\subsection{Implementation}
-\begin{itemize}
-\item System overview (flow chart of key steps?)
-\item Subsection for each step or issue you addressed
-\begin{itemize}
-\item Problem statement
-\item Possible approaches
-\item Chosen approach and why
-\item Implementaton details
-\end{itemize}
-\end{itemize}
-
-\subsection{Evaluation}
-\begin{itemize}
-\item Experiment design...
-\item Data...
-\item Metrics...
-\item Comparisons...
-\item Qualitative results...
-\item Quantitative results...
-\end{itemize}
-
-\subsection{Summary}
-\begin{itemize}
-\item Conclusions...
-\item Limitations...
-\item Future work...
-\end{itemize}
-
-
-\subsection{Subsection}
-More text.
 
 \bibliography{ref} 
 \bibliographystyle{abbrv}

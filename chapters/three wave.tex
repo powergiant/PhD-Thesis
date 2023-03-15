@@ -2,10 +2,48 @@
 
 \section{Introduction}
 
-\subsection{Statement of the results} We define $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$. Under this new notations the ZK equation becomes,
+\subsection{Statement of the results}
+In this chapter, we study the wave turbulence theory for the following KdV type equation
+\begin{equation}\tag{MKDV}\label{eq.MKDV}
+\begin{cases}
+\partial_t\psi(t,x)+\Delta\partial_{x_1}\psi(t,x)-\nu \Delta \psi(t,x)=\lambda \partial_{x_1}(\psi^2(t,x)),\\[.6em]
+\psi(0,x) = \psi_{\textrm{in}}(x), \quad x\in \mathbb{T}^d_{L}.
+\end{cases}    
+\end{equation}
+as an example of three wave system.
+
+Here $\psi$ is a real valued function. We consider the periodic boundary condition, which implies that the spatial domain is a torus $\mathbb{T}^d_{L}=[0,L]^d$. 
+
+We know that the Fourier coefficients of $\psi$ lie on the lattice $\mathbb{Z}_L^d = \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$. Let $n_{\textrm{in}}$ be a known function, we assume that
+\begin{equation}\label{eq.wellprepared}
+\psi_{\textrm{in}}(x)=\frac{1}{L^d}\sum_{k\in\mathbb{Z}^d_L}\sqrt{n_{\textrm{in}}(k)} \eta_k(\omega)\,  e^{2\pi i kx}
+\end{equation}
+where $\eta_k(\omega)$ are mean-zero and identically distributed complex Gaussian random variables satisfying $\mathbb E |\eta_k|^2=1$. To ensure $\psi_{\textrm{in}}$ to be a real value function, we assume that $n_{\textrm{in}}(k)=n_{\textrm{in}}(-k)$ and $\eta_k=\overline{\eta_{-k}}$. Finally, we assume that $\eta_k$ is independent of $\{\eta_{k'}\}_{k'\ne k,-k}$.
+
+%$L$ \textbf{high frequency}
+
+The energy spectrum $n(t,k)$ mentioned in previous section is defined to be $\mathbb E |\widehat \psi(t, k)|^2$, where $\psi(t, k)$ are Fourier coefficients of the solution. Although the initial data is assumed to be the Gaussian random field, it is possible to develop a theory for other types of random initial data.
+
+
+We define $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$. Under this new notations the ZK equation becomes,
 \[
 \partial_t\psi(t,x)=i\Lambda(\nabla)\psi(t,x)+\nu \Delta \psi(t,x)+\lambda \partial_{x_1}(\psi^2(t,x)).
 \]
+
+In the wave turbulence, the energy distribution $n(k)$ is supposed to evolve according to the following wave kinetic equation
+\[
+\tag{WKE}\label{eq.WKE}
+\begin{split}
+\partial_t n(t, k) =&\frac{1}{T_{\text{kin}}}\mathcal K\left(n(t, \cdot)\right),
+\\
+\mathcal K(n)(k):=& |k_x|^2\int_{\substack{(k_1, k_2)\in \R^{2d}\\k_1+k_2=k}}n(k_1) n(k_2)\delta(|k_1|^2k_{1x}+|k_2|^2k_{2x}-|k|^2k_{x})\, dk_1 dk_2
+\\
+-& 2n(k)\int_{\mathbb{R}^d}k_x(k_x-k_{1x})n(k_1) \delta(|k_1|^2k_{1x}+|k_2|^2k_{2x}-|k|^2k_{x})\, dk_1
+\end{split}
+\]
+
+
+
 Now we introduce the main theorem of this paper.
 
 
@@ -49,14 +87,14 @@ then for all $L^{\varepsilon} \leq t \leq T_{\text{max}}$, we have the following
         \end{aligned}
         \right.
     \end{equation}
-    
+    \item By 2, $n_{\mathrm{in}}(k)+n^{(1)}(k)$, the first two terms of \eqref{eq.approx1}, approximately equals to $n_{\mathrm{in}}(k)+\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)$. $n_{\mathrm{in}}(k)+\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)$ is the first two terms of the approximation series of \eqref{eq.WKE}.
 \end{enumerate}
 
 
 \end{thm}
 
 \begin{rem}
-The condition $d\ge 3$ is essential. When $d=1$, the ZK equation becomes the KdV equation which is an integrable system whose long time behavior is quasi-periodic instead of turbulent \cite{JM}. When $d=2$, as mentioned in Remark \ref{rem.nottrue2d}, the desire number theory result is not true and a major revision to \eqref{eq.WKE} is required to obtain a valid wave kinetic theory.
+The condition $d\ge 3$ is essential. When $d=1$, the ZK equation becomes the KdV equation which is an integrable system whose long time behavior is quasi-periodic instead of turbulent \cite{}. When $d=2$, as mentioned in Remark \ref{rem.nottrue2d}, the desire number theory result is not true and a major revision to \eqref{eq.WKE} is required to obtain a valid wave kinetic theory.
 \end{rem}
 
 \begin{rem}
@@ -219,15 +257,15 @@ All the constants are small compared to $L$ in the sense they are less than $L^{
 
 $\varepsilon$ can be an arbitrarily small constant less than $0.5$, the reader is encouraged to assume it to be $0.01$. The order of other constants can be decided by the relations $\theta\ll \varepsilon$, $K=O(\theta^{-1})$, $M\gg K$, $N\ge M/\theta$, here the constants in $\ll$, $O(\cdot)$ are universal. 
 
-\underline{$\mathbb{Z}_L^d$:} $\mathbb{Z}_L^d\defeq \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$
+\underline{$\mathbb{Z}_L^d$:} $\mathbb{Z}_L^d= \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$
 
 \underline{$k_x$, $k_{\perp}$:} Given any vector $k$, let $k_x$ be its first component and $k_{\perp}$ be the vector formed by the rest components. 
 
 \underline{$\Lambda(k)$, $\Lambda(\nabla)$:} $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$ and $\Lambda(\nabla) = i|\nabla|^2\partial_{x_1}$
 
-\underline{Fourier series:} The spatial Fourier series of a function $u: \T_L^d \to \mathbb C$ is defined on $\Z^d_L:=L^{-1}\Z^{d}$ by
+\underline{Fourier series:} The spatial Fourier series of a function $u: \mathbb{T}_L^d \to \mathbb C$ is defined on $\mathbb{Z}^d_L:=L^{-1}\mathbb{Z}^{d}$ by
 \begin{equation}\label{fourierset}
-u_k=\int_{\T^d_L} u(x) e^{-2\pi i k\cdot x},\quad \mathrm{\; so \,that \;}\quad u(x)=\frac{1}{L^d}\sum_{k \in \Z^d_L} u_k \,e^{2\pi i k\cdot x}. 
+u_k=\int_{\mathbb{T}^d_L} u(x) e^{-2\pi i k\cdot x},\quad \mathrm{\; so \,that \;}\quad u(x)=\frac{1}{L^d}\sum_{k \in \mathbb{Z}^d_L} u_k \,e^{2\pi i k\cdot x}. 
 \end{equation}
 Given any function $F$, let $F_k$ or $(F)_k$ be its Fourier coefficients.
 

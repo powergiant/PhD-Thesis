@@ -16,6 +16,13 @@
 %% For distribution of the original source see
 %% the terms for copying and modification in the file  puthesis.dtx.
 %% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%added by Xiao Ma
+% \RequirePackage[table]{xcolor}
+\RequirePackage{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{puthesis-UG}
          [2011/02/16 v1.4.2 Princeton University Thesis class]

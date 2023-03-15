@@ -1,0 +1,380 @@
+\section{Introduction}
+In this paper, we study the wave turbulence theory for the following Klein-Gordon type equation
+\begin{equation}
+    i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-1}\left(|\Lambda(\nabla)^{-1}\psi|^2\Lambda(\nabla)^{-1}\psi\right)   
+\end{equation}
+as an example of four wave systems.
+
+It is well-known that in many PDEs coming from physics, energy can be transferred from low frequency Fourier modes to high frequency modes. Since it takes many steps to transfer energy to very high modes, the information in the low frequency modes is lost and high frequency modes become random and exhibit \textit{universality}. In this case, the most important quantity is the energy spectral function $n(\tau,k) = n\left(\frac{t}{T_{\mathrm{kin}}}, k\right) = \mathbb E |\widehat \psi(t, k)|^2$.
+
+When $t\lesssim T_{\text{kin}}$, physicist believe that the energy spectral $n(\tau, k)$ evolves according to the following wave kinetic equation
+\[
+\tag{WKE}\label{eq.WKE}
+\begin{split}
+&\partial_\tau n(\tau, \xi) =\mathcal K\left(n(\tau, \cdot)\right), 
+\\
+&\mathcal K(\phi)(\xi):= \int_{\substack{(\xi_1, \xi_2, \xi_3)\in \mathbb{R}^{3d}\\S(\xi_1,\xi_2,\xi_3,\xi)=0}} V(\xi_1,\xi_2,\xi_3,\xi)\phi \phi_1 \phi_2 \phi_3\left(\frac{1}{\phi_1}-\frac{1}{\phi_2}+\frac{1}{\phi_3}-\frac{1}{\phi}\right)\delta_{\mathbb{R}}(\Omega(\xi_1,\xi_2,\xi_3,\xi)),
+\end{split}
+\]
+where 
+\begin{equation}
+    \begin{split}
+        &S(\xi_1,\xi_2,\xi_3,\xi) = \xi_1-\xi_2+\xi_3-\xi
+        \\
+        &\Omega(\xi_1,\xi_2,\xi_3,\xi) = |\xi_1|_\beta^2-|\xi_2|_\beta^2+|\xi_3|_\beta^2-|\xi|_\beta^2
+        \\
+        &V(\xi_1,\xi_2,\xi_3,\xi) = \left(\Lambda(\xi_1)\Lambda(\xi_2)\Lambda(\xi_3)\Lambda(\xi)\right)^{-2}.
+    \end{split}
+\end{equation}
+
+
+\subsection{The setup of this paper} We now specify rigorously the randomness and energy distribution used in this paper. 
+
+
+In this paper we consider the Cauchy problem of
+following equation,
+\begin{equation}\tag{NKLG}\label{eq.NKLG}
+\begin{cases}
+i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-1}\left(|\Lambda(\nabla)^{-1}\psi|^2\Lambda(\nabla)^{-1}\psi\right),\\[.6em]
+\psi(0,x) = \psi_{\textrm{in}}(x), \quad x\in \mathbb{T}^d_{L_1\cdots L_d}.
+\end{cases}    
+\end{equation}
+Here $\Lambda(\xi)\coloneqq\sqrt{1+|\xi|^2}$. We consider the periodic boundary condition, which implies that the spatial domain is a torus $\mathbb{T}^d_{L_1\cdots L_d}=\mathbb{T}_{L_1}\times\cdots\mathbb{T}_{L_d}=[0,L_1]\times\cdots\times [0,L_d]$.
+
+We know that the Fourier coefficients of $\psi$ lie on the lattice $\mathbb{Z}_L^d = \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$. Let $n_{\textrm{in}}$ be a known function, we assume that
+\begin{equation}\label{eq.wellprepared}
+\psi_{\textrm{in}}(x)=\frac{1}{L^d}\sum_{k\in\mathbb{Z}^d_L}\sqrt{n_{\textrm{in}}(k)} \eta_k(\omega)\,  e^{2\pi i kx}
+\end{equation}
+where $\eta_k(\omega)$ are mean-zero and identically distributed complex Gaussian random variables satisfying $\mathbb E |\eta_k|^2=1$. To ensure $\psi_{\textrm{in}}$ to be a real value function, we assume that $n_{\textrm{in}}(k)=n_{\textrm{in}}(-k)$ and $\eta_k=\overline{\eta_{-k}}$. Finally, we assume that $\eta_k$ is independent of $\{\eta_{k'}\}_{k'\ne k,-k}$.
+
+In a real turbulent wave, the low frequency Fourier modes in the energy-containing range are influenced by the external force and initial data, so they are not random. In the wave turbulence theory, we just care about high frequency part in the inertial and dissipation range. To simplify the theory, we assume that all Fourier coefficients are random.
+
+%$L$ \textbf{high frequency}
+
+The energy spectrum $n(t,k)$ mentioned in previous section is defined to be $\mathbb E |\widehat \psi(t, k)|^2$, where $\psi(t, k)$ are Fourier coefficients of the solution. Although the initial data is assumed to be the Gaussian random field, it is possible to develop a theory for other types of random initial data.
+
+
+
+\subsection{Statement of the results} In this paper, we assume that the periods $L_1,\cdots L_d\rightarrow \infty$ but their ratios
+$\{\sqrt{\beta_i}\}_{1\le i\le d}$ are bounded, so we can assume that $L_i=L/\sqrt{\beta_i}$ and $L\rightarrow\infty$. By rescaling, we may set these ratios $\{\sqrt{\beta_i}\}_{1\le i\le d}$ to be $1$ and then the spatial domain becomes the standard torus $\mathbb{T}^d_L=[0,L]^d$, the derivatives becomes
+\[
+\nabla_\beta =  \frac{1}{2\pi}   [\sqrt{\beta_1} \partial_1,\cdots,\sqrt{\beta_d} \partial_d],
+\]
+and the dispersive relation becomes
+\begin{equation}
+    \Lambda_{\beta}(\xi)\coloneqq\sqrt{1+|\xi|_{\beta}^2},\qquad |\xi|_{\beta}^2\coloneqq \beta_1\xi_1^2+\cdots\beta_d\xi_d^2
+\end{equation}
+In what follows we ignore the subscript of $\Lambda_{\beta}$ and $\Lambda$ always represents $\Lambda_{\beta}$ unless explicitly mentioned.
+
+
+Under these new notations the Klein-Gordon equation becomes,
+\[
+i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-1}(|\Lambda(\nabla)^{-1}\psi|^2\Lambda(\nabla)^{-1}\psi).
+\]
+
+\textbf{In this paper, we make the technical assumption that $\{\beta_i\}_{1\le i\le d}$ are generic irrationals.}
+
+
+
+\medskip
+Now we introduce the main theorem of this paper.
+
+\begin{thm}\label{th.main}
+Let $d\ge 2$. Suppose that $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported, and $\eta_k(\omega)$ are independent and identically distributed complex Gaussian random variables with mean 0 and variance 1. Fix $0<\epsilon\ll 1$, and set $\alpha=\lambda^2L^{-d}$ to be the strength of the nonlinearity. If $\alpha$ satisfies
+\begin{equation}
+\alpha^{-1}\le L^{2+\epsilon}
+\end{equation}
+Then there exists a set  $A$ of measure zero, such that for all $\beta\in [1,2]^d\backslash A$, for $\psi_{\mathrm{in}}$ given by \eqref{eq.wellprepared} and for all $L^{\epsilon} \leq t \leq L^{-C\varepsilon} \alpha^{-3/2}$, there exists an approximate solution $\psi_{app}(t)$ of \eqref{eq.NKLG} which satisfies
+
+% \begin{equation}
+% \alpha^{-1}\le
+% \left\{
+% \begin{split}
+% &L^{1+\epsilon},&&\mathrm{\ if\ }\beta_i\mathrm{\ arbitrary},
+% \\
+% &L^{2+\epsilon},&&\mathrm{\ if\ }\beta_i\mathrm{\ generic\ irrational},
+% \end{split}\right.
+% \end{equation}
+
+\medskip
+
+\begin{enumerate}
+    \item $\psi_{app}(0)=\psi_{\mathrm{in}}$.
+    \item Define $T_{\mathrm{kin}}=\alpha^{-2}$ and $\mathcal K$ as in \eqref{eq.WKE}, then the expectation of $\psi_{app}$ has the following expansion \begin{equation}\label{approx2}
+\mathbb E |\widehat \psi_{app}(t, k)|^2 =n_{\mathrm{in}}(k)+\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)+o_{\ell^\infty_k}\left(\frac{t}{T_{\mathrm {kin}}}\right)_{L \to \infty}
+\end{equation}
+where $o_{\ell^\infty_k}\left(\frac{t}{T_{\mathrm {kin}}}\right)_{L \to \infty}$ is a quantity that is bounded in $\ell^\infty_k$ by $L^{-\theta} \frac{t}{T_{\mathrm {kin}}}$ for some $\theta>0$.
+    \item Define the error by
+    \begin{equation}
+        Err=i\partial_t\psi_{app}-\Lambda(\nabla)\psi_{app}-\lambda^2 |\Lambda(\nabla)^{-1}\psi_{app}|^2\Lambda(\nabla)^{-1}\psi_{app}.
+    \end{equation}
+    Then for any large $M$, $\psi_{app}$ can be constructed so that
+    \begin{equation}
+    ||Err(\xi)||_{X^p}\le L^{-M},
+\end{equation}
+where $||f||_{X^p}=\sup_{k} \langle k\rangle^{p} |f_k|$ for any function $f$ ($f_k$ are the Fourier coefficients).
+
+\end{enumerate}
+
+
+\end{thm}
+
+\begin{rem}
+\textbf{did not reach kinetic time}
+\end{rem}
+
+\textbf{define $\mathbb{Z}_L^d$ }
+
+\textbf{In this paper, $c+$ (or $c-$) represents a number strictly bigger (smaller) than and sufficiently close to the given $c$)}
+
+
+\textbf{the conclusion of $E |\widehat u(t, k)|^2$ should be refined}
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+\subsection{Ideas of the proof} The basic idea of this paper is to identify a renormalized approximation of the solution and use probability theory and number theory to control the error of this approximation.
+
+\subsubsection{The mass renormalization}\label{sec.renormintro} The Fourier coefficients of the nonlinearity $\lambda^2 |\Lambda(\nabla)^{-1}\psi|^2\Lambda(\nabla)^{-1}\psi$ are given by
+
+\begin{equation}
+    \frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+\end{equation}
+In order to establish a rigorous theory of wave turbulence, we need to show that the nonlinearity is small. To show the smallness we have to exploit the randomness of $u_k$ to achieve the square root cancellation.
+But in $\sum_{k_1=k_2,k_3=k}$ or $\sum_{k_1=k,k_2=k_3}$, which are equal to $ (\sum_{k_1}\Lambda_{k_1}^{-2}|u_{k_1}|^2) \Lambda_{k}^{-1}u_k$, this cancellation due to randomness is absent and they do not have the desired smallness property.
+
+% there is no cancellation due to randomness
+
+To fix that, we need to suitably renormalize the equation (\ref{eq.NKLG}). In \cite{DH}, they renormalize the equation by 
+replacing the solution $u$ of NLS by $e^{-2i\lambda^2\fint_{\mathbb{T}_L^d}|u|^2t}\cdot u$. After this renormalization the nonlinearity of NLS in \cite{DH} becomes
+
+\begin{equation}
+    \lambda^2\bigg(|u|^2-2\fint_{\mathbb{T}_L^d}|u|^2\bigg)u
+\end{equation}
+and the contributions from $\sum_{k_1=k_2,k_3=k}$ and $\sum_{k_1=k,k_2=k_3}$ are absent.
+
+But this method does not work for \eqref{eq.NKLG}, since in the analogous change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}M(s) ds}  \psi_k(t)$ the quantity $M(t)=\sum_{k_1}\Lambda_{k_1}^{-2}|\psi_{k_1}|^2$ is not a conservative quantity. More importantly, after change of variable the nonlinearity becomes
+
+\begin{equation}
+\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\  k_1\ne k_2,\ k_3 \ne k}} \psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3} e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}M(s) ds\left(\Lambda(k_1)^{-1}-\Lambda(k_2)^{-1}+\Lambda(k_3)^{-1}-\Lambda(k)^{-1}\right)} 
+\end{equation}
+Due to randomness of $M$, the additional phase factor $e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}M(s) ds(\cdots)}$ is a random variable which cause a serious problem. Note that this factor is absent in NLS due to $U(1)$ symmetry. 
+
+In order to solve above problem we introduce a new change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}m(s) ds}  \psi_k(t)$, where $m(t)=\mathbb{E}M(t)$. After doing this, the phase factor $e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}m(s) ds(\cdots)}$ is not a random variable. 
+
+Our change of variable solves the problem coming from the randomness of $M$. The problem from time dependence of $M$ will be solved later.
+
+\subsubsection{The approximate solution}\label{sec.appsol} After the renormalization it can be shown that  $\sum_{k_1=k_2,k_3=k}$ and $\sum_{k_1=k,k_2=k_3}$ is small, so in this section we ignore the contribution from them. For simplicity we also ignore the effect of renormaliztion. Then the equation of Fourier coefficients becomes
+
+\begin{equation}\label{eq.Fourierintro}
+    i \dot{\psi}_{k} =  \Lambda(k) \psi_k+\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\  k_1\ne k_2,\ k_3 \ne k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+\end{equation}
+
+
+Define new dynamical variable $\psi\rightarrow e^{- it\Lambda(\nabla)} \psi$ and integrate \eqref{eq.Fourierintro} in time. Then  (\ref{eq.NKLG}) with initial data (\ref{eq.wellprepared}) becomes
+\begin{equation}\label{eq.intmainintro}
+    \psi_k=\xi_k-\frac{i\lambda^2}{L^{2d}} \sum\limits_{\substack{S_{3,k} \\  k_1\ne k_2,\ k_3 \ne k}}
+    \int^t_0 e^{- is \Omega_{3,k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3} ds
+\end{equation}
+Here $S_{3,k}=k_1-k_2+k_3-k$, $\Omega_{3,k}=\Lambda_\beta(k_1)-\Lambda_\beta(k_2)+\Lambda_\beta(k_3)-\Lambda_\beta(k)$. $\xi_k$ are the Fourier coefficients of the initial data of $\psi$ defined by $\xi_k=\sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega)$.
+
+
+
+Denote the second term of right hand side by $\mathcal{T}(\psi,\psi,\psi)_k$ and the right hand side by $\mathcal{F}(\psi)_k=\xi_k+\mathcal{T}(\psi,\psi,\psi)_k$. Then the equation is $\psi=\mathcal{F}(\psi)_k$. A common way of constructing the approximation is iteration: $\psi=\mathcal{F}(\psi)=\mathcal{F}(\mathcal{F}(\psi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\psi)))=\cdots$. 
+
+Define the approximate solution by $\psi_{app}=\mathcal{F}^{N}(\xi)$. By recursively expanding  $\mathcal{F}^{N}$, we know that $\psi_{app}$ is a polynomial of $\xi$.
+The expansion can be described as the following,
+\begin{equation*}
+\begin{split}
+    \psi_{app}=&\mathcal{F}^{N}(\xi)=\xi+\mathcal{T}(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi))
+    \\
+    =&\xi+\mathcal{T}\Big(\xi+\mathcal{T}(\mathcal{F}^{N-2}(\xi),\mathcal{F}^{N-2}(\xi),\mathcal{F}^{N-2}(\xi)),
+    \cdots,
+    \cdots\Big)=\xi+\mathcal{T}(\xi,\xi,\xi)+\cdots
+    \\
+    =&\xi+\mathcal{T}(\xi,\xi,\xi)+\mathcal{T}(\mathcal{T}(\xi,\xi,\xi),\xi,\xi)
+    +\mathcal{T}(\xi,\mathcal{T}(\xi,\xi,\xi),\xi)
+    +\mathcal{T}(\xi,\xi,\mathcal{T}(\xi,\xi,\xi))+\cdots
+\end{split}    
+\end{equation*}
+In above iteration, we recursively replace $\mathcal{F}^{l}(\xi)$ by $\xi+\mathcal{T}(\mathcal{F}^{l-1}(\xi),\mathcal{F}^{l-1}(\xi),\mathcal{F}^{l-1}(\xi))$.
+
+We need a good upper bound for each terms of $\psi_{app}$. To get this we use a good graphical representation, called Feynman diagram, of terms $\xi$, $\mathcal{T}(\xi,\xi,\xi)$, $\mathcal{T}(\mathcal{T}(\xi,\xi,\xi),\xi,\xi)$, $\cdots$. The basic notation of Feynman diagram will be introduced in section \ref{sec.appFey}.
+
+\subsubsection{The perturbative analysis}\label{sec.pert intro} The analysis in previous section suggests that $\psi_{app}$ should be a good approximation of $\psi$. In other words, the error of this approximation $w=\psi-\psi_{app}$ is very small. To prove this fact, we will use the follow equation of $w$ which can be derived from (\ref{eq.intmainintro}):
+\begin{equation}\label{eq.eqwintro}
+    w= Err(\xi)+Lw+B(w,w)+C(w,w,w)
+\end{equation}
+Here $Err(\xi)$ is a polynomial of $\xi$ whose degree $\le N+1$ monomials vanish. $Lw$, $B(w,w)$, $C(w,w,w)$ are linear, quadratic, cubic in $w$ respectively.
+
+We prove the smallness of $w$ using boostrap method.
+
+Define $||w||_{X^p}=\sup_{k} \langle k\rangle^{p} |w_k|$. Starting from the assumption that $\sup_t||w||_{X^p}\le CL^{-M}$ ($C,M\gg 1$), in order to close the boostrap we need to prove that $\sup_t||w||_{X^p}\le (1+C/2)L^{-M}<CL^{-M}$. To prove $||w||_{X^p}\le (1+C/2)L^{-2}$, we use (\ref{eq.eqwintro}), which gives
+\begin{equation}\label{eq.ineqw}
+    ||w||_{X^p}\le ||Err(\xi)||_{X^p}+||Lw||_{X^p}+||B(w,w)||_{X^p}+||C(w,w,w)||_{X^p}
+\end{equation}
+
+In the rest part of the proof we show that 
+\begin{equation}
+    ||Err(\xi)||_{X^p}\le L^{-M},
+    \quad ||B(w,w)||_{X^p}\le C^2L^{d+3-2M},
+    \quad||C(w,w,w)||_{X^p}\le C^3L^{d+3-3M}.
+\end{equation}
+Combining with a special treatment of $Lw$, above estimates imply that $||w||_{X^p}\le (1+C/2)L^{-M}$ which closes the boostrap.
+
+
+\subsubsection{Lattice points counting and $||Err(\xi)||_{X^p}$}\label{sec.latticeintro} In this section we explain the idea of proving upper bound of $||Err(\xi)||_{X^p}$.
+
+$(Err(\xi))_{k}$ is a sum of terms of the form
+\begin{equation}
+\begin{split}
+    &\mathcal{J}_k^0(\xi)=  \xi_k, \quad \mathcal{J}_k^1(\xi)=\frac{\lambda^2}{L^{2d}} \sum_{k_1-k_2+k_3-k=0} H^1_{k_1k_2k_3}  \xi_{k_1}\bar{\xi}_{k_2}\xi_{k_3} , \quad\cdots  \\
+    &\mathcal{J}_k^l(\xi)=\left(\frac{\lambda^2}{L^{2d}}\right)^l\sum_{k_1-k_2+\cdots+k_{2l+1}-k=0} H^l_{k_1\cdots k_{2l+1}}  \xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}, \quad\cdots 
+\end{split}
+\end{equation}
+According to section \ref{sec.appFey}, each terms correspond to a Feynman diagram and their coefficient can be calculated from these diagrams. 
+
+From the Feynman diagram representation in section \ref{sec.appFey}, we know that $H^l$ is large near a surface given by $2l$ equations $S=\{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0\}$. Then in order to estimate $\mathcal{J}_k^l(\xi)$ it suffices to upper bound the number of lattice points near this surface. This is done in section \ref{sec.numbertheory}. 
+
+In addition to lattice points counting, we need to calculate the expectation of $\mathcal{J}_k^l(\xi)$ in order to get upper bound. After taking expectation some equations in the definition of $S$ can be degenerate. But since we have renormalized the equation, it can be proved that the contribution from degenerate case vanishes.
+
+In conclusion, combining lattice points counting and renormalization argument we can show that, for any $M$, we can take $N$ large enough so that $||Err(\xi)||_{X^p}\le L^{-M}$.
+
+% \begin{equation}
+%     P(T)=\sum_{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0} \xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}.
+% \end{equation}
+
+
+
+
+\subsubsection{Upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$} $||B(w,w)||_{X^p}$ is a sum of terms of the form
+\begin{equation}
+    \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s)  \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}
+\end{equation}
+$||C(w,w,w)||_{X^p}$ is a cubic polynomial of $w$ of the form
+\begin{equation}
+    \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s)  w_{k_1}\bar{w}_{k_2}w_{k_3}
+\end{equation}
+
+By assumptions and proofs in this paper, we know that $t\le \alpha^{-3/2}\le L^3$,  $|B_{k_1k_2k_3}(s)|, |C_{k_1k_2k_3}(s)|\lesssim 1$ and $|\mathcal{J}^{l}_{k_1}(\xi)|\lesssim \langle k\rangle^{-p}$. By boostrap assumption, $\sup_{k} \langle k\rangle^{p} |w_k|\le CL^{-M}$. Therefore we have following estimate of $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$
+\begin{equation}
+\begin{split}
+    ||B(w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s)  \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}\right|    
+    \\
+    \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^3 \sum_{k_1-k_2+k_3-k=0} \langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
+    \\
+    \le& C^2 L^{d+3-2M},
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+    ||C(w,w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s)  w_{k_1}\bar{w}_{k_2}w_{k_3}\right|
+    \\
+    \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^3 \sum_{k_1-k_2+k_3-k=0} L^{-M}\langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
+    \\
+    \le& C^3 L^{d+3-3M}
+\end{split}
+\end{equation}
+
+Therefore, we get the desire upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$.
+
+\subsubsection{A random matrix bound and $Lw$}\label{sec.randmatintro} The method introduced above for deriving upper bounds of $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$ does not work for $Lw$. Because it only gives $||Lw||_{X^p}\le CL^{d+3-M}$ which does not imply the desire bound $||Lw||_{X^p}\le L^{-M}$.
+
+In \cite{DH}, they consider solution in the Bourgain space $X^{s,b}$ and use $TT^*$ method to get the upper bound for the operator norm of $L$, $||L||_{X^{s,b}\rightarrow X^{s,b}}\ll 1$. But we prefer to work in the simpler functional space $X^p$ which is not a Hilbert space. Although standard $TT^*$ method is not useful in a non-Hilbert space, we can bypass it using a Neumann series argument.
+
+Let us first explain how $TT^*$ method works. Here we pretend that $||\cdot||_{X^p}$ is a Hilbert norm. In order to estimate $||L||_{X^p\rightarrow X^p}$, the $TT^*$ tell us to calculate the matrix entries $((LL^*)^N)_{k,l}$ of $LL^*$, then apply inequality $||L||_{X^p\rightarrow X^p}=||(LL^*)^N||_{X^p\rightarrow X^p}^{\frac{1}{N}}\le (L^d\sup_{k,l} ((LL^*)^N)_{k,l})^{1/N}$ to obtain upper bound of $||L||_{X^p\rightarrow X^p}$. $(LL^*)^N)_{k,l}$ can be calculated by Feynman diagrams and $\sup_{k,l} ((LL^*)^N)_{k,l}$ can be estimated by the large deviation inequality. By taking $N$ large, the loss $L^{d/N}$ could be made arbitrarily small.
+
+Unfortunely, $||\cdot||_{X^p}$ is not a Hilbert norm. However, we can still estimate $\sup_{k,l} (L^N)_{k,l}$ and $||L^N||_{X^p\rightarrow X^p}$ by similar argument. In this case, the relation between $||L||_{X^p\rightarrow X^p}$ and $||L^N||_{X^p\rightarrow X^p}$ is more subtle. Note that from \eqref{eq.intmainintro} we have the identity
+\begin{equation}
+    w-Lw= Err(\xi)+B(w,w)+C(w,w,w).
+\end{equation}
+We have good upper bounds for all of the three terms on the right hand side. By Neumann series we have
+\begin{equation}
+    w= (1-L)^{-1}(\textit{RHS}) =(1-L^N)^{-1}(1+L+\cdots+L^{N-1})(\textit{RHS}).
+\end{equation}
+Since we can show that $||L^N||_{X^p\rightarrow X^p}\ll 1$, we have $||(1-L^N)^{-1}||_{X^p\rightarrow X^p}\lesssim 1$. The good upper bounds of $\textit{RHS}$ give us good upper bounds of $(1+L+\cdots+L^{N-1})(\textit{RHS})$. Combining above arguments, we obtain the desire estimate of $w$.
+
+\subsubsection{Proof of the main theorem} In summary, above arguments in section \ref{sec.renormintro}-\ref{sec.randmatintro} prove that when $t\le \alpha^{-3/2}$, we have $||w||_{X^p}\le L^{-M}$ with high probability. Although did not mention there, rather than hold true not for all cases, all inequalities in previous section may be false with a small probability ($P(\textit{false})\le Ke^{-CL^{\theta}}$).   
+
+
+Above inequality is equivalent to $\sup_k\, |\langle k \rangle^s w_k|\le CL^{-M}$. Remember that $w:=\psi-\psi_{app}$, so with high probability we have the following estimate
+
+\begin{equation}\label{eq.psikminusxik}
+    \left|\left|\psi_k-\psi_{app,k}\right|\right|^2_{l^2_k}\le CL^{d-M}
+\end{equation}
+
+
+Denote by $A$ the event that above estimate is true, then $\mathbb E |\widehat \psi(t, k)|^2=\mathbb E (|\psi_k|^2 1_{A})+\mathbb E (|\psi_k|^2 1_{A^c})$. A quantitative version of "with high probability" is that $\mathbb P(A^c) \le Ke^{-CL^{\theta}}$. Since $||\Lambda(\nabla)^{1/2} \psi||_{L^2}$ is conservative and $|\psi_k|^2\le L^{d/2} ||\Lambda(\nabla)^{1/2} \psi||_{L^2}\le L^{d/2}$, we know that $\mathbb E (|\psi_k|^2 1_{A^c})\le KL^{d/2} e^{-CL^{\theta}}= o_{L\rightarrow\infty}(L^{-M})$. Therefore, $\mathbb E |\widehat \psi(t, k)|^2=\mathbb E (|\psi_k|^2 1_{A})+o_{L\rightarrow\infty}(L^{-M})$. Since we also have $\mathbb E |\psi_{app,k}|^2=\mathbb E (|\psi_{app,k}|^2 1_{A})+o_{L\rightarrow\infty}(L^{-M})$, we conclude that
+\begin{equation}
+    \mathbb E |\widehat \psi(t, k)|^2=\mathbb E |\psi_{app,k}|^2+\mathbb E (|\psi_k|^2-|\psi_{app,k}|^2)+o_{L\rightarrow\infty}(L^{-M})
+\end{equation}
+
+By (\ref{eq.psikminusxik}), $\mathbb E (|\psi_k|^2-|\psi_{app,k}|^2)=O(L^{-M})$. We may conclude that 
+
+\begin{equation}
+    \mathbb E |\widehat \psi(t, k)|^2=\mathbb E |\psi_{app,k}|^2+O(L^{-M}).
+\end{equation}
+This suggests that we may get the approximation of $\mathbb E |\widehat \psi(t, k)|^2$ by calculating $\mathbb E |\psi_{app,k}|^2$. $\mathbb E |\psi_{app,k}|^2$ can be exactly calculated and the theorem can be proved by extract the main term in $\mathbb E |\psi_{app,k}|^2$. 
+
+ 
+\subsection{Notations}\label{sec.notat} 
+
+\underline{Universal constants:} In this paper, universal constants are constants that just depend on dimension $d$, diameter $D$ of the support of $n_{\text{in}}$ and the length of the inertial range $l^{-1}_d$. 
+
+\underline{$O(\cdot)$, $\ll$, $\lesssim$, $\sim$:} Throughout this paper, we frequently use the notation, $O(\cdot)$, $\ll$, $\lesssim$. $A=O(B)$ or $A\lesssim B$ means that there exists $C$ such that $A\lesssim CB$. $A\ll B$ means that there exists a small constant $c$ such that $A\lesssim cB$. $A\sim B$ means that there exist two constant $c$, $C$ such that $cB\lesssim A\lesssim CB$. Here the meaning of constant depends on the context. If they appear in conditions involving $k$, $\Lambda$, $\Omega$, etc., like $|k|\lesssim 1$, $\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0$, then they are universal constants. If these constants appear in an estimate which gives upper bound of some quantity, like $||L^K||_{X^p\rightarrow X^p}\ll 1$ or $\sup_t\sup_k  |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$, then in addition to the quantities that universal constants depend, they can also depend on the quantities $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.
+
+\underline{Order of constants:} Here is the order of all constants which can appear in the exponential or superscript of $L$. These constants are $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.%, $D$, $l_{d}$.
+
+All the constants are small compared to $L$ in the sense they are less than $L^{\theta}$ for arbitrarily small $\theta>0$.
+%$D$ is assumed to be less than $10l_{d}^{-1}$ and 
+
+$\varepsilon$ can be an arbitrarily small constant less than $0.5$, the reader is encouraged to assume it to be $0.01$. The order of other constants can be decided by the relations $\theta\ll \varepsilon$, $K=O(\theta^{-1})$, $M\gg K$, $N\ge M/\theta$, here the constants in $\ll$, $O(\cdot)$ are universal. 
+
+\underline{$\mathbb{Z}_L^d$:} $\mathbb{Z}_L^d= \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$
+
+\underline{$k_x$, $k_{\perp}$:} Given any vector $k$, let $k_x$ be its first component and $k_{\perp}$ be the vector formed by the rest components. 
+
+\underline{$\Lambda(k)$, $\Lambda(\nabla)$:} $\Lambda(k)\coloneqq k_{1}(k_1^2+\cdots k_d^2)$ and $\Lambda(\nabla) = i|\nabla|^2\partial_{x_1}$
+
+\underline{Fourier series:} The spatial Fourier series of a function $u: \mathbb{T}_L^d \to \mathbb C$ is defined on $\mathbb{Z}^d_L:=L^{-1}\mathbb{Z}^{d}$ by
+\begin{equation}\label{fourierset}
+u_k=\int_{\mathbb{T}^d_L} u(x) e^{-2\pi i k\cdot x},\quad \mathrm{\; so \,that \;}\quad u(x)=\frac{1}{L^d}\sum_{k \in \mathbb{Z}^d_L} u_k \,e^{2\pi i k\cdot x}. 
+\end{equation}
+Given any function $F$, let $F_k$ or $(F)_k$ be its Fourier coefficients.
+
+\underline{Order of $L$:} In this paper, $L$ is assumed to be a constant which is much larger than all the universal constants and $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$. 
+
+\underline{$L$-certainty:} If some statement $S$ involving $\omega$ is true with probability $\geq 1-O_{\theta}(e^{-L^\theta})$, then we say this statement $S$ is $L$-certain.
+
+
+\subsection{A short survey of previous papers} 
+(1) \underline{Previous papers about wave turbulence theory:} There are numerous physics papers about the derivation of wave kinetic equation. For general references, see the books \cite{zakharov2012kolmogorov} and \cite{nazarenko2011wave}, and the review paper \cite{newell2011wave}. 
+
+%Peierls \cite{Peierls1}, \cite{Peierls2}, ZaslavskiiSagdeev [110], Hasselmann [59, 60], Benney-Saffman-Newell [6, 7], 
+
+The WKE was rigorously verified for the Gibbs measure initial data by Lukkarinen and Spohn \cite{lukkarinen2011weakly}. Then the basic concepts of general wave turbulence were rigorously formulated by Buckmaster, Germain, Hani, Shatah \cite{buckmaster2021onset} and a non-trivial result that verified WKE for a short time scale was also proved by them. The WKE was proved for almost sharp time scale independently by Deng and Hani \cite{deng2021derivation} and Collot and Germain \cite{collot2019derivation}, \cite{collot2020derivation} using the ideas from the study of randomly initialized PDE. The full WKE for the sharp time was proved independently by the deep works of Deng and Hani \cite{deng2021full} and Staffilani and Tran \cite{staffilani2021wave} for a four-wave problem and a three-wave problem respectively. One key contribution of \cite{deng2021full} and \cite{staffilani2021wave} was the classification of Feynman diagrams in the contexts of normal form expansion and Liouville equation respectively. WKE for the space-inhomogeneous case was derived by Ampatzoglou, Collot, and Germain \cite{ampatzoglou2021derivation} for almost sharp time scale. The higher order correlation functions were studied by Deng and Hani \cite{deng2021propagation}.  
+
+(3) \underline{Previous papers about the dynamics of WKE:} There are also many papers about the dynamics of WKE itself. For references, see \cite{germain2020optimal}, \cite{gamba2020wave}, \cite{soffer2018dynamics}, \cite{soffer2020energy} and the reference therein.
+
+%(4) numerical simulation
+
+%(4) about boltzmann equation and randomized initial data
+
+
+
+
+
+
+
+
+
+

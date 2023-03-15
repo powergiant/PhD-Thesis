@@ -1,13 +1,161 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ampatzoglou2021derivation}
+I.~Ampatzoglou, C.~Collot, and P.~Germain.
+\newblock Derivation of the kinetic wave equation for quadratic dispersive
+  problems in the inhomogeneous setting.
+\newblock {\em arXiv preprint arXiv:2107.11819}, 2021.
+
+\bibitem{buckmaster2021onset}
+T.~Buckmaster, P.~Germain, Z.~Hani, and J.~Shatah.
+\newblock Onset of the wave turbulence description of the longtime behavior of
+  the nonlinear {S}chr{\"o}dinger equation.
+\newblock {\em Inventiones mathematicae}, 225(3):787--855, 2021.
+
+\bibitem{collot2019derivation}
+C.~Collot and P.~Germain.
+\newblock On the derivation of the homogeneous kinetic wave equation.
+\newblock {\em arXiv preprint arXiv:1912.10368}, 2019.
+
+\bibitem{collot2020derivation}
+C.~Collot and P.~Germain.
+\newblock Derivation of the homogeneous kinetic wave equation: longer time
+  scales.
+\newblock {\em arXiv preprint arXiv:2007.03508}, 2020.
+
+\bibitem{davidson2012methods}
+R.~Davidson.
+\newblock {\em Methods in nonlinear plasma theory}.
+\newblock Elsevier, 2012.
 
 \bibitem{deng2021full}
 Y.~Deng and Z.~Hani.
 \newblock Full derivation of the wave kinetic equation.
 \newblock {\em arXiv preprint arXiv:2104.11204}, 2021.
 
+\bibitem{deng2021derivation}
+Y.~Deng and Z.~Hani.
+\newblock On the derivation of the wave kinetic equation for {NLS}.
+\newblock In {\em Forum of Mathematics, Pi}, volume~9. Cambridge University
+  Press, 2021.
+
+\bibitem{deng2021propagation}
+Y.~Deng and Z.~Hani.
+\newblock Propagation of chaos and the higher order statistics in the wave
+  kinetic theory.
+\newblock {\em arXiv preprint arXiv:2110.04565}, 2021.
+
 \bibitem{deng2023derivation}
 Y.~Deng and Z.~Hani.
 \newblock Derivation of the wave kinetic equation: full range of scaling laws.
 \newblock {\em arXiv preprint arXiv:2301.07063}, 2023.
+
+\bibitem{dymov2021formal}
+A.~Dymov and S.~Kuksin.
+\newblock Formal expansions in stochastic model for wave turbulence 1: kinetic
+  limit.
+\newblock {\em Communications in Mathematical Physics}, 382:951--1014, 2021.
+
+\bibitem{dymov2023formal}
+A.~Dymov and S.~Kuksin.
+\newblock Formal expansions in stochastic model for wave turbulence 2: method
+  of diagram decomposition.
+\newblock {\em Journal of Statistical Physics}, 190(1):3, 2023.
+
+\bibitem{dymov2021large}
+A.~Dymov, S.~Kuksin, A.~Maiocchi, and S.~Vladuts.
+\newblock The large-period limit for equations of discrete turbulence.
+\newblock {\em arXiv preprint arXiv:2104.11967}, 2021.
+
+\bibitem{dymov2020zakharov}
+A.~V. Dymov and S.~B. Kuksin.
+\newblock On the zakharov--lvov stochastic model for wave turbulence.
+\newblock In {\em Doklady Mathematics}, volume 101, pages 102--109. Springer,
+  2020.
+
+\bibitem{faou2020linearized}
+E.~Faou.
+\newblock Linearized wave turbulence convergence results for three-wave
+  systems.
+\newblock {\em Communications in Mathematical Physics}, 378:807--849, 2020.
+
+\bibitem{gamba2020wave}
+I.~M. Gamba, L.~M. Smith, and M.-B. Tran.
+\newblock On the wave turbulence theory for stratified flows in the ocean.
+\newblock {\em Mathematical Models and Methods in Applied Sciences},
+  30(01):105--137, 2020.
+
+\bibitem{germain2020optimal}
+P.~Germain, A.~D. Ionescu, and M.-B. Tran.
+\newblock Optimal local well-posedness theory for the kinetic wave equation.
+\newblock {\em Journal of Functional Analysis}, 279(4):108570, 2020.
+
+\bibitem{jin2021cancellations}
+K.~Jin and X.~Ma.
+\newblock Cancellations of resonances and long time dynamics of cubic
+  {S}chr{\"o}dinger equation on $\mathbb{T}$.
+\newblock {\em Communications in Mathematical Physics}, 381(3):1309--1368,
+  2021.
+
+\bibitem{kuznetsov1972turbulence}
+E.~Kuznetsov.
+\newblock Turbulence of ion sound in a plasma located in a magnetic field.
+\newblock {\em Sov. Phys. JETP}, 35:310, 1972.
+
+\bibitem{lannes2013cauchy}
+D.~Lannes, F.~Linares, and J.-C. Saut.
+\newblock The cauchy problem for the euler--poisson system and derivation of
+  the zakharov--kuznetsov equation.
+\newblock {\em Studies in phase space analysis with applications to PDEs},
+  pages 181--213, 2013.
+
+\bibitem{lukkarinen2011weakly}
+J.~Lukkarinen and H.~Spohn.
+\newblock Weakly nonlinear {S}chr{\"o}dinger equation with random initial data.
+\newblock {\em Inventiones mathematicae}, 183(1):79--188, 2011.
+
+\bibitem{nazarenko2011wave}
+S.~Nazarenko.
+\newblock {\em Wave turbulence}, volume 825.
+\newblock Springer Science \& Business Media, 2011.
+
+\bibitem{newell2011wave}
+A.~C. Newell and B.~Rumpf.
+\newblock Wave turbulence.
+\newblock {\em Annual review of fluid mechanics}, 43:59--78, 2011.
+
+\bibitem{oh2015ornstein}
+T.~Oh.
+\newblock Ornstein-uhlenbeck process on abstract wiener spaces,
+  hypercontractivity, and logarithmic sobolev inequality.
+\newblock {\em Unpublished notes}, 2015.
+
+\bibitem{soffer2018dynamics}
+A.~Soffer and M.-B. Tran.
+\newblock On the dynamics of finite temperature trapped bose gases.
+\newblock {\em Advances in Mathematics}, 325:533--607, 2018.
+
+\bibitem{soffer2020energy}
+A.~Soffer and M.-B. Tran.
+\newblock On the energy cascade of 3-wave kinetic equations: beyond
+  kolmogorov--zakharov solutions.
+\newblock {\em Communications in Mathematical Physics}, 376(3):2229--2276,
+  2020.
+
+\bibitem{staffilani2021wave}
+G.~Staffilani and M.-B. Tran.
+\newblock On the wave turbulence theory for stochastic and random
+  multidimensional {KdV} type equations.
+\newblock {\em arXiv preprint arXiv:2106.09819}, 2021.
+
+\bibitem{zakharov1974three}
+V.~Zakharov and E.~Kuznetsov.
+\newblock On three dimensional solitons.
+\newblock {\em Zhurnal Eksp. Teoret. Fiz}, 66:594--597, 1974.
+
+\bibitem{zakharov2012kolmogorov}
+V.~E. Zakharov, V.~S. L'vov, and G.~Falkovich.
+\newblock {\em Kolmogorov spectra of turbulence {I}: {W}ave turbulence}.
+\newblock Springer Science \& Business Media, 2012.
 
 \end{thebibliography}

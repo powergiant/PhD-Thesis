@@ -1,1 +1,320 @@
-\chapter{Counting results in wave kinetic theory}
+\chapter{Counting results in wave kinetic theory}\label{chapter.numbertheory}
+
+
+\section{Number theoretic results}\label{sec.numbertheoryA}
+The mains results of this appendix is to prove Theorem \ref{th.numbertheory1} and Theorem \ref{th.numbertheory} 
+
+\begin{thm}\label{th.numbertheory1}
+Let $\Lambda(k)=(\beta_x k_x^2+\beta_2 k_2^2+\cdots\beta_d k_d^2)k_x$, $d\ge 3$, then for all $\beta\in [1,2]^d$, the following number theory estimate is true
+
+\begin{equation}\label{eq.numbertheory1}
+    \sup_{\substack{k,\sigma\in\mathbb{Z}_L^d\\k\ne 0,\ T\le L}} |k_x|T\#\left
+    \{\begin{matrix}
+k_1,k_2\in\mathbb{Z}_L^d \\
+|k_1|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1+k_2=k \\
+\Lambda(k_1)+\Lambda(k_2)=\Lambda(k)+\sigma+O(T^{-1})
+\end{matrix}
+\right\}\le L^{2d}.
+\end{equation}
+
+
+\end{thm}
+
+\begin{rem}
+The restriction $T\le L$ is not optimal. The optimal result is expected to be $T\le L^2$ for general $\beta$ and $T\le L^{d}$ for generic $\beta$. It is possible to apply circle method and probabilistic method in number theory method to prove the optimal result.
+\end{rem}
+
+\begin{rem}\label{rem.nottrue2d}
+\ref{th.numbertheory1} and \ref{th.numbertheory} is unlikely to be true when $d=2$. Because in this case, the quadratic term of $k_1$ in \eqref{eq.A11} becomes $3k_xk_{1x}^2+k_x|k_{1y}|^2+2k_{y}\cdot k_{1x} k_{1y}$ ($k_{1\perp}$ becomes $k_{1\perp}=k_y$), which is degenerate when $k_{y}^2=3k_x^2$. 
+\end{rem}
+
+\begin{thm}\label{th.numbertheory} Let $\Omega_k(k_1)\coloneq \Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)$ and $t$ be a large number, then given any smooth compactly supported $F(k)$ and smooth $g(s)$ satisfying $|g|(s)+|g'|(s)\lesssim 1/(1+s^2)$ and $\int_{\mathbb{R}} g(s) ds=c$, we have
+\begin{equation}\label{eq.asymptotics}
+    \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1) = cL^dt^{-1} \int F(k_1) \delta(\Omega_k(k_1)) dk_1+ O(L^{d-1}).
+\end{equation}
+in particular
+\begin{equation}\label{eq.asymptoticsbound}
+    \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1) \le  2ct^{-1}L^d D^{d-1}.
+\end{equation}
+\end{thm}
+
+% k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+% |k_1|,|k_2|\le L^\theta
+% \end{matrix}
+% :
+% \begin{matrix}
+% k_1-k_2+k_3=k \\
+% \Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(k)+n+O(T^{-1})
+% \end{matrix}
+% \right\}\le L^{2d+O(\theta)}
+% \end{equation}
+% More generally, the proof of this theorem works for many other choices of $\Lambda(k)$.
+% \end{thm}
+
+% \begin{rem}
+% Although the proof of Theorem \ref{th.numbertheory} works for much more general $\Lambda(k)$, it's quite hard to formulate a general theorem that covers all physically interesting cases. Therefore, we only illustrate the ideas by proving some special cases.
+% \end{rem}
+
+\begin{proof}[Proof of Theorem \ref{th.numbertheory1}]\eqref{eq.numbertheory1} is a corollary of the following lemma. 
+
+\begin{lem}\label{lem.rationallemma} For any $d\ge 4$ and $\beta$
+\begin{equation}
+    \sup_{\substack{k,\sigma\in\mathbb{Z}_L^d\\k\ne 0}} |k_x| \#\{k_1\in\mathbb{Z}^d_L,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}\lesssim L^{d-1} .
+\end{equation}
+\end{lem}
+\begin{proof}
+Define $\mathcal{D}_{k,\sigma}=\#\{k_1\in\mathbb{Z}^d_L,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}$, then we just need to show that 
+\begin{equation}\label{eq.goalofrationallemma}
+    \sup_{\substack{\substack{k,\sigma\in\mathbb{Z}_L^d\\k\ne 0}}} \#\mathcal{D}_{k,\sigma}\lesssim L^{d-1} .
+\end{equation}
+
+We prove \eqref{eq.goalofrationallemma} using volume bound. The proof is divided into three steps.
+
+% \textbf{Step 1.} In this step, we reduce Lemma \ref{lem.rationallemma} to a simpler lattice point counting problem.
+
+% A simple calculation suggests that
+% \begin{equation}
+% &\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)
+% \\
+% =&
+% \end{equation}
+
+
+
+\textbf{Step 1.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemmastep1}
+    \#\mathcal{D}_{k,\sigma}\le L^{d} \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}),
+\end{equation}
+where $\mathcal{D}^{\mathbb{R}}_{k,\sigma}=\{k_1\in \mathbb{R}^d,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}$.
+
+\eqref{eq.goalofrationallemmastep1} can be proved from the following claim.
+
+\textit{Claim.} If $k_1\in \mathcal{D}_{k,\sigma}$, then $D_{1/(2L)}(k_1)\subseteq \mathcal{D}^{\mathbb{R}}_{k,\sigma}$. Here  $D_{r}(k_1)=\{k_1'\in \mathbb{R}^d: \sup_{i=1,\cdots, d} |(k_1')_i-(k_1)_i|\le r\}$ ($(k_1)_i$ are the components of $k_1$). 
+
+We prove the claim now. $x\in \mathcal{D}_{k,\sigma}$ is equivalent to $\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})$. For any $k_1'\in D_{1/(2L)}(k_1)$, $|k_1'-k_1|\lesssim 1/L$, because $\Lambda$ is a Lifschitz function, we have $|\Lambda(k_1)-\Lambda(k_1')|\lesssim L^{-1}$. Therefore, 
+\begin{equation}
+\begin{split}
+    &|\Lambda_{\beta}(k_1')+\Lambda_{\beta}(k-k_1')-\Lambda(k)-\sigma|
+    \\
+    \le &|\Lambda_{\beta}(k_1)+\Lambda_{\beta}(k-k_1)-\Lambda(k)-\sigma|+|\Lambda_{\beta}(k_1)-\Lambda_{\beta}(k_1')|+|\Lambda_{\beta}(k-k_1)-\Lambda_{\beta}(k-k_1')|
+    \\
+    \lesssim & L^{-1}.
+\end{split}
+\end{equation}
+Therefore, we have $\Lambda(k_1')+\Lambda(k-k_1')-\Lambda(k)=\sigma+O(L^{-1})$ and thus $k_1'\in \mathcal{D}^{\mathbb{R}}_{k,\sigma}$. This is true for any $k_1'\in D_{1/(2L)}(k_1)$, so $D_{1/(2L)}(k_1)\subseteq \mathcal{D}^{\mathbb{R}}_{k,\sigma}$.
+
+Now we prove \eqref{eq.goalofrationallemmastep1}. Since for different $k_1,k_1'\in \mathcal{D}_{k,\sigma}$, $D_{1/(2L)}(k_1)\cap D_{1/(2L)}(k_1')=\emptyset$, we have 
+\begin{equation}
+    \sum_{k_1\in \mathcal{D}_{k,\sigma}} \text{vol}( D_{1/(2L)}(k_1))=\text{vol}\left( \bigcup_{k_1\in \mathcal{D}_{k,\sigma}} D_{1/(2L)}(k_1)\right)\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}).
+\end{equation}
+The left hand side equals to $L^{-d}\#\mathcal{D}_{k,\sigma}$, so we get
+\begin{equation}
+    L^{-d}\#\mathcal{D}_{k,\sigma}\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}),
+\end{equation}
+which implies \eqref{eq.goalofrationallemmastep1}.
+
+\textbf{Step 2.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemmastep2}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma})\le L^{-1} |k_x|^{-1}.
+\end{equation}
+Combining \eqref{eq.goalofrationallemmastep1} and \eqref{eq.goalofrationallemmastep2}, we get
+\eqref{eq.goalofrationallemma}, which proves Lemma \ref{lem.rationallemma}.
+
+Given a vector $k$, we denote the first component of $k$ by $k_x$ and the vector formed by other components by $k_{\perp}$. Then $k=(k_x, k_{\perp})$, $k_1=(k_{1x}, k_{1\perp})$ and a simple calculation suggests that
+\begin{equation}\label{eq.A11}
+\begin{split}
+    &\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)
+ \\
+ =&3k_xk_{1x}^2+k_x|k_{1\perp}|^2+2k_{\perp}\cdot k_{1\perp}k_{1x}-(3k_x^2+|k_{\perp}|^2)k_{1x}-2k_x k_{\perp}\cdot k_{1\perp}
+\end{split}
+\end{equation}
+
+If we fix $k_{1x}$ to be a constant $c$ in $\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)$ and denote the resulting function by $F_{k,\sigma, c}$, then 
+\begin{equation}
+    F_{k,\sigma, c}(k_{1\perp})=k_x|k_{1\perp}|^2+2(c-k_x)k_{\perp}\cdot k_{1\perp}+3k_x c^2-(3k_x^2+|k_{\perp}|^2)c.
+\end{equation}
+
+Therefore, if we define $\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c)$ by
+\begin{equation}
+\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c)=\{k_{1\perp}\in \mathbb{R}^{d-1},\ |k_{1\perp}|\lesssim 1:F_{k,\sigma, c}(k_{1\perp})=\sigma+O(L^{-1})\}
+\end{equation}
+
+Then 
+\begin{equation}
+    \mathcal{D}^{\mathbb{R}}_{k,\sigma}=\cup_{|c|\lesssim 1} \mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c)
+\end{equation}
+
+By Fubini theorem (or coarea formula), we get
+\begin{equation}\label{eq.rationallemmastep2'}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma})=\int_{|c|\lesssim 1} \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c)) dc.
+\end{equation}
+
+To prove \eqref{eq.goalofrationallemmastep2}, it suffices to find an upper of $\text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c))$. Since $F_{k,\sigma, c}(k_{1\perp})$ is a quadratic function in $k_{1\perp}$ whose degree 2 term is $k_x|k_{1\perp}|^2$, a translation $k_{1\perp}\rightarrow k_{1\perp}-(c-k_x)k_{1\perp}/k_x$ transforms $F_{k,\sigma, c}(k_{1\perp})=\sigma+O(L^{-1})$ to $k_x|k_{1\perp}|^2=C_{k,\sigma,c}+O(L^{-1})$.
+
+Therefore, 
+\begin{equation}\label{eq.rationallemmastep2''}
+\begin{split}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c))\le &\text{vol}(\{k_{1\perp}\in \mathbb{R}^{d-1}:k_x|k_{1\perp}|^2=C_{k,\sigma,c}+O(L^{-1})\})
+    \\
+    =& \text{vol}(\{k_{1\perp}\in \mathbb{R}^{d-1}:|k_{1\perp}|^2=C_{k,\sigma,c}/k_x+O(L^{-1}|k_x|^{-1})\})
+    \\
+    \lesssim& L^{-1}|k_x|^{-1}
+\end{split}
+\end{equation}
+Here the last inequality follows from the elementary fact that $\text{vol}(\{x\in \mathbb{R}^n:|x|^2=R^2+O(\eta)\})\lesssim \eta$ when $n\ge 2$. Notice here the dimension of $k_{1\perp}$ is $d-1$ which is greater than $2$, so this fact is applicable.
+
+Combining \eqref{eq.rationallemmastep2'} and \eqref{eq.rationallemmastep2'}, we proves \eqref{eq.goalofrationallemmastep2}. Therefore, we complete the proof of Lemma \ref{lem.rationallemma}
+\end{proof}
+
+We now return to the proof of Theorem \ref{th.numbertheory1}. Define 
+\begin{equation}
+    \mathcal{D}_{k,\sigma}([-T^{-1},T^{-1} ])=\{k_1\in\mathbb{Z}^d_L,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}
+\end{equation}
+
+
+Let us prove \eqref{eq.numbertheory1}. For any $T\le L$, let $N=[L/T]+1$, then $\cup_{j=-N}^N [jL^{-1}, (j+1)L^{-1}]$ is a cover of $[-T^{-1}, T^{-1}]$. Therefore, $\cup_{j=-N}^N\mathcal{D}_{k,\sigma}([jL^{-1}, (j+1)L^{-1}])$ is a cover of $\mathcal{D}_{k,\sigma}([-T^{-1}$ $,T^{-1} ])$
+
+By Lemma \ref{lem.rationallemma} we get 
+\begin{equation}\label{eq.thrationalexpand}
+    \#\mathcal{D}_{k,\sigma}([-T^{-1},T^{-1} ])\lesssim \sum_{j=-N}^N\#\mathcal{D}_{k,\sigma}([jL^{-1}, (j+1)L^{-1}])\lesssim NL^{d-1} |k_x|^{-1}\lesssim L^dT^{-1}|k_x|^{-1}.
+\end{equation}
+
+This proves \eqref{eq.numbertheory1}.
+\end{proof}
+
+
+\begin{proof}[Proof of Theorem \ref{th.numbertheory}] The inequality in Theorem \ref{th.numbertheory} follows from the equality because $\int F(k_1)$ $ \delta(\Omega_k(k_1)) dk_1\le D^{d-1}$, $t\le L^{-\theta}\alpha^{-2}\le L^{1-\theta}$ and $D^{d-1}\lesssim L^{\theta}$ if $L$ is large enough.
+
+Let $k_{1}=\frac{K_1}{L}$ and $k=\frac{K}{L}$. Apply the high dimensional Euler-Maclaurin formula, we know that
+\begin{equation}
+\begin{split}
+    \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1)=&\int g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right) dK_1 
+    \\
+    +& \sum_{ |J|_{\infty} = 1}\int_{\mathbb{R}^d} \{K_1\}^{J} \partial_{K_1}^{J}\left(g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right)\right) dK_1
+\end{split}
+\end{equation}
+
+We have the following estimates
+\begin{equation}\label{eq.asymptoticlemmaeq1}
+    \int g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right) dK_1 =L^d\int g(t\Omega_k(k_1)) F(k_1) dk_1 
+\end{equation}
+and
+\begin{equation}\label{eq.asymptoticlemmaeq2}
+\begin{split}
+    &\int_{\mathbb{R}^d} \{K_1\}^{J} \partial_{K_1}^{J}\left(g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right)\right) dK_1
+    \\
+    = &L^{d-|J|}\int_{\mathbb{R}^d} \{Lk_1\}^{J} \partial_{k_1}^{J}\left(g(t\Omega_k(k_1)) F(k_1)\right) dk_1
+    \\
+    = &O\left(L^{d-|J|}\int_{\mathbb{R}^d}  |\partial_{k_1}^{J}\left(g(t\Omega_k(k_1))F(k_1)|\right) dk_1\right)
+    \\
+    = &O\left(\sum^{|J|}_{j=1}L^{d-j}t^{j}\int_{\mathbb{R}^d}  g^{(j)}(t\Omega_k(k_1))F^{(j)}(k_1) dk_1 \right)
+\end{split}
+\end{equation}
+Here in the second equality we apply the fact that $\{Lk_1\}\le 1$. In the last line we define $g^{(j)}=\sum_{j'\le j} \left|\frac{d^{j'}}{d^{j'}s}g(s)\right|$ and $F^{(j)}(k_1)=\sum_{|J'|\le j}|\partial^{J'}_{k_1}F(k_1)|$ (Here $J'$ is a multi-index) and we also use the fact that $|\partial_{k_1}^{j}(g(t\Omega_k(k_1)))|\le t^{j} g^{(j)}(t\Omega_k(k_1))$. 
+
+Now we just need to show that 
+\begin{equation}\label{eq.asymptoticlemmaeq3}
+    \int g(t\Omega_k(k_1)) F(k_1) dk_1 =ct^{-1} \int F(k_1) \delta(\Omega_k(k_1)) dk_1+ O(t^{-2})
+\end{equation}
+and 
+\begin{equation}\label{eq.asymptoticlemmaeq4}
+    \int_{\mathbb{R}^d}  g^{(j)}(t\Omega_k(k_1))F^{(j)}(k_1) dk_1 \le t^{-1}
+\end{equation}
+
+In fact, if we substitute \eqref{eq.asymptoticlemmaeq3} into \eqref{eq.asymptoticlemmaeq1}, we get the main term in \eqref{eq.asymptotics}. If we substitute \eqref{eq.asymptoticlemmaeq4} into \eqref{eq.asymptoticlemmaeq2}, we know that the error terms come from \eqref{eq.asymptoticlemmaeq2} can be bounded by $\sum^{|J|}_{j=1}L^{d-j}t^{j-1}\le |J| L^{d-1}$. Therefore, \eqref{eq.asymptoticlemmaeq3} and \eqref{eq.asymptoticlemmaeq4} implies the lemma.
+
+By coarea formula we know that
+\begin{equation}
+    \int g(t\Omega_k(k_1)) F(k_1) dk_1 =\int g(t\omega) \underbrace{\left(\int F(k_1) \delta(\Omega_k(k_1)-\omega)dk_1\right) }_{h(\omega)} d\omega 
+\end{equation}
+
+Notice that $h(\omega)$ is differentiable, then we have
+\begin{equation}
+\begin{split}
+    \int g(t\omega)h(\omega) d\omega=&\int g(t\omega)(h(\omega)-h(0)) d\omega + h(0)\int g(t\omega)d\omega
+    \\
+    = &ct^{-1}h(0) +O(t^{-2}). 
+\end{split}
+\end{equation}
+
+Therefore, 
+\begin{equation}
+\begin{split}
+    &\int g(t\Omega_k(k_1)) F(k_1) dk_1 =\int g(t\omega)h(\omega)  d\omega 
+    \\
+    =&ct^{-1}h(0) +O(t^{-2})=ct^{-1}\left(\int F(k_1) \delta(\Omega_k(k_1))dk_1\right)  +O(t^{-2})
+\end{split}
+\end{equation}
+Using the same argument we can also prove \eqref{eq.asymptoticlemmaeq4}, so we complete the proof of the Theorem \ref{th.numbertheory}.
+\end{proof}
+% \textbf{Step 1.} (Reduction)
+
+% To prove \eqref{eq.asymptotics}, without loss of generality, we just need to consider
+% \begin{equation}
+%     \sum_{k_1\in \mathbb{Z}_{L+}^d} g(t\Omega_k(k_1)) F(k_1).
+% \end{equation}
+% Here $\mathbb{Z}_{L+}^d\defeq \{(k^{(1)}, \cdots, k^{(d)})\in \mathbb{Z}_{L}^d: k^{(j)}\ge 0,\ \forall j\}$. To prove the general case, we can replace $F(k^{(1)}_1,\cdots,k^{(d)}_1)$ by $F(\pm k^{(1)}_1,\cdots,\pm k^{(d)}_1)$.
+
+
+% Let $k=(k^{(1)}, \cdots, k^{(d)})$, $k_1=(k_1^{(1)}, \cdots, k_1^{(d)})$, $g'(s)=\frac{d}{ds} g(s)$ and $F'(k)=\partial_{k^{(1)}}\cdots\partial_{k^{(d)}}F(k)$. Then we get
+% \begin{equation}
+%     g(tx)=\int_{tx}^{\infty} g'(s) ds=\int \chi_{|tx|} g'(s)ds
+% \end{equation}
+% \begin{equation}
+%     F(k)=\int_{k^{(1)}}^{\infty}\cdots\int_{k^{(d)}}^{\infty}  F'(m)dm^{(1)}\cdots dm^{(d)}
+% \end{equation}
+
+
+% Substituting into the left hand side of \eqref{eq.asymptotics}, we get
+% \begin{equation}
+%     \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1).
+% \end{equation}
+
+
+\section{High Dimensional Euler-Maclaurin Formula}
+
+\begin{thm}
+Assume that $J=(j_1,\cdots,j_d)$ is a multi-index. Given a vector $K=(K^{(1)},\cdots,K^{(d)})$, define $K^J=\left(K^{(1)}\right)^{j_1}\cdots\left(K^{(d)}\right)^{j_d}$. Given a number $a$, $\{a\}=a-[a]$ is its fractional part, $\{K\}\coloneq(\{K^{(1)}\},\cdots,\{K^{(d)}\})$. We also define $|J|_{\infty}=\sup_{1\le n\le d} j_{n}$, $|J|=\sum_{1\le n\le d} j_{n}$. Then we have
+
+\begin{equation}\label{eq.EulerMaclaurin}
+    \sum_{K\in\mathbb{Z}^d} f(K)=\int_{\mathbb{R}^d} f(K)dK+\sum_{ |J|_{\infty} = 1}\int_{\mathbb{R}^d} \{K\}^{J} \partial_K^{J}f(K) dK
+\end{equation}
+
+\end{thm}
+\begin{proof}
+This can be proved by induction.
+
+When $d=1$, \eqref{eq.EulerMaclaurin} becomes
+\begin{equation}
+    \sum_{K\in\mathbb{Z}} f(K)=\int_{\mathbb{R}} f(K)dK+\int_{\mathbb{R}} \{K\} \partial_K f(K) dK
+\end{equation}
+
+This is the standard Euler-Maclaurin formula which can be proved by integration by parts in the second integral of the right hand side.
+
+If the formula is true in dimension $d$, we prove it for dimension $d+1$. Assume that $K=(\widetilde{K},K^{(d+1)})$ is a $d+1$ dimensional vector, then apply the induction assumption 
+\begin{equation}
+    \sum_{\widetilde{K}\in\mathbb{Z}^d} f(\widetilde{K},K^{(d+1)})=\int_{\mathbb{R}^d} f(\widetilde{K},K^{(d+1)})d\widetilde{K}+\sum_{ |\widetilde{J}|_{\infty} = 1}\int_{\mathbb{R}^d} \{\widetilde{K}\}^{\widetilde{J}} \partial_{\widetilde{K}}^{\widetilde{J}}f(\widetilde{K},K^{(d+1)}) d\widetilde{K}.
+\end{equation}
+
+Sum over $K^{(d+1)}$ and apply $d=1$ Euler-Maclaurin formula we get
+\begin{equation}
+\begin{split}
+    &\sum_{K^{(d+1)}\in\mathbb{Z}}\sum_{\widetilde{K}\in\mathbb{Z}^d} f(\widetilde{K},K^{(d+1)})
+    \\
+    =&\int_{\mathbb{R}^d} \sum_{K^{(d+1)}\in\mathbb{Z}}f(\widetilde{K},K^{(d+1)})d\widetilde{K}+\sum_{ |\widetilde{J}|_{\infty} = 1}\int_{\mathbb{R}^d} \{\widetilde{K}\}^{\widetilde{J}} \partial_{\widetilde{K}}^{\widetilde{J}}\sum_{K^{(d+1)}\in\mathbb{Z}}f(\widetilde{K},K^{(d+1)}) d\widetilde{K}.
+    \\
+    =&\int_{\mathbb{R}^d} \int_{\mathbb{R}}f(\widetilde{K},K^{(d+1)})dK^{(d+1)} d\widetilde{K}+\int_{\mathbb{R}^d} \int_{\mathbb{R}}\{K^{(d+1)}\}\partial_{K^{(d+1)}}f(\widetilde{K},K^{(d+1)})dK^{(d+1)} d\widetilde{K}
+    \\
+    +&\sum_{ |\widetilde{J}|_{\infty} = 1}\int_{\mathbb{R}^d}\int_{\mathbb{R}} \{\widetilde{K}\}^{\widetilde{J}} \partial_{\widetilde{K}}^{\widetilde{J}}f(\widetilde{K},K^{(d+1)})dK^{(d+1)} d\widetilde{K}
+    \\
+    +&\sum_{ |\widetilde{J}|_{\infty} = 1}\int_{\mathbb{R}^d}\int_{\mathbb{R}}\{K^{(d+1)}\}\partial_{K^{(d+1)}} \{\widetilde{K}\}^{\widetilde{J}} \partial_{\widetilde{K}}^{\widetilde{J}}f(\widetilde{K},K^{(d+1)})dK^{(d+1)} d\widetilde{K}.
+    \\
+    =&\int_{\mathbb{R}^{d+1}} f(K)dK + \sum_{ |J|_{\infty} = 1}\int_{\mathbb{R}^d} \{K\}^{J} \partial_K^{J}f(K) dK
+\end{split}
+\end{equation}
+In the last step, $J=(\widetilde{J},j^{(d+1)})$. In the second equality, the second term corresponds to $\widetilde{J}=0$ and $j^{(d+1)}=1$, the third term corresponds to $\widetilde{J}\ne 0$ and $j^{(d+1)}=0$ and the fourth term corresponds to $\widetilde{J}\ne 0$ and $j^{(d+1)}=1$.
+\end{proof}

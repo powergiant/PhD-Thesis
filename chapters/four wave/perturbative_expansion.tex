@@ -1,5 +1,5 @@
 \section{The Perturbation Expansion}
-In this section, we calculate the renormalized approximate series and introduce Feynman diagrams to represent terms in this series. Then we bound the error of this approximation by the bootstrap method, assuming several propositions about the upper bounds of higher order terms. We will prove these propositions in the rest part of the paper.
+In this section, we calculate the renormalized approximate series and introduce Feynman diagrams to represent terms in this series. We will give an incomplete proof of these propositions in the rest part of the paper.
 
 
 \subsection{The renormalization argument} In this section, we derive the equation for Fourier coefficients and specify the renormalization argument mentioned in the introduction.
@@ -438,8 +438,6 @@ Here in the second equality, we use the fact that $\sum_{l(T)\le N}=\sum_{\subst
 Therefore, we complete the proof of this lemma.
 \end{proof}
 
-\subsection{Estimates of the approximation solution}
-
 \subsubsection{Estimates of tree terms} By \eqref{eq.approxerror}, in order to control the approximation error $Err$, it suffices to get upper bounds of tree terms $\mathcal{J}_T$. We state the upper bound in the proposition below and delay its proof to section \ref{sec.treetermsupperbound}.
 
 Let us introduce a definition before state the proposition.
@@ -451,23 +449,10 @@ Given a property $A$, we say $A$ happens $L$-certainly if the probability that $
 \begin{prop}\label{prop.treetermsupperbound}
 We have $L$-certainly that 
 \begin{equation}
-    \sup_k \langle k\rangle^p |(\mathcal{J}_T)_k|\le L^{O(\theta)} \rho^{l(T)}.
+    \sup_t\sup_k  |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}.
 \end{equation}
 Here $(\mathcal{J}_T)_k$ is the Fourier coefficients of $\mathcal{J}_T$ and 
 \begin{equation}
-    \rho=\min(\alpha^3t^2,\alpha^2L^2).
+    \rho=\min(\alpha^{\frac{3}{2}}t,\alpha L).
 \end{equation}
-
-\textbf{there may be a square root in the definition of $\rho$}
 \end{prop}
-
-\subsubsection{Linearization around the approximation solution}
-
-\begin{prop}\label{prop.operatorupperbound}
-
-\end{prop}
-
-\subsection{Bound the error of the approximation}\label{sec.errorw}
-
-\subsection{Proof of the main theorem}\label{sec.proofmain} 
-

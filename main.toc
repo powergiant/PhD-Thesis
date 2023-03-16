@@ -63,23 +63,19 @@
 \contentsline {subsubsection}{Some basic definitions from graph theory}{96}{section*.47}%
 \contentsline {subsubsection}{Connection between iteration and trees}{98}{section*.49}%
 \contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{100}{section*.51}%
-\contentsline {subsection}{\numberline {3.2.3}Estimates of the approximation solution}{102}{subsection.3.2.3}%
 \contentsline {subsubsection}{Estimates of tree terms}{102}{section*.52}%
-\contentsline {subsubsection}{Linearization around the approximation solution}{103}{section*.53}%
-\contentsline {subsection}{\numberline {3.2.4}Bound the error of the approximation}{103}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Proof of the main theorem}{103}{subsection.3.2.5}%
 \contentsline {section}{\numberline {3.3}Lattice points counting and convergence results}{103}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Refined expression of coefficients}{104}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Refined expression of coefficients}{103}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}An upper bound of coefficients in expansion series}{106}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Couples and the renormalized Wick theorem}{111}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}Couples and the renormalized Wick theorem}{110}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Counting lattice points}{121}{subsection.3.3.4}%
-\contentsline {subsubsection}{Basic ideas for counting lattice points}{122}{section*.64}%
-\contentsline {subsubsection}{The cutting operation and its properties}{124}{section*.67}%
-\contentsline {subsubsection}{Combinatorial properties of couples}{127}{section*.70}%
-\contentsline {subsubsection}{Counting results and their proof}{134}{section*.73}%
-\contentsline {subsection}{\numberline {3.3.5}An upper bound of tree terms}{147}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Norm estimate of random matrices}{152}{subsection.3.3.6}%
-\contentsline {chapter}{\numberline {4}Counting results in wave kinetic theory}{153}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Number theoretic results in three wave models}{153}{section.4.1}%
-\contentsline {section}{\numberline {4.2}High Dimensional Euler-Maclaurin Formula}{158}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Number theoretic results in four wave models}{159}{section.4.3}%
+\contentsline {subsubsection}{Basic ideas for counting lattice points}{121}{section*.63}%
+\contentsline {subsubsection}{The cutting operation and its properties}{124}{section*.66}%
+\contentsline {subsubsection}{Combinatorial properties of couples}{126}{section*.69}%
+\contentsline {subsubsection}{Counting results and their proof}{133}{section*.72}%
+\contentsline {subsection}{\numberline {3.3.5}An upper bound of tree terms}{146}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Norm estimate of random matrices}{151}{subsection.3.3.6}%
+\contentsline {chapter}{\numberline {4}Counting results in wave kinetic theory}{152}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Number theoretic results in three wave models}{152}{section.4.1}%
+\contentsline {section}{\numberline {4.2}High Dimensional Euler-Maclaurin Formula}{157}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Number theoretic results in four wave models}{158}{section.4.3}%

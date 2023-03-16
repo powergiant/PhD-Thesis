@@ -16,7 +16,7 @@ In section \ref{sec.numbertheory}, we use couple to establish an lattice points 
 In section \ref{sec.treetermsupperbound} and section \ref{sec.randommatrices}, we apply the lattice points counting result to derive upper bounds for  $\mathcal{J}_{T,k}$ and $\mathcal{P}_T$ respectively. This finishes the proof of Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} and therefore the proof of the main theorem.
 
 
-\subsection{Refined expression of coefficients}\label{sec.refexp} From \eqref{eq.treeterm}, it is easy to show that $\mathcal{J}_{T,k}$ are polynomials of $\xi$. In this section, we calculate the coefficients of $\mathcal{J}_{T,k}$ using the definition \eqref{eq.treeterm} of them.
+\subsection{Refined expression of coefficients}\label{sec.refexp} From \eqref{eq.treeterm.threewave}, it is easy to show that $\mathcal{J}_{T,k}$ are polynomials of $\xi$. In this section, we calculate the coefficients of $\mathcal{J}_{T,k}$ using the definition \eqref{eq.treeterm.threewave} of them.
 
 Notice that all non-leaf nodes other than the root in a tree have degree $3$. For convenience, we add a new edge, called \underline{leg} $\mathfrak{l}$, to the root node, which makes the root also of degree $3$. This process is illustrated by Figure \ref{fig.leg}.
     \begin{figure}[H]
@@ -113,16 +113,16 @@ Now we calculate the coefficients of $\mathcal{J}_{T,k}$.
 
 Let $\mathcal{J}_T$ be terms defined in Definition \ref{def.treeterms}, then their Fourier coefficients $\mathcal{J}_{T,k}$ are degree $l$ polynomials of $\xi$ given by the following formula
 
-\begin{equation}\label{eq.coefterm}
+\begin{equation}\label{eq.coefterm.threewave}
 \mathcal{J}_{T,k}=\left(\frac{i\lambda}{L^{d}}\right)^l\sum_{k_1,\, k_2,\, \cdots,\, k_{l+1}} H^T_{k_1\cdots k_{l+1}}  \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{l+1}}   
 \end{equation}
 where $H^T_{k_1\cdots k_{l+1}}$ is given by
-\begin{equation}\label{eq.coef}
+\begin{equation}\label{eq.coef.threewave}
 H^T_{k_1\cdots k_{l+1}}=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}}\Omega_{\mathfrak{n}}-\nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})|k_{\mathfrak{e}}|^2} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} %\prod_{\mathfrak{n}\in T_{\text{in}} %\textit{with children $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ }}
 \ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}\ \prod_{\mathfrak{e}\in T_{\text{in}}}\iota_{\mathfrak{e}}k_{\mathfrak{e},x} ,
 \end{equation}
 and $\iota$, $A_{\mathfrak{n}}$, $S_{\mathfrak{n}}$, $\Omega_{\mathfrak{n}}$ are defined by 
-\begin{equation}\label{eq.iotadef}
+\begin{equation}\label{eq.iotadef.threewave}
     \iota_{\mathfrak{e}}=\begin{cases}
         +1 \qquad \textit{if $\mathfrak{e}$ pointing inwards to $\mathfrak{n}$}
         \\
@@ -137,7 +137,7 @@ and $\iota$, $A_{\mathfrak{n}}$, $S_{\mathfrak{n}}$, $\Omega_{\mathfrak{n}}$ are
             \{t_{\mathfrak{r}}\le t\} \qquad\qquad\qquad\  \textit{if $\mathfrak{n}= \mathfrak{r}$ }
         \end{cases}
 \end{equation}
-\begin{equation}\label{eq.defnS_n}
+\begin{equation}\label{eq.defnS_n.threewave}
     S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}
 \end{equation}
 \begin{equation}
@@ -147,27 +147,27 @@ For root node $\mathfrak{r}$, we impose the constrain that $k_{\mathfrak{r}}=k$ 
 \end{lem}
 
 \begin{proof}
-We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm} and \eqref{eq.coef} satisfies the recursive formula \eqref{eq.treeterm} by a direct substitution, so they are the unique solution of that recursive formula, and this proves Lemma \ref{lem.treeterms}.
+We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by a direct substitution, so they are the unique solution of that recursive formula, and this proves Lemma \ref{lem.treeterms}.
 \end{proof}
 
 
 
 \subsection{An upper bound of coefficients in expansion series}\label{sec.uppcoef} In this section, we derive an upper bound for coefficients $H^T_{k_1\cdots k_{l+1}}$.
 
-Notice that in \eqref{eq.coefterm}, $H^T_{k_1\cdots k_{l+1}}$ are integral of some oscillatory functions. An upper bound can be derived by the standard integration by parts arguments.
+Notice that in \eqref{eq.coefterm.threewave}, $H^T_{k_1\cdots k_{l+1}}$ are integral of some oscillatory functions. An upper bound can be derived by the standard integration by parts arguments.
 
 Associate each $\mathfrak{n}\in T_{\text{in}}$ with two variables $a_{\mathfrak{n}}$, $b_{\mathfrak{n}}$. Then we define
-\begin{equation}\label{eq.defF_T}
+\begin{equation}\label{eq.defF_T.threewave}
 F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}})=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}} a_{\mathfrak{n}} - \nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})b_{\mathfrak{n}}} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} 
 \end{equation}
 
 \begin{lem}\label{lem.boundcoef'}
 We have the following upper bound for $F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})$,
-\begin{equation}\label{eq.boundcoef'}
+\begin{equation}\label{eq.boundcoef'.threewave}
     \sup_{\{b_{\mathfrak{n}}\}_{\mathfrak{n}}\lesssim 1} |F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{1}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}.
 \end{equation}
 Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the two sequences $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$, $\{r_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by following recursive formula
-\begin{equation}\label{eq.q_n'}
+\begin{equation}\label{eq.q_n'.threewave}
     q_{\mathfrak{n}}=
     \begin{cases}
     a_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -175,7 +175,7 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
     a_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if $\mathfrak{n}\neq\mathfrak{r}$ and $\mathfrak{n}'$ is the parent of $\mathfrak{n}$.}
     \end{cases}
 \end{equation}
-\begin{equation}\label{eq.r_n'}
+\begin{equation}\label{eq.r_n'.threewave}
     r_{\mathfrak{n}}=
     \begin{cases}
     b_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -188,7 +188,7 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
 % Q=\{\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}:q_{\mathfrak{n}}= q_{\mathfrak{n}}(),\ \forall\mathfrak{n}\in T_{\text{in}}\}    
 % \end{equation}
 % and the set $Q_{\mathfrak{n}}$ is defined inductively by 
-% \begin{equation}\label{eq.treeterm}
+% \begin{equation}\label{eq.treeterm.threewave}
 %     Q_{\mathfrak{n}}=
 %     \begin{cases}
 %     \{a_{\mathfrak{r}}\}, \qquad\qquad\qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -199,12 +199,12 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
 \end{lem}
 \begin{proof} The lemma is proved by induction.
 
-For a tree $T$ contains only one node $\mathfrak{r}$, $F_{T}=1$ and \eqref{eq.boundcoef'} is obviously true.
+For a tree $T$ contains only one node $\mathfrak{r}$, $F_{T}=1$ and \eqref{eq.boundcoef'.threewave} is obviously true.
 
-Assume that \eqref{eq.boundcoef'} is true for trees with $\le n-1$ nodes. We prove the $n$ nodes case. 
+Assume that \eqref{eq.boundcoef'.threewave} is true for trees with $\le n-1$ nodes. We prove the $n$ nodes case. 
 
-For general $T$, let $T_1$, $T_2$ be the two subtrees and $\mathfrak{n}_1$, $\mathfrak{n}_2$ be the two children of the root $\mathfrak{r}$, then by the definition of $F_T$\eqref{eq.defF_T}, we get
-\begin{equation}\label{eq.lemboundcoef'1}
+For general $T$, let $T_1$, $T_2$ be the two subtrees and $\mathfrak{n}_1$, $\mathfrak{n}_2$ be the two children of the root $\mathfrak{r}$, then by the definition of $F_T$\eqref{eq.defF_T.threewave}, we get
+\begin{equation}\label{eq.lemboundcoef'1.threewave}
 \begin{split}
     F_{T}(t)=&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}}it_{\mathfrak{n}} a_{\mathfrak{n}} - \nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})b_{\mathfrak{n}}} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}}    
     \\
@@ -219,7 +219,7 @@ For general $T$, let $T_1$, $T_2$ be the two subtrees and $\mathfrak{n}_1$, $\ma
 We do integration by parts in the above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are three inequality constrains, $t_{\mathfrak{r}}\le t$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. 
 
 
-% \begin{equation}\label{eq.lemboundcoefexpand}
+% \begin{equation}\label{eq.lemboundcoefexpand.threewave}
 % \begin{split}
 %     F_{T}(t)=&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
 %     \\
@@ -236,7 +236,7 @@ We do integration by parts in the above integrals using Stokes formula. Notice t
 %     =& \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II})
 % \end{split}
 % \end{equation}
-\begin{equation}\label{eq.lemboundcoefexpand}
+\begin{equation}\label{eq.lemboundcoefexpand.threewave}
 \begin{split}
     F_{T}(t)=\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{it_{\mathfrak{r}}(a_{\mathfrak{r}}+T^{-1}_{\text{max}}\, \text{sgn}(a_{\mathfrak{r}}))- \nu(t-t_{\mathfrak{r}})b_{\mathfrak{r}}}  
     \\
@@ -260,15 +260,15 @@ We do integration by parts in the above integrals using Stokes formula. Notice t
 = \frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{II}) &&
 \end{flalign*}
 
-Here $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand}, so the last equality of \eqref{eq.lemboundcoefexpand} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
+Here $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T.threewave}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand.threewave}, so the last equality of \eqref{eq.lemboundcoefexpand.threewave} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
 
-We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
+We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoef'.threewave}.
 
 A direct calculation gives that 
 \begin{equation}
     F_{I}(t)=e^{it a_{\mathfrak{r}} } F_{T_1}(t)F_{T_2}(t).
 \end{equation}
-Then the induction assumption implies that $\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{I}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
+Then the induction assumption implies that $\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{I}$ can be bounded by the right hand side of \eqref{eq.boundcoef'.threewave}.
 
 Another direct calculation gives that 
 \begin{equation}
@@ -285,11 +285,11 @@ Apply the induction assumption
 \end{split}
 \end{equation}
 
-Combining the bounds of $F_{I}$, $F_{T^{(1)}}$, $F_{T^{(2)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoef'} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
+Combining the bounds of $F_{I}$, $F_{T^{(1)}}$, $F_{T^{(2)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoef'.threewave} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
 \end{proof}
  
 % For general $T$, let $T_1$, $T_2$, $T_3$ be the three subtrees of the root, then we have the following recursive formula for $F_{T}$
-% \begin{equation}\label{eq.lemboundcoefrecur}
+% \begin{equation}\label{eq.lemboundcoefrecur.threewave}
 %     F_{T}(t)=\int^t_0 e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} F_{T_1}(t_{\mathfrak{r}})F_{T_2}(t_{\mathfrak{r}})F_{T_3}(t_{\mathfrak{r}}) dt_{\mathfrak{r}}.
 % \end{equation}
 
@@ -301,11 +301,11 @@ A straight forward application of the above lemma gives following upper bound of
 
 \begin{lem}\label{lem.boundcoef}
 We have the following upper bound for $H^T_{k_1\cdots k_{l+1}}$,
-\begin{equation}\label{eq.boundcoef}
+\begin{equation}\label{eq.boundcoef.threewave}
     |H^T_{k_1\cdots k_{l+1}}|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{1}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\ \prod_{\mathfrak{e}\in T_{\text{in}}}|k_{\mathfrak{e},x}|\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}.
 \end{equation}
 Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the two sequences $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$, $\{r_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by following recursive formula
-\begin{equation}\label{eq.q_n}
+\begin{equation}\label{eq.q_n.threewave}
     q_{\mathfrak{n}}=
     \begin{cases}
     \Omega_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -313,7 +313,7 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
     \Omega_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if $\mathfrak{n}\neq\mathfrak{r}$ and $\mathfrak{n}'$ is the parent of $\mathfrak{n}$.}
     \end{cases}
 \end{equation}
-\begin{equation}\label{eq.r_n}
+\begin{equation}\label{eq.r_n.threewave}
     r_{\mathfrak{n}}=
     \begin{cases}
     |k_{\mathfrak{r}}|^2, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -325,25 +325,25 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
 
 \end{lem}
 \begin{proof}
-This is a direct corollary of Lemma \ref{eq.boundcoef'} if we take $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=|k_{\mathfrak{e}}|^2$. 
+This is a direct corollary of Lemma \ref{eq.boundcoef'.threewave} if we take $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=|k_{\mathfrak{e}}|^2$. 
 \end{proof}
 
 
 Lemma \ref{lem.boundcoef} suggests that the coefficients are small when $|q_{\mathfrak{n}}|\gg T^{-1}_{\text{max}}$. Therefore, in order to bound $\mathcal{J}_{T,k}$, we should count the lattice points on $|q_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}}$
-\begin{equation}\label{eq.diophantineeq''}
+\begin{equation}\label{eq.diophantineeq''.threewave}
     \{k_{\mathfrak{e}}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}\in T: |q_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}},\ S_{\mathfrak{n}}=0,\ \forall \mathfrak{n}\in T.\ k_{\mathfrak{l}}=k\}
 \end{equation}
 
-By solving \eqref{eq.q_n}, we know that $\Omega_{\mathfrak{n}}$ is a linear combination of $q_{\mathfrak{n}}$, so there exist constants $c_{\mathfrak{n},\mathfrak{n}'}$ such that $\Omega_{\mathfrak{n}}=\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}$. Therefore, $|q_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}}$ implies that $|\Omega_{\mathfrak{n}}|\le\sum_{\mathfrak{n}'}|c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}|\lesssim T^{-1}_{\text{max}}$.
+By solving \eqref{eq.q_n.threewave}, we know that $\Omega_{\mathfrak{n}}$ is a linear combination of $q_{\mathfrak{n}}$, so there exist constants $c_{\mathfrak{n},\mathfrak{n}'}$ such that $\Omega_{\mathfrak{n}}=\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}$. Therefore, $|q_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}}$ implies that $|\Omega_{\mathfrak{n}}|\le\sum_{\mathfrak{n}'}|c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}|\lesssim T^{-1}_{\text{max}}$.
 
 %For the sake of concreteness let's take $d_{\mathfrak{n}}=0$ for all nodes ${\mathfrak{n}}$, then $q_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$ for all ${\mathfrak{n}}$ and
-$|\Omega_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}}$ implies that \eqref{eq.diophantineeq''} is a subset of
-\begin{equation}\label{eq.diophantineeq'}
+$|\Omega_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}}$ implies that \eqref{eq.diophantineeq''.threewave} is a subset of
+\begin{equation}\label{eq.diophantineeq'.threewave}
     \{k_{\mathfrak{e}}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}\in T: |\Omega_{\mathfrak{n}}|\lesssim T^{-1}_{\text{max}},\ S_{\mathfrak{n}}=0,\ \forall \mathfrak{n}\in T. \ k_{\mathfrak{l}}=k\}.
 \end{equation}
-To bound the number of elements of \eqref{eq.diophantineeq''}, we just need to do the same thing for \eqref{eq.diophantineeq'}.
+To bound the number of elements of \eqref{eq.diophantineeq''.threewave}, we just need to do the same thing for \eqref{eq.diophantineeq'.threewave}.
 
-\eqref{eq.diophantineeq'} can be read from the tree diagrams $T$. As in Figure \ref{fig.equations}, each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node $\mathfrak{n}$ is connected with three edges $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}$ whose corresponding variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$, $k_{\mathfrak{e}}$ satisfy the momentum conservation equation
+\eqref{eq.diophantineeq'.threewave} can be read from the tree diagrams $T$. As in Figure \ref{fig.equations}, each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node $\mathfrak{n}$ is connected with three edges $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}$ whose corresponding variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$, $k_{\mathfrak{e}}$ satisfy the momentum conservation equation
 \begin{equation}
 \iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0
 \end{equation}
@@ -381,20 +381,20 @@ and the energy conservation equation (if the node is decorated by $\bullet$)
     \end{figure}
     
 
-The goal of the next two sections is to count the number of solutions of a modified version of the above equation \eqref{eq.diophantineeq'}. 
+The goal of the next two sections is to count the number of solutions of a modified version of the above equation \eqref{eq.diophantineeq'.threewave}. 
 
 \subsection{Couples and the Wick theorem}\label{sec.coupwick} In this section, we calculate $\mathbb{E}|\mathcal{J}_{T,k}|^2$ using Wick theorem. We also introduce another type of diagrams, the couple diagrams, to represent the result.
 
-By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{l+1}}$ concentrate near the surface $q_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq''}. 
+By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{l+1}}$ concentrate near the surface $q_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq''.threewave}. 
 
 Let's derive the expression of the coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ and its concentration surface.
 
 %$\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})$
 
-%In this section, we derive the formula \eqref{eq.couples} for calculating expectations $\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})$ in terms of couples. 
+%In this section, we derive the formula \eqref{eq.couples.threewave} for calculating expectations $\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})$ in terms of couples. 
 
 By Lemma \ref{lem.treeterms}, we know that $\mathcal{J}_{T,k}$ is a polynomial of $\xi$ which are proportional to i.i.d Gaussians. Therefore, 
-\begin{equation}\label{eq.termexp1}
+\begin{equation}\label{eq.termexp1.threewave}
 \begin{split}
     \mathbb{E}|\mathcal{J}_{T,k}|^2=&\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T,k}})=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
     \sum_{k_1,\, k_2,\, \cdots,\, k_{l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{l(T)+1}}
@@ -402,7 +402,7 @@ By Lemma \ref{lem.treeterms}, we know that $\mathcal{J}_{T,k}$ is a polynomial o
     & H^T_{k_1\cdots k_{l(T)+1}} \overline{H^{T}_{k'_1\cdots k'_{l(T)+1}}}  \mathbb{E}\Big(\xi_{k_1}\xi_{k_2}\cdots\xi_{k_{l(T)+1}}\xi_{k'_1}\xi_{k'_2}\cdots\xi_{k'_{l(T)+1}}\Big)
 \end{split}
 \end{equation}
-% \begin{equation}\label{eq.termexp1}
+% \begin{equation}\label{eq.termexp1.threewave}
 % \begin{split}
 %     \mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})&=\left(\frac{-i\lambda^2}{L^{2d}}\right)^{l(T)+l(T')}
 %     \sum_{k_1,\, k_2,\, \cdots,\, k_{l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{2l(T')+1}}
@@ -413,7 +413,7 @@ By Lemma \ref{lem.treeterms}, we know that $\mathcal{J}_{T,k}$ is a polynomial o
 % \end{equation}
 
 We just need to calculate 
-\begin{equation}\label{eq.expectation''}
+\begin{equation}\label{eq.expectation''.threewave}
     \mathbb{E}\Big(\xi_{k_1}\xi_{k_2}\cdots\xi_{k_{l(T)+1}}
     \xi_{k'_1}\xi_{k'_2}\cdots\xi_{k'_{l(T)+1}}\Big).
 \end{equation}
@@ -441,7 +441,7 @@ Let $\{\eta_k\}_{k\in\mathbb{Z}^d_L}$ be i.i.d complex Gaussian random variables
     \mathbb{E}(\eta_{k_1}\cdots \eta_{k_{2m}})=\sum_{p\in \mathcal{P}}  \delta_{p}(k_1,\cdots,k_{2m}), 
 \end{equation}
 where 
-\begin{equation}\label{eq.deltapairing}
+\begin{equation}\label{eq.deltapairing.threewave}
 \delta_{p}=\begin{cases}
 1\qquad \textit{if $k_{i}=-k_{j}$ for all $k_{i}\sim_{p}k_{j}$,}
 \\
@@ -459,8 +459,8 @@ Here $\mathcal{P}$ is the set of pairings of $\{1,2,\cdots,n\}$.
 Since $\mathbb{E} [\eta_{k_i}\eta_{k_j}]=\delta_{k_i=-k_j}$, take $X_1=\eta_{k_1}$, $\cdots$, $X_{2m}=\eta_{k_{2m}}$, then we can check that $\prod_{i\sim_{p}j} \mathbb{E} [X_i X_j]=\delta_{p}(k_1,\cdots,k_{2m})$. This finishes the proof of the Wick theorem.
 \end{proof}
 
-Applying Wick theorem to \eqref{eq.termexp1}, we get
-\begin{equation}\label{eq.termexp'}
+Applying Wick theorem to \eqref{eq.termexp1.threewave}, we get
+\begin{equation}\label{eq.termexp'.threewave}
 \begin{split}
     &\mathbb{E}|\mathcal{J}_{T,k}|^2=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
     \sum_{p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)+1}, k'_1,\cdots, k'_{l(T)+1}\})}
@@ -468,7 +468,7 @@ Applying Wick theorem to \eqref{eq.termexp1}, we get
     & \underbrace{\sum_{k_1,\, k_2,\, \cdots,\, k_{l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{l(T)+1}} H^T_{k_1\cdots k_{l(T)+1}} \overline{H^{T}_{k'_1\cdots k'_{l(T)+1}}} \delta_{p}(k_1,\cdots, k_{l(T)+1}, k'_1,\cdots, k'_{l(T)+1})\sqrt{n_{\textrm{in}}(k_1)}\cdots}_{Term(T, p)_k}.
 \end{split}
 \end{equation}
-% \begin{equation}\label{eq.termexp1}
+% \begin{equation}\label{eq.termexp1.threewave}
 % \begin{split}
 %     &\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})=\left(\frac{-i\lambda^2}{L^{2d}}\right)^{l(T)+l(T')}
 %     \sum_{p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)+1}, k'_1,\cdots, k'_{2l(T')+1}\})}
@@ -477,15 +477,15 @@ Applying Wick theorem to \eqref{eq.termexp1}, we get
 % \end{split}
 % \end{equation}
 
-We see that the correlation of two tree terms is a sum of smaller expressions $Term(T, p)$. By \eqref{eq.diophantineeq'}, the coefficients $H^T_{k_1\cdots k_{l(T)+1}} H^{T}_{k'_1\cdots k'_{l(T)+1}}$ of $Term(T, p)$ concentrate near the subset 
+We see that the correlation of two tree terms is a sum of smaller expressions $Term(T, p)$. By \eqref{eq.diophantineeq'.threewave}, the coefficients $H^T_{k_1\cdots k_{l(T)+1}} H^{T}_{k'_1\cdots k'_{l(T)+1}}$ of $Term(T, p)$ concentrate near the subset 
 
-\begin{equation}\label{eq.diophantineequnpaired}
+\begin{equation}\label{eq.diophantineequnpaired.threewave}
 \{k_{\mathfrak{e}}, k_{\mathfrak{e}'}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|, |k_{\mathfrak{e}'}|\lesssim 1,\ \forall \mathfrak{e},\mathfrak{e}'\in T:|\Omega_{\mathfrak{n}}|,|\Omega_{\mathfrak{n}'}|\lesssim T^{-1}_{\text{max}},\ S_{\mathfrak{n}}=S_{\mathfrak{n}'}=0\ \forall \mathfrak{n},\mathfrak{n}'\in T.\ k_{\mathfrak{l}}=-k_{\mathfrak{l}}'=k\}.
 \end{equation}
 
 
-The pairing $p$ in Wick theorem introduces new equations $k_{i}=-k'_{j}$ (defined in \eqref{eq.deltapairing}) and the coefficients $H^T_{k_1\cdots k_{l(T)+1}} H^{T}_{k'_1\cdots k'_{l(T)+1}} \delta_{p}$ concentrate near the subset 
-\begin{equation}\label{eq.diophantineeqpaired}
+The pairing $p$ in Wick theorem introduces new equations $k_{i}=-k'_{j}$ (defined in \eqref{eq.deltapairing.threewave}) and the coefficients $H^T_{k_1\cdots k_{l(T)+1}} H^{T}_{k'_1\cdots k'_{l(T)+1}} \delta_{p}$ concentrate near the subset 
+\begin{equation}\label{eq.diophantineeqpaired.threewave}
 \begin{split}
     \{k_{\mathfrak{e}}, k_{\mathfrak{e}'}\in \mathbb{Z}^d_L,\ &|k_{\mathfrak{e}}|, |k_{\mathfrak{e}'}|\lesssim 1,\ \forall \mathfrak{e},\mathfrak{e}'\in T: |\Omega_{\mathfrak{n}}|,|\Omega_{\mathfrak{n}'}|\lesssim T^{-1}_{\text{max}},\ S_{\mathfrak{n}}=S_{\mathfrak{n}'}=0\ \forall \mathfrak{n},\mathfrak{n}'\in T.
     \\
@@ -494,7 +494,7 @@ The pairing $p$ in Wick theorem introduces new equations $k_{i}=-k'_{j}$ (define
 \end{split}
 \end{equation}
 
-As in the case of \eqref{eq.diophantineeq'}, there is a graphical representation of \eqref{eq.diophantineeqpaired}. To explain this, we need the concept of couples.
+As in the case of \eqref{eq.diophantineeq'.threewave}, there is a graphical representation of \eqref{eq.diophantineeqpaired.threewave}. To explain this, we need the concept of couples.
 
 %It turns out we can find a very compact formula for them. To do this, we need to introduce the concept of couples.
 
@@ -645,14 +645,14 @@ As in the case of \eqref{eq.diophantineeq'}, there is a graphical representation
         \label{fig.couple}
     \end{figure}
     
-    We know that each edge connected to leaf corresponds to a variable $k_i$. A pairing $p$ of $\{k_1,k_2,\cdots,k_{2m}\}$ in \eqref{eq.diophantineeqpaired} induces a pairing of edges connected to leaves. Merging paired edges corresponds to $k_{i}=-k'_{j}$ for all $k_{i}\sim_{p}k'_{j}$ in \eqref{eq.diophantineeqpaired}. 
+    We know that each edge connected to leaf corresponds to a variable $k_i$. A pairing $p$ of $\{k_1,k_2,\cdots,k_{2m}\}$ in \eqref{eq.diophantineeqpaired.threewave} induces a pairing of edges connected to leaves. Merging paired edges corresponds to $k_{i}=-k'_{j}$ for all $k_{i}\sim_{p}k'_{j}$ in \eqref{eq.diophantineeqpaired.threewave}. 
 \end{enumerate}
 \end{defn}
 
-The following proposition introduce the graphical representation of \eqref{eq.diophantineeqpaired}.
+The following proposition introduce the graphical representation of \eqref{eq.diophantineeqpaired.threewave}.
 
 \begin{prop}\label{prop.couple}
-\eqref{eq.diophantineeqpaired} can be read from a couple diagram $\mathcal{C}(T,T,p)$. Each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node corresponds to a momentum conservation equation
+\eqref{eq.diophantineeqpaired.threewave} can be read from a couple diagram $\mathcal{C}(T,T,p)$. Each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node corresponds to a momentum conservation equation
 \begin{equation}
     \iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0,
 \end{equation} 
@@ -674,23 +674,23 @@ This directly follows from the definition of couples.
 
 The calculations of this section are summarized in the following proposition.  
 
-\begin{prop}\label{prop.termcouple} (1) Define $Term(T,p)$ in the same way as in \eqref{eq.termexp'},
-\begin{equation}\label{eq.termTp}
+\begin{prop}\label{prop.termcouple} (1) Define $Term(T,p)$ in the same way as in \eqref{eq.termexp'.threewave},
+\begin{equation}\label{eq.termTp.threewave}
 \begin{split}
     Term(T, p)_k=&\sum_{k_1,\, k_2,\, \cdots,\, k_{l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{l(T)+1}}
     \\
     &H^T_{k_1\cdots k_{l(T)+1}} \overline{H^{T}_{k'_1\cdots k'_{l(T)+1}}} \delta_{p}(k_1,\cdots, k_{l(T)+1}, k'_1,\cdots, k'_{l(T)+1})\sqrt{n_{\textrm{in}}(k_1)}\cdots\sqrt{n_{\textrm{in}}(k'_1)}\cdots
 \end{split}
 \end{equation}
-then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)_k$ for all $p\in \mathcal{P}$, (in \eqref{eq.termexp'} the sum is over set of all possible pairing $\mathcal{P}$)
-\begin{equation}\label{eq.termexp}
+then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)_k$ for all $p\in \mathcal{P}$, (in \eqref{eq.termexp'.threewave} the sum is over set of all possible pairing $\mathcal{P}$)
+\begin{equation}\label{eq.termexp.threewave}
 \begin{split}
     \mathbb{E}|\mathcal{J}_{T,k}|^2=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
     \sum_{p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)+1}, k'_1,\cdots, k'_{l(T)+1}\})} Term(T, p).
 \end{split}
 \end{equation}
 
-(2) $Term(T,p)$ concentrates near the subset \eqref{eq.diophantineeqpaired} which has a simple graphical representation given by Proposition \ref{prop.couple}. 
+(2) $Term(T,p)$ concentrates near the subset \eqref{eq.diophantineeqpaired.threewave} which has a simple graphical representation given by Proposition \ref{prop.couple}. 
 \end{prop}
 
 \begin{proof} The proof of (1), (2) is easy and thus skipped. 
@@ -698,16 +698,16 @@ then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)_k$ for all $p\in \
 % \begin{lem}
 % Formula for $\mathbb{E}(\mathcal{J}_{T,k}\overline{\mathcal{J}_{T',k'}})$ in terms of couple $C$
 
-% \begin{equation}\label{eq.couples}
+% \begin{equation}\label{eq.couples.threewave}
 %     1
 % \end{equation}
 % \end{lem}
 
-\subsection{Counting lattice points}\label{sec.numbertheory} In this section, we use the connection between couples and concentration subsets \eqref{eq.diophantineeqpaired} to count the number of solutions of a generalized version of \eqref{eq.diophantineeqpaired},
+\subsection{Counting lattice points}\label{sec.numbertheory} In this section, we use the connection between couples and concentration subsets \eqref{eq.diophantineeqpaired.threewave} to count the number of solutions of a generalized version of \eqref{eq.diophantineeqpaired.threewave},
 
 
 
-\begin{equation}\label{eq.diophantineeqpairedsigma}
+\begin{equation}\label{eq.diophantineeqpairedsigma.threewave}
 \begin{split}
     &\{k_{\mathfrak{e}}, k_{\mathfrak{e}'}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|, |k_{\mathfrak{e}}'|\lesssim 1,\ \forall \mathfrak{e},\mathfrak{e}'\in T:\  |k_{\mathfrak{e}x}|\sim \kappa_{\mathfrak{e}}, |k'_{\mathfrak{e}x}|\sim \kappa_{\mathfrak{e}'},\ \forall \mathfrak{e},\mathfrak{e}'\in T, 
     \\
@@ -717,8 +717,8 @@ then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)_k$ for all $p\in \
 \end{split}
 \end{equation}
 
-In \eqref{eq.diophantineeqpairedsigma}, $\kappa_{\mathfrak{e}}\in \{0\}\cup  \mathcal{D}(\alpha,1)$, where $\mathcal{D}(\alpha,1)\coloneqq\{2^{-K_{\mathfrak{e}}}:K_{\mathfrak{e}}\in  \mathbb{Z}\cap [0,ln\ \alpha^{-1}]\}$. The relation $|k_{\mathfrak{e}x}|\sim \kappa_{\mathfrak{e}}$ is defined by 
-\begin{equation}\label{eq.kappa}
+In \eqref{eq.diophantineeqpairedsigma.threewave}, $\kappa_{\mathfrak{e}}\in \{0\}\cup  \mathcal{D}(\alpha,1)$, where $\mathcal{D}(\alpha,1)\coloneqq\{2^{-K_{\mathfrak{e}}}:K_{\mathfrak{e}}\in  \mathbb{Z}\cap [0,ln\ \alpha^{-1}]\}$. The relation $|k_{\mathfrak{e}x}|\sim \kappa_{\mathfrak{e}}$ is defined by 
+\begin{equation}\label{eq.kappa.threewave}
     |k_{\mathfrak{e}x}|\sim \kappa_{\mathfrak{e}}\text{ if and only if }\left\{\begin{aligned}
         & \frac{1}{2}\kappa_{\mathfrak{e}}\le  |k_{\mathfrak{e}x}|\le 2\kappa_{\mathfrak{e}} \qquad && \text{ if  $\kappa_{\mathfrak{e}}\ne 0$}
         \\[1em]
@@ -727,20 +727,20 @@ In \eqref{eq.diophantineeqpairedsigma}, $\kappa_{\mathfrak{e}}\in \{0\}\cup  \ma
     \right.
 \end{equation}
 
-\eqref{eq.diophantineeqpairedsigma} is obtained by replacing $\Omega_{\mathfrak{n}}$, $\Omega'_{\mathfrak{n}}$ by $\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}$, $\Omega'_{\mathfrak{n}}-\sigma'_{\mathfrak{n}}$ in \eqref{eq.diophantineeqpaired} and adding conditions $|k_{\mathfrak{e}}|\sim \kappa_{\mathfrak{e}}$, where  $\sigma_{\mathfrak{n}}$, $\sigma'_{\mathfrak{n}}$ and $\kappa_{\mathfrak{e}}$ are some given constants. The counterpart of Proposition \ref{prop.couple} in this case is
+\eqref{eq.diophantineeqpairedsigma.threewave} is obtained by replacing $\Omega_{\mathfrak{n}}$, $\Omega'_{\mathfrak{n}}$ by $\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}$, $\Omega'_{\mathfrak{n}}-\sigma'_{\mathfrak{n}}$ in \eqref{eq.diophantineeqpaired.threewave} and adding conditions $|k_{\mathfrak{e}}|\sim \kappa_{\mathfrak{e}}$, where  $\sigma_{\mathfrak{n}}$, $\sigma'_{\mathfrak{n}}$ and $\kappa_{\mathfrak{e}}$ are some given constants. The counterpart of Proposition \ref{prop.couple} in this case is
 
 \begin{prop}\label{prop.couple'}
-\eqref{eq.diophantineeqpairedsigma} can be read from a couple diagram $\mathcal{C}=\mathcal{C}(T,T,p)$. Each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node corresponds to a momentum conservation equation
-\begin{equation}\label{eq.momentumconservationunit}
+\eqref{eq.diophantineeqpairedsigma.threewave} can be read from a couple diagram $\mathcal{C}=\mathcal{C}(T,T,p)$. Each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node corresponds to a momentum conservation equation
+\begin{equation}\label{eq.momentumconservationunit.threewave}
     \iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0,
 \end{equation} 
 and a energy conservation equation 
-\begin{equation}\label{eq.energyconservationunit}
+\begin{equation}\label{eq.energyconservationunit.threewave}
     \iota_{\mathfrak{e}_1}\Lambda_{k_{\mathfrak{e}_1}}+\iota_{\mathfrak{e}_2}\Lambda_{k_{\mathfrak{e}_2}}+\iota_{\mathfrak{e}}\Lambda_{k_{\mathfrak{e}}} = \sigma_{\mathfrak{n}} + O(T^{-1}_{\text{max}}).
 \end{equation}  
-Denote the momentum and energy conservation equations by $MC_{\mathfrak{n}}$ and $EC_{\mathfrak{n}}$ respectively, then \eqref{eq.diophantineeqpairedsigma} can be rewritten as 
-\begin{equation}\label{eq.diophantineeqpairedsigma'}
-    \text{\eqref{eq.diophantineeqpairedsigma}}=\{k_{\mathfrak{e}}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|\lesssim 1\ \forall \mathfrak{e}\in \mathcal{C}:\  |k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}},\ \forall \mathfrak{e}\in \mathcal{C}_{\text{norm}}.\ MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k.\}
+Denote the momentum and energy conservation equations by $MC_{\mathfrak{n}}$ and $EC_{\mathfrak{n}}$ respectively, then \eqref{eq.diophantineeqpairedsigma.threewave} can be rewritten as 
+\begin{equation}\label{eq.diophantineeqpairedsigma'.threewave}
+    \text{\eqref{eq.diophantineeqpairedsigma.threewave}}=\{k_{\mathfrak{e}}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|\lesssim 1\ \forall \mathfrak{e}\in \mathcal{C}:\  |k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}},\ \forall \mathfrak{e}\in \mathcal{C}_{\text{norm}}.\ MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k.\}
 \end{equation}
 \end{prop}
 \begin{proof}
@@ -752,7 +752,7 @@ To explain the counting argument in this paper, we need the following definition
 \begin{defn}\label{def.morecouple}
 \begin{enumerate}
     \item \textbf{Connected couples:} A couple $\mathcal{C}$ is a \underline{connected couple} if it is connected as a graph.  
-    \item \textbf{Equations of a couple $Eq(\mathcal{C})$:} Given a couple $\mathcal{C}$ and constants $k$, $\sigma_{\mathfrak{n}}$, let $Eq(\mathcal{C},\{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, k)$ (or simply $Eq(\mathcal{C})$) be the system of equation \eqref{eq.diophantineeqpairedsigma'} constructed in Proposition \ref{prop.couple'}. For any system of equations $Eq$, let $\#(Eq)$ be its number of solutions.
+    \item \textbf{Equations of a couple $Eq(\mathcal{C})$:} Given a couple $\mathcal{C}$ and constants $k$, $\sigma_{\mathfrak{n}}$, let $Eq(\mathcal{C},\{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, k)$ (or simply $Eq(\mathcal{C})$) be the system of equation \eqref{eq.diophantineeqpairedsigma'.threewave} constructed in Proposition \ref{prop.couple'}. For any system of equations $Eq$, let $\#(Eq)$ be its number of solutions.
     \item \textbf{Normal edges and leaf edges:} Remember that any couple $\mathcal{C}$ is constructed from a pairing of two trees $T$, $T'$ and therefore all edges in $\mathcal{C}$ comes from $T$, $T'$. We define edges coming from $T_{\text{in}}$, $T'_{\text{in}}$ to be \underline{normal edges} and edges from those connected to leaves in $T$, $T'$ to be \underline{leaf edges}. The set of all normal edges is denoted by $\mathcal{C}_{\text{norm}}$. A leg in $\mathcal{C}$ which is a normal edge is called a \underline{normal leg}.
 \end{enumerate}
 \end{defn}
@@ -839,8 +839,8 @@ The main goal of this section is to prove an upper bound of $\#Eq(\mathcal{C})$.
         \label{fig.exampleofcuttingidea}
     \end{figure}
 
-By \eqref{eq.diophantineeqpairedsigma'}, we know that the couple $\mathcal{C}$ corresponds to the following equations.
-\begin{equation}\label{eq.cuttingexmaple}
+By \eqref{eq.diophantineeqpairedsigma'.threewave}, we know that the couple $\mathcal{C}$ corresponds to the following equations.
+\begin{equation}\label{eq.cuttingexmaple.threewave}
     \begin{split}
         \{a, b, c, d, e:\ &(|a|\text{ to }|e|)\lesssim 1,\ (|a_x|\text{ to }|e_x|)\sim (\kappa_{a}\text{ to }\kappa_{e})
         \\
@@ -854,11 +854,11 @@ By \eqref{eq.diophantineeqpairedsigma'}, we know that the couple $\mathcal{C}$ c
     \end{split}
 \end{equation}
 
-We know that \eqref{eq.cuttingexmaple} can be rewritten into the form $\bigcup_{a,e\in A} B_{a,e}$, where
-\begin{equation}\label{eq.couplequationA}
+We know that \eqref{eq.cuttingexmaple.threewave} can be rewritten into the form $\bigcup_{a,e\in A} B_{a,e}$, where
+\begin{equation}\label{eq.couplequationA.threewave}
     A=\{a, e:\ |a|,|e|\lesssim 1,\ |a_x|\sim \kappa_{a},|e_x|\sim \kappa_{e}, a+e=k,\ \Lambda(a) + \Lambda(e) - \Lambda(k) =\sigma_{1} + O(T^{-1}_{\text{max}})\}
 \end{equation}
-\begin{equation}\label{eq.couplequationB}
+\begin{equation}\label{eq.couplequationB.threewave}
     \begin{split}
         B_{a,e}=\{b, c, d:\ &|b|,|c|,|d|\lesssim 1,\ |b_x|\sim \kappa_{b},|c_x|\sim \kappa_{c},|d_x|\sim \kappa_{d}
         \\
@@ -872,7 +872,7 @@ We know that \eqref{eq.cuttingexmaple} can be rewritten into the form $\bigcup_{
 
 Since an upper bound of $\# Eq(\mathcal{C})$ can be derived from upper bounds of $\# A$, $\# B_{a,e}$, we just need to consider $A$, $B_{a,e}$ which are systems of equations of smaller size. We can reduce the size of systems of equations in this way and prove upper bounds by induction.
 
-One problem of applying induction argument is that $A$, $B_{a,e}$ cannot be represented by couple defined by Definition \ref{def.conple} that can contain at most two legs (an edge just connected to one node). In Definition \ref{def.conple}, a leg is used to represent a variable which is fixed, as in the condition $k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k$ in \eqref{eq.diophantineeqpairedsigma'}. The definition of $\# B_{a,e}$ contains three fixed variables $a$, $e$, $k$ which cannot be represented by just two legs. Therefore, we has to define a new type of couple that allows multiple legs.
+One problem of applying induction argument is that $A$, $B_{a,e}$ cannot be represented by couple defined by Definition \ref{def.conple} that can contain at most two legs (an edge just connected to one node). In Definition \ref{def.conple}, a leg is used to represent a variable which is fixed, as in the condition $k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k$ in \eqref{eq.diophantineeqpairedsigma'.threewave}. The definition of $\# B_{a,e}$ contains three fixed variables $a$, $e$, $k$ which cannot be represented by just two legs. Therefore, we has to define a new type of couple that allows multiple legs.
 
 Except for the lack of legs, we also have the problem of representing free variables. We know that the couple representation of $A$ should contain one node and three edges if we insist on the rule that a node corresponds to an equation and the variables in the equation correspond to edges connected to this node. All these edges are legs, but two of three edges correspond to variable $a$, $b$ which are not fixed. Therefore, we have to define a type of legs that can correspond to unfixed variables.
 
@@ -904,7 +904,7 @@ To solve the above problems, we introduce the following definition.
     
     
     \item \textbf{Equations of a couple $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$:} We define the corresponding equations for a couples with multiple legs.
-    \begin{equation}\label{eq.Eq(C,c)}
+    \begin{equation}\label{eq.Eq(C,c).threewave}
     \begin{split}
         &Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
         \\
@@ -915,14 +915,14 @@ To solve the above problems, we introduce the following definition.
 \end{enumerate}
 \end{defn}
 
-With the above definition, it's easy to show that the couple $A$ and $B_{a,e}$ in Figure \ref{fig.exampleofcuttingidea} correspond to the system of equations \eqref{eq.couplequationA} and \eqref{eq.couplequationB} respectively.
+With the above definition, it's easy to show that the couple $A$ and $B_{a,e}$ in Figure \ref{fig.exampleofcuttingidea} correspond to the system of equations \eqref{eq.couplequationA.threewave} and \eqref{eq.couplequationB.threewave} respectively.
 
 
-Using the above argument, we can prove the following proposition which gives an upper bound of number of solutions of \eqref{eq.diophantineeqpairedsigma} (or \eqref{eq.diophantineeqpairedsigma'}).
+Using the above argument, we can prove the following proposition which gives an upper bound of number of solutions of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}).
 
 \begin{prop}\label{prop.counting}
-Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be an connected couple with exactly one free and one fixed leg, $n$ be the total number of nodes in $\mathcal{C}$ and $Q=L^{d}T^{-1}_{\text{max}}$. We fix $k\in \mathbb{R}$ for the legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha}. Then the number of solutions $M$ of \eqref{eq.diophantineeqpairedsigma} (or \eqref{eq.diophantineeqpairedsigma'}) is bounded by 
-\begin{equation}\label{eq.countingbd0}
+Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be an connected couple with exactly one free and one fixed leg, $n$ be the total number of nodes in $\mathcal{C}$ and $Q=L^{d}T^{-1}_{\text{max}}$. We fix $k\in \mathbb{R}$ for the legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave}. Then the number of solutions $M$ of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}) is bounded by 
+\begin{equation}\label{eq.countingbd0.threewave}
 M\leq L^{O(n\theta)} Q^{\frac{n}{2}}\ \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa^{-1}_{\mathfrak{e}}.
 \end{equation}
 \end{prop}
@@ -1069,11 +1069,11 @@ In $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$ each edge $\mathfrak{e}
 Let us explain how does $Eq(\mathcal{C})$ and $\#Eq(\mathcal{C})$ changes after cutting. The result is summarized in the following lemma.
 \begin{lem}\label{lem.Eq(C)cutting}
 Let $c$ be a cut of $\mathcal{C}$ that consists of edges $\{\mathfrak{e}_{i}\}$ and $\mathcal{C}_1$, $\mathcal{C}_2$ be two components after cutting. Let $\mathfrak{e}_{i}^{(1)}\in \mathcal{C}_1$, $\mathfrak{e}_{i}^{(2)}\in \mathcal{C}_2$ be two edges obtained by cutting $\mathfrak{e}_{i}$. The $\text{rc}$ map is defined by assigning $\{\mathfrak{e}_{i}^{(1)}\}$ to be free legs and $\{\mathfrak{e}_{i}^{(2)}\}$ to be fixed legs. Then we have 
-\begin{equation}\label{eq.Eq(C)cutting}
+\begin{equation}\label{eq.Eq(C)cutting.threewave}
     Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}.
 \end{equation}
 and
-\begin{equation}\label{eq.Eq(C)cuttingcounting}
+\begin{equation}\label{eq.Eq(C)cuttingcounting.threewave}
     \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\le
     \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_1)} } \# Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_2)} }\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}).
 \end{equation}
@@ -1081,7 +1081,7 @@ Here $\text{leg}(\mathcal{C})$ is the set of fixed legs in $\mathcal{C}$ (not th
 \end{lem}
 \begin{proof}
 %Let $c$ be a cut of $\mathcal{C}$ that consists of edges $\{\mathfrak{e}_{i}\}$. Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be two components after cutting and $\mathfrak{e}_{i}^{(1)}\in \mathcal{C}_1$, $\mathfrak{e}_{i}^{(2)}\in \mathcal{C}_2$ be two edges obtained by cutting $\mathfrak{e}_{i}$. We assume that $\{\mathfrak{e}_{i}^{(1)}\}$ are free legs and $\{\mathfrak{e}_{i}^{(2)}\}$ are legs. 
-By definition \eqref{eq.Eq(C,c)} we have
+By definition \eqref{eq.Eq(C,c).threewave} we have
 \begin{equation}
 \begin{split}
     Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=&\{k_{\mathfrak{e}}\in \mathbb{Z}^d_L,\ |k_{\mathfrak{e}}|\lesssim 1:\  |k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}},\ \forall \mathfrak{e}\in \mathcal{C}_{\text{norm}}.\ MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}.\  k_{\mathfrak{l}}=c_{\mathfrak{l}},\ \forall \mathfrak{l}\in \text{leg}(\mathcal{C}).\} 
@@ -1103,9 +1103,9 @@ Therefore, we have the following identity of $Eq(\mathcal{C},\{c_{\mathfrak{l}}\
 \begin{equation}
     Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}.
 \end{equation}
-which proves \eqref{eq.Eq(C)cutting}.
+which proves \eqref{eq.Eq(C)cutting.threewave}.
 
-We can also find the relation between $\#Eq(\mathcal{C}_1)$, $\#Eq(\mathcal{C}_2)$ and $\#Eq(\mathcal{C})$. Applying \eqref{eq.Eq(C)cutting},
+We can also find the relation between $\#Eq(\mathcal{C}_1)$, $\#Eq(\mathcal{C}_2)$ and $\#Eq(\mathcal{C})$. Applying \eqref{eq.Eq(C)cutting.threewave},
 \begin{equation}
 \begin{split}
     \#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=&\sum_{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}})\in \#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})} 1
@@ -1131,7 +1131,7 @@ Take $\sup$ in the above equation
 \end{split}
 \end{equation}
 
-This proves \eqref{eq.Eq(C)cuttingcounting}.
+This proves \eqref{eq.Eq(C)cuttingcounting.threewave}.
 \end{proof}
 
 
@@ -1455,8 +1455,8 @@ Therefore, we complete the proof.
 \begin{lem}\label{lem.freeleg} %Free leg moving lemma
 Given a connected couple $\mathcal{C}$ with multiple legs, then we have the following conclusions.
 
-(1) Let $\{k_{\mathfrak{l}_i}\}_{i=1,\cdots,n_{\text{leg}}}$ be the variables corresponding to legs in couple $\mathcal{C}$. Let $\iota_{\mathfrak{e}}$ be the same as \eqref{eq.iotadef}, then $Eq(\mathcal{C})$ implies the following momentum conservation equation
-\begin{equation}\label{eq.momentumconservation}
+(1) Let $\{k_{\mathfrak{l}_i}\}_{i=1,\cdots,n_{\text{leg}}}$ be the variables corresponding to legs in couple $\mathcal{C}$. Let $\iota_{\mathfrak{e}}$ be the same as \eqref{eq.iotadef.threewave}, then $Eq(\mathcal{C})$ implies the following momentum conservation equation
+\begin{equation}\label{eq.momentumconservation.threewave}
     \sum_{i=1}^{n_{\text{leg}}} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}=0,
 \end{equation}
 
@@ -1486,7 +1486,7 @@ For a leg $\mathfrak{l}$, since it is connected to just one node, we may omit th
 
 For each node $\mathfrak{n}$, let $\mathfrak{e}_1(\mathfrak{n})$, $\mathfrak{e}_2(\mathfrak{n})$, $\mathfrak{e}(\mathfrak{n})$ be the three edges connected to it. For each edge $\mathfrak{e}$, let $\mathfrak{n}_1(\mathfrak{e})$, $\mathfrak{n}_2(\mathfrak{e})$ be the two nodes connected to it. Then we know that $\iota_{\mathfrak{e}}(\mathfrak{n}_1(\mathfrak{e}))+\iota_{\mathfrak{e}}(\mathfrak{n}_2(\mathfrak{e}))$, since $\mathfrak{n}_1(\mathfrak{e})$ and $\mathfrak{n}_2(\mathfrak{e})$ have the opposite direction. 
 
-Since $k_{\mathfrak{e}}$ satisfy $Eq(\mathcal{C})$, by \eqref{eq.momentumconservationunit}, we get $\iota_{\mathfrak{e}_1(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_1(\mathfrak{n})}+\iota_{\mathfrak{e}_2(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_2(\mathfrak{n})}+\iota_{\mathfrak{e}(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}(\mathfrak{n})}=0$. Summing over $\mathfrak{n}$ gives 
+Since $k_{\mathfrak{e}}$ satisfy $Eq(\mathcal{C})$, by \eqref{eq.momentumconservationunit.threewave}, we get $\iota_{\mathfrak{e}_1(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_1(\mathfrak{n})}+\iota_{\mathfrak{e}_2(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_2(\mathfrak{n})}+\iota_{\mathfrak{e}(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}(\mathfrak{n})}=0$. Summing over $\mathfrak{n}$ gives 
 \begin{equation}
 \begin{split}
     0=&\sum_{\mathfrak{n}\in \mathcal{C}}\iota_{\mathfrak{e}_1(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_1(\mathfrak{n})}+\iota_{\mathfrak{e}_2(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}_2(\mathfrak{n})}+\iota_{\mathfrak{e}(\mathfrak{n})}(\mathfrak{n})k_{\mathfrak{e}(\mathfrak{n})}
@@ -1498,9 +1498,9 @@ Since $k_{\mathfrak{e}}$ satisfy $Eq(\mathcal{C})$, by \eqref{eq.momentumconserv
     =& \sum_{i=1}^{n_{\text{leg}}} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}
 \end{split}
 \end{equation}
-This proves \eqref{eq.momentumconservation} and thus proves (1).
+This proves \eqref{eq.momentumconservation.threewave} and thus proves (1).
 
-Now we prove (2). Since in $Eq\left(\widehat{\mathcal{C}}, \{c_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}\cup \{-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}\}\right)$, $\{k_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}$ are fixed to be constants $\{c_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}$ and $k_{\mathfrak{l}_{i_0}}$ is fixed to be the constant $-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}$, by \eqref{eq.momentumconservation}, we know that 
+Now we prove (2). Since in $Eq\left(\widehat{\mathcal{C}}, \{c_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}\cup \{-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}\}\right)$, $\{k_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}$ are fixed to be constants $\{c_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}$ and $k_{\mathfrak{l}_{i_0}}$ is fixed to be the constant $-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}$, by \eqref{eq.momentumconservation.threewave}, we know that 
 \begin{equation}
     \iota_{\mathfrak{l}_{i_0}}\left(-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}\right)+ \iota_{\mathfrak{l}_{i_1}}k_{\mathfrak{l}_{i_1}}+\sum_{i\ne i_0, i_1} \iota_{\mathfrak{l}_i}c_{\mathfrak{l}_i}=0.
 \end{equation}
@@ -1513,7 +1513,7 @@ The proof of (3) is similar to (2). Whether or not containing $k_{\mathfrak{l}_{
 \end{equation}
 Therefore, $k_{\mathfrak{l}_{i_0}}$ is fixed to be the constant $-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}c_{\mathfrak{l}_i}$ in $Eq(\widehat{\mathcal{C}})$ and we conclude that $Eq(\mathcal{C})=Eq(\widehat{\mathcal{C}})$. We thus complete the proof of (3).
 
-If (4) is wrong, then $\mathcal{C}$ just has one leg $\mathfrak{l}$. By \eqref{eq.momentumconservation}, $k_{\mathfrak{l}}=0$. This contradicts with $k_{\mathfrak{l},x}\ne 0$ in \eqref{eq.kappa}.
+If (4) is wrong, then $\mathcal{C}$ just has one leg $\mathfrak{l}$. By \eqref{eq.momentumconservation.threewave}, $k_{\mathfrak{l}}=0$. This contradicts with $k_{\mathfrak{l},x}\ne 0$ in \eqref{eq.kappa.threewave}.
 \end{proof}
 
 
@@ -1626,7 +1626,7 @@ The proof of (3), (4) in case 2 (i) is the same as that in case 1.1 (i).
 
 
 \begin{prop}\label{prop.countingind}
-Let $\mathcal{C}(k)$ be a couple which is the output of step $k$ of the cutting algorithm Proposition \ref{prop.cuttingalgorithm}. For any couple $\mathcal{C}$, let $n(\mathcal{C})$ be the total number of nodes in $\mathcal{C}$ and $n_e(\mathcal{C})$ (resp. $n_{fx}(\mathcal{C})$, $n_{\textit{fr}}(\mathcal{C})$) be the total number of non-leg edges (resp. fixed legs, free legs). We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}(k)$ and $c_{\mathfrak{l}}\in \mathbb{R}$ for each fixed leg $\mathfrak{l}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha}. Then we have
+Let $\mathcal{C}(k)$ be a couple which is the output of step $k$ of the cutting algorithm Proposition \ref{prop.cuttingalgorithm}. For any couple $\mathcal{C}$, let $n(\mathcal{C})$ be the total number of nodes in $\mathcal{C}$ and $n_e(\mathcal{C})$ (resp. $n_{fx}(\mathcal{C})$, $n_{\textit{fr}}(\mathcal{C})$) be the total number of non-leg edges (resp. fixed legs, free legs). We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}(k)$ and $c_{\mathfrak{l}}\in \mathbb{R}$ for each fixed leg $\mathfrak{l}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave}. Then we have
 
 (1) We have following relation of $n(\mathcal{C})$, $n_e(\mathcal{C})$, $n_{fx}(\mathcal{C})$ and $n_{\textit{fr}}(\mathcal{C})$
 \begin{equation}
@@ -1639,7 +1639,7 @@ Let $\mathcal{C}(k)$ be a couple which is the output of step $k$ of the cutting 
 \end{equation}
 
 (3) If we assume that $\mathcal{C}(k)$ satisfies the property P, then (recall that $Q=L^{d}T^{-1}_{\text{max}}$)
-\begin{equation}\label{eq.countingbd3}
+\begin{equation}\label{eq.countingbd3.threewave}
 \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C}(k),\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\leq L^{O\left(\chi(\mathcal{C}(k))\theta\right)} Q^{\chi(\mathcal{C}(k))}\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}(k)} \kappa^{-1}_{\mathfrak{e}} .
 \end{equation}
 
@@ -1647,11 +1647,11 @@ Let $\mathcal{C}(k)$ be a couple which is the output of step $k$ of the cutting 
 
 \underline{Derivation of Proposition \ref{prop.counting} from Proposition \ref{prop.countingind}:} 
 By Proposition \ref{prop.cuttingalgorithm} (2), $\mathcal{C}_{\text{norm}}(1)=\mathcal{C}_{\text{norm}}$ and $\# Eq(\mathcal{C})=\# Eq(\mathcal{C}(1))$. Then by Proposition \ref{prop.countingind} (3), 
-\begin{equation}\label{eq.countinglemstep3}
+\begin{equation}\label{eq.countinglemstep3.threewave}
     \# Eq(\mathcal{C})=\# Eq(\mathcal{C}(1))\leq L^{O(\chi(\mathcal{C}(1))\theta)} Q^{\chi(\mathcal{C}(1))}\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}(1)} \kappa^{-1}_{\mathfrak{e}}
     %=L^{O(\theta)} Q^{\chi(\mathcal{C})}\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa^{-1}_{\mathfrak{e}}
 \end{equation}
-Since in $\mathcal{C}(1)$, $n_{fx}(\mathcal{C}(1))=n_{\textit{fr}}(\mathcal{C}(1))=1$, by Proposition \ref{prop.countingind} (1), $2n_e(\mathcal{C}(1))+2=3n(\mathcal{C}(1))$. Using this fact and the definition of $\chi$, we get $\chi(\mathcal{C}(1))=n_e(\mathcal{C}(1))+1-n(\mathcal{C}(1))=n(\mathcal{C}(1))/2$. Substituting this expression of $\chi(\mathcal{C}(1))$ into \eqref{eq.countinglemstep3} proves the conclusion of Proposition \ref{prop.counting}. 
+Since in $\mathcal{C}(1)$, $n_{fx}(\mathcal{C}(1))=n_{\textit{fr}}(\mathcal{C}(1))=1$, by Proposition \ref{prop.countingind} (1), $2n_e(\mathcal{C}(1))+2=3n(\mathcal{C}(1))$. Using this fact and the definition of $\chi$, we get $\chi(\mathcal{C}(1))=n_e(\mathcal{C}(1))+1-n(\mathcal{C}(1))=n(\mathcal{C}(1))/2$. Substituting this expression of $\chi(\mathcal{C}(1))$ into \eqref{eq.countinglemstep3.threewave} proves the conclusion of Proposition \ref{prop.counting}. 
 
 The proof of Proposition \ref{prop.countingind} is the main goal of the rest of the proof.
 
@@ -1703,8 +1703,8 @@ We complete the proof of (2) of Proposition \ref{prop.countingind}.
 \underline{Proof of 1 node case of Proposition \ref{prop.countingind} (3):} We prove the following Lemma \ref{lem.countingbdunit} which is the 1 node case of Proposition \ref{prop.countingind} (3). Recall that $\mathcal{C}_{I}$ and $\mathcal{C}_{II}$ are the two possibilities of the 1 node couple $\mathcal{C}_{\mathfrak{l}}$ in Proposition \ref{prop.cuttingalgorithm} (3).
 
 \begin{lem}\label{lem.countingbdunit}
-$\mathcal{C}_{I}$, $\mathcal{C}_{II}$ satisfy the bound \eqref{eq.countingbd3} in Proposition \ref{prop.countingind}. In other words, fix $c_1$ (resp. $c_1$, $c_2$) for the fixed legs of $\mathcal{C}_{I}$ (resp. $\mathcal{C}_{II}$), then we have 
-\begin{equation}\label{eq.countingbdunit}
+$\mathcal{C}_{I}$, $\mathcal{C}_{II}$ satisfy the bound \eqref{eq.countingbd3.threewave} in Proposition \ref{prop.countingind}. In other words, fix $c_1$ (resp. $c_1$, $c_2$) for the fixed legs of $\mathcal{C}_{I}$ (resp. $\mathcal{C}_{II}$), then we have 
+\begin{equation}\label{eq.countingbdunit.threewave}
     \# Eq(\mathcal{C}_{I})\leq L^\theta Q\kappa^{-1}_{\mathfrak{e}},\qquad \# Eq(\mathcal{C}_{II})\leq Q^0=1.
 \end{equation}
 \end{lem}
@@ -1768,7 +1768,7 @@ Here the second inequality follows from induction assumption and Lemma \ref{lem.
 
 Then applying Lemma \ref{lem.Eq(C)cutting} gives
 
-\begin{equation}\label{eq.case2expand}
+\begin{equation}\label{eq.case2expand.threewave}
 \begin{split}
     \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C}(k),\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\le&
     \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}(k)\backslash\mathcal{C}(k)_2)} } \# Eq(\mathcal{C}(k)\backslash\mathcal{C}(k)_2,\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}(k)_2)} }\# Eq(\mathcal{C}(k)_2, \{c_{\mathfrak{l}_2}\})
@@ -1778,8 +1778,8 @@ Then applying Lemma \ref{lem.Eq(C)cutting} gives
 \end{equation}
 Here in the second inequality, we apply the induction assumption to $\mathcal{C}(k)_2$.
 
-Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand} gives
-\begin{equation}\label{eq.case2expand'}
+Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand.threewave} gives
+\begin{equation}\label{eq.case2expand'.threewave}
 \begin{split}
     &\sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C}(k),\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
     \lesssim  L^{O(\mathcal{C}(k)_2\theta)} Q^{\chi(\mathcal{C}(k)_2)}\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}(k)\backslash\mathcal{C}(k)_2)} } \# Eq(\mathcal{C}(k)\backslash\mathcal{C}(k)_2,\{c_{\mathfrak{l}_1}\})
@@ -1829,14 +1829,14 @@ and thus the proof of Proposition \ref{prop.counting}.
 \subsection{An upper bound of tree terms}\label{sec.treetermsupperbound} In this section, we first prove the following Proposition which gives an upper bound of the variance of $\mathcal{J}_{T,k}$ and then prove Proposition \ref{prop.treetermsupperbound} as its corollary.
 
 \begin{prop}\label{prop.treetermsvariance}
-Assume that $\alpha$ satisfies \eqref{eq.conditionalpha} and $\rho=\alpha\, T^{\frac{1}{2}}_{\text{max}}$. For any $\theta>0$, we have
+Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave} and $\rho=\alpha\, T^{\frac{1}{2}}_{\text{max}}$. For any $\theta>0$, we have
 \begin{equation}
     \sup_k\, \mathbb{E}|(\mathcal{J}_T)_k|^2\lesssim L^{O(l(T)\theta)} \rho^{2l(T)}.
 \end{equation}
 and $\mathbb{E}|(\mathcal{J}_T)_k|^2=0$ if $|k|\gtrsim 1$.
 \end{prop}
 \begin{proof}
-By \eqref{eq.termTp} and \eqref{eq.termexp}, we know that $\mathcal{J}_{T,k}$ is a linear combination of $Term(T,p)_k$.
+By \eqref{eq.termTp.threewave} and \eqref{eq.termexp.threewave}, we know that $\mathcal{J}_{T,k}$ is a linear combination of $Term(T,p)_k$.
 \begin{equation}
 \begin{split}
     \mathbb{E}|\mathcal{J}_{T,k}|^2=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
@@ -1845,14 +1845,14 @@ By \eqref{eq.termTp} and \eqref{eq.termexp}, we know that $\mathcal{J}_{T,k}$ is
 \end{equation}
 
 Since $\alpha=\frac{\lambda}{L^{\frac{d}{2}}}$, $\frac{\lambda}{L^{d}}=\alpha L^{-\frac{d}{2}}$. Since the number of elements in $\mathcal{P}$ can be bounded by a constant, by Lemma \ref{lem.Tpvariance} proved below, we get
-\begin{equation}\label{eq.proptreetermsvariance1}
+\begin{equation}\label{eq.proptreetermsvariance1.threewave}
 \begin{split}
     \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim (\alpha L^{-\frac{d}{2}})^{2l(T)}
     L^{O(n\theta)} Q^{\frac{n}{2}}  T^{n}_{\text{max}}  .
 \end{split}
 \end{equation}
 
-By definition, $n$ is the total number of $\bullet$ nodes in the couple constructed from tree $T$ and pairing $p$. Therefore, $n$ equals to $2l(T)$.  Replacing $n$ by $2l(T)$ and $Q$ by $L^dT^{-1}_{\text{max}}$ in \eqref{eq.proptreetermsvariance1}, we get
+By definition, $n$ is the total number of $\bullet$ nodes in the couple constructed from tree $T$ and pairing $p$. Therefore, $n$ equals to $2l(T)$.  Replacing $n$ by $2l(T)$ and $Q$ by $L^dT^{-1}_{\text{max}}$ in \eqref{eq.proptreetermsvariance1.threewave}, we get
 \begin{equation}
 \begin{split}
     \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim& (\alpha L^{-\frac{d}{2}})^{2l(T)}
@@ -1870,13 +1870,13 @@ Therefore, we complete the proof of this proposition.
 \end{proof}
 
 
-\begin{lem}\label{lem.Tpvariance} Let $n$ and $Q=L^dT^{-1}_{\text{max}}$ be the same as in Proposition \ref{prop.counting}. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha} and $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported. Let $\mathcal{C}$ be the couple constructed from tree $T$ and pairing $p$. Then for any $\theta>0$, we have
+\begin{lem}\label{lem.Tpvariance} Let $n$ and $Q=L^dT^{-1}_{\text{max}}$ be the same as in Proposition \ref{prop.counting}. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave} and $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported. Let $\mathcal{C}$ be the couple constructed from tree $T$ and pairing $p$. Then for any $\theta>0$, we have
 \begin{equation}
     \sup_k\, |Term(T,p)_k|\le L^{O(n\theta)} Q^{\frac{n}{2}} T_{\text{max}}^{n}.
 \end{equation}
 and $Term(T,p)_k=0$ if $|k|\gtrsim 1$.
 \end{lem}
-\begin{proof} By \eqref{eq.termTp}, we get
+\begin{proof} By \eqref{eq.termTp.threewave}, we get
 
 \begin{equation}
 \begin{split}
@@ -1888,23 +1888,23 @@ and $Term(T,p)_k=0$ if $|k|\gtrsim 1$.
 
 Since $n_{\mathrm{in}}$ are compactly supported and there are bounded many of them in $Term(T, p)_k$, by $k_1 + k_2 + \cdots + k_{l(T)+1}=k$, we know that $Term(T, p)_k=0$ if $|k|\gtrsim 1$.
 
-By \eqref{eq.boundcoef}, we get  %$\frac{1}{\sqrt{(|c(\Omega)_{\mathfrak{n}}|+T^{-2}_{\text{max}})^2+|r_{\mathfrak{n}}|^2}}\lesssim \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-2}_{\text{max}}}$
-\begin{equation}\label{eq.termlemmaeq1}
+By \eqref{eq.boundcoef.threewave}, we get  %$\frac{1}{\sqrt{(|c(\Omega)_{\mathfrak{n}}|+T^{-2}_{\text{max}})^2+|r_{\mathfrak{n}}|^2}}\lesssim \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-2}_{\text{max}}}$
+\begin{equation}\label{eq.termlemmaeq1.threewave}
     |H^T_{k_1\cdots k_{l+1}}|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{1}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\ \prod_{\mathfrak{e}\in T_{\text{in}}}|k_{\mathfrak{e},x}|\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}.
 \end{equation}
 
 
 
-% If $k_1,\cdots,k_{l(T)+1}$ are bounded, then the above argument proves the boundedness of $|k_{\mathfrak{e},x}|$, so by \eqref{eq.termlemmaeq1} we have
-% \begin{equation}\label{eq.termlemmaeq2}
+% If $k_1,\cdots,k_{l(T)+1}$ are bounded, then the above argument proves the boundedness of $|k_{\mathfrak{e},x}|$, so by \eqref{eq.termlemmaeq1.threewave} we have
+% \begin{equation}\label{eq.termlemmaeq2.threewave}
 %     H^T_{k_1\cdots k_{l+1}}\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{1}{\sqrt{(|q_{\mathfrak{n}}|+T^{-1}_{\text{max}})^2+|r_{\mathfrak{n}}|^2}}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}.
 % \end{equation}
 
 
-By \eqref{eq.q_n}, $q_{\mathfrak{n}}$ is a linear combination of $\Omega_{\mathfrak{n}}$, so there exist constants $c_{\mathfrak{n},\widetilde{\mathfrak{n}}}$ such that $q_{\mathfrak{n}}=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$. Let $c$ be the matrix $[c_{\mathfrak{n},\widetilde{\mathfrak{n}}}]$ and $\mathscr{M}(T)$ be the set of all possible such matrices, then the number of elements in $\mathscr{M}(T)$ can be bounded by a constant. Let $c(\Omega)$ be the vector $\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}\}_{\mathfrak{n}}$ and $c(\Omega)_{\mathfrak{n}}=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ be the components of $c(\Omega)$.
+By \eqref{eq.q_n.threewave}, $q_{\mathfrak{n}}$ is a linear combination of $\Omega_{\mathfrak{n}}$, so there exist constants $c_{\mathfrak{n},\widetilde{\mathfrak{n}}}$ such that $q_{\mathfrak{n}}=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$. Let $c$ be the matrix $[c_{\mathfrak{n},\widetilde{\mathfrak{n}}}]$ and $\mathscr{M}(T)$ be the set of all possible such matrices, then the number of elements in $\mathscr{M}(T)$ can be bounded by a constant. Let $c(\Omega)$ be the vector $\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}\}_{\mathfrak{n}}$ and $c(\Omega)_{\mathfrak{n}}=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ be the components of $c(\Omega)$.
 
-With this notation, we know that $q_{\mathfrak{n}}=c(\Omega)_{\mathfrak{n}}$ and the right hand side of \eqref{eq.termlemmaeq1} becomes $\sum_{c\in \mathscr{M}(T) }\prod_{\mathfrak{n}\in T_{\text{in}}} \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}$. Therefore, using the fact that $n_{\textrm{in}}$ are compactly supported, we have
-\begin{equation}\label{eq.termlemmaeq3}
+With this notation, we know that $q_{\mathfrak{n}}=c(\Omega)_{\mathfrak{n}}$ and the right hand side of \eqref{eq.termlemmaeq1.threewave} becomes $\sum_{c\in \mathscr{M}(T) }\prod_{\mathfrak{n}\in T_{\text{in}}} \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}$. Therefore, using the fact that $n_{\textrm{in}}$ are compactly supported, we have
+\begin{equation}\label{eq.termlemmaeq3.threewave}
 \begin{split}
     &|Term(T, p)_k|\lesssim \sum_{\substack{k_1,\, \cdots,\, k_{l(T)+1},\, k'_1,\, \cdots,\, k'_{l(T)+1}\\ |k_{j}|, |k'_j|\lesssim 1, \forall j}} \sum_{c\in \mathscr{M}(T) }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \prod_{\mathfrak{e}\in T_{\text{in}}} |k_{\mathfrak{e},x}|\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}} 
     \\
@@ -1912,8 +1912,8 @@ With this notation, we know that $q_{\mathfrak{n}}=c(\Omega)_{\mathfrak{n}}$ and
 \end{split}
 \end{equation}
 
-Switch the order of summations and products in \eqref{eq.termlemmaeq3}, then we get
-\begin{equation}\label{eq.termlemmaeq2}
+Switch the order of summations and products in \eqref{eq.termlemmaeq3.threewave}, then we get
+\begin{equation}\label{eq.termlemmaeq2.threewave}
 \begin{split}
     &|Term(T, p)_k|\lesssim \sum_{\substack{k_1,\, \cdots,\, k_{l(T)+1},\, k'_1,\, \cdots,\, k'_{l(T)+1}\\ |k_{j}|, |k'_j|\lesssim 1, \forall j}} \sum_{c, c'\in \mathscr{M}(T) }\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}\frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}
     \\
@@ -1922,27 +1922,27 @@ Switch the order of summations and products in \eqref{eq.termlemmaeq3}, then we 
 \end{equation}
 
 Given a tree $T$ and pairing $p$, we can construct a couple $\mathcal{C}$. We show that 
-\begin{equation}\label{eq.termlemmaeq4}
+\begin{equation}\label{eq.termlemmaeq4.threewave}
 \sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) },\qquad \prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}, \qquad \prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}},\qquad \cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}.    
 \end{equation}
 
 
-Remember that $\mathcal{C}$ is constructed by glueing two copies of $T$ by $p$. In \eqref{eq.termlemmaeq2}, $\mathfrak{n}$, $\mathfrak{e}$, $\mathfrak{n}'$, $\mathfrak{e}'$ denote nodes and edges in the first or second copy respectively. Since all nodes in $\mathcal{C}$ come from the two copies of $T$, we get $\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}$ and $\cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}$. Remember that $T_{\text{in}}$ is the tree formed by all non-leaf nodes, so edges of $\mathcal{C}_{\text{norm}}$ all come from the two copies of $T_{\text{in}}$. Therefore $\prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}$. Given two matrix $c$, $c'$, we can construct a new matrix $c\oplus c'$ as the following. Consider two vectors $\Omega=\{\Omega_{\mathfrak{n}}\}_{\mathfrak{n}'\in T}$, $\Omega'=\{\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}'\in T}$, then define $\Omega\oplus\Omega'\coloneqq \{\Omega_{\mathfrak{n}},\Omega_{\mathfrak{n}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. We know that $c(\Omega)=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ and $c(\Omega')=\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}$. Define $c\oplus c'$ to be the linear map whose domain is all vector of the form $\Omega\oplus\Omega'$ and whose action is $c\oplus c'(\Omega\oplus\Omega')=\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}},\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. Define $\mathscr{M}(\mathcal{C})=\{c\oplus c':c, c'\in \mathscr{M}(T)\}$, then we get $\sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) }$.
+Remember that $\mathcal{C}$ is constructed by glueing two copies of $T$ by $p$. In \eqref{eq.termlemmaeq2.threewave}, $\mathfrak{n}$, $\mathfrak{e}$, $\mathfrak{n}'$, $\mathfrak{e}'$ denote nodes and edges in the first or second copy respectively. Since all nodes in $\mathcal{C}$ come from the two copies of $T$, we get $\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}$ and $\cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}$. Remember that $T_{\text{in}}$ is the tree formed by all non-leaf nodes, so edges of $\mathcal{C}_{\text{norm}}$ all come from the two copies of $T_{\text{in}}$. Therefore $\prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}$. Given two matrix $c$, $c'$, we can construct a new matrix $c\oplus c'$ as the following. Consider two vectors $\Omega=\{\Omega_{\mathfrak{n}}\}_{\mathfrak{n}'\in T}$, $\Omega'=\{\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}'\in T}$, then define $\Omega\oplus\Omega'\coloneqq \{\Omega_{\mathfrak{n}},\Omega_{\mathfrak{n}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. We know that $c(\Omega)=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ and $c(\Omega')=\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}$. Define $c\oplus c'$ to be the linear map whose domain is all vector of the form $\Omega\oplus\Omega'$ and whose action is $c\oplus c'(\Omega\oplus\Omega')=\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}},\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. Define $\mathscr{M}(\mathcal{C})=\{c\oplus c':c, c'\in \mathscr{M}(T)\}$, then we get $\sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) }$.
 
 
 
-By \eqref{eq.termlemmaeq4} and the fact that leaves corresponding to $k_j, k_j'$ are merged in $\mathcal{C}$, \eqref{eq.termlemmaeq2} is equivalent to 
-\begin{equation}\label{eq.termlemmaeq5}
+By \eqref{eq.termlemmaeq4.threewave} and the fact that leaves corresponding to $k_j, k_j'$ are merged in $\mathcal{C}$, \eqref{eq.termlemmaeq2.threewave} is equivalent to 
+\begin{equation}\label{eq.termlemmaeq5.threewave}
 |Term(T, p)_k|\lesssim \sum_{\substack{k_1,\, \cdots,\, k_{l(T)+1},\, k'_1,\, \cdots,\, k'_{l(T)+1}\\ |k_{j}|, |k'_j|\lesssim 1, \forall j}} \sum_{c\in \mathscr{M}(\mathcal{C}) }\prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}|k_{\mathfrak{e},x}|\ \delta_{\cap_{\mathfrak{n}\in \mathcal{C}} \{S_{\mathfrak{n}}=0\}}
 \end{equation}
 
 
-Assigning a number $\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}$ for each node $\mathfrak{n}\in \mathcal{C}$, a number $\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)\coloneqq\{2^{-K_{\mathfrak{e}}}:K_{\mathfrak{e}}\in  \mathbb{Z}\cap [0,ln\ \alpha^{-1}]\}$ for each edge $\mathfrak{e}$ and a number $k\in \mathbb{Z}^d_{L}$ for each fixed leg, we can define the associated equation $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)=Eq(\mathcal{C})$ as in \eqref{eq.diophantineeqpairedsigma'}. Then we have  
-\begin{equation}\label{eq.termlemmaeq8}
+Assigning a number $\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}$ for each node $\mathfrak{n}\in \mathcal{C}$, a number $\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)\coloneqq\{2^{-K_{\mathfrak{e}}}:K_{\mathfrak{e}}\in  \mathbb{Z}\cap [0,ln\ \alpha^{-1}]\}$ for each edge $\mathfrak{e}$ and a number $k\in \mathbb{Z}^d_{L}$ for each fixed leg, we can define the associated equation $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)=Eq(\mathcal{C})$ as in \eqref{eq.diophantineeqpairedsigma'.threewave}. Then we have  
+\begin{equation}\label{eq.termlemmaeq8.threewave}
     \sum_{\substack{k_1,\, \cdots,\, k_{l(T)+1},\, k'_1,\, \cdots,\, k'_{l(T)+1}\\\cap_{\mathfrak{n}\in \mathcal{C}} \{S_{\mathfrak{n}}=0\}}}=\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}}\sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)},
 \end{equation}
 which implies that
-\begin{equation}\label{eq.termlemmaeq6}
+\begin{equation}\label{eq.termlemmaeq6.threewave}
 \begin{split}
     |Term(T, p)_k|\lesssim \sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}}\sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)} \sum_{c\in \mathscr{M}(\mathcal{C}) }\prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}|k_{\mathfrak{e},x}|
 \end{split}
@@ -1956,11 +1956,11 @@ which implies that
 % \end{equation}
 %Since $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)$ contains equations in $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, $\delta_{\cap_{\mathfrak{n}'\in T_{\text{in}}} \{S_{\mathfrak{n}'}=0\}}$ and $\delta_{p}$, so we may remove the three indicator functions from the above sum. 
 
-Remember in the definition of $Eq(\mathcal{C})$, we have conditions that $|k_{\mathfrak{e}}|\lesssim 1$. These conditions come from the fact that on the support of $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, if $k_1,\cdots,k_{l(T)+1}$ are bounded, then $|k_{\mathfrak{e}}|$ are also bounded. Recall that by \eqref{eq.defnS_n}, $S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}$. The conditions that $S_{\mathfrak{n}}=0$ imply that the variables $k_{\mathfrak{e}}$ of the parent edge $\mathfrak{e}$ are linear combinations of the variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$ of children edges $\mathfrak{e}_1$, $\mathfrak{e}_2$. The variables of children edges $\mathfrak{e}_j$ are again a linear combinations of the variables of their children. We may iterate this argument to show that all variables $k_{\mathfrak{e}}$ are linear combinations of variables of leaves $k_1,\cdots,k_{l(T)+1}$. Because $k_1,\cdots,k_{l(T)+1}$ are bounded, then their linear combinations $k_{\mathfrak{e}}$ are also bounded.
+Remember in the definition of $Eq(\mathcal{C})$, we have conditions that $|k_{\mathfrak{e}}|\lesssim 1$. These conditions come from the fact that on the support of $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, if $k_1,\cdots,k_{l(T)+1}$ are bounded, then $|k_{\mathfrak{e}}|$ are also bounded. Recall that by \eqref{eq.defnS_n.threewave}, $S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}$. The conditions that $S_{\mathfrak{n}}=0$ imply that the variables $k_{\mathfrak{e}}$ of the parent edge $\mathfrak{e}$ are linear combinations of the variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$ of children edges $\mathfrak{e}_1$, $\mathfrak{e}_2$. The variables of children edges $\mathfrak{e}_j$ are again a linear combinations of the variables of their children. We may iterate this argument to show that all variables $k_{\mathfrak{e}}$ are linear combinations of variables of leaves $k_1,\cdots,k_{l(T)+1}$. Because $k_1,\cdots,k_{l(T)+1}$ are bounded, then their linear combinations $k_{\mathfrak{e}}$ are also bounded.
 
 In the definition of $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)$,
-$|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$ and $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$. Denote the constant in $O(T^{-1}_{\text{max}})$ by $\delta$ and then we have $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|\le \delta T^{-1}_{\text{max}}$. Therefore, we have $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\lesssim \delta T^{-1}_{\text{max}}$. We have the freedom of choosing $\delta$ in the definition and we take it sufficiently small so that $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\le \frac{1}{2}T^{-1}_{\text{max}}$. This implies that $|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}\gtrsim |c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}$. Since we also have $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$, by \eqref{eq.termlemmaeq6} we get
-\begin{equation}\label{eq.lemboundtermTp}
+$|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$ and $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$. Denote the constant in $O(T^{-1}_{\text{max}})$ by $\delta$ and then we have $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|\le \delta T^{-1}_{\text{max}}$. Therefore, we have $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\lesssim \delta T^{-1}_{\text{max}}$. We have the freedom of choosing $\delta$ in the definition and we take it sufficiently small so that $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\le \frac{1}{2}T^{-1}_{\text{max}}$. This implies that $|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}\gtrsim |c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}$. Since we also have $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$, by \eqref{eq.termlemmaeq6.threewave} we get
+\begin{equation}\label{eq.lemboundtermTp.threewave}
 \begin{split}
     &Term(T, p)_k
     \\
@@ -1973,10 +1973,10 @@ $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$ and $|k_{
     \lesssim &\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}}\prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \left(\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}\kappa_{\mathfrak{e}}\right)L^{O(n\theta)} Q^{\frac{n}{2}}\ \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa^{-1}_{\mathfrak{e}}
 \end{split}
 \end{equation}
-Here in the last inequality we applied \eqref{eq.countingbd0} in Proposition \ref{prop.counting}.
+Here in the last inequality we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
 
-After simplification, \eqref{eq.lemboundtermTp} gives us 
-\begin{equation}\label{eq.lemboundtermTpsimplify}
+After simplification, \eqref{eq.lemboundtermTp.threewave} gives us 
+\begin{equation}\label{eq.lemboundtermTpsimplify.threewave}
 \begin{split}
     |Term(T, p)_k|\lesssim &L^{O(n\theta)} Q^{\frac{n}{2}}\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}}
     \\
@@ -1997,7 +1997,7 @@ After simplification, \eqref{eq.lemboundtermTp} gives us
 Here in the last step we use the fact that $\#\mathcal{D}(\alpha,1)\lesssim ln(\alpha^{-1})$. $|\sigma_{\mathfrak{n}}|\lesssim 1$ in the sum of the first two inequalities comes from the fact that $\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=0$ if some $|\sigma_{\mathfrak{n}}|\gtrsim 1$. This fact is true because in $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, all $|k_{\mathfrak{e}}|\lesssim 1$, which implies that $|\Omega_{\mathfrak{n}}|\lesssim 1$ and therefore $|\sigma_{\mathfrak{n}}|\gtrsim 1$ (notice that $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$).
 
 We claim that 
-\begin{equation}\label{eq.lemTpvarianceclaim}
+\begin{equation}\label{eq.lemTpvarianceclaim.threewave}
      \sup_{c}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\lesssim L^{O(n\theta)} T^{n}_{\text{max}}
 \end{equation}
 
@@ -2007,12 +2007,12 @@ Since there are only bounded many matrices in $\mathscr{M}(\mathcal{C})$.  Given
 \end{equation}
 which proves the lemma.
 
-Now prove the claim. Notice that there are $n$ nodes in $\mathcal{C}$. We label these nodes by $h=1,\cdots,n$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{T_{\text{max}}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=\frac{m_{h}}{T_{\text{max}}}$. \eqref{eq.lemTpvarianceclaim} is thus equivalent to 
-\begin{equation}\label{eq.lemTpvarianceclaim1}
+Now prove the claim. Notice that there are $n$ nodes in $\mathcal{C}$. We label these nodes by $h=1,\cdots,n$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{T_{\text{max}}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=\frac{m_{h}}{T_{\text{max}}}$. \eqref{eq.lemTpvarianceclaim.threewave} is thus equivalent to 
+\begin{equation}\label{eq.lemTpvarianceclaim1.threewave}
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{T_{\text{max}}}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(n\theta)}T^{n}_{\text{max}}
 \end{equation}
 
-Before proving \eqref{eq.lemTpvarianceclaim1}, let's first look at one of its special case. If $c=Id$, then $c(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1} becomes
+Before proving \eqref{eq.lemTpvarianceclaim1.threewave}, let's first look at one of its special case. If $c=Id$, then $c(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1.threewave} becomes
 \begin{equation}
 \begin{split}
     T^{n}_{\text{max}}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{1}{|m_{h}|+1} = T^{n}_{\text{max}}\prod_{h=1}^{n}\left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \frac{1}{|m_{h}|+1}\right)
@@ -2021,12 +2021,12 @@ Before proving \eqref{eq.lemTpvarianceclaim1}, let's first look at one of its sp
 \end{equation}
 Here we use the fact that $\sum_{\substack{j\in \mathbb{Z}\\ |j|\lesssim  T_{\text{max}}}} \frac{1}{|j|+1}=O(ln(\alpha^{-1}))$.
 
-Now we prove \eqref{eq.lemTpvarianceclaim1}. We just need to show that 
-\begin{equation}\label{eq.lemTpvarianceEulerMac}
+Now we prove \eqref{eq.lemTpvarianceclaim1.threewave}. We just need to show that 
+\begin{equation}\label{eq.lemTpvarianceEulerMac.threewave}
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{1}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(n\theta)}
 \end{equation}
 
-By Euler-Maclaurin formula \eqref{eq.EulerMaclaurin} and change of variable formula, we get
+By Euler-Maclaurin formula \eqref{eq.EulerMaclaurin.threewave} and change of variable formula, we get
 \begin{equation}
 \begin{split}
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{1}{|c(\{m_{h}\})_{h}|+1}\le& \int_{|m_{h}|\lesssim  T_{\text{max}}}  \prod_{h=1}^{n}\frac{1}{|c(\{m_{h}\})_{h}|+1}\prod_{h=1}^{n} dm_{h}
@@ -2064,17 +2064,17 @@ Proposition \ref{prop.treetermsupperbound} is a corollary of the above large dev
 with probability less than $e^{-c(L^{\frac{n}{2}\theta})^{\frac{2}{n}}}=e^{-cL^{\theta}}$. By definition \ref{def.Lcertainly}, the above inequality holds true $L$-certainly.
 
 Since by Proposition \ref{prop.treetermsvariance}, $\mathbb{E}|(\mathcal{J}_T)_k|^2\lesssim L^{O(l(T)\theta)} \rho^{2l(T)}$, then we get 
-\begin{equation}\label{eq.proptreetermsupperbound1}
+\begin{equation}\label{eq.proptreetermsupperbound1.threewave}
 |(\mathcal{J}_{T})_{k}(t)|\lesssim L^{O(l(T)\theta)} \rho^{l(T)},\qquad \textit{L-certainly}
 \end{equation} 
 
-\eqref{eq.proptreetermsupperbound1} is very similar to the final goal \eqref{eq.treetermsupperbound}, except for the $\sup_t$ and $\sup_k$ in front. In what follows we apply the standard epsilon net and union bound method to remove these two $\sup$.
+\eqref{eq.proptreetermsupperbound1.threewave} is very similar to the final goal \eqref{eq.treetermsupperbound.threewave}, except for the $\sup_t$ and $\sup_k$ in front. In what follows we apply the standard epsilon net and union bound method to remove these two $\sup$.
 
 Assume that $|t-t'|\lesssim \rho^{l(T)}L^{-M}$, it's not hard to show that $|(\mathcal{J}_{T})_{k}(t)-(\mathcal{J}_{T})_{k}(t')|\lesssim \rho^{l(T)}$. Therefore, if $\sup_{i} \sup_{k} |(\mathcal{J}_{T})_{k}(i\rho^{l(T)}L^{-M})|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$, then $\sup_{t} \sup_{k} |(\mathcal{J}_{T})_{k}(t)|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$ and the proof is completed.
 %Consider the decomposition $\left[0, T_{\text{max}}\right]=\bigcup_{i=0}^{L^{M} T_{\text{max}}}\left[\frac{i}{L^M},\frac{i+1}{L^M}\right]$.
 
 Notice that 
-\begin{equation}\label{eq.unionbound}
+\begin{equation}\label{eq.unionbound.threewave}
 \begin{split}
     &\mathbb{P}\left(\sup_{i\in \mathbb{Z}} \sup_{k} |(\mathcal{J}_{T})_{k}(i\rho^{l(T)}L^{-M})|\gtrsim L^{O(l(T)\theta)} \rho^{l(T)}\right)
     \\
@@ -2094,7 +2094,7 @@ Now we complete the proof of Proposition \ref{prop.treetermsupperbound}.
 \subsection{Norm estimate of random matrices} \label{sec.randommatrices} In this section, we prove Proposition \ref{prop.operatorupperbound}. 
 
 Remember that by definition of $\mathcal{P}_{T}$ and $\mathcal{T}$, 
-\begin{equation}\label{eq.formulaP_T}
+\begin{equation}\label{eq.formulaP_T.threewave}
 \mathcal{P}_{T}(w)=\mathcal{T}(\mathcal{J}_{T},w)=\frac{i\lambda}{L^{d}} \sum\limits_{S(k_1,k_2,k)=0}\int^{t}_0k_{x}\mathcal{J}_{T,k_1} w_{k_2}e^{i s\Omega(k_1,k_2,k)- \nu|k|^2(t-s)} ds.
 \end{equation}    
 
@@ -2116,7 +2116,7 @@ Proposition \ref{prop.operatorupperbound} is a corollary of the following propos
 
 \begin{prop}\label{prop.operatorupperbound'}
 Let $\rho=\alpha\, T^{\frac{1}{2}}_{\text{max}}$ and $\mathcal{P}^l_{T}$ be the operator defined above. Define the space $X^{p}_{L^{2M}}=\{w\in X^p: w_k=0\text{ if }|k|\gtrsim L^{2M}\}$ and the norm $||w||_{X^{p}_{L^{2M}}}=\sup_{|k|\lesssim L^{2M}} \langle k\rangle^{p} |w_k|$. Then for any sequence of trees and numbers $\{T_1,\cdots,T_K\}$ and $\{\tau_1,\cdots,\tau_K\}$, we have $L$-certainly the operator bound
-\begin{equation}\label{eq.operatornormtau}
+\begin{equation}\label{eq.operatornormtau.threewave}
     \left|\left|\sum_{\tau_1,\cdots,\tau_K}\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}\right|\right|_{L_t^{\infty}X^{p}_{L^{2M}}\rightarrow L_t^{\infty}X^{p}}\le L^{O\left(1+\theta \sum_{j=1}^K l(T_j)\right)} \rho^{\sum_{j=1}^K l(T_j)}.
 \end{equation}
 for any $T_j$ with $l(T_j)\le N$. 
@@ -2128,18 +2128,18 @@ for any $T_j$ with $l(T_j)\le N$.
 \end{equation}
 
 Define $\left(X^{p}_{L^{2M}}\right)^{\perp}=\{w\in X^p: w_k=0\text{ if }|k|\lesssim L^{2M}\}$. To prove Proposition \ref{prop.operatorupperbound}, it suffices to show that for all $w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$,
-\begin{equation}\label{eq.prop2.8eq1}
+\begin{equation}\label{eq.prop2.8eq1.threewave}
     \left|\left|\prod_{j=1}^K\mathcal{P}_{T_j}w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{O\left(1+\theta \sum_{j=1}^K l(T_j)\right)} \rho^{\sum_{j=1}^K l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p}.
 \end{equation}
 
-By \eqref{eq.formulaP_T}, if $w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$, then $\mathcal{P}_{T_j} w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$ if we enlarge the constant in $|k|\lesssim L^{2M}$ in the definition of $\left(X^{p}_{L^{2M}}\right)^{\perp}$. Therefore, to prove \eqref{eq.prop2.8eq1}, it suffices to prove
-\begin{equation}\label{eq.prop2.8eq2}
+By \eqref{eq.formulaP_T.threewave}, if $w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$, then $\mathcal{P}_{T_j} w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$ if we enlarge the constant in $|k|\lesssim L^{2M}$ in the definition of $\left(X^{p}_{L^{2M}}\right)^{\perp}$. Therefore, to prove \eqref{eq.prop2.8eq1.threewave}, it suffices to prove
+\begin{equation}\label{eq.prop2.8eq2.threewave}
     \left|\left|\mathcal{P}_{T_j}w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{O(1+l(T_j)\theta)} \rho^{l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p},
 \end{equation}
 for all $w\in \left(X^{p}_{L^{2M}}\right)^{\perp}$.
 
-By \eqref{eq.formulaP_T},
-\begin{equation}\label{eq.prop2.8eq3}
+By \eqref{eq.formulaP_T.threewave},
+\begin{equation}\label{eq.prop2.8eq3.threewave}
 \begin{split}
     |\mathcal{P}_{T_j}(w)_k|\le &\frac{\lambda}{L^{d}} \sum\limits_{S(k_1,k_2,k)=0}\int^{t}_0|k_{x}||\mathcal{J}_{T_j,k_1}| |w_{k_2}|e^{- \nu|k|^2(t-s)} ds
     \\
@@ -2154,9 +2154,9 @@ By \eqref{eq.formulaP_T},
 \end{equation} 
 Here in the second inequality, we apply Proposition \ref{prop.treetermsupperbound}. In the third line we use the fact that $\int^{t}_0e^{- \nu|k|^2(t-s)} ds\le \nu^{-1} \langle k\rangle^{-2}$. In the fourth line we use the fact that $\sum_{k_2:|k_2-k|\lesssim 1} \langle k_2\rangle^{-p}\le \langle k\rangle^{-p}$ and $|k|\gtrsim L^{2M}$ (since if $|k|\lesssim L^{2M}$ then $|\mathcal{P}_{T_j}(w)_k|$ vanishes and there is nothing to prove).
 
-\eqref{eq.prop2.8eq3} implies that $ \left|\left|\mathcal{P}_{T_j}w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{-M} \rho^{l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{O(1+l(T_j)\theta)} \rho^{l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p}$, so we have proved \eqref{eq.prop2.8eq2} and thus \eqref{eq.operatornorm'}.
+\eqref{eq.prop2.8eq3.threewave} implies that $ \left|\left|\mathcal{P}_{T_j}w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{-M} \rho^{l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p}\lesssim L^{O(1+l(T_j)\theta)} \rho^{l(T_j)} \left|\left|w\right|\right|_{L_t^{\infty}X^p}$, so we have proved \eqref{eq.prop2.8eq2.threewave} and thus \eqref{eq.operatornorm'.threewave}.
 
-Now we prove \eqref{eq.operatornorm}. Because $L=\sum_{1\le l(T)\le N} \mathcal{P}_{T}$ and $L^K=\sum_{1\le l(T_1),\cdots l(T_K)\le N} \mathcal{P}_{T_1}\cdots\mathcal{P}_{T_K}$, by \eqref{eq.operatornorm'} 
+Now we prove \eqref{eq.operatornorm.threewave}. Because $L=\sum_{1\le l(T)\le N} \mathcal{P}_{T}$ and $L^K=\sum_{1\le l(T_1),\cdots l(T_K)\le N} \mathcal{P}_{T_1}\cdots\mathcal{P}_{T_K}$, by \eqref{eq.operatornorm'.threewave} 
 \begin{equation}
      \left|\left|L^K\right|\right|_{L_t^{\infty}X^p\rightarrow L_t^{\infty}X^p}\lesssim L^{O(1)} \sum_{1\le l(T_1),\cdots l(T_K)\le N} (L^{O(\theta)}\rho)^{\sum_{j=1}^K l(T_j)}\le L^{O\left(1+\theta \sum_{j=1}^K l(T_j)\right)} \rho^{K}
 \end{equation}
@@ -2173,7 +2173,7 @@ $\mathcal{P}^{l}_{T}$ is almost the same as $\mathcal{P}_{T}$ except for the lim
 
 %as in section \ref{sec.connection}.
 
-By \eqref{eq.treeterm}, we know that $\mathcal{J}_{T}=\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}})$ corresponds to the tree $T$ in which the two subtrees of the root nodes are $T_{\mathfrak{n}_1}$ and $T_{\mathfrak{n}_2}$. Taking $T_{\mathfrak{n}_2}$ to be an one node tree, as the left tree in Figure \ref{fig.T(J,xi)andT(J,w)}, then this graph represents a term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \xi)$. The right tree in Figure \ref{fig.T(J,xi)andT(J,w)} represents the term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, w)$, because as in section \ref{sec.connection}, the $\Box$ node represents a function $w$ (in section \ref{sec.connection} the function is $\phi$).
+By \eqref{eq.treeterm.threewave}, we know that $\mathcal{J}_{T}=\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}})$ corresponds to the tree $T$ in which the two subtrees of the root nodes are $T_{\mathfrak{n}_1}$ and $T_{\mathfrak{n}_2}$. Taking $T_{\mathfrak{n}_2}$ to be an one node tree, as the left tree in Figure \ref{fig.T(J,xi)andT(J,w)}, then this graph represents a term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \xi)$. The right tree in Figure \ref{fig.T(J,xi)andT(J,w)} represents the term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, w)$, because as in section \ref{sec.connection}, the $\Box$ node represents a function $w$ (in section \ref{sec.connection} the function is $\phi$).
 
  \begin{figure}[H]
     \centering
@@ -2294,7 +2294,7 @@ We introduce the following definition.
 Because the tree in this section contains $\Box$ nodes and substitution nodes, we propose the following generalization of Definition \ref{def.treeterms} of tree terms.
 
 \begin{defn}\label{def.treetermsoperator} Given a binary tree $T$ with $\Box$ nodes and substitution nodes, we inductively define the quantity $\mathcal{J}_T$ by:
-\begin{equation}\label{eq.treetermoperator}
+\begin{equation}\label{eq.treetermoperator.threewave}
     \mathcal{J}_T=
     \begin{cases}
     \xi, \qquad\qquad\quad\ \   \textit{ if $T$ has only one node $\star$.}
@@ -2313,7 +2313,7 @@ Then we have the following formula of $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(w
 
 \begin{lem}
 With above definition of $T_1\circ \cdots \circ T_{K}$ and $\mathcal{J}_T$, we have 
-\begin{equation}\label{eq.operatoreqsimple}
+\begin{equation}\label{eq.operatoreqsimple.threewave}
     \prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(w)=\mathcal{J}_{T_1\circ \cdots \circ T_{K}}
 \end{equation}
 \end{lem}
@@ -2325,7 +2325,7 @@ To get a good upper bound, we need a better formula of $\prod_{j=1}^K\mathcal{P}
 
 \begin{lem}\label{lem.treetermsoperator} (1) Using the same notation as Lemma \ref{lem.treeterms}. Given a tree $T$ with $\Box$ nodes and substitution nodes. Assume that the root $\mathfrak{r}$ is a substitution nodes of index $\tau_{1}$. Let $\mathcal{J}_T$ be terms defined in Definition \ref{def.treetermsoperator}, then their Fourier coefficients $\mathcal{J}_{T,k}$ are degree $l$ polynomials of $\xi$ and $w$ given by the following formula
 
-\begin{equation}\label{eq.coeftermoperator}
+\begin{equation}\label{eq.coeftermoperator.threewave}
 \mathcal{J}_{T,k}=\left(\frac{i\lambda}{L^{d}}\right)^l\sum_{k_1,\, k_2,\, \cdots,\, k_{l+1}} \int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}}\Omega_{\mathfrak{n}}-\nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})|k_{\mathfrak{e}}|^2} \prod_{j=1}^{l+1} (\xi|w)_{k_j} %(\xi|w)_{k_1}(\xi|w)_{k_2}\cdots(\xi|w)_{k_{l+1}}    
 \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} 
 \ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}\ \prod_{\mathfrak{e}\in T_{\text{in}}}\iota_{\mathfrak{e}}k_{\mathfrak{e},x}
@@ -2356,7 +2356,7 @@ Here $\iota$, $(\xi|w)_{k_j}$, $A_{\mathfrak{n}}$, $S_{\mathfrak{n}}$, $\Omega_{
     \end{aligned}\right.
 \end{equation}
 
-\begin{equation}\label{eq.defnS_noperator}
+\begin{equation}\label{eq.defnS_noperator.threewave}
     S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}
 \end{equation}
 
@@ -2413,7 +2413,7 @@ Here $k_1,\cdots,k_{l}$ are all variables corresponding to $\star$ leaves, $k'$ 
 \end{equation}
 \end{lem}
 \begin{proof}
-Lemma \ref{lem.treetermsoperator} (1) can be proved by the same method as Lemma \ref{lem.treeterms}. We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm} and \eqref{eq.coef} satisfies the recursive formula \eqref{eq.treeterm} by a direct substitution, so they are the unique solution of that recursive formula, and this proves (1).
+Lemma \ref{lem.treetermsoperator} (1) can be proved by the same method as Lemma \ref{lem.treeterms}. We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by a direct substitution, so they are the unique solution of that recursive formula, and this proves (1).
 
 (2) is a corollary of (1).
 \end{proof}
@@ -2421,7 +2421,7 @@ Lemma \ref{lem.treetermsoperator} (1) can be proved by the same method as Lemma 
 We can also calculate $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(\mathcal{J}_{T})$, replacing $w$ by $\mathcal{J}_{T}$ corresponds to replacing a $\Box$ node by a tree $T$, so $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(\mathcal{J}_{T})=\mathcal{J}_{T_1\circ T_2\circ \cdots\circ T_K\circ T}$. Since $T$ does not contain $\Box$ node, so does $T_1\circ T_2\circ \cdots\circ T_K\circ T$ and $\mathcal{J}_{T_1\circ T_2\circ \cdots\circ T_K\circ T}$ is a polynomial of Gaussian variables $\xi_k$. Then we have the following lemma
 \begin{lem}
 We have 
-\begin{equation}\label{eq.operatoreqsimpleJ_T}
+\begin{equation}\label{eq.operatoreqsimpleJ_T.threewave}
     \prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(\mathcal{J}_{T})=\mathcal{J}_{T_1\circ T_2\circ \cdots\circ T_K\circ T}
 \end{equation}
 \end{lem}
@@ -2435,7 +2435,7 @@ This lemma follows from the above explanation .
 
 \begin{lem}\label{lem.boundcoefoperator}
 Assume that $|k_1|, \cdots, |k_{l}|\lesssim 1$, then for $t\le  T_{\text{max}}$, we have the following upper bound for $H^{\tau_1\cdots \tau_{K}}_{Tk_1\cdots k_{l}kk'}$,
-\begin{equation}\label{eq.boundcoefoperator}
+\begin{equation}\label{eq.boundcoefoperator.threewave}
     |H^{\tau_1\cdots \tau_{K}}_{Tk_1\cdots k_{l}kk'}|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}} \prod_{\mathfrak{e}\in T_{\text{in}}} p_{\mathfrak{e}}.
 \end{equation}
 Here $\tau_{\mathfrak{n}}$ is defined by 
@@ -2448,10 +2448,10 @@ Here $\tau_{\mathfrak{n}}$ is defined by
     \end{aligned}\right.
 \end{equation}
 Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the sequences $\{p_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$, $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$, $\{r_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by following formulas
-\begin{equation}\label{eq.p_noperator}
+\begin{equation}\label{eq.p_noperator.threewave}
     p_{\mathfrak{e}}=\frac{|k_{\mathfrak{e},x}|}{|k_{\mathfrak{e},x}|+1}
 \end{equation}
-\begin{equation}\label{eq.q_noperator}
+\begin{equation}\label{eq.q_noperator.threewave}
     q_{\mathfrak{n}}=
     \begin{cases}
     \Omega_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -2459,7 +2459,7 @@ Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elem
     \Omega_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if $\mathfrak{n}\neq\mathfrak{r}$ and $\mathfrak{n}'$ is the parent of $\mathfrak{n}$.}
     \end{cases}
 \end{equation}
-\begin{equation}\label{eq.r_noperator}
+\begin{equation}\label{eq.r_noperator.threewave}
     r_{\mathfrak{n}}=
     \begin{cases}
     |k_{\mathfrak{r}}|^2, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
@@ -2485,22 +2485,22 @@ Since $|k_{\mathfrak{e}}|\lesssim 1$, we get $\left|\prod_{\mathfrak{e}\in T_{\t
 
 
 As in section \ref{sec.uppcoef}, we define 
-\begin{equation}\label{eq.defF_Toperator}
+\begin{equation}\label{eq.defF_Toperator.threewave}
 F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}})=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} B_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}} a_{\mathfrak{n}} - \nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})b_{\mathfrak{n}}} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} \prod^K_{j=1}|k_{s_j,x}|
 \end{equation}
 
 Keeping notation the same as Lemma \ref{lem.boundcoef'}, if we can show that
-\begin{equation}\label{eq.lemboundop1}
+\begin{equation}\label{eq.lemboundop1.threewave}
     |F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}})|\lesssim\sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\prod_{\mathfrak{e}\in T_{\text{in}}} p_{\mathfrak{e}}
 ,
 \end{equation}
-then this lemma can be proved by taking $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=|k_{\mathfrak{e}}|^2$ in \eqref{eq.lemboundop1}.
+then this lemma can be proved by taking $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=|k_{\mathfrak{e}}|^2$ in \eqref{eq.lemboundop1.threewave}.
 
-Therefore, it suffices to prove \eqref{eq.lemboundop1}.
+Therefore, it suffices to prove \eqref{eq.lemboundop1.threewave}.
 
 We run a similar inductive integration by parts argument of Lemma \ref{lem.boundcoef'}. If the roots $\mathfrak{r}$ is not a substitution node, then the same argument of Lemma \ref{lem.boundcoef'} works. Therefore, we just consider the case that the roots $\mathfrak{r}$ is a substitution node. 
 
-Using the same calculation as \eqref{eq.lemboundcoef'1}, we get 
+Using the same calculation as \eqref{eq.lemboundcoef'1.threewave}, we get 
 \begin{equation}
 \begin{split}
     F_{T}(t)=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} B_{\mathfrak{n}}}&e^{it_{\mathfrak{r}}(a_{\mathfrak{r}}+T^{-1}_{\text{max}}\, \text{sgn}(a_{\mathfrak{r}}))- \nu(t-t_{\mathfrak{r}})b_{\mathfrak{r}}} e^{-iT^{-1}_{\text{max}}t_{\mathfrak{r}} \text{sgn}(a_{\mathfrak{r}})} 
@@ -2514,7 +2514,7 @@ Using the same calculation as \eqref{eq.lemboundcoef'1}, we get
 We do integration by parts in above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are four inequality constrains, $t_{\mathfrak{r}}\le t-2^{-\tau_{1}}T_{\text{max}}$, $t_{\mathfrak{r}}\ge t-2^{-\tau_{1}-1}T_{\text{max}}$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. Notice that the first two come from $(t-t_{\mathfrak{r}})/T_{\text{max}}\in [2^{-\tau_{1}},2^{-\tau_{1}-1}]$.
 
 
-\begin{equation}\label{eq.lemboundcoefexpandop}
+\begin{equation}\label{eq.lemboundcoefexpandop.threewave}
 \begin{split}
     F_{T}(t)=&\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} B_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{it_{\mathfrak{r}}(a_{\mathfrak{r}}+T^{-1}_{\text{max}}\, \text{sgn}(a_{\mathfrak{r}}))- \nu(t-t_{\mathfrak{r}})b_{\mathfrak{r}}}  
     \\
@@ -2561,9 +2561,9 @@ The argument of $F_{I}$ and $F_{I'}$ is very similar, so we just consider $F_{I}
         =&O\left(\frac{(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} }{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}} |F_{T_1}(t)| |F_{T_2}(t)|\frac{|k_{s_1,x}|}{|k_{s_1,x}|+1}\right)=O\left(\frac{2^{-\frac{\tau_{1}}{2}}|F_{T_1}(t)| |F_{T_2}(t)|}{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}}p_{\mathfrak{e}}\right)
     \end{split}
 \end{equation}
-Here in the last line we use the fact that $b_{\mathfrak{r}}=|k_{s_1}|^2$, $\nu T_{\text{max}}\gtrsim 1$ \eqref{eq.conditionnu} and $(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} \lesssim 2^{-\frac{\tau_{1}}{2}}$. By above equation and the induction assumption, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }F_{I}(t)$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator}.
+Here in the last line we use the fact that $b_{\mathfrak{r}}=|k_{s_1}|^2$, $\nu T_{\text{max}}\gtrsim 1$ \eqref{eq.conditionnu.threewave} and $(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} \lesssim 2^{-\frac{\tau_{1}}{2}}$. By above equation and the induction assumption, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }F_{I}(t)$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator.threewave}.
 
-Now we find upper bounds of $\widetilde{F}_{T^{(1)}}$ and $\widetilde{F}_{T^{(2)}}$. Let $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_Toperator}. By a direct calculation, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }\widetilde{F}_{T^{(1)}}(t)$ equals to
+Now we find upper bounds of $\widetilde{F}_{T^{(1)}}$ and $\widetilde{F}_{T^{(2)}}$. Let $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_Toperator.threewave}. By a direct calculation, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }\widetilde{F}_{T^{(1)}}(t)$ equals to
 \begin{equation}
     \begin{split}
         &\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } \int_{\cup_{\mathfrak{n}\in T_{\text{in}}} B_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}} e^{it_{\mathfrak{r}}(a_{\mathfrak{r}}+T^{-1}_{\text{max}}\, \text{sgn}(a_{\mathfrak{r}}))- \nu(t-t_{\mathfrak{r}})b_{\mathfrak{r}}} e^{-iT^{-1}_{\text{max}}t_{\mathfrak{r}} \text{sgn}(a_{\mathfrak{r}})} 
@@ -2577,7 +2577,7 @@ Now we find upper bounds of $\widetilde{F}_{T^{(1)}}$ and $\widetilde{F}_{T^{(2)
         =&O\left(\frac{|k_{s_1,x}|e^{- 2^{-\tau_{1}}|k_{s_1}|^2} }{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}} |F_{T^{(j)}}(t)|\right)=O\left(\frac{2^{-\frac{\tau_{1}}{2}}|F_{T^{(j)}}(t)| }{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}}p_{\mathfrak{e}}\right)
     \end{split}
 \end{equation}
-We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator}.
+We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator.threewave}.
 
 
 Another direct calculation gives that 
@@ -2599,23 +2599,23 @@ Apply the induction assumption
 
 Therefore, we get an upper bound for $F_{II}$.
 
-Combining the bounds of $F_{I}$, $F_{I'}$, $\widetilde{F}_{T^{(1)}}$, $\widetilde{F}_{T^{(2)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
+Combining the bounds of $F_{I}$, $F_{I'}$, $\widetilde{F}_{T^{(1)}}$, $\widetilde{F}_{T^{(2)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator.threewave} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
 \end{proof}
 
 \subsubsection{The upper bound for expectation of entries} In this section, we prove the Proposition \ref{prop.treetermsvarianceoperator} which gives an upper bound for $\mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2$. This lemma is an analog of Proposition \ref{prop.treetermsvariance}.
 
 \begin{prop}\label{prop.treetermsvarianceoperator}
-Assume that $\alpha$ satisfies \eqref{eq.conditionalpha}. For any $\theta>0$, we have
+Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave}. For any $\theta>0$, we have
 \begin{equation}
     \sup_k\, \mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2\lesssim L^{O(l(T)\theta)} 2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} \rho^{2l(T)}.
 \end{equation}
 and $\mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2=0$ if $|k-k'|\gtrsim 1$.
 \end{prop}
 
-\begin{proof} We first find a formula of $\mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2$ which is similar to \eqref{eq.termTp} and \eqref{eq.termexp}.
+\begin{proof} We first find a formula of $\mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2$ which is similar to \eqref{eq.termTp.threewave} and \eqref{eq.termexp.threewave}.
 
 A direct calculation gives
-\begin{equation}\label{eq.termexp1op}
+\begin{equation}\label{eq.termexp1op.threewave}
 \begin{split}
     \mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2=&\mathbb{E}(H^{\tau_1\cdots \tau_{K}}_{Tkk'}\overline{H^{\tau_1\cdots \tau_{K}}_{Tkk'}})=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
     \sum_{k_1,\, k_2,\, \cdots,\, k_{l(T)}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{l(T)}}
@@ -2624,14 +2624,14 @@ A direct calculation gives
 \end{split}
 \end{equation}
 
-Applying Wick theorem (Lemma \ref{th.wick}) to \eqref{eq.termexp1op}, we get
-\begin{equation}\label{eq.termexpop}
+Applying Wick theorem (Lemma \ref{th.wick}) to \eqref{eq.termexp1op.threewave}, we get
+\begin{equation}\label{eq.termexpop.threewave}
 \mathbb{E}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}|^2=\left(\frac{\lambda}{L^{d}}\right)^{2l(T)}
     \sum_{p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)}, k'_1,\cdots, k'_{l(T)}\})} Term(T, p)_{op,k,k
     '}.
 \end{equation}
 and
-\begin{equation}\label{eq.termTpop}
+\begin{equation}\label{eq.termTpop.threewave}
 \begin{split}
     &Term(T, p)_{op,k,k
     '}
@@ -2657,7 +2657,7 @@ Therefore, we complete the proof of this proposition.
 \end{proof}
 
 
-\begin{lem}\label{lem.Tpvarianceop} Let $Q=L^dT^{-1}_{\text{max}}$ be the same as in Proposition \ref{prop.counting}. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha} and $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported. Then for any $\theta>0$, we have
+\begin{lem}\label{lem.Tpvarianceop} Let $Q=L^dT^{-1}_{\text{max}}$ be the same as in Proposition \ref{prop.counting}. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave} and $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported. Then for any $\theta>0$, we have
 \begin{equation}
     \sup_k\, |Term(T, p)_{op,k,k
     '}|\le L^{O(l(T)\theta)}2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} Q^{l(T)} T_{\text{max}}^{2l(T)}.
@@ -2665,7 +2665,7 @@ Therefore, we complete the proof of this proposition.
 and $Term(T, p)_{op,k,k
     '}=0$ if $|k-k'|\gtrsim 1$.
 \end{lem}
-\begin{proof} By \eqref{eq.termTpop}, we get
+\begin{proof} By \eqref{eq.termTpop.threewave}, we get
 \begin{equation}
 \begin{split}
     &Term(T, p)_{op,k,k
@@ -2677,13 +2677,13 @@ and $Term(T, p)_{op,k,k
 
 Since $n_{\mathrm{in}}$ are compactly supported and there are bounded many of them in $Term(T, p)_{op,k,k'}$, by $k_1 + k_2 + \cdots + k_{l(T)}=k-k'$, we know that $Term(T, p)_{op,k,k'}=0$ if $|k-k'|\gtrsim 1$.
 
-By \eqref{eq.boundcoefoperator}, we get  %$\frac{1}{\sqrt{(|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}})^2+|r_{\mathfrak{n}}|^2}}\lesssim \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}$
-\begin{equation}\label{eq.termlemmaeq1op}
+By \eqref{eq.boundcoefoperator.threewave}, we get  %$\frac{1}{\sqrt{(|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}})^2+|r_{\mathfrak{n}}|^2}}\lesssim \frac{1}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}$
+\begin{equation}\label{eq.termlemmaeq1op.threewave}
     |H^{\tau_1\cdots \tau_{K}}_{Tk_1\cdots k_{l}kk'}|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|q_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}\prod_{\mathfrak{e}\in T_{\text{in}}} p_{\mathfrak{e}}.
 \end{equation}
 
-Define $[c_{\mathfrak{n},\widetilde{\mathfrak{n}}}]$, $\mathscr{M}(T)$, $c(\Omega)$ in the same way as the proof of Lemma \ref{lem.Tpvariance}. We can apply the same derivation of \eqref{eq.termlemmaeq3} to obtain
-\begin{equation}\label{eq.termlemmaeq3op}
+Define $[c_{\mathfrak{n},\widetilde{\mathfrak{n}}}]$, $\mathscr{M}(T)$, $c(\Omega)$ in the same way as the proof of Lemma \ref{lem.Tpvariance}. We can apply the same derivation of \eqref{eq.termlemmaeq3.threewave} to obtain
+\begin{equation}\label{eq.termlemmaeq3op.threewave}
 \begin{split}
     &|Term(T, p)_{op,k,k'}|\lesssim \sum_{\substack{k_1,\, \cdots,\, k_{l(T)},\, k'_1,\, \cdots,\, k'_{l(T)}\\ |k_{j}|, |k'_j|\lesssim 1, \forall j}} \sum_{c\in \mathscr{M}(T) }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}    \ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}\prod_{\mathfrak{e}\in T_{\text{in}}} p_{\mathfrak{e}} 
     \\
@@ -2692,7 +2692,7 @@ Define $[c_{\mathfrak{n},\widetilde{\mathfrak{n}}}]$, $\mathscr{M}(T)$, $c(\Omeg
 \end{equation}
 
 We obviously have the following inequality
-\begin{equation}\label{eq.termlemmaeq4op}
+\begin{equation}\label{eq.termlemmaeq4op.threewave}
 \begin{split}
     &|Term(T, p)_{op,k,k'}|\lesssim \sum_{k'}|Term(T, p)_{op,k,k'}|
     \\
@@ -2702,8 +2702,8 @@ We obviously have the following inequality
 \end{split}
 \end{equation}
 
-Switch the order of summations and products in \eqref{eq.termlemmaeq3}, then we get
-\begin{equation}\label{eq.termlemmaeq2op}
+Switch the order of summations and products in \eqref{eq.termlemmaeq3.threewave}, then we get
+\begin{equation}\label{eq.termlemmaeq2op.threewave}
 \begin{split}
     |Term(T, p)_{op,k,k'}|\lesssim& \sum_{\substack{k_1,\, \cdots,\, k_{l(T)},\, k'_1,\, \cdots,\, k'_{l(T)}, k'\\ |k_{j}|, |k'_j|\lesssim 1, \forall j,\ |k'-k|\lesssim 1}} \sum_{c, c'\in \mathscr{M}(T) }\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c'(\Omega)_{\mathfrak{n}'}|+T^{-1}_{\text{max}}}
     \\
@@ -2711,33 +2711,33 @@ Switch the order of summations and products in \eqref{eq.termlemmaeq3}, then we 
 \end{split}
 \end{equation}
 
-Consider a tree $T$ with a $\Box$ nodes and a pairing $p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)}, k'_1,\cdots, k'_{l(T)}\})$. $p$ can be viewed as a pairing of all star nodes of two copies of $T$. A couple $\mathcal{C}$ can be constructed by merging all paired star nodes according $p$ and merging the two $\Box$ nodes. As in \eqref{eq.termlemmaeq4}, we can show that
-\begin{equation}\label{eq.termlemmaeq4op'}
+Consider a tree $T$ with a $\Box$ nodes and a pairing $p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)}, k'_1,\cdots, k'_{l(T)}\})$. $p$ can be viewed as a pairing of all star nodes of two copies of $T$. A couple $\mathcal{C}$ can be constructed by merging all paired star nodes according $p$ and merging the two $\Box$ nodes. As in \eqref{eq.termlemmaeq4.threewave}, we can show that
+\begin{equation}\label{eq.termlemmaeq4op'.threewave}
 \sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) },\qquad \prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}, \qquad \prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}},\qquad \cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}.    
 \end{equation}
 
 
-The analog of \eqref{eq.termlemmaeq5} is 
-\begin{equation}\label{eq.termlemmaeq5op}
+The analog of \eqref{eq.termlemmaeq5.threewave} is 
+\begin{equation}\label{eq.termlemmaeq5op.threewave}
 |Term(T, p)_{op,k,k'}|\lesssim \sum_{\substack{k_1,\, \cdots,\, k_{l(T)},\, k'_1,\, \cdots,\, k'_{l(T)}, k'\\ |k_{j}|, |k'_j|\lesssim 1, \forall j,\ |k'-k|\lesssim 1}} \sum_{c\in \mathscr{M}(\mathcal{C}) }\prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} p_{\mathfrak{e}}\  \delta_{\cap_{\mathfrak{n}\in \mathcal{C}} \{S_{\mathfrak{n}}=0\}}
 \end{equation}
 
-The rest part of the proof is exactly the same as the proof of Lemma \ref{lem.Tpvariance} after \eqref{eq.termlemmaeq5}. For completeness, we include a sketch.
+The rest part of the proof is exactly the same as the proof of Lemma \ref{lem.Tpvariance} after \eqref{eq.termlemmaeq5.threewave}. For completeness, we include a sketch.
 
-As \eqref{eq.termlemmaeq8}, we have  
+As \eqref{eq.termlemmaeq8.threewave}, we have  
 \begin{equation}
     \sum_{\substack{k_1,\, \cdots,\, k_{l(T)+1},\, k'_1,\, \cdots,\, k'_{l(T)+1}\\\cap_{\mathfrak{n}\in \mathcal{C}} \{S_{\mathfrak{n}}=0\}}}=\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}}\sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)},
 \end{equation}
 which implies that
-\begin{equation}\label{eq.termlemmaeq6op}
+\begin{equation}\label{eq.termlemmaeq6op.threewave}
 \begin{split}
     |Term(T, p)_{op,k,k'}|\lesssim \sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}}\sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)} \sum_{c\in \mathscr{M}(\mathcal{C}) }\prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} p_{\mathfrak{e}}
 \end{split}
 \end{equation}
 
 
-As \eqref{eq.lemboundtermTp}, we get
-\begin{equation}\label{eq.lemboundtermTpop}
+As \eqref{eq.lemboundtermTp.threewave}, we get
+\begin{equation}\label{eq.lemboundtermTpop.threewave}
 \begin{split}
     &Term(T, p)_k
     \\
@@ -2750,9 +2750,9 @@ As \eqref{eq.lemboundtermTp}, we get
     \lesssim &\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}}\prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}} L^{O(n\theta)} Q^{\frac{n}{2}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}
 \end{split}
 \end{equation}
-Here in the last inequality we applied \eqref{eq.countingbd0} in Proposition \ref{prop.counting}.
+Here in the last inequality we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
 
-After simplification, \eqref{eq.lemboundtermTpop} gives us 
+After simplification, \eqref{eq.lemboundtermTpop.threewave} gives us 
 \begin{equation}
 \begin{split}
     |Term(T, p)_{op,k,k'}|\lesssim &L^{O(n\theta)} Q^{\frac{n}{2}}\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}}
@@ -2771,10 +2771,10 @@ After simplification, \eqref{eq.lemboundtermTpop} gives us
 %     \lesssim & L^{O(n\theta)} Q^{n} L^{\frac{1}{2} dn_d}\sum_{c,c'\in \mathscr{M}(T) } \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}  + O(L^{-6d\, l(T)-6d})
 % \end{split}
 % \end{equation}
-Here in the first step we use the fact that $\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{1}{\kappa_{\mathfrak{e}}+1}\le 1$. The reason for other steps can be find in the derivation of \eqref{eq.lemboundtermTpsimplify}.
+Here in the first step we use the fact that $\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{1}{\kappa_{\mathfrak{e}}+1}\le 1$. The reason for other steps can be find in the derivation of \eqref{eq.lemboundtermTpsimplify.threewave}.
 
 We claim that 
-\begin{equation}\label{eq.lemTpvarianceclaimop}
+\begin{equation}\label{eq.lemTpvarianceclaimop.threewave}
      \sup_{c}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\lesssim L^{O(l(T)\theta)}2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} T^{2l(T)}_{\text{max}}
 \end{equation}
 
@@ -2784,16 +2784,16 @@ Since there are only bounded many matrices in $\mathscr{M}(\mathcal{C})$.  Given
 \end{equation}
 which proves the lemma since $n=2l(T)$.
 
-Now prove the claim. In a tree $T$, there are $l(T)$ branching nodes, so there are $l(T)$ nodes in $T_{\text{in}}$. Since all nodes of $\mathcal{C}$ comes the two copies of $T_{\text{in}}$, so there are $2l(T)$ nodes in $\mathcal{C}$. Label these nodes by $h=1,\cdots,2l(T)$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{T_{\text{max}}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=T^{-1}_{\text{max}} m_{h}$. \eqref{eq.lemTpvarianceclaimop} is thus equivalent to 
-\begin{equation}\label{eq.lemTpvarianceclaim1op}
+Now prove the claim. In a tree $T$, there are $l(T)$ branching nodes, so there are $l(T)$ nodes in $T_{\text{in}}$. Since all nodes of $\mathcal{C}$ comes the two copies of $T_{\text{in}}$, so there are $2l(T)$ nodes in $\mathcal{C}$. Label these nodes by $h=1,\cdots,2l(T)$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{T_{\text{max}}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=T^{-1}_{\text{max}} m_{h}$. \eqref{eq.lemTpvarianceclaimop.threewave} is thus equivalent to 
+\begin{equation}\label{eq.lemTpvarianceclaim1op.threewave}
     T^{2l(T)}_{\text{max}}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim T_{\text{max}}}} \prod_{h=1}^{2l(T)}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(l(T)\theta)}2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} T^{2l(T)}_{\text{max}}
 \end{equation}
 
-To we prove \eqref{eq.lemTpvarianceclaim1op}. We just need to show that 
+To we prove \eqref{eq.lemTpvarianceclaim1op.threewave}. We just need to show that 
 \begin{equation}
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim T_{\text{max}}}} \prod_{h=1}^{2l(T)}\frac{1}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(l(T)\theta)}
 \end{equation}
-This can be proved by Euler-Maclaurin formula \eqref{eq.EulerMaclaurin} as \eqref{eq.lemTpvarianceEulerMac}.
+This can be proved by Euler-Maclaurin formula \eqref{eq.EulerMaclaurin.threewave} as \eqref{eq.lemTpvarianceEulerMac.threewave}.
 
 Now we complete the proof of the claim and thus the proof of the lemma.
 \end{proof}
@@ -2829,7 +2829,7 @@ Summing over all $\tau_1,\cdots, \tau_{K}$ gives
 \sum_{\tau_1,\cdots, \tau_{K}}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}(t,s)|\lesssim L^{O(l(T)\theta)} \rho^{l(T)},\qquad \textit{L-certainly}.
 \end{equation} 
 
-Applying the epsilon net and union bound method as in \eqref{eq.unionbound}, we obtain
+Applying the epsilon net and union bound method as in \eqref{eq.unionbound.threewave}, we obtain
 \begin{equation}
     \sup_{t,s}\sup_{|k|,|k'|\lesssim L^{2M}}\sum_{\tau_1,\cdots, \tau_{K}}|H^{\tau_1\cdots \tau_{K}}_{Tkk'}(t,s)|\lesssim L^{O(l(T)\theta)}  \rho^{l(T)},\qquad \textit{L-certainly}.
 \end{equation}
@@ -2855,7 +2855,7 @@ Therefore, we complete the proof of Proposition \ref{prop.operatorupperbound'}.
 
 
 
-\subsection{Asymptotics of the main terms} In this section, we prove \eqref{eq.n1} in Theorem \ref{th.main} which characterize the asymptotic behavior of $n^{(1)}(k)$.
+\subsection{Asymptotics of the main terms} In this section, we prove \eqref{eq.n1.threewave} in Theorem \ref{th.main} which characterize the asymptotic behavior of $n^{(1)}(k)$.
 
 \begin{prop}\label{prop.mainterms} Using the same notation as Theorem \ref{th.main} (2), then we have 
 \begin{equation}
@@ -2877,9 +2877,9 @@ Therefore, we complete the proof of Proposition \ref{prop.operatorupperbound'}.
     \right.
     \end{equation}
 \end{prop}
-\begin{proof} The second case of \eqref{eq.n1} is obvious. We divide the proof of the first case into several steps.
+\begin{proof} The second case of \eqref{eq.n1.threewave} is obvious. We divide the proof of the first case into several steps.
 
-\textbf{Step 1.} (Calculation of $\psi_{app,k}$ and $n^{(1)}(k)$) The first three terms in the tree expansion \eqref{eq.approxsol} can be calculated explicitly. 
+\textbf{Step 1.} (Calculation of $\psi_{app,k}$ and $n^{(1)}(k)$) The first three terms in the tree expansion \eqref{eq.approxsol.threewave} can be calculated explicitly. 
 \begin{equation}
 \begin{split}
     \psi_{app,k}=\psi^{(0)}_{app,k}+\psi^{(1)}_{app,k}+\psi^{(2)}_{app,k}+\cdots
@@ -2911,8 +2911,8 @@ where $\psi^{(0)}_{app,k}$,$\psi^{(1)}_{app,k}$, $\psi^{(2)}_{app,k}$ are given 
 \end{split}
 \end{equation}
 
-By \eqref{eq.n(j)}, we know that
-\begin{equation}\label{eq.n(1)}
+By \eqref{eq.n(j).threewave}, we know that
+\begin{equation}\label{eq.n(1).threewave}
     n^{(1)}(k)=\mathbb E \left|\psi^{(1)}_{app,k}\right|^2+ 2\text{Re}\  \mathbb E \left(\psi^{(2)}_{app,k}\overline{\xi_k}\right).
 \end{equation}
 
@@ -2935,7 +2935,7 @@ By \eqref{eq.n(j)}, we know that
 \end{equation}
 
 $n^{(1)}(k)$ is also decomposed into $n^{(1)}(k)=n^{(11)}(k)+n^{(12)}(k)$
-\begin{equation}\label{eq.n(11)}
+\begin{equation}\label{eq.n(11).threewave}
     n^{(11)}(k)=\mathbb E \left|\psi^{(11)}_{app,k}\right|^2+ 2\text{Re}\  \mathbb E \left(\psi^{(21)}_{app,k}\overline{\xi_k}\right).
 \end{equation}
 \begin{equation}
@@ -2943,16 +2943,16 @@ $n^{(1)}(k)$ is also decomposed into $n^{(1)}(k)=n^{(11)}(k)+n^{(12)}(k)$
 \end{equation}
 
 \textbf{Step 3.} (Estimate of $n^{(12)}(k)$ for $|k|\le \epsilon_1 l_{d}^{-1}$) In this step, all constants in $\lesssim$ depend only on the dimension $d$. Define 
-\begin{equation}\label{eq.H(11)}
+\begin{equation}\label{eq.H(11).threewave}
     H^{(11)}_{k_1k_2k}=k_{x} \int^{t}_0e^{i s\Omega(k_1,k_2,k)} ds
 \end{equation}
-\begin{equation}\label{eq.H(12)}
+\begin{equation}\label{eq.H(12).threewave}
     H^{(12)}_{k_1k_2k}=-\nu|k|^2k_{x} \int^{t}_0e^{i s\Omega(k_1,k_2,k)- a\nu|k|^2(t-s)} (t-s)ds
 \end{equation}
-\begin{equation}\label{eq.H(21)}
+\begin{equation}\label{eq.H(21).threewave}
     H^{(21)}_{k_1k_2k_3k}=2k_{x}(k_{2x}+k_{3x})\int_{0\le r<s\le t}e^{i s\Omega(k_1,k_2+k_3,k)} e^{i r\Omega(k_2,k_3,k_2+k_3)} dsdr
 \end{equation}
-\begin{equation}\label{eq.H(22)}
+\begin{equation}\label{eq.H(22).threewave}
 \begin{split}
     H^{(22)}_{k_1k_2k_3k}=&-2k_{x}(k_{2x}+k_{3x})\int_{0\le r<s\le t}(\nu|k|^2(t-s)+\nu|k_2+k_3|^2(s-r))
     \\
@@ -2961,16 +2961,16 @@ $n^{(1)}(k)$ is also decomposed into $n^{(1)}(k)=n^{(11)}(k)+n^{(12)}(k)$
 \end{equation}
 
 Then we have
-\begin{equation}\label{eq.psi(11)app}
+\begin{equation}\label{eq.psi(11)app.threewave}
     \psi^{(11)}_{app,k}=\frac{i\lambda}{L^{d}} \sum\limits_{k_1+k_2=k} H^{(11)}_{k_1k_2k}\xi_{k_1} \xi_{k_2} 
 \end{equation}
-\begin{equation}\label{eq.psi(12)app}
+\begin{equation}\label{eq.psi(12)app.threewave}
     \psi^{(12)}_{app,k}=\int^1_{0}\frac{i\lambda}{L^{d}} \sum\limits_{k_1+k_2=k} H^{(12)}_{k_1k_2k}\xi_{k_1} \xi_{k_2} da 
 \end{equation}
-\begin{equation}\label{eq.psi(21)app}
+\begin{equation}\label{eq.psi(21)app.threewave}
     \psi^{(21)}_{app,k}=\left(\frac{i\lambda}{L^{d}}\right)^2 \sum\limits_{k_1+k_2+k_3=k} H^{(11)}_{k_1k_2k_3k}\xi_{k_1} \xi_{k_2}\xi_{k_3} 
 \end{equation}
-\begin{equation}\label{eq.psi(22)app}
+\begin{equation}\label{eq.psi(22)app.threewave}
     \psi^{(22)}_{app,k}=\int^1_{0}\left(\frac{i\lambda}{L^{d}}\right)^2 \sum\limits_{k_1+k_2+k_3=k} H^{(12)}_{k_1k_2k_3k}\xi_{k_1} \xi_{k_2}\xi_{k_3} da 
 \end{equation}
 
@@ -2984,7 +2984,7 @@ To derive an upper bound for $n^{(12)}(k)$, it suffices to consider $\mathbb E \
 \end{equation}
 
 Integration by parts we get 
-\begin{equation}\label{eq.H(11)bound}
+\begin{equation}\label{eq.H(11)bound.threewave}
 \begin{split}
     |H^{(11)}_{k_1k_2k}|\lesssim&\left|\int^{t}_0\frac{T_{\text{max}}^{-1}k_x}{\Omega+T^{-1}_{\text{max}}\text{sgn}(\Omega)}e^{i s\Omega} ds\right|+\left|\left[\frac{k_x}{i(\Omega+T^{-1}_{\text{max}}\text{sgn}(\Omega)}e^{i s\Omega}\right]_{0}^t\right|
     \\
@@ -2993,12 +2993,12 @@ Integration by parts we get
 \end{equation}
 
 By a similar integration by parts method, we get
-\begin{equation}\label{eq.H(12)bound}
+\begin{equation}\label{eq.H(12)bound.threewave}
     |H^{(12)}_{k_1k_2k}|\lesssim \frac{|k|^2|k_x|\nu T_{\text{max}}}{|\Omega|+T^{-1}_{\text{max}}}.
 \end{equation}
 
-By \eqref{eq.psi(12)app}, we know that 
-\begin{equation}\label{eq.psi(12)bound}
+By \eqref{eq.psi(12)app.threewave}, we know that 
+\begin{equation}\label{eq.psi(12)bound.threewave}
 \begin{split}
     \mathbb E \left|\psi^{(12)}_{app,k}\right|^2\le& \int^1_{0}\frac{\lambda^2}{L^{2d}} \mathbb E\left|\sum\limits_{k_1+k_2=k} H^{(12)}_{k_1k_2k}\xi_{k_1} \xi_{k_2}\right|^2 da 
     \\
@@ -3009,10 +3009,10 @@ By \eqref{eq.psi(12)app}, we know that
     \le& \frac{2\epsilon_1^2\lambda^2}{L^{2d}} \max(|k_x|^2,D^2) T_{\text{max}} L^dD^{d-1}=2\epsilon_1^2 \max(|k_x|^2,D^2) T_{\text{max}} T^{-1}_{\text{kin}}D^{d-1} 
 \end{split}   
 \end{equation}
-Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(12)bound}. In the last line we apply \eqref{eq.asymptoticsbound} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
+Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
 
-By \eqref{eq.H(11)bound} and \eqref{eq.H(12)bound}, we know that 
-\begin{equation}\label{eq.psi(11)(12)bound}
+By \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}, we know that 
+\begin{equation}\label{eq.psi(11)(12)bound.threewave}
 \begin{split}
     \left|\text{Re}\ \mathbb E \left(\psi^{(11)}_{app,k}\overline{\psi^{(12)}_{app,k}}\right)\right|
     \le& \int^1_{0}\frac{2\lambda^2}{L^{2d}} \text{Re}\,\mathbb E\left(\sum\limits_{k_1+k_2=k} H^{(11)}_{k_1k_2k}\xi_{k_1} \xi_{k_2}  \sum\limits_{k_1+k_2=k} \overline{H^{(12)}_{k_1k_2k}\xi_{k_1} \xi_{k_2}}\right) da 
@@ -3024,20 +3024,20 @@ By \eqref{eq.H(11)bound} and \eqref{eq.H(12)bound}, we know that
     \le& \frac{2\epsilon_1\lambda^2}{L^{2d}} \max(|k_x|^2,D^2) T_{\text{max}} L^d=\epsilon_1 \max(|k_x|^2,D^2) T_{\text{max}} T^{-1}_{\text{kin}} D^{d-1}
 \end{split}   
 \end{equation}
-Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(11)bound} and \eqref{eq.H(12)bound}. In the last line we apply \eqref{eq.asymptoticsbound} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
+Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
 
-\eqref{eq.psi(12)bound} and \eqref{eq.psi(11)(12)bound} give desire upper bounds of $\mathbb E \left|\psi^{(12)}_{app,k}\right|^2$ and $\text{Re}\ \mathbb E \left(\psi^{(11)}_{app,k}\overline{\psi^{(12)}_{app,k}}\right)$.
-
-
+\eqref{eq.psi(12)bound.threewave} and \eqref{eq.psi(11)(12)bound.threewave} give desire upper bounds of $\mathbb E \left|\psi^{(12)}_{app,k}\right|^2$ and $\text{Re}\ \mathbb E \left(\psi^{(11)}_{app,k}\overline{\psi^{(12)}_{app,k}}\right)$.
 
 
-\textbf{Step 3.2.} (Upper bound of $\text{Re}\  \mathbb E \left(\psi^{(22)}_{app,k}\overline{\xi_k}\right)$) By \eqref{eq.psi(22)app}, we have 
+
+
+\textbf{Step 3.2.} (Upper bound of $\text{Re}\  \mathbb E \left(\psi^{(22)}_{app,k}\overline{\xi_k}\right)$) By \eqref{eq.psi(22)app.threewave}, we have 
 \begin{equation}
 \text{Re}\  \mathbb E \left(\psi^{(22)}_{app,k}\overline{\xi_k}\right)=\int^1_{0}\left(\frac{i\lambda}{L^{d}}\right)^2 \text{Re}\,\sum\limits_{k_1+k_2+k_3=k} H^{(22)}_{k_1k_2k_3k}\mathbb E\left(\xi_{k_1} \xi_{k_2}\xi_{k_3}\overline{\xi_k}\right) da 
 \end{equation}
 
 By Wick theorem, $\mathbb E\left(\xi_{k_1} \xi_{k_2}\xi_{k_3}\overline{\xi_k}\right)=\delta_{k_1=-k_2}\delta_{k_3=k}+\delta_{k_1=-k_3}\delta_{k_2=k}+\delta_{k_1=k}\delta_{k_2=-k_3}$. Therefore we get 
-\begin{equation}\label{eq.H(22)wick}
+\begin{equation}\label{eq.H(22)wick.threewave}
 \begin{split}
     \text{Re}\  \mathbb E \left(\psi^{(22)}_{app,k}\overline{\xi_k}\right)=&\int^1_{0}\left(\frac{i\lambda}{L^{d}}\right)^2 \text{Re}\,\sum\limits_{k_1+k_2+k_3=k} H^{(22)}_{k_1k_2k_3k}(\delta_{k_1=-k_2}\delta_{k_3=k}+\delta_{k_1=-k_3}\delta_{k_2=k}+0) da
     \\
@@ -3046,7 +3046,7 @@ By Wick theorem, $\mathbb E\left(\xi_{k_1} \xi_{k_2}\xi_{k_3}\overline{\xi_k}\ri
 \end{equation}
 Here in the first equality the term corresponding to $\delta_{k_1=k}\delta_{k_2=-k_3}$ vanishes because $H^{(22)}_{k,k_2,-k_2,k}=0$ and the two terms corresponding to $\delta_{k_1=-k_2}\delta_{k_3=k}$, $\delta_{k_1=-k_3}\delta_{k_2=k}$ are equal.
 
-By \eqref{eq.H(22)}, we get
+By \eqref{eq.H(22).threewave}, we get
 \begin{equation}
 \begin{split}
     H^{(22)}_{k_1,-k_1,k,k}=-2k_{x}(k_{x}-k_{1x})\int_{0\le r<s\le t}&(\nu|k|^2(t-s)+\nu|k-k_1|^2(s-r))
@@ -3056,7 +3056,7 @@ By \eqref{eq.H(22)}, we get
 \end{equation}
 
 We find upper bound of $\text{Re}\,\left(H^{(22)}_{k_1,-k_1,k,k}\right)$ using integration by parts.
-\begin{equation}\label{eq.ReH(22)bound}
+\begin{equation}\label{eq.ReH(22)bound.threewave}
 \begin{split}
     &\text{Re}\,\left(H^{(22)}_{k_1,-k_1,k,k}\right)=2k_{x}(k_{x}-k_{1x})\int_{0\le r<s\le t}(\nu|k|^2(t-s)+\nu|k-k_1|^2(s-r))
     \\
@@ -3072,13 +3072,13 @@ We find upper bound of $\text{Re}\,\left(H^{(22)}_{k_1,-k_1,k,k}\right)$ using i
 \end{split}
 \end{equation}
 
-The first term on the right hands side equals to $0$ after taking the real part. Using the same integration by parts argument as in \eqref{eq.H(11)bound}, the second term can be bounded by 
-\begin{equation}\label{eq.H(22)secondterm}
+The first term on the right hands side equals to $0$ after taking the real part. Using the same integration by parts argument as in \eqref{eq.H(11)bound.threewave}, the second term can be bounded by 
+\begin{equation}\label{eq.H(22)secondterm.threewave}
     \frac{|k|^2|k_x|(|k_{1x}|+|k_x|)\nu T_{\text{max}}}{(|\Omega(k_1,k-k_1,k)|+T^{-1}_{\text{max}})^2}.
 \end{equation}
 
 The last term can be bounded by integration by parts in the following integral
-\begin{equation}\label{eq.asymstep3.2}
+\begin{equation}\label{eq.asymstep3.2.threewave}
 \begin{split}
     \int_{0\le r<s\le t}\big[&\nu|k-k_1|^2(\nu|k|^2(t-s)+\nu|k-k_1|^2(s-r)-1)
     \\
@@ -3088,18 +3088,18 @@ The last term can be bounded by integration by parts in the following integral
 
 Integration by parts and bound the three resulting integral by taking the absolute value of the integrand, then we get 
 \begin{equation}
-|\eqref{eq.asymstep3.2}|\le  \frac{|k|^2}{|\Omega|+T^{-1}_{\text{max}}}
+|\eqref{eq.asymstep3.2.threewave}|\le  \frac{|k|^2}{|\Omega|+T^{-1}_{\text{max}}}
 \end{equation}
 
-Therefore, the last term in \eqref{eq.ReH(22)bound} can also be bounded by \eqref{eq.H(22)secondterm}.
+Therefore, the last term in \eqref{eq.ReH(22)bound.threewave} can also be bounded by \eqref{eq.H(22)secondterm.threewave}.
 
 Then we get 
 \begin{equation}
     \text{Re}\,\left(H^{(22)}_{k_1,-k_1,k,k}\right)\lesssim \nu T_{\text{max}}|k|^2|k_x|\frac{|k_{1x}|+|k_x|}{(|\Omega(k_1,k-k_1,k)|+T^{-1}_{\text{max}})^2}.
 \end{equation}
 
-Substitute into \eqref{eq.H(22)wick}, then we have
-\begin{equation}\label{eq.psi(22)bound}
+Substitute into \eqref{eq.H(22)wick.threewave}, then we have
+\begin{equation}\label{eq.psi(22)bound.threewave}
 \begin{split}
     \text{Re}\  \mathbb E \left(\psi^{(22)}_{app,k}\overline{\xi_k}\right)&\lesssim\frac{\lambda^2}{L^{2d}} |k|^2|k_x|\nu T_{\text{max}}n(k)\sum\limits_{k_1} \frac{|k_{1x}|+|k_x|}{(|\Omega(k_1,k-k_1,k)|+T^{-1}_{\text{max}})^2}n(k_1)
     \\
@@ -3110,11 +3110,11 @@ Substitute into \eqref{eq.H(22)wick}, then we have
     &\lesssim \epsilon_1\frac{T_{\text{max}}}{T_{\text{kin}}}\max(D^{d+1},|k_x|^2D^{d-1}+|k_x|D^{d})
 \end{split}
 \end{equation}
-In the second inequality, we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$ and $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$. In the last inequality we apply \eqref{eq.asymptoticsbound} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$, $F(k_1)=n(k_1) n(k-k_1)$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$. 
+In the second inequality, we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$ and $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$. In the last inequality we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$, $F(k_1)=n(k_1) n(k-k_1)$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$. 
 
 
-Combining \eqref{eq.psi(12)bound}, \eqref{eq.psi(11)(12)bound} and \eqref{eq.psi(22)bound}, we get the following upper bound
-\begin{equation}\label{eq.n(12)final}
+Combining \eqref{eq.psi(12)bound.threewave}, \eqref{eq.psi(11)(12)bound.threewave} and \eqref{eq.psi(22)bound.threewave}, we get the following upper bound
+\begin{equation}\label{eq.n(12)final.threewave}
     n^{(12)}(k)\lesssim \epsilon_1\frac{T_{\text{max}}}{T_{\text{kin}}}\underbrace{\max(D^{d+1},|k_x|^2D^{d-1}+|k_x|D^{d})}_{\text{Err}_{D}(k_x)}.
 \end{equation}
 % The derivation of upper bounds of $H^{(21)}$ and $H^{(22)}$ is similar to that in the proof of Lemma \ref{lem.boundcoef'}. We just present the derivation for $H^{(21)}$. Define $\Omega_1=\Omega(k_1,k_2+k_3,k)$ and $\Omega_2=\Omega(k_2,k_3,k_2+k_3)$, then we have
@@ -3154,8 +3154,8 @@ Combining \eqref{eq.psi(12)bound}, \eqref{eq.psi(11)(12)bound} and \eqref{eq.psi
 % \end{equation}
 
 
-\textbf{Step 4.} (Asymptotics of $n^{(11)}(k)$) By \eqref{eq.n(11)} and Wick theorem, we get 
-\begin{equation}\label{eq.n(11)asym}
+\textbf{Step 4.} (Asymptotics of $n^{(11)}(k)$) By \eqref{eq.n(11).threewave} and Wick theorem, we get 
+\begin{equation}\label{eq.n(11)asym.threewave}
 \begin{split}
     n^{(11)}(k)=&\frac{2\lambda^2}{L^{2d}} |k_x|^2\sum\limits_{k_1+k_2=k}n(k_1) n(k_2) \left|\int^{t}_0e^{i s\Omega(k_1,k_2,k)} ds\right|^2
     \\
@@ -3172,11 +3172,11 @@ Combining \eqref{eq.psi(12)bound}, \eqref{eq.psi(11)(12)bound} and \eqref{eq.psi
     =&\frac{t}{T_{\text{kin}}}\mathcal{K}(n)(k)+O\left(L^{-\theta}\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)
 \end{split}
 \end{equation}
-Here in the third equality we apply \eqref{eq.numbertheory1} in Theorem \ref{th.numbertheory} by taking $t\rightarrow\frac{t}{2}$, $g(x)=\frac{\sin^2(x)}{x^2}$ and $F(k_1)=n(k_1) n(k-k_1)$ or $F(k_1)=n(k_1)$. In the third equality we also use the facts that  $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$.
+Here in the third equality we apply \eqref{eq.numbertheory1.threewave} in Theorem \ref{th.numbertheory} by taking $t\rightarrow\frac{t}{2}$, $g(x)=\frac{\sin^2(x)}{x^2}$ and $F(k_1)=n(k_1) n(k-k_1)$ or $F(k_1)=n(k_1)$. In the third equality we also use the facts that  $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$.
 
-Combining \eqref{eq.n(12)final} and \eqref{eq.n(11)asym}, we complete the prove of the first case in \eqref{eq.n1}.
+Combining \eqref{eq.n(12)final.threewave} and \eqref{eq.n(11)asym.threewave}, we complete the prove of the first case in \eqref{eq.n1.threewave}.
 \end{proof}
-% \textbf{Step 5.} (Upper bound for $|k|\ge  l_{d}^{-1}$) By \eqref{eq.n(1)} and Wick theorem, we get 
+% \textbf{Step 5.} (Upper bound for $|k|\ge  l_{d}^{-1}$) By \eqref{eq.n(1).threewave} and Wick theorem, we get 
 % \begin{equation}
 % \begin{split}
 %     n^{(1)}(k)=&\frac{2\lambda^2}{L^{2d}} |k_x|^2\sum\limits_{k_1+k_2=k}n(k_1) n(k_2) \left|\int^{t}_0e^{i s\Omega(k_1,k_2,k)- \nu|k|^2(t-s)} ds\right|^2

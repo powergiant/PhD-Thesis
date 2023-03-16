@@ -17,6 +17,84 @@ loss of derivative
 
 renormalization
 
+
+In this section we introduce the new variable $\psi$ and rewrite \eqref{eq.NKLG} into the standard form of a dispersive equation. 
+
+
+
+Notice that in \eqref{eq.NKLG} $\partial_{tt} u - \Delta u +u = -\lambda^2 u^3$, the operator
+$\partial_{tt}-\Delta +1$ can be factorized into $(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_t+\Lambda(\nabla))$, where $\Lambda(\nabla)$ is the Fourier multiplier with symbol $\Lambda(\xi)=\sqrt{1+|\xi|^2}$. Therefore the equation can be simplified by introducing a new variable
+\begin{equation}
+    \psi=i\partial_tu+\Lambda(\nabla)u.
+\end{equation}
+Then we have
+\begin{equation}\label{eq.firstorderderivation}
+    (-i\partial_t+\Lambda(\nabla))\psi=(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_tu+\Lambda(\nabla))u=-\lambda^2 u^3.
+\end{equation} 
+
+We can solve $u$ in terms of $\psi$, $\bar{\psi}$
+\begin{equation}\label{eq.defpsi}
+    u=(2\Lambda(\nabla))^{-1}(\psi+\bar{\psi}).
+\end{equation} 
+We can derive the equation of $\psi$ by substituting \eqref{eq.defpsi} into the right hand side of \eqref{eq.firstorderderivation}
+
+\begin{equation}\label{eq.firstorder}
+    i\partial_t\psi-\Lambda(\nabla)\psi=\frac{\lambda^2}{8} \Big(\Lambda(\nabla)^{-1}\psi+\Lambda(\nabla)^{-1}\bar{\psi}\Big)^3.
+\end{equation} 
+
+
+In this section we explain the renormalization argument.
+Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equation (\ref{eq.firstorder}) becomes
+
+\begin{equation}\label{eq.mainfourier'}
+\begin{split}
+i \dot{\psi}_{k} =& \Lambda_k u_k+\frac{\lambda^2}{8L^{2d}} \sum_{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3} m^{3}_{k_1k_2k_3}\psi_{k_1}\psi_{k_2}  \psi_{k_3}
++m^{2}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+\\
+&+m^{1}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3}
++m^{0}_{k_1k_2k_3}\overline{\psi}_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3},
+\end{split}
+\end{equation}
+where 
+\begin{equation}
+\begin{cases}
+m^{3}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 = k}
+\\
+m^{2}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 +k_3 = k}
+\\
+m^{1}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 -k_3 = k}
+\\
+m^{0}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 + k =0}
+\end{cases}
+\end{equation}
+
+According to \eqref{eq.wellprepared}, the initial data of \eqref{eq.mainfourier'} can be written as 
+
+\begin{equation}
+    \psi_k(0) =  \sqrt{n_{\textrm{in}}(k)/2} \,(\alpha_k+i\beta_k)
+\end{equation}
+To keep the notation simpler we define
+\begin{equation}
+\begin{split}
+    &\eta_{k}(\omega)=\frac{1}{\sqrt{2}}(\alpha_k+i\beta_k),
+    \\
+    &\xi_k = \psi_k(0) = \sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega).
+\end{split}
+\end{equation}
+Therefore $\eta_{k}(\omega)$ are i.i.d complex normal distributions and $\xi_k$ are Fourier coefficients of the initial data of $\psi$.
+
+As explained in Appendix \ref{app.rem}, the random data Cauchy problem of defocusing Klein-Gordon equation \eqref{eq.NKLG'} is almost equivalent to above equation after change of variable $\psi=i\partial_tu+\Lambda(\nabla)u$.
+\begin{equation}\label{eq.NKLG'}
+\begin{cases}
+\partial_{tt} u = \Delta u -u - \lambda^2 u^3,  \quad x\in \mathbb{T}^d_{L_1\cdots L_d},   \\[.6em]
+u(0,x) = u_{\textrm{in}}(x).
+\\[.6em]
+\partial_tu(0,x) = u^{1}_{\textrm{in}}(x)
+\end{cases}    
+\end{equation}
+
+
+
 \section{Previous research}
 
 several staffilani tran 

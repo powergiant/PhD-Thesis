@@ -1,13 +1,13 @@
 \chapter{Counting results in wave kinetic theory}\label{chapter.numbertheory}
 
 
-\section{Number theoretic results}\label{sec.numbertheoryA}
+\section{Number theoretic results in three wave models}\label{sec.numbertheoryA}
 The mains results of this appendix is to prove Theorem \ref{th.numbertheory1} and Theorem \ref{th.numbertheory} 
 
 \begin{thm}\label{th.numbertheory1}
 Let $\Lambda(k)=(\beta_x k_x^2+\beta_2 k_2^2+\cdots\beta_d k_d^2)k_x$, $d\ge 3$, then for all $\beta\in [1,2]^d$, the following number theory estimate is true
 
-\begin{equation}\label{eq.numbertheory1}
+\begin{equation}\label{eq.numbertheory1.threewave}
     \sup_{\substack{k,\sigma\in\mathbb{Z}_L^d\\k\ne 0,\ T\le L}} |k_x|T\#\left
     \{\begin{matrix}
 k_1,k_2\in\mathbb{Z}_L^d \\
@@ -29,15 +29,15 @@ The restriction $T\le L$ is not optimal. The optimal result is expected to be $T
 \end{rem}
 
 \begin{rem}\label{rem.nottrue2d}
-\ref{th.numbertheory1} and \ref{th.numbertheory} is unlikely to be true when $d=2$. Because in this case, the quadratic term of $k_1$ in \eqref{eq.A11} becomes $3k_xk_{1x}^2+k_x|k_{1y}|^2+2k_{y}\cdot k_{1x} k_{1y}$ ($k_{1\perp}$ becomes $k_{1\perp}=k_y$), which is degenerate when $k_{y}^2=3k_x^2$. 
+\ref{th.numbertheory1} and \ref{th.numbertheory} is unlikely to be true when $d=2$. Because in this case, the quadratic term of $k_1$ in \eqref{eq.A11.threewave} becomes $3k_xk_{1x}^2+k_x|k_{1y}|^2+2k_{y}\cdot k_{1x} k_{1y}$ ($k_{1\perp}$ becomes $k_{1\perp}=k_y$), which is degenerate when $k_{y}^2=3k_x^2$. 
 \end{rem}
 
 \begin{thm}\label{th.numbertheory} Let $\Omega_k(k_1)\coloneq \Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)$ and $t$ be a large number, then given any smooth compactly supported $F(k)$ and smooth $g(s)$ satisfying $|g|(s)+|g'|(s)\lesssim 1/(1+s^2)$ and $\int_{\mathbb{R}} g(s) ds=c$, we have
-\begin{equation}\label{eq.asymptotics}
+\begin{equation}\label{eq.asymptotics.threewave}
     \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1) = cL^dt^{-1} \int F(k_1) \delta(\Omega_k(k_1)) dk_1+ O(L^{d-1}).
 \end{equation}
 in particular
-\begin{equation}\label{eq.asymptoticsbound}
+\begin{equation}\label{eq.asymptoticsbound.threewave}
     \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1) \le  2ct^{-1}L^d D^{d-1}.
 \end{equation}
 \end{thm}
@@ -59,7 +59,7 @@ in particular
 % Although the proof of Theorem \ref{th.numbertheory} works for much more general $\Lambda(k)$, it's quite hard to formulate a general theorem that covers all physically interesting cases. Therefore, we only illustrate the ideas by proving some special cases.
 % \end{rem}
 
-\begin{proof}[Proof of Theorem \ref{th.numbertheory1}]\eqref{eq.numbertheory1} is a corollary of the following lemma. 
+\begin{proof}[Proof of Theorem \ref{th.numbertheory1}]\eqref{eq.numbertheory1.threewave} is a corollary of the following lemma. 
 
 \begin{lem}\label{lem.rationallemma} For any $d\ge 4$ and $\beta$
 \begin{equation}
@@ -68,11 +68,11 @@ in particular
 \end{lem}
 \begin{proof}
 Define $\mathcal{D}_{k,\sigma}=\#\{k_1\in\mathbb{Z}^d_L,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}$, then we just need to show that 
-\begin{equation}\label{eq.goalofrationallemma}
+\begin{equation}\label{eq.goalofrationallemma.threewave}
     \sup_{\substack{\substack{k,\sigma\in\mathbb{Z}_L^d\\k\ne 0}}} \#\mathcal{D}_{k,\sigma}\lesssim L^{d-1} .
 \end{equation}
 
-We prove \eqref{eq.goalofrationallemma} using volume bound. The proof is divided into three steps.
+We prove \eqref{eq.goalofrationallemma.threewave} using volume bound. The proof is divided into three steps.
 
 % \textbf{Step 1.} In this step, we reduce Lemma \ref{lem.rationallemma} to a simpler lattice point counting problem.
 
@@ -86,12 +86,12 @@ We prove \eqref{eq.goalofrationallemma} using volume bound. The proof is divided
 
 
 \textbf{Step 1.} In this step, we show that 
-\begin{equation}\label{eq.goalofrationallemmastep1}
+\begin{equation}\label{eq.goalofrationallemmastep1.threewave}
     \#\mathcal{D}_{k,\sigma}\le L^{d} \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}),
 \end{equation}
 where $\mathcal{D}^{\mathbb{R}}_{k,\sigma}=\{k_1\in \mathbb{R}^d,\ |k_1|\lesssim 1:\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)=\sigma+O(L^{-1})\}$.
 
-\eqref{eq.goalofrationallemmastep1} can be proved from the following claim.
+\eqref{eq.goalofrationallemmastep1.threewave} can be proved from the following claim.
 
 \textit{Claim.} If $k_1\in \mathcal{D}_{k,\sigma}$, then $D_{1/(2L)}(k_1)\subseteq \mathcal{D}^{\mathbb{R}}_{k,\sigma}$. Here  $D_{r}(k_1)=\{k_1'\in \mathbb{R}^d: \sup_{i=1,\cdots, d} |(k_1')_i-(k_1)_i|\le r\}$ ($(k_1)_i$ are the components of $k_1$). 
 
@@ -107,7 +107,7 @@ We prove the claim now. $x\in \mathcal{D}_{k,\sigma}$ is equivalent to $\Lambda(
 \end{equation}
 Therefore, we have $\Lambda(k_1')+\Lambda(k-k_1')-\Lambda(k)=\sigma+O(L^{-1})$ and thus $k_1'\in \mathcal{D}^{\mathbb{R}}_{k,\sigma}$. This is true for any $k_1'\in D_{1/(2L)}(k_1)$, so $D_{1/(2L)}(k_1)\subseteq \mathcal{D}^{\mathbb{R}}_{k,\sigma}$.
 
-Now we prove \eqref{eq.goalofrationallemmastep1}. Since for different $k_1,k_1'\in \mathcal{D}_{k,\sigma}$, $D_{1/(2L)}(k_1)\cap D_{1/(2L)}(k_1')=\emptyset$, we have 
+Now we prove \eqref{eq.goalofrationallemmastep1.threewave}. Since for different $k_1,k_1'\in \mathcal{D}_{k,\sigma}$, $D_{1/(2L)}(k_1)\cap D_{1/(2L)}(k_1')=\emptyset$, we have 
 \begin{equation}
     \sum_{k_1\in \mathcal{D}_{k,\sigma}} \text{vol}( D_{1/(2L)}(k_1))=\text{vol}\left( \bigcup_{k_1\in \mathcal{D}_{k,\sigma}} D_{1/(2L)}(k_1)\right)\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}).
 \end{equation}
@@ -115,17 +115,17 @@ The left hand side equals to $L^{-d}\#\mathcal{D}_{k,\sigma}$, so we get
 \begin{equation}
     L^{-d}\#\mathcal{D}_{k,\sigma}\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}),
 \end{equation}
-which implies \eqref{eq.goalofrationallemmastep1}.
+which implies \eqref{eq.goalofrationallemmastep1.threewave}.
 
 \textbf{Step 2.} In this step, we show that 
-\begin{equation}\label{eq.goalofrationallemmastep2}
+\begin{equation}\label{eq.goalofrationallemmastep2.threewave}
     \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma})\le L^{-1} |k_x|^{-1}.
 \end{equation}
-Combining \eqref{eq.goalofrationallemmastep1} and \eqref{eq.goalofrationallemmastep2}, we get
-\eqref{eq.goalofrationallemma}, which proves Lemma \ref{lem.rationallemma}.
+Combining \eqref{eq.goalofrationallemmastep1.threewave} and \eqref{eq.goalofrationallemmastep2.threewave}, we get
+\eqref{eq.goalofrationallemma.threewave}, which proves Lemma \ref{lem.rationallemma}.
 
 Given a vector $k$, we denote the first component of $k$ by $k_x$ and the vector formed by other components by $k_{\perp}$. Then $k=(k_x, k_{\perp})$, $k_1=(k_{1x}, k_{1\perp})$ and a simple calculation suggests that
-\begin{equation}\label{eq.A11}
+\begin{equation}\label{eq.A11.threewave}
 \begin{split}
     &\Lambda(k_1)+\Lambda(k-k_1)-\Lambda(k)
  \\
@@ -149,14 +149,14 @@ Then
 \end{equation}
 
 By Fubini theorem (or coarea formula), we get
-\begin{equation}\label{eq.rationallemmastep2'}
+\begin{equation}\label{eq.rationallemmastep2'.threewave}
     \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma})=\int_{|c|\lesssim 1} \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c)) dc.
 \end{equation}
 
-To prove \eqref{eq.goalofrationallemmastep2}, it suffices to find an upper of $\text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c))$. Since $F_{k,\sigma, c}(k_{1\perp})$ is a quadratic function in $k_{1\perp}$ whose degree 2 term is $k_x|k_{1\perp}|^2$, a translation $k_{1\perp}\rightarrow k_{1\perp}-(c-k_x)k_{1\perp}/k_x$ transforms $F_{k,\sigma, c}(k_{1\perp})=\sigma+O(L^{-1})$ to $k_x|k_{1\perp}|^2=C_{k,\sigma,c}+O(L^{-1})$.
+To prove \eqref{eq.goalofrationallemmastep2.threewave}, it suffices to find an upper of $\text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c))$. Since $F_{k,\sigma, c}(k_{1\perp})$ is a quadratic function in $k_{1\perp}$ whose degree 2 term is $k_x|k_{1\perp}|^2$, a translation $k_{1\perp}\rightarrow k_{1\perp}-(c-k_x)k_{1\perp}/k_x$ transforms $F_{k,\sigma, c}(k_{1\perp})=\sigma+O(L^{-1})$ to $k_x|k_{1\perp}|^2=C_{k,\sigma,c}+O(L^{-1})$.
 
 Therefore, 
-\begin{equation}\label{eq.rationallemmastep2''}
+\begin{equation}\label{eq.rationallemmastep2''.threewave}
 \begin{split}
     \text{vol}(\mathcal{D}^{\mathbb{R}}_{k,\sigma}(k_{1x}=c))\le &\text{vol}(\{k_{1\perp}\in \mathbb{R}^{d-1}:k_x|k_{1\perp}|^2=C_{k,\sigma,c}+O(L^{-1})\})
     \\
@@ -167,7 +167,7 @@ Therefore,
 \end{equation}
 Here the last inequality follows from the elementary fact that $\text{vol}(\{x\in \mathbb{R}^n:|x|^2=R^2+O(\eta)\})\lesssim \eta$ when $n\ge 2$. Notice here the dimension of $k_{1\perp}$ is $d-1$ which is greater than $2$, so this fact is applicable.
 
-Combining \eqref{eq.rationallemmastep2'} and \eqref{eq.rationallemmastep2'}, we proves \eqref{eq.goalofrationallemmastep2}. Therefore, we complete the proof of Lemma \ref{lem.rationallemma}
+Combining \eqref{eq.rationallemmastep2'.threewave} and \eqref{eq.rationallemmastep2'.threewave}, we proves \eqref{eq.goalofrationallemmastep2.threewave}. Therefore, we complete the proof of Lemma \ref{lem.rationallemma}
 \end{proof}
 
 We now return to the proof of Theorem \ref{th.numbertheory1}. Define 
@@ -176,14 +176,14 @@ We now return to the proof of Theorem \ref{th.numbertheory1}. Define
 \end{equation}
 
 
-Let us prove \eqref{eq.numbertheory1}. For any $T\le L$, let $N=[L/T]+1$, then $\cup_{j=-N}^N [jL^{-1}, (j+1)L^{-1}]$ is a cover of $[-T^{-1}, T^{-1}]$. Therefore, $\cup_{j=-N}^N\mathcal{D}_{k,\sigma}([jL^{-1}, (j+1)L^{-1}])$ is a cover of $\mathcal{D}_{k,\sigma}([-T^{-1}$ $,T^{-1} ])$
+Let us prove \eqref{eq.numbertheory1.threewave}. For any $T\le L$, let $N=[L/T]+1$, then $\cup_{j=-N}^N [jL^{-1}, (j+1)L^{-1}]$ is a cover of $[-T^{-1}, T^{-1}]$. Therefore, $\cup_{j=-N}^N\mathcal{D}_{k,\sigma}([jL^{-1}, (j+1)L^{-1}])$ is a cover of $\mathcal{D}_{k,\sigma}([-T^{-1}$ $,T^{-1} ])$
 
 By Lemma \ref{lem.rationallemma} we get 
-\begin{equation}\label{eq.thrationalexpand}
+\begin{equation}\label{eq.thrationalexpand.threewave}
     \#\mathcal{D}_{k,\sigma}([-T^{-1},T^{-1} ])\lesssim \sum_{j=-N}^N\#\mathcal{D}_{k,\sigma}([jL^{-1}, (j+1)L^{-1}])\lesssim NL^{d-1} |k_x|^{-1}\lesssim L^dT^{-1}|k_x|^{-1}.
 \end{equation}
 
-This proves \eqref{eq.numbertheory1}.
+This proves \eqref{eq.numbertheory1.threewave}.
 \end{proof}
 
 
@@ -199,11 +199,11 @@ Let $k_{1}=\frac{K_1}{L}$ and $k=\frac{K}{L}$. Apply the high dimensional Euler-
 \end{equation}
 
 We have the following estimates
-\begin{equation}\label{eq.asymptoticlemmaeq1}
+\begin{equation}\label{eq.asymptoticlemmaeq1.threewave}
     \int g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right) dK_1 =L^d\int g(t\Omega_k(k_1)) F(k_1) dk_1 
 \end{equation}
 and
-\begin{equation}\label{eq.asymptoticlemmaeq2}
+\begin{equation}\label{eq.asymptoticlemmaeq2.threewave}
 \begin{split}
     &\int_{\mathbb{R}^d} \{K_1\}^{J} \partial_{K_1}^{J}\left(g(t\Omega_k(K_1/L)) F\left(\frac{K_1}{L}\right)\right) dK_1
     \\
@@ -217,15 +217,15 @@ and
 Here in the second equality we apply the fact that $\{Lk_1\}\le 1$. In the last line we define $g^{(j)}=\sum_{j'\le j} \left|\frac{d^{j'}}{d^{j'}s}g(s)\right|$ and $F^{(j)}(k_1)=\sum_{|J'|\le j}|\partial^{J'}_{k_1}F(k_1)|$ (Here $J'$ is a multi-index) and we also use the fact that $|\partial_{k_1}^{j}(g(t\Omega_k(k_1)))|\le t^{j} g^{(j)}(t\Omega_k(k_1))$. 
 
 Now we just need to show that 
-\begin{equation}\label{eq.asymptoticlemmaeq3}
+\begin{equation}\label{eq.asymptoticlemmaeq3.threewave}
     \int g(t\Omega_k(k_1)) F(k_1) dk_1 =ct^{-1} \int F(k_1) \delta(\Omega_k(k_1)) dk_1+ O(t^{-2})
 \end{equation}
 and 
-\begin{equation}\label{eq.asymptoticlemmaeq4}
+\begin{equation}\label{eq.asymptoticlemmaeq4.threewave}
     \int_{\mathbb{R}^d}  g^{(j)}(t\Omega_k(k_1))F^{(j)}(k_1) dk_1 \le t^{-1}
 \end{equation}
 
-In fact, if we substitute \eqref{eq.asymptoticlemmaeq3} into \eqref{eq.asymptoticlemmaeq1}, we get the main term in \eqref{eq.asymptotics}. If we substitute \eqref{eq.asymptoticlemmaeq4} into \eqref{eq.asymptoticlemmaeq2}, we know that the error terms come from \eqref{eq.asymptoticlemmaeq2} can be bounded by $\sum^{|J|}_{j=1}L^{d-j}t^{j-1}\le |J| L^{d-1}$. Therefore, \eqref{eq.asymptoticlemmaeq3} and \eqref{eq.asymptoticlemmaeq4} implies the lemma.
+In fact, if we substitute \eqref{eq.asymptoticlemmaeq3.threewave} into \eqref{eq.asymptoticlemmaeq1.threewave}, we get the main term in \eqref{eq.asymptotics.threewave}. If we substitute \eqref{eq.asymptoticlemmaeq4.threewave} into \eqref{eq.asymptoticlemmaeq2.threewave}, we know that the error terms come from \eqref{eq.asymptoticlemmaeq2.threewave} can be bounded by $\sum^{|J|}_{j=1}L^{d-j}t^{j-1}\le |J| L^{d-1}$. Therefore, \eqref{eq.asymptoticlemmaeq3.threewave} and \eqref{eq.asymptoticlemmaeq4.threewave} implies the lemma.
 
 By coarea formula we know that
 \begin{equation}
@@ -249,11 +249,11 @@ Therefore,
     =&ct^{-1}h(0) +O(t^{-2})=ct^{-1}\left(\int F(k_1) \delta(\Omega_k(k_1))dk_1\right)  +O(t^{-2})
 \end{split}
 \end{equation}
-Using the same argument we can also prove \eqref{eq.asymptoticlemmaeq4}, so we complete the proof of the Theorem \ref{th.numbertheory}.
+Using the same argument we can also prove \eqref{eq.asymptoticlemmaeq4.threewave}, so we complete the proof of the Theorem \ref{th.numbertheory}.
 \end{proof}
 % \textbf{Step 1.} (Reduction)
 
-% To prove \eqref{eq.asymptotics}, without loss of generality, we just need to consider
+% To prove \eqref{eq.asymptotics.threewave}, without loss of generality, we just need to consider
 % \begin{equation}
 %     \sum_{k_1\in \mathbb{Z}_{L+}^d} g(t\Omega_k(k_1)) F(k_1).
 % \end{equation}
@@ -269,7 +269,7 @@ Using the same argument we can also prove \eqref{eq.asymptoticlemmaeq4}, so we c
 % \end{equation}
 
 
-% Substituting into the left hand side of \eqref{eq.asymptotics}, we get
+% Substituting into the left hand side of \eqref{eq.asymptotics.threewave}, we get
 % \begin{equation}
 %     \sum_{k_1\in \mathbb{Z}_L^d} g(t\Omega_k(k_1)) F(k_1).
 % \end{equation}
@@ -280,7 +280,7 @@ Using the same argument we can also prove \eqref{eq.asymptoticlemmaeq4}, so we c
 \begin{thm}
 Assume that $J=(j_1,\cdots,j_d)$ is a multi-index. Given a vector $K=(K^{(1)},\cdots,K^{(d)})$, define $K^J=\left(K^{(1)}\right)^{j_1}\cdots\left(K^{(d)}\right)^{j_d}$. Given a number $a$, $\{a\}=a-[a]$ is its fractional part, $\{K\}\coloneq(\{K^{(1)}\},\cdots,\{K^{(d)}\})$. We also define $|J|_{\infty}=\sup_{1\le n\le d} j_{n}$, $|J|=\sum_{1\le n\le d} j_{n}$. Then we have
 
-\begin{equation}\label{eq.EulerMaclaurin}
+\begin{equation}\label{eq.EulerMaclaurin.threewave}
     \sum_{K\in\mathbb{Z}^d} f(K)=\int_{\mathbb{R}^d} f(K)dK+\sum_{ |J|_{\infty} = 1}\int_{\mathbb{R}^d} \{K\}^{J} \partial_K^{J}f(K) dK
 \end{equation}
 
@@ -288,7 +288,7 @@ Assume that $J=(j_1,\cdots,j_d)$ is a multi-index. Given a vector $K=(K^{(1)},\c
 \begin{proof}
 This can be proved by induction.
 
-When $d=1$, \eqref{eq.EulerMaclaurin} becomes
+When $d=1$, \eqref{eq.EulerMaclaurin.threewave} becomes
 \begin{equation}
     \sum_{K\in\mathbb{Z}} f(K)=\int_{\mathbb{R}} f(K)dK+\int_{\mathbb{R}} \{K\} \partial_K f(K) dK
 \end{equation}
@@ -317,4 +317,551 @@ Sum over $K^{(d+1)}$ and apply $d=1$ Euler-Maclaurin formula we get
 \end{split}
 \end{equation}
 In the last step, $J=(\widetilde{J},j^{(d+1)})$. In the second equality, the second term corresponds to $\widetilde{J}=0$ and $j^{(d+1)}=1$, the third term corresponds to $\widetilde{J}\ne 0$ and $j^{(d+1)}=0$ and the fourth term corresponds to $\widetilde{J}\ne 0$ and $j^{(d+1)}=1$.
+\end{proof}
+
+
+\section{Number theoretic results in four wave models}
+
+The mains results of this appendix is to prove Theorem \ref{th.numbertheory1} and Theorem \ref{th.numbertheory} 
+
+\begin{thm}\label{th.numbertheory1}
+Let $\Lambda(k)=\sqrt{1+|k|^2}$, then for all $\beta\in [1,2]^d$, the following number theory estimate is true
+
+\begin{equation}\label{eq.numbertheory1}
+    \sup_{\substack{c,n\in\mathbb{Z}_L^d\\T\le L}}
+    T\#\left\{
+        \begin{matrix}
+            k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+            |k_1|,|k_2|,|k_3|\lesssim 1
+        \end{matrix}
+        :
+        \begin{matrix}
+            k_1-k_2+k_3=c \\
+            \Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(c)+n+O(T^{-1})
+        \end{matrix}
+    \right\}\le L^{2d}.
+\end{equation}
+
+\begin{equation}\label{eq.numbertheory1'}
+    \sup_{\substack{c_1,c_2,n\in\mathbb{Z}_L^d\\T\le L}}
+    T\#\left\{
+        \begin{matrix}
+            k_1,k_2\in\mathbb{Z}_L^d \\
+            |k_1|, |k_2|\lesssim 1
+        \end{matrix}
+        :
+        \begin{matrix}
+            k_1+ k_2=c_1+ c_{2} \\
+            \Lambda(k_1)+\Lambda(k_2)=\Lambda(c_1)+ \Lambda(c_2)+n+O(T^{-1})
+        \end{matrix}
+        \right\}\le L^{2d}.
+\end{equation}
+
+\begin{equation}\label{eq.numbertheory1''}
+    \sup_{\substack{c_1,c_2,n\in\mathbb{Z}_L^d\\T\le L^2}}
+    T\#\left\{
+        \begin{matrix}
+            k_1,k_2\in\mathbb{Z}_L^d \\
+            |k_1|, |k_2|\lesssim 1
+        \end{matrix}
+        :
+        \begin{matrix}
+            k_1- k_2=c_1- c_{2},\ k_1\ne k_2 \\
+            \Lambda(k_1)-\Lambda(k_2)=\Lambda(c_1)- \Lambda(c_2)+n+O(T^{-1})
+        \end{matrix}
+        \right\}\le L^{2d+1}.
+\end{equation}
+
+More generally, the proof of this theorem works for many other choices of $\Lambda(k)$.
+\end{thm}
+
+
+\begin{thm}\label{th.numbertheory}
+Let $\Lambda(k)=\sqrt{1+|k|^2}$, then for sufficiently generic $\beta\in [1,2]^d$, the following number theory estimate is true for all $\theta\ll 1$
+
+\begin{equation}\label{eq.numbertheory}
+    \sup_{\substack{c,n\in\mathbb{Z}_L^d\\T\le L^{2}}}
+    T\#\left\{
+        \begin{matrix}
+            k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+            |k_1|,|k_2|,|k_3|\le L^\theta
+        \end{matrix}
+        :
+        \begin{matrix}
+            k_1-k_2+k_3=c \\
+            \Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(c)+n+O(T^{-1})
+        \end{matrix}
+    \right\}\le L^{2d+O(\theta)}
+\end{equation}
+
+\begin{equation}\label{eq.numbertheory'}
+    \sup_{\substack{c_1,c_2,n\in\mathbb{Z}_L^d\\T\le L^{2}}}
+    T\#\left\{
+        \begin{matrix}
+            k_1,k_2\in\mathbb{Z}_L^d \\
+            |k_1|, |k_2|\le L^\theta
+        \end{matrix}
+        :
+        \begin{matrix}
+            k_1\pm k_2=c_1\pm c_{2},\ k_1\ne k_2 \\
+            \Lambda(k_1)\pm\Lambda(k_2)=\Lambda(c_1)\pm \Lambda(c_2)+n+O(T^{-1})
+        \end{matrix}
+    \right\}\le L^{2d+O(\theta)}
+\end{equation}
+
+More generally, the proof of this theorem works for many other choices of $\Lambda(k)$.
+\end{thm}
+
+% k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+% |k_1|,|k_2|\le L^\theta
+% \end{matrix}
+% :
+% \begin{matrix}
+% k_1-k_2+k_3=k \\
+% \Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(k)+n+O(T^{-1})
+% \end{matrix}
+% \right\}\le L^{2d+O(\theta)}
+% \end{equation}
+% More generally, the proof of this theorem works for many other choices of $\Lambda(k)$.
+% \end{thm}
+
+% \begin{rem}
+% Although the proof of Theorem \ref{th.numbertheory} works for much more general $\Lambda(k)$, it's quite hard to formulate a general theorem that covers all physically interesting cases. Therefore, we only illustrate the ideas by proving some special cases.
+% \end{rem}
+
+\begin{proof}[Proof of Theorem \ref{th.numbertheory1}]\eqref{eq.numbertheory1} and \eqref{eq.numbertheory1'} are corollaries of the following lemma. 
+
+\begin{lem}\label{lem.rationallemma} For any $\beta$
+\begin{equation}
+    \sup_{\substack{m,n\\m\lesssim 1}} \#\left\{\begin{array}{cc}
+         x,y\in\mathbb{Z}^d_L  \\
+         |x|,|y|\lesssim 1
+    \end{array}:\begin{array}{cc}
+         x+y=m  \\
+         \Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-1})
+    \end{array}\right\}\lesssim_{\beta} L^{d-2} .
+\end{equation}
+\end{lem}
+\begin{proof}
+It is easy to show that
+\begin{equation}
+\begin{split}
+    &\#\left\{\begin{array}{cc}
+         x,y\in\mathbb{Z}^d_L  \\
+         |x|,|y|\lesssim 1
+    \end{array}:\begin{array}{cc}
+         x+y=m  \\
+         \Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-1})
+    \end{array}\right\}
+    \\
+    =&\#\left\{
+         x\in \mathbb{Z}^d_L,\ |x|\lesssim 1:\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)=n+O(L^{-1})\right\}
+\end{split}
+\end{equation}
+
+Define $\mathcal{D}_{m,n}=\left\{x\in \mathbb{Z}^d_L,\ |x|\lesssim 1: \Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)=n+O(L^{-1})\right\}$, then we just need to show that 
+\begin{equation}\label{eq.goalofrationallemma}
+    \sup_{\substack{m,n\\m\lesssim 1}} \#\mathcal{D}_{m,n}\lesssim_{\beta} L^{d-1} .
+\end{equation}
+
+We prove \eqref{eq.goalofrationallemma} using volume bound. The proof is divided into two steps.
+
+\textbf{Step 1.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemmastep1}
+    \#\mathcal{D}_{m,n}\le L^{d} \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}),
+\end{equation}
+where $\mathcal{D}^{\mathbb{R}}_{m,n}=\left\{x\in \mathbb{R}^d,\ |x|\lesssim 1:\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)=n+O(L^{-1})\right\}$.
+
+\eqref{eq.goalofrationallemmastep1} can be proved from the following claim.
+
+\textit{Claim.} If $x\in \mathcal{D}_{m,n}$, then $D_{1/(2L)}(x)\subseteq \mathcal{D}^{\mathbb{R}}_{m,n}$. Here  $D_{r}(x)=\{x'\in \mathbb{R}^d: \sup_{i=1,\cdots, d} |x'_i-x_i|\le r\}$ ($x_i$ are the components of $x$). 
+
+We prove the claim now. $x\in \mathcal{D}_{m,n}$ is equivalent to $\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)=n+O(L^{-1})$. For any $x'\in D_{1/(2L)}(x)$, $|x'-x|\lesssim 1/L$, because $\Lambda$ is a Lifschitz function, we have $|\Lambda_{\beta}(x)-\Lambda_{\beta}(x')|\lesssim L^{-1}$. Therefore, 
+\begin{equation}
+\begin{split}
+    &|\Lambda_{\beta}(x')+\Lambda_{\beta}(m-x')-n|
+    \\
+    \le &|\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)-n|+|\Lambda_{\beta}(x)-\Lambda_{\beta}(x')|+|\Lambda_{\beta}(m-x)-\Lambda_{\beta}(m-x')|
+    \\
+    \lesssim & L^{-1}.
+\end{split}
+\end{equation}
+Therefore, we have $\Lambda_{\beta}(x')+\Lambda_{\beta}(m-x')-n=O(L^{-1})$ and thus $x'\in \mathcal{D}^{\mathbb{R}}_{m,n}$. This is true for any $x'\in D_{1/(2L)}(x)$, so $D_{1/(2L)}(x)\subseteq \mathcal{D}^{\mathbb{R}}_{m,n}$.
+
+Since for different $x_1,x_2\in \mathcal{D}_{m,n}$, $D_{1/(2L)}(x_1)\cap D_{1/(2L)}(x_2)=\emptyset$, we have 
+\begin{equation}
+    \sum_{x\in \mathcal{D}_{m,n}} \text{vol}( D_{1/(2L)}(x))=\text{vol}\left( \bigcup_{x\in \mathcal{D}_{m,n}} D_{1/(2L)}(x)\right)\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}).
+\end{equation}
+The left hand side equals to $L^{-d}\#\mathcal{D}_{m,n}$, so we get
+\begin{equation}
+    L^{-d}\#\mathcal{D}_{m,n}\le \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}),
+\end{equation}
+which implies \eqref{eq.goalofrationallemmastep1}.
+
+\textbf{Step 2.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemmastep2}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n})\le L^{-1}.
+\end{equation}
+Combining \eqref{eq.goalofrationallemmastep1} and \eqref{eq.goalofrationallemmastep2}, we get
+\eqref{eq.goalofrationallemma}, which proves Lemma \ref{lem.rationallemma}.
+
+
+By calculating the Hessian we can show that $F_{\beta,m,n}=\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)-n$ is a convex function. Let $x_{\beta, m}$ be its unique critical point. By Morse lemma, we know that there exists $r_0$ such that $F_{\beta,m,n}=|y|^2-a$ after a change of variable.
+
+In $\mathcal{D}^{\mathbb{R}}_{m,n}\backslash B_{r_0}(x_{\beta, m})$, $|\nabla F_{\beta,m,n}|\gtrsim 1$. Then by the coarea formula, we get
+\begin{equation}
+\begin{split}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}\backslash B_{r_0}(x_{\beta, m})) =&  \text{vol}(\{|F_{\beta,m,n}|\lesssim L^{-1}\}\backslash B_{r_0}(x_{\beta, m}))
+    \\
+    =& \int^{CL^{-1}}_{-CL^{-1}} \int_{\{F_{\beta,m,n}=s\}\backslash B_{r_0}(x_{\beta, m})}\frac{1}{|\nabla F_{\beta,m,n}|}d\sigma ds
+    \\
+    \lesssim& \int^{CL^{-1}}_{-CL^{-1}} \text{Area}(\{F_{\beta,m,n}=s\}\backslash B_{r_0}(x_{\beta, m})) ds
+    \\
+    \lesssim& L^{-1}.
+\end{split}
+\end{equation}
+
+In $\mathcal{D}^{\mathbb{R}}_{m,n}\cap  B_{r_0}(x_{\beta, m})$, $F_{\beta,m,n}=|y|^2-a$ after a change of variable $y=y(x)$ and $y(B_{r_0}(x_{\beta, m}))\subseteq B_{Cr_0}(0)$ 
+\begin{equation}
+\begin{split}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}\cap B_{r_0}(x_{\beta, m})) \lesssim \text{vol}(\{||y|^2-a|\lesssim L^{-1}\}\cap B_{Cr_0}(0))\lesssim L^{-1}.
+\end{split}
+\end{equation}
+Here the proof of the second inequality is elementary and is thus skipped. 
+
+Therefore, we complete the proof of Lemma \ref{lem.rationallemma}
+\end{proof}
+
+We now return to the proof of Theorem \ref{th.numbertheory1}. Define 
+\begin{equation}
+    \mathcal{D}^{(1)}_{m,n}([-T^{-1},T^{-1} ])=\left\{\begin{matrix}
+k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+|k_1|,|k_2|,|k_3|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1-k_2+k_3=c \\
+\Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(c)+n+O(T^{-1})
+\end{matrix}
+\right\}
+\end{equation}
+
+\begin{equation}
+    \mathcal{D}^{(2)}_{m,n}([-T^{-1},T^{-1} ])=\left
+    \{\begin{matrix}
+k_1,k_2\in\mathbb{Z}_L^d \\
+|k_1|, |k_2|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1+ k_2=c_1+ c_{2} \\
+\Lambda(k_1)+\Lambda(k_2)=\Lambda(c_1)+ \Lambda(c_2)+n+O(T^{-1})
+\end{matrix}
+\right\}
+\end{equation}
+
+
+Let us first prove \eqref{eq.numbertheory1'}. For any $T\le L$, let $N=[L/T]+1$, then $\cup_{j=-N}^N [jL^{-1}, (j+1)L^{-1}]$ is a cover of $[-T^{-1}, T^{-1}]$. Therefore, $\cup_{j=-N}^N\mathcal{D}^{(2)}_{m,n}([jL^{-1}, (j+1)L^{-1}])$ is a cover of $\mathcal{D}^{(2)}_{m,n}([-T^{-1}$ $,T^{-1} ])$
+
+By Lemma \ref{lem.rationallemma} we get 
+\begin{equation}\label{eq.thrationalexpand}
+    \#\mathcal{D}^{(2)}_{m,n}([-T^{-1},T^{-1} ])\lesssim \sum_{j=-N}^N\#\mathcal{D}^{(2)}_{m,n}([jL^{-1}, (j+1)L^{-1}])\lesssim NL^{d-1}\lesssim L^dT^{-1}.
+\end{equation}
+
+This proves \eqref{eq.numbertheory1'}.
+
+Now we prove \eqref{eq.numbertheory1}. 
+
+\begin{equation}\label{eq.thrationalexpandlong}
+\begin{split}
+\#\mathcal{D}^{(1)}_{m,n}([-T^{-1},T^{-1} ])=&\#\left\{\begin{matrix}
+k_1,k_2,k_3\in\mathbb{Z}_L^d \\
+|k_1|,|k_2|,|k_3|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1-k_2+k_3=c \\
+\Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)=\Lambda(c)+n+O(T^{-1})
+\end{matrix}
+\right\}
+\\
+=&\sum_{|c_2|\lesssim 1} \#\left\{\begin{matrix}
+k_1,k_3\in\mathbb{Z}_L^d \\
+|k_1|,|k_3|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1+k_3=c+c_2 \\
+\Lambda(k_1)+\Lambda(k_3)=\Lambda(c)+\Lambda(c_2)+n+O(T^{-1})
+\end{matrix}
+\right\}
+\\
+= &  \sum_{|c_2|\lesssim 1} \mathcal{D}^{(2)}_{m,n}([-T^{-1},T^{-1} ])\lesssim \sum_{|c_2|\lesssim 1} L^{d} T^{-1}
+\\
+=&L^{2d} T^{-1}.
+\end{split}
+\end{equation}
+
+This proves \eqref{eq.numbertheory1}.
+
+\eqref{eq.numbertheory1''} is a simple corollary of the following lemma. 
+
+\begin{lem}\label{lem.rationallemma2} For any $\beta$
+\begin{equation}
+    \sup_{\substack{m,n\\0\ne m\lesssim 1}} \#\left\{\begin{array}{cc}
+         x,y\in\mathbb{Z}^d_L  \\
+         |x|,|y|\lesssim 1
+    \end{array}:\begin{array}{cc}
+         x-y=m\ne 0  \\
+         \Lambda_{\beta}(x)-\Lambda_{\beta}(y)=n+O(L^{-2})
+    \end{array}\right\}\lesssim_{\beta} L^{d-1} .
+\end{equation}
+\end{lem}
+\begin{proof} The proof of this lemma is similar to that of Lemma \ref{lem.rationallemma}. 
+
+Since $m\in\mathbb{Z}^d_L$ and $m\ne 0$, we have $|m|\ge L^{-1}$. Therefore, we have
+
+\begin{equation}
+\begin{split}
+    &\left\{x\in \mathbb{Z}^d_L,\ |x|\lesssim 1: \Lambda_{\beta}(x)-\Lambda_{\beta}(x-m)-n=O(L^{-2})\right\}
+    \\
+    \subseteq& \left\{x\in \mathbb{Z}^d_L,\ |x|\lesssim 1: |m|^{-1}(\Lambda_{\beta}(x)-\Lambda_{\beta}(x-m)-n)=O(L^{-1})\right\}
+\end{split}
+\end{equation}
+
+Define $\mathcal{D}_{m,n}=\left\{x\in \mathbb{Z}^d_L,\ |x|\lesssim 1: |m|^{-1}(\Lambda_{\beta}(x)-\Lambda_{\beta}(x-m)-n)=O(L^{-1})\right\}$, then we just need to show that 
+\begin{equation}\label{eq.goalofrationallemma2}
+    \sup_{\substack{m,n\\m\lesssim 1}} \#\mathcal{D}_{m,n}\lesssim_{\beta} L^{d-1} .
+\end{equation}
+
+We prove \eqref{eq.goalofrationallemma2} using volume bound. The proof is divided into two steps.
+
+\textbf{Step 1.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemma2step1}
+    \#\mathcal{D}_{m,n}\le L^{d} \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}),
+\end{equation}
+where $\left\{x\in \mathbb{R}^d,\ |x|\lesssim 1: |m|^{-1}(\Lambda_{\beta}(x)-\Lambda_{\beta}(x-m)-n)=O(L^{-1})\right\}$.
+
+Since the Lifschitz norm of the function $F_{\beta,m,n}(x)=|m|^{-1}(\Lambda_{\beta}(x)-\Lambda_{\beta}(x-m)-n)$ is bounded by a universal constant, the same argument of step 1 in the proof of Lemma \ref{lem.rationallemma} works and we do not repeat it.
+
+\textbf{Step 2.} In this step, we show that 
+\begin{equation}\label{eq.goalofrationallemma2step2}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n})\le L^{-1}.
+\end{equation}
+Combining \eqref{eq.goalofrationallemma2step1} and \eqref{eq.goalofrationallemma2step2}, we get
+\eqref{eq.goalofrationallemma2}, which proves Lemma \ref{lem.rationallemma2}.
+
+
+By calculating the Hessian we can show that $\Lambda_{\beta}(x)$ is a convex function, so
+\begin{equation}
+    |m|^{-1}\left|\nabla\Lambda_{\beta}(x)-\nabla\Lambda_{\beta}(x-m)\right|\gtrsim 1.
+\end{equation}
+
+Above equation implies that $|\nabla F_{\beta,m,n}|\gtrsim 1$ By the coarea formula, we get
+\begin{equation}
+\begin{split}
+    \text{vol}(\mathcal{D}^{\mathbb{R}}_{m,n}) =&  \text{vol}(\{|F_{\beta,m,n}|\lesssim L^{-1}\})
+    \\
+    =& \int^{CL^{-1}}_{-CL^{-1}} \int_{\{F_{\beta,m,n}=s\}}\frac{1}{|\nabla F_{\beta,m,n}|}d\sigma ds
+    \\
+    \lesssim& \int^{CL^{-1}}_{-CL^{-1}} \text{Area}(\{F_{\beta,m,n}=s\}) ds
+    \\
+    \lesssim& L^{-1}.
+\end{split}
+\end{equation}
+
+
+Therefore, we complete the proof of Lemma \ref{lem.rationallemma2}
+
+\end{proof}
+
+Finally we prove \eqref{eq.numbertheory1''}. Define
+\begin{equation}
+    \mathcal{D}^{(3)}_{m,n}([-T^{-1},T^{-1} ])=\left\{\begin{matrix}
+k_1,k_2\in\mathbb{Z}_L^d \\
+|k_1|, |k_2|\lesssim 1
+\end{matrix}
+:
+\begin{matrix}
+k_1- k_2=c_1- c_{2},\ k_1\ne k_2 \\
+\Lambda(k_1)-\Lambda(k_2)=\Lambda(c_1)- \Lambda(c_2)+n+O(T^{-1})
+\end{matrix}
+\right\}
+\end{equation}
+
+Apply the same argument of getting \eqref{eq.thrationalexpand},
+\begin{equation}
+    \#\mathcal{D}^{(3)}_{m,n}([-T^{-1},T^{-1} ])\lesssim \sum_{j=-N}^N\#\mathcal{D}^{(3)}_{m,n}([jL^{-1}, (j+1)L^{-1}])\lesssim NL^{d-1}\lesssim L^dT^{-1}.
+\end{equation}
+This proves \eqref{eq.numbertheory1''} and we complete the proof of Theorem \ref{th.numbertheory1}.
+\end{proof}
+
+
+
+\begin{proof}[Proof of Theorem \ref{th.numbertheory}]
+The $-$ case of \eqref{eq.numbertheory'} is equivalent to \eqref{eq.numbertheory1''}.
+
+\eqref{eq.numbertheory} and the $+$ case of \eqref{eq.numbertheory'} are corollaries of the following lemma. 
+
+\begin{lem}\label{lem.irrationallemma} For any $\theta$, for almost all $\beta$
+\begin{equation}
+    \sup_{\substack{m,n\\m\lesssim 1}} \#\left\{\begin{array}{cc}
+         x,y\in\mathbb{Z}^d_L  \\
+         |x|,|y|\lesssim L^{\theta}
+    \end{array}:\begin{array}{cc}
+         x+y=m  \\
+         \Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-2+\theta})
+    \end{array}\right\}\lesssim_{\theta,\beta} L^{d-2+\theta} .
+\end{equation}
+\end{lem}
+\begin{proof} Let 
+\begin{equation}
+    \#_{m,n,L,\beta}=\#\left\{\begin{array}{cc}
+         x,y\in\mathbb{Z}^d_L  \\
+         |x|,|y|\lesssim L^{\theta}
+    \end{array}:\begin{array}{cc}
+         x+y=m  \\
+         \Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-2+\theta})
+    \end{array}\right\}
+\end{equation}
+
+
+Then the lemma is equivalent to 
+\begin{equation}
+    \mathbb{P}_{\beta}\left(\sup_{\substack{m,n\\m\lesssim 1}} \#_{m,n,L,\beta} \lesssim_{\theta,\beta} L^{d-2+\theta}\right)=1.
+\end{equation}
+which is also equivalent to
+\begin{equation}\label{eq.irrationallemmaexpand}
+    \mathbb{P}_{\beta}\left(\sup_{L}\sup_{\substack{m,n\\m\lesssim 1}} L^{-(d-2+\theta)}\#_{m,n,L,\beta} <\infty \right)=1.
+\end{equation}
+
+The proof of \eqref{eq.irrationallemmaexpand} is divided into several steps.
+
+\textbf{Step 1.} In this step, we show that in the proof of \eqref{eq.irrationallemmaexpand}, we may replace $\sup_{L}$ and $\sup_{m,n}$ by supremum over discrete set $\mathcal{L}$ and $\mathcal{M}$, $\mathcal{N}$, i.e. $\sup_{L\in \mathcal{L}}$ and $\sup_{m\in\mathcal{M},n\in\mathcal{N}}$.
+
+Since $x,y\in \mathbb{Z}_L^d$, we may assume that $m\in \mathbb{Z}_{L}^d$ and we take $\mathcal{M}=\mathbb{Z}_{L}^d$.
+
+Since if $|n-n'|\lesssim L^{-2}$, then $\Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-2+\theta})$ $\Rightarrow$ $\Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n'+O(L^{-2+\theta})$, we know that \eqref{eq.irrationallemmaexpand} is true for all $n\in\mathbb{Z}_{L^2}^d$ implies that it is true for all $n'\in\mathbb{R}^d$. We can thus take $\mathcal{N}=\mathbb{Z}_{L^2}^d$.
+
+Let $K=[\text{log}_2 L]$ and $l=L/2^K$, then $L=l\cdot 2^K$ and $l\in [1,2]$. Since if $|l-l'|\lesssim L^{-2}$, then $\Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-2+\theta})$ $\Rightarrow$ $\Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n'+O(L^{-2+\theta})$, we know that \eqref{eq.irrationallemmaexpand} is true for all $l\in [1,2]$ implies that it is true for all $l\in [1,2]\cap \mathbb{Z}_{L^2}$. We can thus take $\mathcal{L}=\{L=l\cdot 2^K:\ l\in [1,2]\cap \mathbb{Z}_{L^2},\ K\in \mathbb{N}_+\}$.
+
+Therefore, to prove \eqref{eq.irrationallemmaexpand}, it suffices to show that 
+\begin{equation}\label{eq.irrationallemmaexpand'}
+    \mathbb{P}_{\beta}\left(\sup_{L\in \mathcal{L}}\sup_{\substack{m\in \mathcal{M},m\lesssim 1\\n\in \mathcal{N}}}  L^{-(d-2+\theta)}\#_{m,n,L,\beta} <\infty\right)=1.
+\end{equation}
+
+In what follows, we show that 
+\begin{equation}\label{eq.irrationallemmaexpand''}
+    \mathbb{P}_{\beta}\left(\sup_{L\in \mathcal{L}}L^{-(d-2+\theta)}\#_{m,n,L,\beta} <\infty \right)=1.
+\end{equation}
+\eqref{eq.irrationallemmaexpand''} implies that $\sup_{L\in \mathcal{L}}L^{-(d-2+\theta)}\#_{m,n,L,\beta} =\infty$ is a null set. Since a countable union of null sets is still a null set, \eqref{eq.irrationallemmaexpand'} is a corollary of \eqref{eq.irrationallemmaexpand''}.
+
+\textbf{Step 2.} In this step, we derive \eqref{eq.irrationallemmaexpand''} from the following expectation bound.
+\begin{equation}\label{eq.irrationallemmaexpectation}
+    \mathbb{E}(\#_{m,n,L,\beta})\lesssim L^{d-2+\theta/2}.
+\end{equation}
+
+\eqref{eq.irrationallemmaexpectation} implies that
+\begin{equation}\label{eq.irrationallemmaexpectation'}
+    \mathbb{E}(\#_{m,n,l\cdot 2^K,\beta})\lesssim 2^{(d-2)K+\theta K/2}.
+\end{equation}
+
+Therefore, we have
+\begin{equation}
+    \mathbb{E}\left(\sum_{K} 2^{-(d-2+\theta)K}\#_{m,n,l\cdot 2^K,\beta}\right)\lesssim \sum_K 2^{-\theta K/2}\le C_{\theta}<\infty.
+\end{equation}
+
+This implies that almost surely
+\begin{equation}
+    \sum_{K} 2^{-(d-2+\theta)K}\#_{m,n,l\cdot 2^K,\beta}<\infty.
+\end{equation}
+
+Let $C_{\beta,\theta}=\sum_{K} 2^{-(d-2+\theta)K}\#_{m,n,l\cdot 2^K,\beta}$ which is finite almost surely. We get 
+\begin{equation}
+    \#_{m,n,l\cdot 2^K,\beta}\le C_{\beta,\theta} 2^{(d-2+\theta)K},
+\end{equation}
+which is equivalent to \eqref{eq.irrationallemmaexpand''}.
+
+\textbf{Step 3.} In this step, we prove the expectation bound \eqref{eq.irrationallemmaexpectation}.
+
+Let's calculate the expectation.
+\begin{equation}\label{eq.irrationallemmastep2}
+\begin{split}
+    \mathbb{E}(\#_{m,n,L,\beta})=&\mathbb{E}\left(\sum_{\substack{x,y\in\mathbb{Z}^d_L,x+y=m \\ |x|,|y|\lesssim L^{\theta}}} \chi_{\Lambda_{\beta}(x)+\Lambda_{\beta}(y)=n+O(L^{-2})}\right)
+    \\
+    =&\sum_{\substack{x,y\in\mathbb{Z}^d_L,x+y=m \\ |x|,|y|\lesssim L^{\theta}}} \mathbb{P}_{\beta}(|\Lambda_{\beta}(x)+\Lambda_{\beta}(y)-n|\lesssim L^{-2})
+    \\
+    =&\sum_{\substack{x,y\in\mathbb{Z}^d_L,x+y=m \\ |x|,|y|\lesssim L^{\theta}}} \mathbb{P}_{\beta}(|F_{x,y}(\beta)|\lesssim L^{-2})
+\end{split}
+\end{equation}
+Here we define $F_{x,y}(\beta)=\Lambda_{\beta}(x)+\Lambda_{\beta}(y)-n$.
+
+We estimate $\mathbb{P}_{\beta}(|F_{x,y}(\beta)|\lesssim L^{-2})$ using coarea formula. 
+\begin{equation}\label{eq.irrationallemmastep2'}
+\begin{split}
+    \mathbb{P}_{\beta}(|F_{x,y}(\beta)|\lesssim L^{-2})=&\text{Area}(|F_{x,y}(\beta)|\lesssim L^{-2})
+    \\
+    =& \int^{CL^{-2}}_{-CL^{-2}} \int_{\{F_{x,y}=s\}}\frac{1}{|\nabla F_{x,y}|}d\sigma ds
+    \\
+    \lesssim& L^{-2} \sup |\nabla F_{x,y}|^{-1} \text{Area}(F_{x,y}=s)
+    \\
+    \lesssim& L^{-2} \sup |\nabla F_{x,y}|^{-1}
+\end{split}
+\end{equation}
+
+We thus need to get lower bound of $|\nabla F_{x,y}|$.
+
+A simple calculation gives
+\begin{equation}
+    \nabla_{\beta} F_{x,y}(\beta)=\frac{1}{2\Lambda_{\beta}(x)}\begin{bmatrix} x_1^2\\\vdots\\x_d^2
+    \end{bmatrix}+\frac{1}{2\Lambda_{\beta}(y)}\begin{bmatrix} y_1^2\\\vdots\\y_d^2
+    \end{bmatrix},
+\end{equation}
+which implies that 
+\begin{equation}
+\begin{split}
+    |\nabla_{\beta} F_{x,y}(\beta)|^2=&\frac{1}{4\Lambda^2_{\beta}(x)} (x_1^4+\cdots x_d^4) +\frac{1}{4\Lambda^2_{\beta}(y)} (y_1^4+\cdots y_d^4)+\frac{1}{2\Lambda_{\beta}(x)\Lambda_{\beta}(y)} (x_1^2y_1^2+\cdots x_d^2y_d^2)
+    \\
+    \gtrsim& L^{-} (|x|^2+|y|^2)^2.
+\end{split}
+\end{equation}
+
+Therefore, we have 
+\begin{equation}
+    |\nabla_{\beta} F_{x,y}(\beta)|\gtrsim L^{-} (|x|^2+|y|^2).
+\end{equation}
+
+By \eqref{eq.irrationallemmastep2'}, we get for $(x,y)\ne (0,0)$
+\begin{equation}
+    \mathbb{P}_{\beta}(|F_{x,y}(\beta)|\lesssim L^{-2})\lesssim L^{-2+} (|x|^2+|y|^2)^{-1}.
+\end{equation}
+and for $x=y=0$
+\begin{equation}
+    \mathbb{P}_{\beta}(|F_{0,0}(\beta)|\le 1.
+\end{equation}
+
+By \eqref{eq.irrationallemmastep2},
+\begin{equation}
+\begin{split}
+    \mathbb{E}(\#_{m,n,L,\beta})\lesssim & 1+L^{-2+}\sum_{\substack{x,y\in\mathbb{Z}^d_L,x+y=m \\ |x|,|y|\lesssim L^{\theta}}}  (|x|^2+|y|^2)^{-1}    
+    \\
+    \lesssim& L^{d-2+\theta/2}.
+\end{split}
+\end{equation}
+
+Therefore, we complete the proof of the expectation bound \eqref{eq.irrationallemmaexpectation} and thus the proof of Lemma \ref{lem.irrationallemma}
+\end{proof}
+
+% \begin{lem}For any $\theta$, for almost all $\beta$
+% \begin{equation}
+%     \sup_{\substack{m,n\\m\gg 1}} \#\{x\in\mathbb{Z}^d_L, |x|\lesssim L^{\theta}:\Lambda_{\beta}(x)+\Lambda_{\beta}(m-x)=\Lambda_{\beta}(m)+n+O(L^{-2+\theta})\}\lesssim_{\theta,\beta} L^{d-2+\theta}. 
+% \end{equation}
+
+% \end{lem}
+
+% \begin{proof}
+
+% \end{proof}
+
+The derivation of \eqref{eq.numbertheory} and the $+$ case of \eqref{eq.numbertheory'} from Lemma \ref{lem.irrationallemma} can be done by applying a similar argument of \eqref{eq.thrationalexpand} and \eqref{eq.thrationalexpandlong}.
 \end{proof}

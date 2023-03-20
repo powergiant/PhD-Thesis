@@ -1,17 +1,20 @@
 \section{Lattice points counting and convergence results}
-In this section, we prove Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} which gives upper bounds for tree terms $\mathcal{J}_{T,k}$ and the linearization operator $\mathcal{P}_T$. As explained before, these results are crucial in the proof of the main theorem. The proof of is divided into several steps.
+In this section, we give an incomplete proof of Proposition \ref{prop.treetermsupperbound} which gives upper bounds for some tree terms $\mathcal{J}_{T,k}$. The proof of is divided into several steps.
 
 In section \ref{sec.refexp}, we calculate the coefficients of $\mathcal{J}_{T,k}$ as polynomials of Gaussian random variables.
 
-In section \ref{sec.uppcoef}, we obtain upper bounds for the coefficients of these Gaussian polynomials.
-
 Large deviation theory suggests that an upper bound of a Gaussian polynomial can be derived from an upper bound of its expectation and variance.
 
-In section \ref{sec.coupwick}, we introduce the concept of couples which is a graphical method of calculating the expectation of Gaussian polynomials.
+In section \ref{sec.coupwick}, we introduce the concept of couples which is a graphical method of calculating the expectation of Gaussian polynomials. In this section, we also introduce and prove the formal version of our renormalized Wick theorem.
 
-In section \ref{sec.numbertheory}, we use couple to establish an lattice points counting result.
+In section \ref{sec.numbertheory}, we use couple to establish an lattice points counting result. This result says gives upper bound of numbers of the lattice points near the resonance surface and this bound is strong enough to derive the wave kinetic equation up to epsilon loss, \textbf{if the number of good closed couples is more than the number of bad closed couples}.
 
-In section \ref{sec.treetermsupperbound} and section \ref{sec.randommatrices}, we apply the lattice points counting result to derive upper bounds for  $\mathcal{J}_{T,k}$ and $\mathcal{P}_T$ respectively. This finishes the proof of Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} and therefore the proof of the main theorem.
+In section \ref{}, we introduce a cancellation identity and explain \textbf{heuristically} why Wick theorem is sufficient to exclude all bad couples.
+
+% In section \ref{sec.uppcoef}, 
+we obtain upper bounds for the coefficients of these Gaussian polynomials.
+
+
 
 
 
@@ -19,7 +22,7 @@ In section \ref{sec.treetermsupperbound} and section \ref{sec.randommatrices}, w
 
 
 
-From \eqref{eq.intrenorm} and \eqref{eq.treeterm}, it is easy to show that $\mathcal{J}_{T,k}$ are polynomials of $\xi$ of we remove the renormalization symbol $:\cdot:$. Given this renormalization symbol, we know that $\mathcal{J}_{T,k}$ should be a renormalized polynomial of $\xi$ that will be defined in the following definition. An example of renormalized polynomial is $(:(:\xi_{k_1}\bar{\xi}_{k_2}:)\xi_{k_3}\bar{\xi}_{k_4}:)\bar{\xi}_{k_5}\xi_{k_6}$.
+From \eqref{eq.intrenorm} and \eqref{eq.treeterm}, it is easy to show that $\mathcal{J}_{T,k}$ are polynomials of $\xi$ if we remove the renormalization symbol $:\cdot:$. Given this renormalization symbol, we know that $\mathcal{J}_{T,k}$ should be a renormalized polynomial of $\xi$ that will be defined in the following definition. An example of renormalized polynomial is $(:(:\xi_{k_1}\bar{\xi}_{k_2}:)\xi_{k_3}\bar{\xi}_{k_4}:)\bar{\xi}_{k_5}\xi_{k_6}$.
 
 \begin{defn} \label{def.renorm}
 \begin{enumerate}
@@ -260,7 +263,7 @@ We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm} and \eqref{eq.c
 
 The following table provide a dictionary between concepts in Definition \ref{def.tree} in previous section and expressions in tree terms $\mathcal{J}_{T,k}$ in Lemma \ref{lem.treeterms}.
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{center}
     \begin{longtable}{|c|c|}
     \hline
@@ -309,204 +312,11 @@ The following table provide a dictionary between concepts in Definition \ref{def
 \caption{\label{tab.dict} A dictionary between concepts of trees and expressions in tree terms.}
 \end{table}
 
-\subsection{An upper bound of coefficients in expansion series}\label{sec.uppcoef} In this section, we derive an upper bound for coefficients $H^T_{k_1\cdots k_{2l+1}}$.
-
-Notice that in \eqref{eq.coefterm}, $H^T_{k_1\cdots k_{l+1}}$ are integral of some oscillatory functions. An upper bound can be derived by the standard integration by parts arguments.
-
-Associate each $\mathfrak{n}\in T_{\text{in}}$ with two variables $a_{\mathfrak{n}}$, $b_{\mathfrak{n}}$. Then we define
-\begin{equation}\label{eq.defF_T}
-F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}})=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}} a_{\mathfrak{n}} - \nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})b_{\mathfrak{n}}} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} 
-\end{equation}
-
-\begin{lem}\label{lem.boundcoef'}
-If $c'(t_{\mathfrak{n}})\lesssim 1$, then we have the following upper bound for $F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})$,
-\begin{equation}\label{eq.boundcoef'}
-    \sup_{\{b_{\mathfrak{n}}\}_{\mathfrak{n}}\lesssim 1} |F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}.
-\end{equation}
-Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the sequence $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by the following recursive formula
-\begin{equation}\label{eq.q_n'}
-    q_{\mathfrak{n}}=
-    \begin{cases}
-    a_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
-    \\
-    a_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if }\mathfrak{n}\neq\mathfrak{r}\textit{ and }\mathfrak{n}'\textit{ is the parent of }\mathfrak{n}.
-    \end{cases}
-\end{equation}
-
-% \begin{equation}
-% Q=\{\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}:q_{\mathfrak{n}}= q_{\mathfrak{n}}(),\ \forall\mathfrak{n}\in T_{\text{in}}\}    
-% \end{equation}
-% and the set $Q_{\mathfrak{n}}$ is defined inductively by 
-% \begin{equation}\label{eq.treeterm}
-%     Q_{\mathfrak{n}}=
-%     \begin{cases}
-%     \{a_{\mathfrak{r}}\}, \qquad\qquad\qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
-%     \\
-%     \mathcal{T}_1(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}}, \mathcal{J}_{T_{\mathfrak{n}_3}}), \textit{ if $\mathfrak{n}\neq\mathfrak{r}$.}
-%     \end{cases}
-% \end{equation}
-\end{lem}
-\begin{proof} The lemma is proved by induction. 
-
-For a tree $T$ contains only one node $\mathfrak{r}$, $F_{T}=1$ and \eqref{eq.boundcoef'} is obviously true.
-
-Assume that \eqref{eq.boundcoef'} is true for trees with $\le n-1$ nodes. We prove the $n$ nodes case. 
-
-For general $T$, let $T_1$, $T_2$, $T_3$ be the three subtrees and $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ be the three children of the root $\mathfrak{r}$, then by the definition of $F_T$\eqref{eq.defF_T}, we get
-\begin{equation}
-\begin{split}
-    &F_{T}(t)=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}}    
-    \\
-    =&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-    \\
-    =&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in \mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-\end{split}
-\end{equation}
-
-We do integration by parts in above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are four inequality constrains, $t_{\mathfrak{r}}\le t$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}, t_{\mathfrak{n}_3}$. 
-
-
-% \begin{equation}\label{eq.lemboundcoefexpand}
-% \begin{split}
-%     F_{T}(t)=&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
-%     \\
-%     &\qquad\qquad\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-%     \\
-%     =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) 
-%     \\
-%     &\qquad\qquad\qquad e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-%     \\
-%     -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
-%     \\
-%     &\qquad\qquad\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-%     \\
-%     =& \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II})
-% \end{split}
-% \end{equation}
-
-\begingroup
-\allowdisplaybreaks
-\begin{align}\label{eq.lemboundcoefexpand}
-    &F_{T}(t)=\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} \notag
-    \\
-    &\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)\notag
-    \\
-    =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) \notag
-    \\
-    & e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) 
-    \\
-    -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} \notag
-    \\
-    &\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) \notag
-    \\
-    =& \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II})\notag
-\end{align}
-\endgroup
-
-
-
-
-
-
-
-
-% \begin{equation}\label{eq.lemboundcoefexpand}
-%     \begin{split}
-%         F_{T}(t)=&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
-%         \\
-%         &\qquad\qquad\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
-%     \end{split}
-%     \end{equation}
-%     \begin{flalign*}
-%     \hspace{1.3cm}
-%     =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) &&
-%     \\
-%     &\qquad\qquad\qquad e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) &&
-%     \end{flalign*}
-%     \begin{flalign*}
-%     \hspace{1.3cm}
-%     -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} &&
-%         \\
-%         &\qquad\qquad\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) &&
-%     \end{flalign*}
-%     \begin{flalign*}
-%     \hspace{1.3cm}
-%     = \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II}) &&
-%     \end{flalign*}
-
-
-Here $T^{(j)}$, $j=1,2,3$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges that connecting $\mathfrak{n}_j$ with other two nodes and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand}, so the last equality of \eqref{eq.lemboundcoefexpand} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
-
-We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
-
-A direct calculation gives that 
-\begin{equation}
-    F_{I}(t)=e^{-i(ta_{\mathfrak{r}}+\alpha c(t)b_{\mathfrak{r}})} F_{T_1}(t)F_{T_2}(t)F_{T_3}(t).
-\end{equation}
-Then the induction assumption implies that $\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{I}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
-
-Another direct calculation gives that 
-\begin{equation}
-    F_{II}(t)=\int^t_0 e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} F_{T_1}(t_{\mathfrak{r}})F_{T_2}(t_{\mathfrak{r}})F_{T_3}(t_{\mathfrak{r}}) dt_{\mathfrak{r}}.
-\end{equation}
-Applying the induction assumption
-\begin{equation}
-\begin{split}
-    \left| \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{II}(t)\right|\le& \frac{\alpha t}{|a_{\mathfrak{r}}|+\alpha}\prod_{j=1}^3\left(\sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{j,\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{j,\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\right)
-    \\
-    \le& \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}.
-\end{split}
-\end{equation}.
-
-Combining the bounds of $F_{I}$, $F_{T^{(1)}}$, $F_{T^{(2)}}$, $F_{T^{(3)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoef'} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
-\end{proof}
- 
-% For general $T$, let $T_1$, $T_2$, $T_3$ be the three subtrees of the root, then we have the following recursive formula for $F_{T}$
-% \begin{equation}\label{eq.lemboundcoefrecur}
-%     F_{T}(t)=\int^t_0 e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} F_{T_1}(t_{\mathfrak{r}})F_{T_2}(t_{\mathfrak{r}})F_{T_3}(t_{\mathfrak{r}}) dt_{\mathfrak{r}}.
-% \end{equation}
-
-
-
-
-
-A straight forward application of above lemma gives following upper bound of the coefficients $H^T_{k_1\cdots k_{2l+1}}$. 
-
-\begin{lem}\label{lem.boundcoef}
-Let $m(t)=\mathbb{E}M(t)$, then by mass conservation $m(t_{\mathfrak{n}})\lesssim 1$ for all $t_{\mathfrak{n}}$. We have the following upper bound for $H^T_{k_1\cdots k_{2l+1}}$,
-\begin{equation}\label{eq.boundcoef}
-    H^T_{k_1\cdots k_{2l+1}}\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}}.
-\end{equation}
-Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the sequence $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by the following recursive formula
-\begin{equation}\label{eq.q_n}
-    q_{\mathfrak{n}}=
-    \begin{cases}
-    \Omega_{\mathfrak{r}}, \qquad\qquad \textit{ if }\mathfrak{n}=\textit{ the root }\mathfrak{r}.
-    \\
-    \Omega_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if }\mathfrak{n}\neq\mathfrak{r}\textit{ and }\mathfrak{n}'\textit{ is the parent of }\mathfrak{n}.
-    \end{cases}
-\end{equation}
-
-
-\end{lem}
-\begin{proof}
-This is a direct corollary of Lemma \ref{eq.boundcoef'} if we take $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=\widetilde{\Omega}_{\mathfrak{n}}/(2\alpha \int^t_{0}m(s) ds)$ and $c(t_{\mathfrak{n}})=2\int^t_{0}m(s) ds$. 
-\end{proof}
-
-
-Lemma \ref{lem.boundcoef} suggests that the coefficients is small when $|q_{\mathfrak{n}}|\gg \alpha$. Therefore, in order to bound $\mathcal{J}_{T,k}$, we should count the lattice points on $|q_{\mathfrak{n}}|\lesssim \alpha$
-\begin{equation}\label{eq.diophantineeq''}
-    \{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |q_{\mathfrak{n}}|\lesssim \alpha,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k\}
-\end{equation}
-
-By solving \eqref{eq.q_n}, $\Omega_{\mathfrak{n}}$ is a linear combination of $q_{\mathfrak{n}}$, so there exists constants $c_{\mathfrak{n},\mathfrak{n}'}$ such that $\Omega_{\mathfrak{n}}=\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}$. Therefore, $|q_{\mathfrak{n}}|\lesssim \alpha$ implies that $|\Omega_{\mathfrak{n}}|\le\sum_{\mathfrak{n}'}|c_{\mathfrak{n},\mathfrak{n}'}q_{\mathfrak{n}'}|\lesssim \alpha$.
-
-%For the sake of concreteness let's take $d_{\mathfrak{n}}=0$ for all nodes ${\mathfrak{n}}$, then $q_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$ for all ${\mathfrak{n}}$ and
-$|\Omega_{\mathfrak{n}}|\lesssim \alpha$ implies that \eqref{eq.diophantineeq''} is a subset of
+Lemma \ref{lem.treeterms} suggests that the coefficients is small when $|\Omega_{\mathfrak{n}}|\gg \omega$, $\omega$ is supposed to be $\frac{1}{T_{\text{kin}}}$. Therefore, in order to bound $\mathcal{J}_{T,k}$, we should count the lattice points on $|\Omega_{\mathfrak{n}}|\lesssim \omega$
 \begin{equation}\label{eq.diophantineeq'}
-    \{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|\lesssim \alpha,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k\}.
+    \{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|\lesssim \omega,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k\}
 \end{equation}
-To bound the number of elements of \eqref{eq.diophantineeq''}, we just need to do the same thing for \eqref{eq.diophantineeq'}.
+
 
 \eqref{eq.diophantineeq'} can be read from the tree diagrams $T$. As in Figure \ref{fig.equations}, each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node $\mathfrak{n}$ is connected with four edges $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$, $\mathfrak{e}$ whose corresponding variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$, $k_{\mathfrak{e}_3}$, $k_{\mathfrak{e}}$ satisfy the momentum conservation equation
 \begin{equation}
@@ -547,7 +357,7 @@ and the energy conservation equation (if the node is decorated by $\bullet$ or $
         \draw[-{Stealth[length=5mm, width=3mm]}] (1) -- (13);
         \node[scale=2.0] at (0,-5.5) {$\iota_{\mathfrak{e}_1}=\iota_{\mathfrak{e}_3}=1, \iota_{\mathfrak{e}}=\iota_{\mathfrak{e}_2}=-1$};
         \node[scale=2.0] at (0,-6.5) {$k_{\mathfrak{e}_1}-k_{\mathfrak{e}_2}+k_{\mathfrak{e}_3}-k_{\mathfrak{e}}=0$, $\cdots$};
-        \node[scale=2.0] at (0,-7.5) {$\Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}}=O(\alpha^{-1})$};
+        \node[scale=2.0] at (0,-7.5) {$\Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}}=O(\omega)$};
 
 
         \node[scale=2.0] at (14.3,0) {$k_{\mathfrak{e}}$};
@@ -576,12 +386,11 @@ and the energy conservation equation (if the node is decorated by $\bullet$ or $
     \end{figure}
     
 
-The goal of the next two sections is to count the number of solutions of a modified version of above equation \eqref{eq.diophantineeq'}. 
 
 \subsection{Couples and the renormalized Wick theorem} \label{sec.coupwick} In this section, we introduce the renormalized Wick theorem and calculate $\mathbb{E}|\mathcal{J}_{T,k}|^2$ using this theorem. We also introduce another type of diagrams, the couple diagrams, to represent the result.
 
 
-By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{2l+1}}$ concentrate near the surface $q_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq''}. 
+By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{2l+1}}$ concentrate near the surface $\Omega_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq'}. 
 
 Let's derive the expression of the coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ and its concentration surface.
 
@@ -984,13 +793,13 @@ Applying Wick theorem to \eqref{eq.termexp1}, we get
 
 We see that the correlation of two tree terms is a sum of smaller expressions $Term(T, p)$. By \eqref{eq.diophantineeq'}, the coefficients $H^T_{k_1\cdots k_{2l(T)+1}} H^{T}_{k'_1\cdots k'_{2l(T)+1}}$ of $Term(T, p)$ concentrate near the subset 
 \begin{equation}\label{eq.diophantineequnpaired}
-    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}|\lesssim \alpha,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k\}.
+    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}|\lesssim \omega,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k\}.
 \end{equation}
 
 The pairing $p$ in Wick theorem introduces new equations $k_{i}=k'_{j}$ (defined in \eqref{eq.deltapairing}) and the coefficients $H^T_{k_1\cdots k_{2l(T)+1}} H^{T}_{k'_1\cdots k'_{2l(T)+1}} \delta_{p}$ concentrate near the subset 
 \begin{equation}\label{eq.diophantineeqpaired}
 \begin{split}
-    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ &|k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}|\lesssim \alpha,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k. \\
+    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ &|k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}|\lesssim \omega,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k. \\
     &\textit{$k_{i}=k'_{j}$ (and $k_{i}=k_{j}$, $k'_{i}=k'_{j}$) for all $k_{i}\sim_{p}k'_{j}$ (and $k_{i}\sim_{p}k_{j}$, $k'_{i}\sim_{p}k'_{j}$)}\}.
 \end{split}
 \end{equation}
@@ -1304,7 +1113,7 @@ As in the case of \eqref{eq.diophantineeq'}, there is a graphical representation
 \end{equation} 
 and a energy conservation equation 
 \begin{equation}
-    \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}} = O(\alpha).
+    \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}} = O(\omega).
     % \begin{cases}
     %     \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}} = O(\alpha), \textit{ if the node is decorated by }\bullet.
     %     \\
@@ -1355,10 +1164,11 @@ then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)$ for all $p\in \ma
 % \end{equation}
 % \end{lem}
 
+
 \subsection{Counting lattice points}\label{sec.numbertheory} In this section, we apply the connection between couple and concentration subset \eqref{eq.diophantineeqpaired} to count the number of solutions of a generalized version of \eqref{eq.diophantineeqpaired},
 \begin{equation}\label{eq.diophantineeqpairedsigma}
 \begin{split}
-    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ &|k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}-\sigma'_{\mathfrak{n}}|\lesssim \alpha,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T'} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k. \\
+    \{k_{\mathfrak{e}}, k'_{\mathfrak{e}}\in \mathbb{Z}^d,\ &|k_{\mathfrak{e}}|, |k'_{\mathfrak{e}}|\lesssim 1,\ \forall \mathfrak{e}: |\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|,|\Omega'_{\mathfrak{n}}-\sigma'_{\mathfrak{n}}|\lesssim \omega,\ \forall \mathfrak{n}. \ \{k_{\mathfrak{e}}\}_{\mathfrak{e}}, \{k'_{\mathfrak{e}}\}_{\mathfrak{e}}\in \cap_{\mathfrak{n}\in T'} S_{\mathfrak{n}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k. \\
     &\textit{$k_{i}=k'_{j}$ (and $k_{i}=k_{j}$, $k'_{i}=k'_{j}$) for all $k_{i}\sim_{p}k'_{j}$ (and $k_{i}\sim_{p}k_{j}$, $k'_{i}\sim_{p}k'_{j}$)}\}.
 \end{split}
 \end{equation}
@@ -1372,7 +1182,7 @@ then $\mathbb{E}|\mathcal{J}_{T,k}|^2$ is a sum of $Term(T,p)$ for all $p\in \ma
 \end{equation} 
 and a energy conservation equation 
 \begin{equation}\label{eq.energyconservationunit}
-    \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}} =\sigma_{\mathfrak{n}}+O(\alpha).
+    \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}} =\sigma_{\mathfrak{n}}+O(\omega).
 \end{equation}  
 Denote the momentum and energy conservation equations by $MC_{\mathfrak{n}}$ and $EC_{\mathfrak{n}}$ respectively, then \eqref{eq.diophantineeqpairedsigma} can be rewritten as 
 \begin{equation}\label{eq.diophantineeqpairedsigma'}
@@ -1493,29 +1303,29 @@ By \eqref{eq.diophantineeqpairedsigma'}, we know that the couple $\mathcal{C}$ c
     \begin{split}
         \{&(a, b, c, d, e, f, g):\ (|a|\text{ to }|g|)\lesssim 1,
         \\
-        &a - b + c = k,\ \Lambda(a) - \Lambda(b) + \Lambda(c) - \Lambda(k) =\sigma_{1} + O(\alpha)
+        &a - b + c = k,\ \Lambda(a) - \Lambda(b) + \Lambda(c) - \Lambda(k) =\sigma_{1} + O(\omega)
         \\
-        &d - e + f = a,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(a) =\sigma_{2} + O(\alpha)
+        &d - e + f = a,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(a) =\sigma_{2} + O(\omega)
         \\
-        &d - e + f = g,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(g) =\sigma_{3} + O(\alpha)
+        &d - e + f = g,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(g) =\sigma_{3} + O(\omega)
         \\
-        &c - b + g = k,\ \Lambda(c) - \Lambda(b) + \Lambda(g) - \Lambda(k)  =\sigma_{4} + O(\alpha)\}
+        &c - b + g = k,\ \Lambda(c) - \Lambda(b) + \Lambda(g) - \Lambda(k)  =\sigma_{4} + O(\omega)\}
     \end{split}
 \end{equation}
 
 We know that \eqref{eq.cuttingexmaple} can be rewritten into the form $\bigcup_{a,e\in A} B_{a,e}$, where
 \begin{equation}\label{eq.couplequationA}
-    A=\{a, b, c:\ |a|,|b|,|c|\lesssim 1,\ a - b + c = k,\ \Lambda(a) - \Lambda(b) + \Lambda(c) - \Lambda(k) =\sigma_{1} + O(\alpha)\}
+    A=\{a, b, c:\ |a|,|b|,|c|\lesssim 1,\ a - b + c = k,\ \Lambda(a) - \Lambda(b) + \Lambda(c) - \Lambda(k) =\sigma_{1} + O(\omega)\}
 \end{equation}
 \begin{equation}\label{eq.couplequationB}
     \begin{split}
         B_{a,b,c}=\{&d, e, f, g:\ |d|,|e|,|f|,|g|\lesssim 1,
         \\
-        &d - e + f = a,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(a) =\sigma_{2} + O(\alpha)
+        &d - e + f = a,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(a) =\sigma_{2} + O(\omega)
         \\
-        &d - e + f = g,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(g) =\sigma_{3} + O(\alpha)
+        &d - e + f = g,\ \Lambda(d) - \Lambda(e) + \Lambda(f) - \Lambda(g) =\sigma_{3} + O(\omega)
         \\
-        &c - b + g = k,\ \Lambda(c) - \Lambda(b) + \Lambda(g) - \Lambda(k)  =\sigma_{4} + O(\alpha)\}
+        &c - b + g = k,\ \Lambda(c) - \Lambda(b) + \Lambda(g) - \Lambda(k)  =\sigma_{4} + O(\omega)\}
     \end{split}    
 \end{equation}
 
@@ -1549,7 +1359,7 @@ To solve the above problems, we introduce the following definition.
         \caption{Node decoration of degree one nodes}
         \label{fig.decorationdegreeone}
     \end{figure}
-    An edge connected to a $\star$ or invisible nodes is called a \underline{free leg} or \underline{fixed leg} respectively. 
+    An edge connected to a $\star$ or invisible nodes is called a \underline{free leg} or \underline{fixed leg} respectively. They correspond to free variables or fixed variables $k_{\mathfrak{e}}$ respectively.
     
     
     \item \textbf{Equations of a couple $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$:} We define the corresponding equations for a couples with multiple legs.
@@ -1784,11 +1594,11 @@ This proves \eqref{eq.Eq(C)cuttingcounting}.
 
 The following lemma gives a relation between numbers of non-leg edges, legs and nodes.
 
-\begin{lem}\label{prop.countingind}
-For any couple $\mathcal{C}$, let $n(\mathcal{C})$ be the total number of nodes in $\mathcal{C}$ and $n_e(\mathcal{C})$ (resp. $n_{fx}(\mathcal{C})$, $n_{\textit{fr}}(\mathcal{C})$) be the total number of non-leg edges (resp. fixed legs, free legs). We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}(k)$ and $c_{\mathfrak{l}}\in \mathbb{R}$ for each fixed leg $\mathfrak{l}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha}. Then we have
+\begin{lem}\label{lem.eulerchar}
+For any couple $\mathcal{C}$, let $n(\mathcal{C})$ be the total number of nodes in $\mathcal{C}$ and $n_e(\mathcal{C})$ (resp. $n_{fx}(\mathcal{C})$, $n_{\textit{fr}}(\mathcal{C})$) be the total number of non-leg edges (resp. fixed legs, free legs). Then we have
 
 (1) $n(\mathcal{C})$, $n_e(\mathcal{C})$, $n_{fx}(\mathcal{C})$ and $n_{\textit{fr}}(\mathcal{C})$ satisfies the following relation
-\begin{equation}
+\begin{equation}\label{eq.nnenlnle}
     2n_e(\mathcal{C})+n_{fx}(\mathcal{C})+n_{\textit{fr}}(\mathcal{C})=4n(\mathcal{C})
 \end{equation}
 
@@ -1965,7 +1775,90 @@ After splitting all $\circ$ nodes in Definition \ref{def.couple}, a couple may h
 
         \item \textbf{Good nodes and bad nodes in renormalization forest.} Given a pairing $p$ and a node $\mathfrak{n}$ in a renormalization forest $F$, let $T_{\mathfrak{n}}$ be the subtree $F$ rooted at $\mathfrak{n}$ and $\text{Child}_{\mathfrak{n}}$ be the set of all children of $\mathfrak{n}$, then $\mathfrak{n}$ is said to be \underline{bad} if the pairing $p\notin \mathcal{P}(L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'}),A)$. Otherwise, $\mathfrak{n}$ is said to be \underline{good}. Here $A=\{k_1,k_2,\cdots,k_{2l+1}\}$, $\mathcal{P}(B,A)$ is defined in Definition \ref{def.pairing} (4)
         
-        In other word, a node is bad if $p$ does pair all leaves in $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$ with leaves in the this set.
+        In other word, a node is bad if $p$ does pair all leaves in $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$ with leaves in the this set. For example, consider the following renormalization forest (this forest is the same as the forest in Figure \ref{fig.forestsr}).
+        \begin{figure}[H]
+            \centering
+            \scalebox{0.36}{
+            \begin{tikzpicture}[level distance=80pt, sibling distance=60pt]
+                    
+                \node[circ, xshift = -2cm] (2) at (25, 0) {}
+                       child {node[circ, xshift = -1cm] (21) {}
+                            child {node[fillstar, xshift = -1cm] (211) {}}
+                            child {node[fillstar, xshift = 1cm] (212) {}}
+                       }
+                       child {node[fillstar] (22) {}}
+                       child {node[fillstar, xshift = 1cm] (23) {}};
+                \node[scale=1.5] at ($(211)+(0.5,0)$) {$1$};
+                \node[scale=1.5] at ($(212)+(0.5,0)$) {$2$};
+                \node[scale=1.5] at ($(22)+(0.5,0)$) {$3$};
+                \node[scale=1.5] at ($(23)+(0.5,0)$) {$4$};
+                % \node[scale=1.5] at (18.2,-5.65) {$1$};
+                % \node[scale=1.5] at (22.5,-5.65) {$2$};
+                % \node[scale=1.5] at (23.5,-2.8) {$3$}; 
+                % \node[scale=1.5] at (26.6,-2.8) {$4$};
+                \node[circ, xshift = -1cm] (3) at (31, 0) {}
+                    child {node[fillstar, xshift = -1cm] (31) {}}
+                    child {node[fillstar, xshift = 1cm] (32) {}};    
+                \node[scale=1.5] at ($(31)+(0.5,0)$) {$9$};
+                \node[scale=1.5] at ($(32)+(0.5,0)$) {$10$};
+                % \node[scale=1.5] at (28.5,-2.8) {$9$}; 
+                % \node[scale=1.5] at (32.6,-2.8) {$10$};
+
+                \draw[bend right =50, dashed] (22) edge (23);
+                \draw[bend right =50, dashed] (211) edge (31);
+                \draw[bend right =50, dashed] (212) edge (32);
+            \end{tikzpicture}
+            }
+            \caption{Good nodes and bad nodes}
+            \label{fig.goodbadnodes}
+        \end{figure}
+        Assume that the pairing is $p=\{1,9\}\cup\{2,10\}\cup\{3,4\}$, then the top left node $\mathfrak{n}_0$ is bad because $L(T_{\mathfrak{n}_0})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}_0}} L(T_{\mathfrak{n}'})=\{3,4\}$ are paired. The other two nodes are good nodes.
+
+        \item \textbf{Chain of bad circle nodes.} Given a renormalization forest $F$, a \underline{chain of bad nodes} is a sequence of bad nodes $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\cdots$ ,$\mathfrak{n}_{l}$ such that this sequence have the property that for each $1\le i\le l-1$, $\mathfrak{n}_{i}$ only have one child $\mathfrak{n}_{i+1}$ and this sequence is one of the maximal sequence satisfies this property. We say a chain of bad node is \underline{long} or \underline{short}, if $l>1$ or $l=1$ respectively.
+        
+        For example, consider the following renormalization forest, the pairing is $p=\{1,7\}\cup\{2,8\}\cup\{3,4\}\cup\{5,6\}$, then $n_1$, $n_2$ form a long chain of bad nodes, and $n_2$ or $n_3$ form two short chain of bad nodes
+
+        \begin{figure}[H]
+            \centering
+            \scalebox{0.36}{
+            \begin{tikzpicture}[level distance=80pt, sibling distance=60pt]
+                    
+                \node[circ, xshift = -2cm] (1) at (0, 0) {}
+                       child {node[circ, xshift = -1cm] (11) {}
+                            child {node[circ, xshift = -1cm] (111) {}
+                                child {node[fillstar, xshift = -1cm] (1111) {}}
+                                child {node[fillstar, xshift = 1cm] (1112) {}}}
+                            child {node[fillstar] (112) {}}
+                            child {node[fillstar, xshift = 1cm] (113) {}}
+                       }
+                       child {node[fillstar] (12) {}}
+                       child {node[fillstar, xshift = 1cm] (13) {}};
+                \node[scale=1.5] at ($(1111)+(0.5,0)$) {$1$};
+                \node[scale=1.5] at ($(1112)+(0.5,0)$) {$2$};
+                \node[scale=1.5] at ($(112)+(0.5,0)$) {$3$};
+                \node[scale=1.5] at ($(113)+(0.5,0)$) {$4$};
+                \node[scale=1.5] at ($(12)+(0.5,0)$) {$5$};
+                \node[scale=1.5] at ($(13)+(0.5,0)$) {$6$};
+                \node[circ, xshift = -1cm] (2) at (8, 0) {}
+                    child {node[fillstar, xshift = -1cm] (21) {}}
+                    child {node[fillstar, xshift = 1cm] (22) {}};    
+                \node[scale=1.5] at ($(21)+(0.5,0)$) {$7$};
+                \node[scale=1.5] at ($(22)+(0.5,0)$) {$8$};
+                \node[scale=1.5] at ($(1)+(0.7,0)$) {$\mathfrak{n}_1$};
+                \node[scale=1.5] at ($(11)+(0.7,0)$) {$\mathfrak{n}_2$};
+                \node[scale=1.5] at ($(111)+(0.7,0)$) {$\mathfrak{n}_3$};
+                \node[scale=1.5] at ($(2)+(0.7,0)$) {$\mathfrak{n}_4$};
+
+                \draw[bend right =50, dashed] (1111) edge (21);
+                \draw[bend right =50, dashed] (1112) edge (22);
+                \draw[bend right =50, dashed] (112) edge (113);
+                \draw[bend right =50, dashed] (12) edge (13);
+            \end{tikzpicture}
+            }
+            \caption{Chain of bad nodes}
+            \label{fig.chainofbadnodes}
+        \end{figure}
+        %Let $n_{G}(\mathcal{C})$ and $n_{B}(\mathcal{C})$ be the number of good and bad component of $\mathcal{C}$ respectively. Let $n_{G}(F)$ and $n_{B}(F)$ be the of good and bad nodes of $F$ respectively. Let $n_{BC}(\mathcal{C})$, $n_{BC}(\mathcal{F})$ chain of bad components and chain of bad nodes.
         
         % \begin{figure}[H]
         %     \centering
@@ -1974,128 +1867,277 @@ After splitting all $\circ$ nodes in Definition \ref{def.couple}, a couple may h
         %     \label{fig.goodbadr}
         % \end{figure}
 
-        \item \textbf{Two edge reducibility.} A couple is said to be \underline{two edge reducible} if there is a cut consists of two edges that are all connected to the same node such that after cutting all edges in this cut, one of the resulting components has exactly two legs.
+    %     \item \textbf{Two edge reducibility.} A couple is said to be \underline{two edge reducible} if there is a cut consists of two edges that are all connected to the same node such that after cutting all edges in this cut, one of the resulting components has exactly two legs.
 
-        Figure \ref{fig.reducibility} provides some examples that does or does not satisfy this property.
+    %     Figure \ref{fig.reducibility} provides some examples that does or does not satisfy this property.
         
-        \begin{figure}[H]
-            \centering
-            %\includegraphics[scale=0.25]{components_cutted.png}
-            \caption{Example of two edge reducible couples (left) and two edge reducible couples (right)}
-            \label{fig.reducibility}
-        \end{figure}
+    %     \begin{figure}[H]
+    %         \centering
+    %         %\includegraphics[scale=0.25]{components_cutted.png}
+    %         \caption{Example of two edge reducible couples (left) and two edge reducible couples (right)}
+    %         \label{fig.reducibility}
+    %     \end{figure}
     \end{enumerate}
 \end{defn}
 
-We have the following lemma that gives equalities and inequalities between the number of good and bad components and nodes. 
+The counting result in the next section says that we lose a factor for each bad nodes but gain a factor for each good nodes. We have the following lemma that gives uppper bounds of number of chain of bad nodes in terms of good nodes.
+% gives equalities and inequalities between the number of good and bad components and nodes. 
 
-\begin{lem} Given two trees $T$, $T'$ and a pairing $p$ of leaves, let $F$ be the forest which is the union of two forests $R(T)$ and $R(T')$, we can construct a couple $\mathcal{C}(T,T',p)$ from $T$, $T'$, $p$. Let $n_{G}(\mathcal{C})$ and $n_{B}(\mathcal{C})$ be the number of good and bad component of $\mathcal{C}$ respectively. Let $n_{G}(F)$ and $n_{B}(F)$ be the of good and bad nodes of $F$ respectively. Then we have the following equalities and inequalities.
-    \begin{equation}\label{eq.n_B}
-        n_{B}(\mathcal{C}) = n_{B}(T)
-    \end{equation}
-    \begin{equation}\label{eq.n_G}
-        n_{G}(\mathcal{C}) \le \frac{1}{2} n_{G}(T)
-    \end{equation}
-    \begin{equation}\label{eq.n_Bn_G}
-        n_{B}(T) \le n_{G}(T)
-    \end{equation}
+\begin{lem}\label{eq.ineqn_BCn_G} Given two trees $T$, $T'$ and a pairing $p\in\mathcal{P}_F$ of leaves in the renormalized pairing set $\mathcal{P}_F$, let $F$ be the forest which is the union of two forests $R(T)$ and $R(T')$. Then the couple $\mathcal{C} = \mathcal{C}(T,T',p)$ constructed from $T$, $T'$, $p$ have the following properties.
+
+% Let $n_{G}(\mathcal{C})$ and $n_{B}(\mathcal{C})$ be the number of good and bad component of $\mathcal{C}$ respectively. 
+
+Let $n_{G}(F)$ be the number of good and bad nodes of $F$ respectively. Let $n_{BC}(F)$ be the number of chain of bad nodes of $F$. Then we have the following inequality.
+% \begin{equation}\label{eq.n_B}
+%     n_{B}(\mathcal{C}) = n_{B}(T)
+% \end{equation}
+% \begin{equation}\label{eq.n_G}
+%     n_{G}(\mathcal{C}) \le \frac{1}{2} n_{G}(T)
+% \end{equation}
+% \begin{equation}\label{eq.n_Bn_G}
+%     n_{B}(T) \le n_{G}(T)
+% \end{equation}
+\begin{equation}\label{eq.n_Bn_G}
+    n_{BC}(F) + 1 \le 2n_{G}(F)
+\end{equation}
 \end{lem}
+\begin{rem}
+It is crucial that the couple is constructed from a pairing $p$ from $\mathcal{P}_F$. For a general pairing, the lemma is not true.
+\end{rem}
+\begin{proof} We first consider the following claim.
+    
+\textit{Claim 1.} If a circle node $\mathfrak{n}$ in $F$ has no circle child, then $\mathfrak{n}$ is good.
+
 \begin{proof}
-    We first prove \eqref{eq.n_B}. From Definition \ref{def.couple} (2), we know that one $\circ$ node corresponds to one dotted edge. We need the following claim to continue the proof.
-
-    \textit{Claim.} Given a tree $T$ and its renormalization forest $F=R(T)$, $\circ$ node and its children $n_1$, $n_2$ and $n_3$, then after splitting all $\circ$ nodes, the set of all leaves $L(T_{n_1})\cup L(T_{n_2})$ of $T$ in subtrees $T_{n_1}$, $T_{n_2}$ of $T$ equals to $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$.
-
-    \begin{proof}
-        This is obvious from the definition of splitting.
-    \end{proof}
-
-    Given a bad node, since all leaves in $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$ are paired by $p$ with leaves in the same set, by the above claim, we know that the same is true for $L(T_{n_1})\cup L(T_{n_2})$. Since all leaves in $L(T_{n_1})\cup L(T_{n_2})$ are paired with each other, we get a closed components with only one dotted edge which is bad. All bad components arise in this way, this gives \eqref{eq.n_B}.
-
-
-    Then we prove \eqref{eq.n_G}. Since each good components contain at least two dotted edges, and these two dotted edges correspond to two good nodes, so we know that $2n_{G}(\mathcal{C}) \le n_{G}(T)$. This gives \eqref{eq.n_G}.
-
-    Finally, we prove \eqref{eq.n_Bn_G}.
-
+    Under this assumption, $\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'}) = \emptyset$ and $L(T_{\mathfrak{n}}) = L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$. By the definition of $\mathcal{P}_F$, Definition \ref{def.pairing} (5), $p\notin\mathcal{P}(L(T_{\mathfrak{n}}), A)$. Therefore, $\mathfrak{n}$ is a good nodes.
 \end{proof}
 
 
-We have the following lemma that gives an uppper bound on the number of components in terms of number of dotted edges in a couple and exclude the presence of two edge reducible components.
+\textit{Claim 2.} The last nodes of a chain of bad circle nodes must either have a good circle child or have at least two bad children.
+
+\begin{proof}
+    If the claim is wrong, the last node have at most one circle child and this child is a bad circle nodes. If the last node does not have circle children, by claim 1, the last node must be good, which gives a contradiction. If the last node has exacatly one circle children which is bad, then this contradicts with the maximality of the chain with respect to its defining property.
+\end{proof}
 
 
-\begin{lem} 
+If a chain of bad nodes has no bad ancestors, we call it \underline{top chain of bad nodes}. Denote all top chain of bad nodes by $\mathfrak{c}_1, \cdots, \mathfrak{c}_k$. Denote by $T_{\mathfrak{c}_1}\cdots T_{\mathfrak{c}_k}$ the subtree of the first node of this chains. Then we know that 
+\begin{equation}
+    n_{BC}(F) = n_{BC}(T_{\mathfrak{c}_1}) + \cdots + n_{BC}(T_{\mathfrak{c}_k})
+\end{equation}
 
-    \begin{enumerate}
-        \item Given two trees $T$, $T'$ and a pairing $p$ of leaves, let $F$ be the forest which is the union of two forests $R(T)$ and $R(T')$, we can construct a couple $\mathcal{C}(T,T',p)$ from $T$, $T'$, $p$.
+\begin{equation}
+     n_{G}(T_{\mathfrak{c}_1}) + \cdots + n_{G}(T_{\mathfrak{c}_k})\le n_{G}(F)
+\end{equation}
+
+By these two inequalities, we know that it suffices to prove \eqref{eq.n_Bn_G} for trees $T$ whose root is a bad circle nodes.
+
+We prove \eqref{eq.n_Bn_G} for a tree $T$ with a bad root by induction on the total number $n$ of bad chains. 
+
+If $n=1$, by claim 2, it have a good circle children, so $n_{G}(T)\ge 1$. We get $n_{G}(T)+1\ge 2 =2n_{BC}(T) $.
+
+Assume that the Lemma is true for $<n$. We prove the case $n$. 
+
+
+For the top chain of bad nodes, by claim 2, it either have a good child or two bad children.
+
+\underline{The one good child case.} In the first case, remove the top chain $\mathfrak{c}$ from $T$ to get a forest, then take the subtrees $T_{\mathfrak{c}_1'},\cdots, T_{\mathfrak{c}_{k'}'}$ of top chains of the new forest. We have 
+\begin{equation}\label{eq.lemineqn_BCn_G1}
+    n_{BC}(T) = n_{BC}(T_{\mathfrak{c}_1'}) + \cdots + n_{BC}(T_{\mathfrak{c}_{k'}'}) + 1
+\end{equation}
+
+\begin{equation}\label{eq.lemineqn_BCn_G2}
+     n_{G}(T_{\mathfrak{c}_1'}) + \cdots + n_{G}(T_{\mathfrak{c}_{k'}'}) + 1\le n_{G}(T).
+\end{equation}
+Here we have the $+1$ in \eqref{eq.lemineqn_BCn_G1} for $n_{G}$ because in the first case $\mathfrak{c}$ has a good children.
+
+By induction assumption, we have
+\begin{equation}
+    n_{BC}(T_{\mathfrak{c}_i'}) + 1 \le 2n_{G}(T_{\mathfrak{c}_i'}).
+\end{equation}
+
+Summing over $i$ and applying \eqref{eq.lemineqn_BCn_G1} and \eqref{eq.lemineqn_BCn_G2}, we get 
+\begin{equation}
+    n_{BC}(T) + k'-1 \le 2(n_{G}(T)-1).
+\end{equation}
+
+Since $k'\ge 0$, this implies \eqref{eq.n_Bn_G} in the first case.
+
+\underline{The two bad child case.} Now we consider the second case. Remove the top chain $\mathfrak{c}$ from $T$ to get a forest, then take the subtrees $T_{\mathfrak{c}_1'},\cdots, T_{\mathfrak{c}_{k'}'}$ of top chains of the new forest. We have 
+\begin{equation}\label{eq.lemineqn_BCn_G3}
+    n_{BC}(T) = n_{BC}(T_{\mathfrak{c}_1'}) + \cdots + n_{BC}(T_{\mathfrak{c}_{k'}'}) + 1
+\end{equation}
+
+\begin{equation}\label{eq.lemineqn_BCn_G4}
+     n_{G}(T_{\mathfrak{c}_1'}) + \cdots + n_{G}(T_{\mathfrak{c}_{k'}'})\le n_{G}(T).
+\end{equation}
+
+By induction assumption, we have
+\begin{equation}
+    n_{BC}(T_{\mathfrak{c}_i'}) + 1 \le 2n_{G}(T_{\mathfrak{c}_i'}).
+\end{equation}
+
+Summing over $i$ and applying \eqref{eq.lemineqn_BCn_G1} and \eqref{eq.lemineqn_BCn_G2}, we get 
+\begin{equation}
+    n_{BC}(T) + k' - 1 \le 2n_{G}(T).
+\end{equation}
+
+Since $k'\ge 2$, this implies \eqref{eq.n_Bn_G} in the second case, which complete the proof of the lemma.
+\end{proof}
+
+
+% For different chains of bad circle, the good children is different, and then we can define a bijection map from the set of chains of bad nodes to good nodes.
+
+% \begin{lem} Given two trees $T$, $T'$ and a pairing $p$ of leaves, let $F$ be the forest which is the union of two forests $R(T)$ and $R(T')$, we can construct a couple $\mathcal{C}(T,T',p)$ from $T$, $T'$, $p$. Let $n_{G}(\mathcal{C})$ and $n_{B}(\mathcal{C})$ be the number of good and bad component of $\mathcal{C}$ respectively. Let $n_{G}(F)$ and $n_{B}(F)$ be the of good and bad nodes of $F$ respectively. Then we have the following equalities and inequalities.
+%     \begin{equation}\label{eq.n_B}
+%         n_{B}(\mathcal{C}) = n_{B}(T)
+%     \end{equation}
+%     \begin{equation}\label{eq.n_G}
+%         n_{G}(\mathcal{C}) \le \frac{1}{2} n_{G}(T)
+%     \end{equation}
+%     \begin{equation}\label{eq.n_Bn_G}
+%         n_{B}(T) \le n_{G}(T)
+%     \end{equation}
+% \end{lem}
+% \begin{proof}
+%     We first prove \eqref{eq.n_B}. From Definition \ref{def.couple} (2), we know that one $\circ$ node corresponds to one dotted edge. We need the following claim to continue the proof.
+
+%     \textit{Claim.} Given a tree $T$ and its renormalization forest $F=R(T)$, $\circ$ node and its children $n_1$, $n_2$ and $n_3$, then after splitting all $\circ$ nodes, the set of all leaves $L(T_{n_1})\cup L(T_{n_2})$ of $T$ in subtrees $T_{n_1}$, $T_{n_2}$ of $T$ equals to $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$.
+
+%     \begin{proof}
+%         This is obvious from the definition of splitting.
+%     \end{proof}
+
+%     Given a bad node, since all leaves in $L(T_{\mathfrak{n}})\backslash\cup_{n'\in \text{Child}_{\mathfrak{n}}} L(T_{\mathfrak{n}'})$ are paired by $p$ with leaves in the same set, by the above claim, we know that the same is true for $L(T_{n_1})\cup L(T_{n_2})$. Since all leaves in $L(T_{n_1})\cup L(T_{n_2})$ are paired with each other, we get a closed components with only one dotted edge which is bad. All bad components arise in this way, this gives \eqref{eq.n_B}.
+
+
+%     Then we prove \eqref{eq.n_G}. Since each good components contain at least two dotted edges, and these two dotted edges correspond to two good nodes, so we know that $2n_{G}(\mathcal{C}) \le n_{G}(T)$. This gives \eqref{eq.n_G}.
+
+%     Finally, we prove \eqref{eq.n_Bn_G}.
+
+% \end{proof}
+
+
+% We have the following lemma that gives an uppper bound on the number of components in terms of number of dotted edges in a couple and exclude the presence of two edge reducible components.
+
+
+% \begin{lem} 
+
+%     \begin{enumerate}
+%         \item Given two trees $T$, $T'$ and a pairing $p$ of leaves, let $F$ be the forest which is the union of two forests $R(T)$ and $R(T')$, we can construct a couple $\mathcal{C}(T,T',p)$ from $T$, $T'$, $p$.
         
-        Then all couples $\mathcal{C} = \mathcal{C}(T,T',p)$ constructed from a pairing $p\in \mathcal{P}_F$ have the property that the number $n_{G}(\mathcal{C})$ of good components of $\mathcal{C}$ is greater than the number $n_{B}(\mathcal{C})$ of bad components. In other word, we have the following inequality.
-        \begin{equation}
-            n_{G}(\mathcal{C})\ge n_{B}(\mathcal{C})
-        \end{equation}
+%         Then all couples $\mathcal{C} = \mathcal{C}(T,T',p)$ constructed from a pairing $p\in \mathcal{P}_F$ have the property that the number $n_{G}(\mathcal{C})$ of good components of $\mathcal{C}$ is greater than the number $n_{B}(\mathcal{C})$ of bad components. In other word, we have the following inequality.
+%         \begin{equation}
+%             n_{G}(\mathcal{C})\ge n_{B}(\mathcal{C})
+%         \end{equation}
 
-        \item Given a two edge reducible couple $\mathcal{C}$, we have $\# Eq(\mathcal{C}) = 0$.
-    \end{enumerate}
-\end{lem}
-\begin{proof}
-We first prove (2). If $C$ is two edge reducible couple, then there is a cut consists of two edges $\mathfrak{e}_1, \mathfrak{e}_2$ that are all connected to the same node $\mathfrak{n}$, such that after cutting all edges in this cut, one of the resulting components $\mathcal{C}_1$ has exactly two legs.
+%         \item Given a two edge reducible couple $\mathcal{C}$, we have $\# Eq(\mathcal{C}) = 0$.
+%     \end{enumerate}
+% \end{lem}
+% \begin{proof}
+% We first prove (2). If $C$ is two edge reducible couple, then there is a cut consists of two edges $\mathfrak{e}_1, \mathfrak{e}_2$ that are all connected to the same node $\mathfrak{n}$, such that after cutting all edges in this cut, one of the resulting components $\mathcal{C}_1$ has exactly two legs.
 
-Apply the Lemma \ref{lem.momentumconservation} to $\mathcal{C}_1$, then we know that $k_{\mathfrak{e}_1}=k_{\mathfrak{e}_2}$. By \ref{eq.momentumconservationunit}, we know that $k_{\mathfrak{e}_1}\ne k_{\mathfrak{e}_2}\ne k_{\mathfrak{e}_3}$. Therefore, the set of solutions must be empty. 
+% Apply the Lemma \ref{lem.momentumconservation} to $\mathcal{C}_1$, then we know that $k_{\mathfrak{e}_1}=k_{\mathfrak{e}_2}$. By \ref{eq.momentumconservationunit}, we know that $k_{\mathfrak{e}_1}\ne k_{\mathfrak{e}_2}\ne k_{\mathfrak{e}_3}$. Therefore, the set of solutions must be empty. 
 
-Now we prove (1). 
+% Now we prove (1). 
 
-After splitting all $\circ$ nodes as in Definition \ref{def.couple} (3), $T$ is decomposed into  $\{T_j\}$ and a tree $T_{\text{leg}}$, so that $T_{\text{leg}}$ contains the legs of $T$ and each $T_j$ contains exactly one dotted edge. It's easy to see that $\cup_{j} L(T_j)$ and $L(T_{\text{leg}})$ coincides with  $L(F_{\mathfrak{n}})$ and $\{k_1,k_2,\cdots,k_{2m}\}\backslash L(F_{\mathfrak{n}})$ respectively. ($F=R(T)\cup R(T')$) Therefore, by Theorem \ref{th.wickr} and Definition \ref{def.pairing} (5), we know that there is no tree in $\{T_j\}$ and $T_{\text{leg}}$ whose leaves pair only with the leaves itself. Therefore, all trees in $\{T_j\}$ and $T_{\text{leg}}$ has at least one edge connects to another different tree. If a component does not have leg, which means that $T_{\text{leg}}$ does not contain in this component, then it contains at least two trees in $\{T_j\}$. This implies that this component has at least two dotted edges since each of these two $T_j$ trees contains a dotted edge.
-
-
-*****************************************************
-
-\textbf{Step 1.} In this step, we show that after splitting all $\circ$ nodes as in Definition \ref{def.couple} (3), $T$ is decomposed into  $\{T^{\mathfrak{n}}\}_{\mathfrak{n}\text{ is decorated by } \circ}$ and a tree $T_{\text{leg}}$, so that $T_{\text{leg}}$ contains the legs of $T$ and each $T^{\mathfrak{n}}$ contains exactly one dotted edge.
-
-Before doing any proof, we refine Definition \ref{def.couple} (3) about splitting $\circ$ nodes when constructing couples. We eliminate its ambiguity by specifying the order of splitting $\circ$ nodes. 
-
-First split all $\circ$ nodes without $\circ$ descendants as in Definition \ref{def.couple} (2). After splitting one such $\circ$ nodes $\mathfrak{n}_{\circ}$, we get one tree $T_{\text{leg}}^{1}$ containing the leg and another tree $T^{\mathfrak{n}_{\circ}}$ containing one dotted edge connecting two subtrees $T_{\mathfrak{n}_1}$, $T_{\mathfrak{n}_2}$. Notice that there are no $\circ$ nodes in $T^{\mathfrak{n}_{\circ}}$.
-
-After splitting all $\circ$ descendant free $\circ$ nodes, there may be new such nodes in $T_{\text{leg}}^{1}$, then we split all such nodes and get $T_{\mathfrak{n}_2}$ and new $T^{\mathfrak{n}_{\circ}}$. Repeat this process until all $\circ$ nodes are split. 
-
-Finally, $T$ is decomposed into $\{T^{\mathfrak{n}}\}_{\mathfrak{n}\text{ is decorated by } \circ}$ and a tree $T_{\text{leg}}$ containing legs. Each $T^{\mathfrak{n}}$ contains exactly one dotted edge. Therefore, we finish the proof of step 1.
+% After splitting all $\circ$ nodes as in Definition \ref{def.couple} (3), $T$ is decomposed into  $\{T_j\}$ and a tree $T_{\text{leg}}$, so that $T_{\text{leg}}$ contains the legs of $T$ and each $T_j$ contains exactly one dotted edge. It's easy to see that $\cup_{j} L(T_j)$ and $L(T_{\text{leg}})$ coincides with  $L(F_{\mathfrak{n}})$ and $\{k_1,k_2,\cdots,k_{2m}\}\backslash L(F_{\mathfrak{n}})$ respectively. ($F=R(T)\cup R(T')$) Therefore, by Theorem \ref{th.wickr} and Definition \ref{def.pairing} (5), we know that there is no tree in $\{T_j\}$ and $T_{\text{leg}}$ whose leaves pair only with the leaves itself. Therefore, all trees in $\{T_j\}$ and $T_{\text{leg}}$ has at least one edge connects to another different tree. If a component does not have leg, which means that $T_{\text{leg}}$ does not contain in this component, then it contains at least two trees in $\{T_j\}$. This implies that this component has at least two dotted edges since each of these two $T_j$ trees contains a dotted edge.
 
 
-\textbf{Step 2.} In this step, we prove that the set of leaves of $T^{\mathfrak{n}}$ is the same as the set of leaves $L(F_{\mathfrak{n}})$ if $F=R(T)\cup R(T')$.
+% *****************************************************
+
+% \textbf{Step 1.} In this step, we show that after splitting all $\circ$ nodes as in Definition \ref{def.couple} (3), $T$ is decomposed into  $\{T^{\mathfrak{n}}\}_{\mathfrak{n}\text{ is decorated by } \circ}$ and a tree $T_{\text{leg}}$, so that $T_{\text{leg}}$ contains the legs of $T$ and each $T^{\mathfrak{n}}$ contains exactly one dotted edge.
+
+% Before doing any proof, we refine Definition \ref{def.couple} (3) about splitting $\circ$ nodes when constructing couples. We eliminate its ambiguity by specifying the order of splitting $\circ$ nodes. 
+
+% First split all $\circ$ nodes without $\circ$ descendants as in Definition \ref{def.couple} (2). After splitting one such $\circ$ nodes $\mathfrak{n}_{\circ}$, we get one tree $T_{\text{leg}}^{1}$ containing the leg and another tree $T^{\mathfrak{n}_{\circ}}$ containing one dotted edge connecting two subtrees $T_{\mathfrak{n}_1}$, $T_{\mathfrak{n}_2}$. Notice that there are no $\circ$ nodes in $T^{\mathfrak{n}_{\circ}}$.
+
+% After splitting all $\circ$ descendant free $\circ$ nodes, there may be new such nodes in $T_{\text{leg}}^{1}$, then we split all such nodes and get $T_{\mathfrak{n}_2}$ and new $T^{\mathfrak{n}_{\circ}}$. Repeat this process until all $\circ$ nodes are split. 
+
+% Finally, $T$ is decomposed into $\{T^{\mathfrak{n}}\}_{\mathfrak{n}\text{ is decorated by } \circ}$ and a tree $T_{\text{leg}}$ containing legs. Each $T^{\mathfrak{n}}$ contains exactly one dotted edge. Therefore, we finish the proof of step 1.
 
 
+% \textbf{Step 2.} In this step, we prove that the set of leaves of $T^{\mathfrak{n}}$ is the same as the set of leaves $L(F_{\mathfrak{n}})$ if $F=R(T)\cup R(T')$.
 
 
 
-\textbf{Step 3.} In this step, we finish the proof of (3).
 
-By definition of $\mathcal{P}_{F}$ in Theorem \ref{th.wickr}, 
 
-When pairing leaves, several components of $T$, $T'$ can be connected into one component. The definition of $\mathcal{P}_F$ implies that any
-\end{proof}
+% \textbf{Step 3.} In this step, we finish the proof of (3).
+
+% By definition of $\mathcal{P}_{F}$ in Theorem \ref{th.wickr}, 
+
+% When pairing leaves, several components of $T$, $T'$ can be connected into one component. The definition of $\mathcal{P}_F$ implies that any
+% \end{proof}
 
 
 \subsubsection{Counting results and their proof}
 The following proposition gives an upper bound of number of solutions of \eqref{eq.diophantineeqpairedsigma} (or \eqref{eq.diophantineeqpairedsigma'}).
 
 \begin{prop}\label{prop.counting}
-Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be an open admissible couple, $n$ be the total number of nodes in $\mathcal{C}$, $n_c$ be the number of closed components of $\mathcal{C}$ and $Q=L^{d}\sqrt{\alpha}$. We fix $k\in \mathbb{R}$ for the legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\alpha\le L^{-2}$(\textbf{rational and irrational}). Then we have following conclusions
+Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be an open admissible couple, $n$ be the total number of nodes in $\mathcal{C}$, $n_c$ be the number of closed components of $\mathcal{C}$ and $Q=L^{d}\sqrt{\omega}$. We fix $k\in \mathbb{R}$ for the fixed legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\omega\ge L^{-1}$ (or $\omega\ge L^{-2}$ in case that the ratio of periods is generic in the sense of Theorem \ref{th.numbertheory}). Then we have following conclusions
 
 (1) The number of solutions $M$ of \eqref{eq.diophantineeqpairedsigma} (or \eqref{eq.diophantineeqpairedsigma'}) is bounded by 
-\begin{equation}\label{eq.countingbd0}M\leq L^{O(\theta)} Q^{n} L^{dn_c}, 
+\begin{equation}\label{eq.countingbd0}
+    M\leq L^{O(\theta)} Q^{n} L^{dn_c}.
 \end{equation}
 
-(2) $n$ equals to the total number of $\bullet$ nodes in $T$ and $T'$. 
-
-(3) Let $n_d$ be the total number of dotted edges in $\mathcal{C}$. Then $n_d$ equals to the total number of circle nodes in $T$ and $T'$. We also have the inequality
-\begin{equation}\label{eq.dottededgeclosedcomponent}
-    n_c\le \frac{1}{2}n_d
+(2) We know that $n$ equals to the total number of $\bullet$ nodes in $T$ and $T'$. Let $n_G$ and $n_B$ be the number of good and bad nodes in $T$ and $T'$ respectively. Then we have 
+\begin{equation}\label{eq.ineqn_Gn_B}
+    \left\{\begin{aligned}
+        & 2n_G \ge n_{BC}+1
+        \\
+        & n_G \ge 2(n_c - n_B)
+    \end{aligned}\right.
 \end{equation}
 
-(4) By (1), (3), we know that 
-\begin{equation}\label{eq.countingbd1}M\leq L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d}, 
+
+
+% (3) Let $n_d$ be the total number of dotted edges in $\mathcal{C}$. Then $n_d$ equals to the total number of circle nodes in $T$ and $T'$. We also have the inequality
+% \begin{equation}\label{eq.dottededgeclosedcomponent}
+%     n_c\le \frac{1}{2}n_d
+% \end{equation}
+
+(3) Let $l$ and $l'$ be the total number of nodes in $T$ and $T'$ respectively. Assume that there is no long chain of bad circle nodes and $\omega \ge L^{-\frac{d}{2}}$. Then we also have 
+
+\begin{equation}\label{eq.countingbd1}
+    M/Q^{l+l'}\leq L^{O(\theta)}. 
 \end{equation}
+
+This inequality is important because the order of magnitude of $Term(T,T',p)$ is supposed to be  $M/Q^{l+l'}$ when $\omega=T_{\text{kin}}^{-1}$. As long as we can remove the condition that there is no long chain of bad circle nodes, up to epsilon loss the wave kinetic equation can be derived.
+
 \end{prop}
-\begin{proof} Because $\mathcal{C}$ is admissible, by Proposition \ref{prop.termcouple} (1) or Definition \ref{def.morecouple} (1), each connected components of $\mathcal{C}$ contains at least two dotted edges. Therefore, we have $2n_{c}\le n_d$, which gives \eqref{eq.dottededgeclosedcomponent}.
+\begin{proof} We first prove (2). The fact that $n$ equals to the total number of $\bullet$ nodes in $T$ and $T'$ follows from the definition. The first inequality of \eqref{eq.ineqn_Gn_B} follows from Lemma \ref{eq.ineqn_BCn_G}. 
+    
+Now we prove the second inequality of \eqref{eq.ineqn_Gn_B}. Remember from the definition of dotted edges, Definition \ref{def.couple} (2), each dotted edge correspond to a circle node. By definition of bad circle nodes, component arising from them can only contains one dotted edge, so $n_c - n_B$ are the number of couples contain at least two dotted edges. All these couples correspond to at least to good circle nodes and thus the number of them is less than $n_G/2$. Therefore, we proved the desired inequality.
 
-We have proved (3). (2) follows from the definition of couple. (4) follows from (1), (3). Therefore, we only need to prove (1).
+Then we prove (3) from (1) and (2). Let $n_{\text{circ}}$ be the total number of circle nodes in $T$ and $T'$. Since $l+l'$ and $n$ are the total number of nodes and $\bullet$ nodes in $T$ and $T'$ respectively, we know that $l+l' = n + n_{\text{circ}}$. By definition of $n_G$ and $n_B$, we know that $n_{} = n_{G} + n_{B}$. 
+
+By assumption that there is no long chain of bad circle nodes, we know that $n_{B} = n_{BC}$. Therefore, the first inequality of \eqref{eq.ineqn_Gn_B} becomes
+\begin{equation}\label{eq.n_Gn_B'}
+    n_{G} \ge n_{B}.
+\end{equation}
+
+Multiply this inequality by $\frac{1}{3}$, the second inequality of \eqref{eq.ineqn_Gn_B} $\frac{2}{3}$ and then sum them. We get the following inequality.
+
+\begin{equation}\label{eq.n_Gn_B''}
+    n_{G} \ge \frac{4}{3}n_c - n_{B}\qquad \Leftrightarrow\qquad n_c \le \frac{3}{4} (n_{G} + n_{B}) 
+\end{equation}
+
+By (1), we get 
+\begin{equation}
+    \begin{split}
+        M/Q^{l+l'}\leq& L^{O(\theta)} Q^{n} L^{dn_c}/Q^{n+n_G+n_B}
+        \\
+        =& L^{O(\theta)} L^{dn} (\sqrt{\omega})^{n}L^{dn_c}/(L^{d(n+n_G+n_B)}(\sqrt{\omega})^{n+n_G+n_B})
+        \\
+        =& L^{O(\theta)} (\sqrt{\omega})^{-n_G-n_B}L^{d(n_c-n_G-n_B)}
+        \\
+        =& L^{O(\theta)} (L^{-\frac{d}{4}}\sqrt{\omega}^{-1})^{n_G+n_B}\le L^{O(\theta)}.
+    \end{split}
+\end{equation}
+Here in the third inequality, we applied \eqref{eq.n_Gn_B''} and $\omega \ge L^{-\frac{d}{2}}$ in the hypothesis of (3).
+
+Therefore, we have finished the proof of (3)
 
 The proof of (1) is lengthy and therefore divided into several steps. To present its proof, let us first introduce several useful notations.
 
@@ -2103,65 +2145,18 @@ Given a couple $\mathcal{C}$ and $k$, $\sigma_{\mathfrak{n}}$, let $Eq(\mathcal{
 
 Now we prove (1).
 
-\textbf{Step 1.} In this step, we reduce Proposition \ref{prop.counting} to the case of connected couples by showing that
+\textbf{Step 1.} In this step, we reduce Proposition \ref{prop.counting} to the case of connected couples.
+
+By Lemma \eqref{eq.Eq(C)cutting}, we know that 
 \begin{equation}\label{eq.conn}
     \#(Eq(\mathcal{C}))= \#(Eq(\widetilde{\mathcal{C}}))\prod_{j=1}^{n_c} \#(Eq(\mathcal{C}_{j})).
 \end{equation}
 Here $\widetilde{\mathcal{C}}$ is the open component of $\mathcal{C}$ (it is not difficult to show that $\mathcal{C}$ only has one open component), $\mathcal{C}_{j}$, $1\le j\le n_c$ are the closed components of $\mathcal{C}$ and we have $\mathcal{C}=\widetilde{\mathcal{C}}\cup(\cup_{j=1}^{n_c} \mathcal{C}_{j})$.
 
-Applying \eqref{eq.diophantineeqpairedsigma'}, we know that 
-\begin{equation}\label{eq.Eq(C)expand}
-\begin{split}
-    Eq(\mathcal{C})=&\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}| \lesssim 1,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\}   
-    \\
-    =&\{(k_{\widetilde{\mathfrak{e}}},k_{\mathfrak{e}_1},\cdots,k_{\mathfrak{e}_{n_c}}):\ |k_{\widetilde{\mathfrak{e}}}|,|k_{\mathfrak{e}_1}|,\cdots,|k_{\mathfrak{e}_{n_c}}| \lesssim 1,\ MC_{\widetilde{\mathfrak{n}}},MC_{\mathfrak{n}_1},\cdots, MC_{\mathfrak{n}_{n_c}},
-    \\
-    EC_{\widetilde{\mathfrak{n}}},EC_{\mathfrak{n}_1}&,\cdots, EC_{\mathfrak{n}_{n_c}}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\  (\widetilde{\mathfrak{e}},\mathfrak{e}_1,\cdots,\mathfrak{e}_{n_c}),\  (\widetilde{\mathfrak{n}},\mathfrak{n}_1,\cdots,\mathfrak{n}_{n_c})\in \widetilde{\mathcal{C}}\times \mathcal{C}_{1}\times \cdots\times \mathcal{C}_{n_c})\}
-\end{split}
-\end{equation}
-
-For each $\mathfrak{n}\in\mathcal{C}_i$, the equation $MC_{\mathfrak{n}}$ and  $EC_{\mathfrak{n}}$ are equations of variables of four variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$, $k_{\mathfrak{e}_3}$, $k_{\mathfrak{e}}$ whose corresponding edges $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$, $\mathfrak{e}$ are connected to $\mathfrak{n}\in\mathcal{C}_i$ and therefore contained in $\mathcal{C}_i$.
-
-Fix a component $\mathfrak{n}\in\mathcal{C}_i$, notice that $MC_{\mathfrak{n}_i}$, $EC_{\mathfrak{n}_i}$ are equations of variables inside $\mathcal{C}_i$, so we can collect all variables $k_{\mathfrak{e}_i}$ and equations $MC_{\mathfrak{n}_i}$, $EC_{\mathfrak{n}_i}$ for all $\mathfrak{e}_i$, $\mathfrak{n}_i\in \mathcal{C}_i$. Then \eqref{eq.Eq(C)expand} can be rewritten as 
-\begin{equation}\label{eq.Eq(C)expand'}
-\begin{split}
-    Eq(\mathcal{C})=\{(k_{\widetilde{\mathfrak{e}}},k_{\mathfrak{e}_1},\cdots,k_{\mathfrak{e}_{n_c}}):&\ |k_{\widetilde{\mathfrak{e}}}| \lesssim 1,\ MC_{\widetilde{\mathfrak{n}}},\ EC_{\widetilde{\mathfrak{n}}},\  k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\ \forall \widetilde{\mathfrak{e}}, \widetilde{\mathfrak{n}}\in\widetilde{\mathcal{C}}
-    \\
-    &\ |k_{\mathfrak{e}_1}| \lesssim 1,\ MC_{\mathfrak{n}_1},\ EC_{\mathfrak{n}_1}.\ \forall \mathfrak{e}_1, \mathfrak{n}_1\in\mathcal{C}_1
-    \\
-    &\ \qquad\qquad\cdots\cdots
-    \\
-    &\ |k_{\mathfrak{e}_{n_c}}| \lesssim 1,\ MC_{\mathfrak{n}_{n_c}},\ EC_{\mathfrak{n}_{n_c}}.\ \forall \mathfrak{e}_{n_c}, \mathfrak{n}_{n_c}\in\mathcal{C}_{n_c}\}.
-\end{split}
-\end{equation}
-
-Since $\widetilde{\mathcal{C}}$, $\mathcal{C}_{1}$, $\cdots $, $\mathcal{C}_{n_c}$ are disjoint and $Eq(\mathcal{C}_{i})=\{k_{\mathfrak{e}_i}:|k_{\mathfrak{e}_i}| \lesssim 1,\ MC_{\mathfrak{n}_i},\ EC_{\mathfrak{n}_i}.\ \forall \mathfrak{e}_i, \mathfrak{n}_i\in\mathcal{C}_i\}$, we get
-\begin{equation}\label{eq.Eq(C)expand''}
-\begin{split}
-    Eq(\mathcal{C})=&\{(k_{\widetilde{\mathfrak{e}}},k_{\mathfrak{e}_1},\cdots,k_{\mathfrak{e}_{n_c}}):\ k_{\widetilde{\mathfrak{e}}}\in Eq(\mathcal{C}),\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1),\ \cdots,\ k_{\mathfrak{e}_{n_c}}\in Eq(\mathcal{C}_{n_c})\}
-    \\
-    =&Eq(\widetilde{\mathcal{C}})\times Eq(\mathcal{C}_{1})\times\cdots\times Eq(\mathcal{C}_{n_c})
-\end{split}
-\end{equation}
+Therefore, we just need to prove the following proposition which claim that Proposition \ref{prop.counting} is true for connected couples. Note that in the statement of the following proposition, we have an extra factor $L^d$ for each closed component. In total, we get a factor $L^{dn_c}$. This how we get the $L^{dn_c}$ in $M\leq L^{O(\theta)} Q^{n} L^{dn_c}$ of Proposition \ref{prop.counting}.
 
 
-Since $Eq(\mathcal{C})=Eq(\widetilde{\mathcal{C}})\times Eq(\mathcal{C}_{1})\times\cdots\times Eq(\mathcal{C}_{n_c})$, we know that $\#(Eq(\mathcal{C}))= \#(Eq(\widetilde{\mathcal{C}}))\prod_{j=1}^{n_c} \#(Eq($ $\mathcal{C}_{j}))$ and the proof of step 1 has been finished.
-
-
-% The couple $C$ may not be connected. May reduce to connected case. Need to show that
-
-% (1) The only disconnectness comes from $\circ$ nodes (all connected components that does not contain the legs must contain dotted edge from a $\circ$ nodes) (assign dotted edges to closed connected components)
-
-% (2) The connected component containing legs is open, others are closed. 
-
-% (3) Removing a dotted edge gives a factor of $Q$ (in the equation the weights is $t/L^d$). 
-
-% (4) By proposition below, the open connected component does not lose factor. The others lose a factor of $L^d$ and gain a factor of $Q^{\#\{\textit{dotted edges}\}}$. (1) implies that $\#\{\textit{dotted edges}\}\ge 1$, renormalized implies that $\#\{\textit{dotted edges}\}\ge 2$. Therefore in all other connected components we lose a factor $L^d Q^2\le 1$, so we do not lose factor in any components. 
-
-% (5) Combine the results in each components we prove the proposition.
-Therefore by \eqref{eq.conn}, it suffices to prove Proposition \ref{prop.counting} for connected couples, i.e. the following proposition.
-
-\begin{prop}\label{prop.countingconn} Let $\mathcal{C}$ be a connected couple and $n$ be the total number of nodes in $\mathcal{C}$. We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$ and $k\in \mathbb{R}$ if $\mathcal{C}$ is open. Assume that $\alpha\le L^{-2}$. Then (recall that $Q=L^{d}\sqrt{\alpha}$)
+\begin{prop}\label{prop.countingconn} Let $\mathcal{C}$ be a connected couple and $n$ be the total number of nodes in $\mathcal{C}$. We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$ and $k\in \mathbb{R}$ if $\mathcal{C}$ is open. Assume that $\omega\ge L^{-1}$ (or $\omega\ge L^{-2}$ in case that the ratio of periods is generic in the sense of Theorem \ref{th.numbertheory}). Then (recall that $Q=L^{d}\sqrt{\omega}$)
 \begin{equation}\label{eq.countingbd2}\# Eq(\mathcal{C})\leq\left\{\begin{aligned}
 &L^{O(\theta)} Q^{n},     \qquad\quad\textit{if $C$ is open},\\
 & L^{d+O(\theta) }Q^{n},\qquad\textit{if $C$ is closed}.
@@ -2173,119 +2168,11 @@ Therefore by \eqref{eq.conn}, it suffices to prove Proposition \ref{prop.countin
 Step 2-4 are devoted to the proof of Proposition \ref{prop.countingconn} using a cutting edge argument. 
 
 
-\textbf{Step 2.} In this step, we explain the cutting edge argument and introduce a stronger version of Proposition \ref{prop.countingconn}.
+\textbf{Step 2.} Although all components can have at most two legs at the beginning, after cutting, the resulting couples can have more than two legs. In this step, we introduce a stronger version of Proposition \ref{prop.countingconn} that covers legs of more than two legs.
 
-By \eqref{eq.conn}, we know that if we can decompose the couple $\mathcal{C}$ into disjoint components $\mathcal{C}_1$, $\mathcal{C}_2$, then we just need to count the equation of each component. To get a such decomposition, we cut some edges of the couple. We also prove result that relates $\#Eq(\mathcal{C}_1)$, $\#Eq(\mathcal{C}_2)$ and $\#Eq(\mathcal{C})$.
+\begin{lem}\label{prop.countingind}
+Let $\mathcal{C}$ be a connected couple with multiple legs, $n$ be the total number of nodes in $\mathcal{C}$ and $n_e$ (resp. $n_{\textit{fx}}$, $n_{\textit{fr}}$) be the total number of non-leg edges (resp. fixed legs, free legs). We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$ and $c_{\mathfrak{l}}\in \mathbb{R}$ for each fixed leg $\mathfrak{l}$. Assume that $\omega\ge L^{-1}$ (or $\omega\ge L^{-2}$ in case that the ratio of periods is generic in the sense of Theorem \ref{th.numbertheory}). We assume that $n_{\textit{fx}},n_{\textit{fr}}\ne 0$. Then 
 
-The following definition is important 
-
-\begin{defn}
-\begin{enumerate}
-    \item \textbf{Leg and leaf edges.} An edge just connected to one node is called a \underline{leg} (we have encounter this definition in the second paragraph of section \ref{sec.refexp}). An edge connected to a leaf node (a node of degree 1) is called a \underline{leaf edge}.
-    \item \textbf{Cutting an edge.} Given an edge $\mathfrak{e}$, we can cut it into two edges (a leg and a leaf edge) as in Figure \ref{fig.cutedge}.
-    
-    \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of cutting an edge}
-        \centering
-        \label{fig.cutedge}
-    \end{figure}
-
-    \item \textbf{Cut.} A \underline{cut} $c$ of a couple $\mathcal{C}$ is a set of edges such that $\mathcal{C}$ is disconnected after cutting all edges in $c$.
-    \item \textbf{$c(\mathfrak{n})$ and $c(\mathfrak{e})$.} Given an edge $\mathfrak{e}$, define  $c(\mathfrak{e})$ to be the cut that consists of only one edge $\mathfrak{e}$. Given a node $\mathfrak{n}\in \mathcal{C}$, let $\{\mathfrak{e}_{i}\}$ be edges that connect $\mathfrak{n}$ with other node, then define $c(\mathfrak{n})$ be the cut that consists of edges $\{\mathfrak{e}_{i}\}$.
-    
-    \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of cuts, $c(\mathfrak{n})$ and $c(\mathfrak{e})$}
-        \centering
-        \label{fig.c(n)c(e)}
-    \end{figure}
-\end{enumerate}
-\end{defn}
-
-The couples in Proposition \ref{prop.countingconn} contains just $0$ or $2$ legs, but after cutting, these couples may contain more legs and leaf edges. 
-
-Now we define $Eq(\mathcal{C})$ for a couple $\mathcal{C}$ with multiple legs and leaf edges. Given $c_{\mathfrak{l}}$ for each leg $\mathfrak{l}$, define $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$ by
-\begin{equation}\label{eq.Eq(C,c)}
-Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}| \lesssim L^+,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=c_{\mathfrak{l}},\ \forall \mathfrak{l}.\}    
-\end{equation}
-Here each edge $\mathfrak{e}$ is still associate a variable $k_{\mathfrak{e}}$ and each node $\mathfrak{n}$ is still associate with equations $MC_{\mathfrak{n}}$, $EC_{\mathfrak{n}}$. The only difference with 
-\eqref{eq.diophantineeqpairedsigma'} is that the corresponding variables $k_{\mathfrak{l}}$ of legs are fixed to be a constant $c_{\mathfrak{l}}$ (The corresponding variables of leaf edges are free).
-
-
-Let us explain how does $Eq(\mathcal{C})$ and $\#Eq(\mathcal{C})$ changes after cutting. The result is summarized in the following lemma.
-\begin{lem}\label{lem.Eq(C)cutting}
-Let $c$ be a cut of $\mathcal{C}$ that consists of edges $\{\mathfrak{e}_{i}\}$. Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be two components after cutting and $\mathfrak{e}_{i}^{(1)}\in \mathcal{C}_1$, $\mathfrak{e}_{i}^{(2)}\in \mathcal{C}_2$ be two edges obtained by cutting $\mathfrak{e}_{i}$. We assume that $\{\mathfrak{e}_{i}^{(1)}\}$ are leaf edges and $\{\mathfrak{e}_{i}^{(2)}\}$ are legs. Then we have 
-\begin{equation}\label{eq.Eq(C)cutting}
-    Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}.
-\end{equation}
-and
-\begin{equation}\label{eq.Eq(C)cuttingcounting}
-    \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\le
-    \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_1)} } \# Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_2)} }\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}).
-\end{equation}
-\end{lem}
-\begin{proof}
-%Let $c$ be a cut of $\mathcal{C}$ that consists of edges $\{\mathfrak{e}_{i}\}$. Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be two components after cutting and $\mathfrak{e}_{i}^{(1)}\in \mathcal{C}_1$, $\mathfrak{e}_{i}^{(2)}\in \mathcal{C}_2$ be two edges obtained by cutting $\mathfrak{e}_{i}$. We assume that $\{\mathfrak{e}_{i}^{(1)}\}$ are leaf edges and $\{\mathfrak{e}_{i}^{(2)}\}$ are legs. 
-By definition \eqref{eq.Eq(C,c)} we have
-\begin{equation}
-\begin{split}
-    Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=&\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}| \lesssim L^+,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=c_{\mathfrak{l}},\ \forall \mathfrak{l}\in \text{leg}(\mathcal{C}).\} \\
-    =&\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_2}):\ |k_{\mathfrak{e}_1}| \lesssim L^+,\ MC_{\mathfrak{n}_1},\  EC_{\mathfrak{n}_1}.\ \forall \mathfrak{e}_1, \mathfrak{n}_1\in\mathcal{C}_1.\ k_{\mathfrak{l}_1}=c_{\mathfrak{l}_1},\ \forall \mathfrak{l}_1\in \text{leg}(\mathcal{C})\cap \text{leg}(\mathcal{C}_1)
-    \\
-    \ |k_{\mathfrak{e}_2}| \lesssim L^+,\ &MC_{\mathfrak{n}_2},\  EC_{\mathfrak{n}_2}.\ \forall \mathfrak{e}_2, \mathfrak{n}_2\in\mathcal{C}_2.\ k_{\mathfrak{l}_2}=c_{\mathfrak{l}_2},\ \forall \mathfrak{l}_2\in \text{leg}(\mathcal{C})\cap \text{leg}(\mathcal{C}_2),\ k_{\mathfrak{e}_{i}^{(2)}}=k_{\mathfrak{e}_{i}^{(1)}},\ \forall\mathfrak{e}_{i}\in c\}
-    \\
-    =&\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}
-\end{split}
-\end{equation}
-Here in $Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)$, $k_{\mathfrak{e}_{i}^{(1)}}$ are view as a constant value and $k_{\mathfrak{e}_{i}^{(2)}}$ are fixed to be this constant value.
-
-Therefore, after cutting, $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$ becomes
-\begin{equation}
-    Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}.
-\end{equation}
-which proves \eqref{eq.Eq(C)cutting}.
-
-We can also find the relation between $\#Eq(\mathcal{C}_1)$, $\#Eq(\mathcal{C}_2)$ and $\#Eq(\mathcal{C})$. Applying \eqref{eq.Eq(C)cutting},
-\begin{equation}
-\begin{split}
-    \#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})=&\sum_{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}})\in \#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})} 1
-    \\
-    =&\sum_{\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)\right\}} 1
-    \\
-    =&\sum_{k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\})} \sum_{k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)} 1
-    \\
-    =&\sum_{k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\})} \# Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)
-\end{split}
-\end{equation}
-Take $\sup$ in above equation
-\begin{equation}
-\begin{split}
-    &\sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
-    =\sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\sum_{k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\})} \# Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)
-    \\
-    \le &\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C})\cap \text{leg}(\mathcal{C}_1)} }\sum_{k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\})} \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C})\cap \text{leg}(\mathcal{C}_2)} }\# Eq\left(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\}, \left\{k_{\mathfrak{e}_{i}^{(1)}}\right\}_{i}\right)
-    \\
-    \le &\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_1)} }\sum_{k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\})} \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_2)} }\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\})
-    \\
-    = &\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_1)} } \# Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_2)} }\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\})
-\end{split}
-\end{equation}
-
-This proves \eqref{eq.Eq(C)cuttingcounting}.
-\end{proof}
-
-\eqref{eq.Eq(C)cuttingcounting} is the main tool of proving the following proposition.
-
-\begin{lem}\label{lem.eulerchar}
-Let $\mathcal{C}$ be a connected couple with multiple legs and leaf edges, $n$ be the total number of nodes in $\mathcal{C}$ and $n_e$ (resp. $n_{\textit{fx}}$, $n_{\textit{fr}}$) be the total number of non-leg and non-leaf edges (resp. legs, leaf edges). We fix $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$ and $c_{\mathfrak{l}}\in \mathbb{R}$ for each leg $\mathfrak{l}$. Assume that $\alpha\le L^{-2}$. Then we have
-
-(1) Let $\chi(\mathcal{C})=n_e+n_{\textit{fr}}-n$. Let $c$, $\mathcal{C}_1$, $\mathcal{C}_2$ be the same as in Lemma \ref{lem.Eq(C)cutting} and also assume that $\{\mathfrak{e}_{i}^{(1)}\}$ are leaf edges and $\{\mathfrak{e}_{i}^{(2)}\}$ are legs. Then 
-\begin{equation}
-    \chi(\mathcal{C})=\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2).
-\end{equation}
-
-(2) If we assume that $n_{\textit{fx}},n_{\textit{fr}}\ne 0$, then (recall that $Q=L^{d}\sqrt{\alpha}$)
 \begin{equation}\label{eq.countingbd3}
 \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\leq L^{O(\theta)} Q^{\chi(\mathcal{C})} = L^{O(\theta)} Q^{n_e+n_{\textit{fr}}-n}.
 \end{equation}
@@ -2294,10 +2181,10 @@ Let $\mathcal{C}$ be a connected couple with multiple legs and leaf edges, $n$ b
 
 Proposition \ref{prop.countingind} will be proved in Step 3, 4. In the rest part of this step we show that Proposition \ref{prop.countingconn} is a corollary of Proposition \ref{prop.countingind}.
 
-Since the couples in Proposition \ref{prop.countingconn} and Proposition \ref{prop.counting} either have no leaf edge, these two propositions are not obvious corollaries of Proposition \ref{prop.countingind}.
+Since the couples in Proposition \ref{prop.countingconn} and Proposition \ref{prop.counting} have no free leg, these two propositions are not obvious corollaries of Proposition \ref{prop.countingind}.
 
 \begin{proof}[Proof of Proposition \ref{prop.countingconn}]
-The closed couple case of Proposition  \ref{prop.countingconn} can be derived from the open couple case by following argument.
+The closed couple case of Proposition \ref{prop.countingconn} can be derived from the open couple case by following argument.
 
 Let $\mathcal{C}$ be a closed couple, choose an edge $\mathfrak{e}_{*}\in \mathcal{C}$ which connects $\mathfrak{n}_1$, $\mathfrak{n}_2$. Cut this edge into two legs $\mathfrak{l}_1$ and $\mathfrak{l}_2$, then the couple $\widetilde{\mathcal{C}}$ obtained in this way is an open couple. Therefore, we have
 
@@ -2319,25 +2206,9 @@ If we can prove the open couple case, we have $\#Eq(\widetilde{\mathcal{C}},\{k_
     \#Eq(\mathcal{C})=\sum_{|k_{\mathfrak{e}_*}|\lesssim 1} \#Eq(\widetilde{\mathcal{C}},\{k_{\mathfrak{e}_*},k_{\mathfrak{e}_*}\})\lesssim L^{d+O(\theta)} Q^{n}.
 \end{equation}
 
-To prove the open couple case, we need the following lemma about couples.
+The open couple case can be proved by Lemma \ref{lem.freeleg}.
 
-\begin{lem}\label{lem.momentumconservation}
-Let $\mathcal{C}$ be a connected couple with multiple legs and leaf edges. Let $n$, $n_e$, $n_{\textit{fx}}$, $n_{\textit{fr}}$ be the total number of nodes, non-leg non-leaf edges, legs and leaf edges respectively. Let $\{k_{\mathfrak{l}_i}\}_{i=1,\cdots,n_{\textit{fx}}}$, $\{k_{\mathfrak{l}\mathfrak{f}_i}\}_{i=1,\cdots,n_{\textit{fr}}}$ be the variables corresponding to legs and leaf edges. 
-
-Remember that all couples (or couples with multiple legs and leaf edges) are constructed from a pairing of trees. Each edge $\mathfrak{e}$ in a tree has a sign $\iota_{\mathfrak{e}}$ (Definition \ref{def.tree} (12)).  
-
-Then we have the momentum conservation equation
-\begin{equation}\label{eq.momentumconservation}
-    \sum_{i=1}^{n_{\textit{fx}}} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}+\sum^{n_{\textit{fr}}}_{i=1}\iota_{\mathfrak{l}\mathfrak{e}_i}k_{\mathfrak{l}\mathfrak{f}_i}=0,
-\end{equation}
-and a relation of $n$, $n_e$, $n_{\textit{fx}}$ and $n_{\textit{fr}}$
-\begin{equation}\label{eq.nnenlnle}
-    2n_e+n_{\textit{fx}}+n_{\textit{fr}}=4n.
-\end{equation}
-
-\end{lem}
-
-An open couple has two legs $\mathfrak{l}$, $\mathfrak{l}'$ with opposite sign, so by momentum conservation equation we have $k_{\mathfrak{l}}=k_{\mathfrak{l}'}$ and $k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k$ is a consequence of $k_{\mathfrak{l}}=k$. Therefore, we have 
+An open couple has two fixed legs $\mathfrak{l}$, $\mathfrak{l}'$ with opposite sign, so by momentum conservation equation \eqref{eq.momentumconservation}, we have $k_{\mathfrak{l}}=k_{\mathfrak{l}'}$, and $k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k$ is a consequence of $k_{\mathfrak{l}}=k$. Therefore, we have 
 \begin{equation}\label{eq.stephatC}
 \begin{split}
     Eq(\mathcal{C})=&\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ |k_{\mathfrak{e}}| \lesssim L^+,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\}  
@@ -2347,7 +2218,7 @@ An open couple has two legs $\mathfrak{l}$, $\mathfrak{l}'$ with opposite sign, 
     =&Eq(\widehat{\mathcal{C}},k)
 \end{split}
 \end{equation}
-where $\widehat{\mathcal{C}}$ is the couple obtained by replacing a leg by a leaf edge.
+where $\widehat{\mathcal{C}}$ is the couple obtained by replacing a fixed leg by a free leg.
 
 In $\widehat{\mathcal{C}}$, $n_{\textit{fx}}=n_{\textit{fr}}=1\ne 0$, so by \eqref{eq.nnenlnle}, we have $n_e+1=2n$. Applying \eqref{eq.countingbd3}, we get
 \begin{equation}\label{eq.stephatC'}
@@ -2357,161 +2228,276 @@ In $\widehat{\mathcal{C}}$, $n_{\textit{fx}}=n_{\textit{fr}}=1\ne 0$, so by \eqr
 This proves Proposition \ref{prop.countingconn}.
 \end{proof}
 
-\begin{proof}[Proof of Lemma \ref{lem.momentumconservation}]
-
-\end{proof}
 
 \textbf{Step 3.} In this step, we prove Proposition \ref{prop.countingind} for basic counting units.
 
-To prove Proposition \ref{prop.countingind}, we keep cutting nodes from the couple $\mathcal{C}$. Suppose that $\mathcal{C}$ has $n$ nodes and we cut a node $\mathfrak{n}$ from $\mathcal{C}$ using cut $c(\mathfrak{n})$. Let $\mathcal{C}_1$ be the larger components after cutting with $n-1$ nodes and $\mathcal{C}_2$ be the smaller components with $1$ nodes.
+To prove Proposition \ref{prop.countingind}, we keep cutting nodes connected to legs from the couple $\mathcal{C}$. Suppose that $\mathcal{C}$ has $n$ nodes and we cut a node $\mathfrak{n}$ from $\mathcal{C}$ using cut $c(\mathfrak{n})$. Let $\mathcal{C}_{\mathfrak{n}}$ be the smaller components contains fixed leg $\mathfrak{l}$ with $1$ nodes $\mathfrak{n}$ and $\mathcal{C}' = \mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ be the larger components with $n-1$ nodes.
 
-As in Figure \ref{fig.3possibilities}, there are three possibilities of $\mathcal{C}_2$. We label them by $\mathcal{C}_{I}$, $\mathcal{C}_{II}$, $\mathcal{C}_{III}$.
+As in Figure \ref{fig.3possibilities}, there are three possibilities of $\mathcal{C}_{\mathfrak{n}}$. We label them by $\mathcal{C}_{I}$, $\mathcal{C}_{II}$, $\mathcal{C}_{III}$.
+
 
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Three possibilities of $\mathcal{C}_2$.}
-        \centering
-        \label{fig.3possibilities}
-    \end{figure}
+    \centering
+    \scalebox{0.3}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (0,0) (1) {} 
+            child {node[fillcirc] (11) {} 
+                child {node[fillstar] (111) {}}
+                child {node[fillstar] (112) {}}
+                child {node[fillstar] (113) {}}
+            };
+        \draw[-{Stealth[length=5mm, width=3mm]}] (1) -- (11);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (11) -- (111);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (11) -- (112);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (11) -- (112);
+        
+        \node[] at (12,0) (2) {} 
+            child {node[fillcirc] (21) {} 
+                child {node[fillstar] (211) {}}
+                child {node[fillstar] (212) {}}
+                child {node[] (213) {}}
+            };
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) -- (21);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (21) -- (211);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (21) -- (212);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (21) -- (213);
+
+        \node[] at (24,0) (3) {} 
+            child {node[fillcirc] (31) {} 
+                child {node[fillstar] (311) {}}
+                child {node[] (312) {}}
+                child {node[] (313) {}}
+            };
+        \draw[-{Stealth[length=5mm, width=3mm]}] (3) -- (31);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (31) -- (311);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (31) -- (312);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (31) -- (313);
+    \end{tikzpicture}
+    }
+    \caption{Three possibilities of $\mathcal{C}_\mathfrak{l}$.}
+    \label{fig.3possibilities}
+\end{figure}
+    
     
 \begin{lem}\label{lem.countingbdunit}
-$\mathcal{C}_{I}$, $\mathcal{C}_{II}$, $\mathcal{C}_{III}$ satisfy the bound \eqref{eq.countingbd3} in Proposition \ref{prop.countingind}. In other words, fix $c_1$ (resp. $c_1$, $c_2$ and $c_1$, $c_2$, $c_3$) for the legs of $\mathcal{C}_{I}$ (resp. $\mathcal{C}_{II}$ and $\mathcal{C}_{III}$), then we have 
+$\mathcal{C}_{I}$, $\mathcal{C}_{II}$, $\mathcal{C}_{III}$ satisfy the bound \eqref{eq.countingbd3} in Proposition \ref{prop.countingind}. In other words, fix $c_1$ (resp. $c_1$, $c_3$ and $c_1$, $c_2$, $c_3$) for the legs of $\mathcal{C}_{I}$ (resp. $\mathcal{C}_{II}$ and $\mathcal{C}_{III}$), then we have 
 \begin{equation}\label{eq.countingbdunit}
     \# Eq(\mathcal{C}_{I})\leq L^\theta Q^{2},\qquad \# Eq(\mathcal{C}_{II})\leq L^\theta Q,\qquad \# Eq(\mathcal{C}_{III})\leq Q^0=1.
 \end{equation}
 \end{lem}
-\begin{proof}
+\begin{proof} Given $c_1$, $c_2$, $c_3$ the equation of $\mathcal{C}_{III}$ is 
+    \begin{equation}
+        \begin{cases}
+        k_{\mathfrak{e}_1}-k_{\mathfrak{e}_2}+k_{\mathfrak{e}_3}-k_{\mathfrak{e}}=0,\ k_{\mathfrak{e}_2}=c_2,\ k_{\mathfrak{e}_3}=c_3,\ k_{\mathfrak{e}}=c_1,
+        \\
+        \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}}=\sigma_{\mathfrak{n}}+O(\omega)
+        \end{cases}
+    \end{equation}
+    It's obvious that there is at most one solution to this system of equations.
+    
+    Given $c_1$, the equation of $\mathcal{C}_{I}$ is 
+    \begin{equation}
+        \begin{cases}
+        k_{\mathfrak{e}_1}-k_{\mathfrak{e}_2}+k_{\mathfrak{e}_3}-k_{\mathfrak{e}}=0,\ k_{\mathfrak{e}}=c_1,
+        \\
+        \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}}=\sigma_{\mathfrak{n}}+O(\omega)
+        \end{cases}
+    \end{equation}
+    By Theorem \ref{th.numbertheory1} or \ref{th.numbertheory} \eqref{eq.numbertheory1} or \eqref{eq.numbertheory}, corresponding to general or generic case, the number of solutions of the above system of equations can be bounded by $ L^\theta Q^2$.
 
-\end{proof}
+    Given $c_1$, $c_2$, the equation of $\mathcal{C}_{II}$ is 
+    \begin{equation}
+        \begin{cases}
+        k_{\mathfrak{e}_1}-k_{\mathfrak{e}_2}+k_{\mathfrak{e}_3}-k_{\mathfrak{e}}=0,\ k_{\mathfrak{e}}=c_1,\ k_{\mathfrak{e}_3}=c_3,
+        \\
+        \Lambda_{k_{\mathfrak{e}_1}}-\Lambda_{k_{\mathfrak{e}_2}}+\Lambda_{k_{\mathfrak{e}_3}}-\Lambda_{k_{\mathfrak{e}}}=\sigma_{\mathfrak{n}}+O(\omega)
+        \end{cases}
+    \end{equation}
+    By Theorem \ref{th.numbertheory1} or \ref{th.numbertheory} \eqref{eq.numbertheory1''} or \eqref{eq.numbertheory'}, corresponding to general or generic case, the number of solutions of the above system of equations can be bounded by $ L^\theta Q$
+    
+    Therefore, we complete the proof of this lemma.
+    \end{proof}
 
 \textbf{Step 4.} In this step, we apply the edge cutting argument to prove Proposition \ref{prop.countingind} by induction.
-
-We first prove (1) of Proposition \ref{prop.countingind}.
-
-Let $c$ be the cut that consists of edges $\{\mathfrak{e}_{i}\}$ and $n(c)$ be the number of edges in $c$. Given a couple $\mathcal{C}$, let $n(\mathcal{C})$, $n_e(\mathcal{C})$, $n_{\textit{fx}}(\mathcal{C})$ and $n_{\textit{fr}}$ be the total number of the number of nodes, non-leg and non-leaf edges, legs and leaf edges respectively. 
-
-Then we have $n(\mathcal{C})=n(\mathcal{C}_1)+n(\mathcal{C}_2)$. Compared to $\mathcal{C}$, in $\mathcal{C}_1$ and $\mathcal{C}_2$, $n(c)$ non-leg and non-leaf edges are cutted into pairs of leaf edges and legs, so $n_e(\mathcal{C})=n(\mathcal{C}_1)+n(\mathcal{C}_2)-n(c)$. Because we have $n(c)$ additional leaf edges after cutting, so $n_{\textit{fr}}(\mathcal{C})=n_{\textit{fr}}(\mathcal{C}_1)+n_{\textit{fr}}(\mathcal{C}_2)+n(c)$. Therefore, we get
-\begin{equation}
-\begin{split}
-    \chi(\mathcal{C})=&n_e(\mathcal{C})+n_{\textit{fr}}(\mathcal{C})-n(\mathcal{C})
-    \\
-    =&n(\mathcal{C}_1)+n(\mathcal{C}_2)-n(c)+n_{\textit{fr}}(\mathcal{C}_1)+n_{\textit{fr}}(\mathcal{C}_2)+n(c)-(n(\mathcal{C}_1)+n(\mathcal{C}_2))
-    \\
-    =&(n(\mathcal{C}_1)+n_{\textit{fr}}(\mathcal{C}_1)-n(\mathcal{C}_1))+(n(\mathcal{C}_2)+n_{\textit{fr}}(\mathcal{C}_2)-n(\mathcal{C}_2))
-    \\
-    =&\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2).
-\end{split}
-\end{equation}
-
-We have complete the proof of (1) of Proposition \ref{prop.countingind}. In the rest part of the proof, we proof (2) inductively using cutting edge argument.
 
 If $\mathcal{C}$ has only one node ($n=1$), then $\mathcal{C}$ equals to $\mathcal{C}_{I}$, $\mathcal{C}_{II}$ or $\mathcal{C}_{III}$ and Proposition \ref{prop.countingind} in this case follows from Lemma \ref{lem.countingbdunit}.
 
 Suppose that Proposition \ref{prop.countingind} holds true for couples with number of nodes $\le n-1$. We prove it for couples with number of nodes $n$. 
 
-Since $n_{\textit{fx}}, n_{\textit{fr}}\ne 0$, there exists both legs and leaf edges. We will cut a node $\mathfrak{n}_*\in\mathcal{C}$ which is connected to a leg. Denoted by $\mathcal{N}_{leg}$ the set of all such nodes and by $\mathcal{C}_{\mathfrak{n}_*}$ the components containing $\mathfrak{n}_*$ after cutting. There are several different situations in this cutting.
+Since $n_{\textit{fx}}, n_{\textit{fr}}\ne 0$, there exists both fixed and free legs. We will cut a node $\mathfrak{n}_*\in\mathcal{C}$ which is connected to a fixed leg. Denoted by $\mathcal{N}_{leg}$ the set of all such nodes and by $\mathcal{C}_{\mathfrak{n}_*}$ the components containing $\mathfrak{n}_*$ after cutting. There are several different situations in this cutting.
 
 \textbf{Case 1.} Assume that for all $\mathfrak{n}\in \mathcal{N}_{leg}$, after cutting $\mathfrak{n}$, $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ is still connected.
 
-\textbf{Case 1.1.} Assume that not all leaf edges and legs are connected to one node. One example of this case is shown in Figure \ref{fig.examplecase1.1}
+\textbf{Case 1.1.} Assume that not all legs are connected to one node. One example of this case is shown in Figure \ref{fig.examplecase1.1}.
+
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of case 1.1.}
-        \centering
-        \label{fig.examplecase1.1}
-    \end{figure}
+    \centering
+    \scalebox{0.5}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (0,0) (1) {};
+        \node[fillcirc] at (3, 0) (2) {};
+        \node[draw, circle, minimum size=1cm, scale=2] at (7,0) (3) {$\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$};
+        % \node[fillcirc] at (11, 0) (4) {};
+        % \node[] at (14, 0) (5) {};
+        \node[fillstar] at (11, 0) (6) {};
+        \draw[-{Stealth[length=5mm, width=3mm]}] (1) edge (2);
+        \draw[{Stealth[length=5mm, width=3mm]}-] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}, bend left =40] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}, bend right =40] (2) edge (3);
+        % \draw[{Stealth[length=5mm, width=3mm]}-] (3) edge (4);
+        % \draw[-{Stealth[length=5mm, width=3mm]}, bend left =40] (3) edge (4);
+        % \draw[-{Stealth[length=5mm, width=3mm]}, bend right =40] (3) edge (4);
+        % \draw[-{Stealth[length=5mm, width=3mm]}] (4) edge (5);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (3) edge (6);
 
-In this case, we have
+        \node[scale=1.5] at ($(2)+(0,-0.5)$) {$\mathfrak{n}_*$};
+        \node[scale =2] at ($(2)+(1.8,1.1)$) {$\times$};
+        \node[scale =2] at ($(2)+(1.8,0)$) {$\times$};
+        \node[scale =2] at ($(2)+(1.8,-1.1)$) {$\times$};
 
-\textit{Claim.} There exists a node $\mathfrak{n}_*\in \mathcal{N}_{leg}$ such that not all leaf edges are connected to this node.
+        
+        % \node[] at (10,0) (1) {};
+        % \node[fillcirc] at (10, -3) (2) {};
+        % \node[draw, circle, minimum size=1cm, scale=1.5] at (7,-7) (3) {$(\mathcal{C}(k)')_1$};
+        % \node[draw, circle, minimum size=1cm, scale=1.5] at (13,-7) (4) {$(\mathcal{C}(k)')_2$};
+        % \draw[-{Stealth[length=5mm, width=3mm]}] (1) edge (2);
+        % \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (3);
+        % \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (4);
+    \end{tikzpicture}
+    }
+    \caption{Example of case 1.1.}
+    \label{fig.examplecase1.1}
+\end{figure}
+
+In this case, we have the following claim.
+
+\textit{Claim.} There exists a node $\mathfrak{n}_*\in \mathcal{N}_{leg}$ such that not all free legs are connected to this node.
 \begin{proof}
-If this is not true. Then all node $\mathfrak{n}\in \mathcal{N}_{leg}$ connected to all leaf edges. If there are two node $\mathfrak{n}_1, \mathfrak{n}_2\in \mathcal{N}_{leg}$, then all leaf edges are connected to both $\mathfrak{n}_1, \mathfrak{n}_2$ which is impossible because a leaf edge just is connected to one node. Therefore, $\mathcal{N}_{leg}$ contains just one node $n_*$ which is connected to all leaf edges and legs. This contradicts with the assumption of Case 1.1.
+If there are only one node in $\mathfrak{n}\in \mathcal{N}_{leg}$, then all fixed legs are connect to this node. By this, we know that not all free legs are connected to this node, because by assumption of case 1.1, not all legs are connected to one node. We choose $\mathfrak{n}_*$ to be this node. 
+ 
+If there are two node $\mathfrak{n}_1, \mathfrak{n}_2\in \mathcal{N}_{leg}$, and if all free legs are connected to one of them, then choose $\mathfrak{n}_*$ to be the other one. Otherwise, choose $\mathfrak{n}_*$ to either one of $\mathfrak{n}_1, \mathfrak{n}_2$ works.
 \end{proof}
 
-If this claim is true, then we cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_1=\mathcal{C}_{\mathfrak{n}}$, $\mathcal{C}_2=\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ be two components after cutting. As in Lemma \ref{lem.Eq(C)cutting}, let  $\{\mathfrak{e}_{i}^{(1)}\}\subseteq \mathcal{C}_1$ be leaf edges and $\{\mathfrak{e}_{i}^{(2)}\}\subseteq \mathcal{C}_2$ be legs, then applying Lemma \ref{lem.Eq(C)cutting} gives
+We cut the node $\mathfrak{n}_*$ in this claim from $\mathcal{C}$. Let $\mathcal{C}_{\mathfrak{n}}$, $\mathcal{C}_1=\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ be two components after cutting. As in Lemma \ref{lem.Eq(C)cutting}, let  $\{\mathfrak{e}_{i}^{(1)}\}\subseteq \mathcal{C}_{\mathfrak{n}}$ be free legs and $\{\mathfrak{e}_{i}^{(2)}\}\subseteq \mathcal{C}_1$ be fixed legs, then applying Lemma \ref{lem.Eq(C)cutting} gives
 \begin{equation}
 \begin{split}
     \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\le&
-    \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_1)} } \# Eq(\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_2)} }\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\})
+    \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_{\mathfrak{n}})} } \# Eq(\mathcal{C}_{\mathfrak{n}},\{c_{\mathfrak{l}_1}\}) \sup_{\{c_{\mathfrak{l}_2}\}_{\mathfrak{l}_2\in \text{leg}(\mathcal{C}_1)} }\# Eq(\mathcal{C}_1, \{c_{\mathfrak{l}_2}\})
     \\
-    \lesssim&  L^{\theta} Q^{\chi(\mathcal{C}_1)} L^{O(\theta)} Q^{\chi(\mathcal{C}_2)} = L^{O(\theta)} Q^{\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2)} \\
+    \lesssim&  L^{\theta} Q^{\chi(\mathcal{C}_{\mathfrak{n}})} L^{O(\theta)} Q^{\chi(\mathcal{C}_1)} = L^{O(\theta)} Q^{\chi(\mathcal{C}_{\mathfrak{n}})+\chi(\mathcal{C}_1)} \\
     =& L^{O(\theta)} Q^{\chi(\mathcal{C})}.
 \end{split}
 \end{equation}
-Here the second inequality follows from induction assumption and Lemma \ref{lem.countingbdunit}. Because it can be verified that in both $\mathcal{C}_1$ and $\mathcal{C}_2$, $n_{\textit{fx}}$ and $n_{\textit{fr}}$ are not equal to $0$, the induction assumption and Lemma \ref{lem.countingbdunit} are applicable.
+Here the second inequality follows from induction assumption and Lemma \ref{lem.countingbdunit}. Because it can be verified that in both $\mathcal{C}_{\mathfrak{n}}$ and $\mathcal{C}_1$, $n_{\textit{fx}}$ and $n_{\textit{fr}}$ are not equal to $0$, the induction assumption and Lemma \ref{lem.countingbdunit} are applicable.
 
-\textbf{Case 1.2.} Assume that all leaf edges and legs are connected to one node $\mathfrak{n}_*$. One example of this case is shown in Figure \ref{fig.examplecase1.2}
+Now we provide a detailed analysis of why in both $\mathcal{C}_{\mathfrak{n}}$ and $\mathcal{C}_1$, $n_{\textit{fx}}$ and $n_{\textit{fr}}$ are not equal to $0$. 
+
+$\mathcal{C}_{\mathfrak{n}}$ contains a fixed leg because $\mathfrak{n}_*\in \mathcal{N}_{leg}$ and by definition of $\mathcal{N}_{leg}$, $\mathfrak{n}_*$ is connected to a fixed leg. $\mathcal{C}_{\mathfrak{n}}$ contains a free leg because it contains free legs $\{\mathfrak{e}_{i}^{(1)}\}\subseteq \mathcal{C}_{\mathfrak{n}}$.
+
+By the claim, since not all free legs are connected to $\mathfrak{n}_*$, $\mathcal{C}_1$ contains a free leg. $\mathcal{C}_1$ contains a fixed leg because it contains fixed legs $\{\mathfrak{e}_{i}^{(2)}\}\subseteq \mathcal{C}_1$.
+
+\textbf{Case 1.2.} Assume that all legs are connected to one node $\mathfrak{n}_*$. One example of this case is shown in Figure \ref{fig.examplecase1.2}
+
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of case 1.2.}
-        \centering
-        \label{fig.examplecase1.2}
-    \end{figure}
-    
-We cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_1=\mathcal{C}_{\mathfrak{n}}$, $\mathcal{C}_2=\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ be two components after cutting.
+    \centering
+    \scalebox{0.4}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (-2,0) (0) {};
+        \node[fillstar] at (1.8,-0.2) (1) {};
+        \node[fillcirc] at (0, -3) (2) {};
+        \node[scale = 1.3, draw, circle, minimum size=1cm, scale=2] at (0,-7) (3) {$\mathcal{C}_1$}; 
+        \draw[-{Stealth[length=5mm, width=3mm]}] (0) edge (2);
+        \draw[{Stealth[length=5mm, width=3mm]}-] (1) edge (2);
+        \draw[{Stealth[length=5mm, width=3mm]}-, bend left = 40] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}, bend right = 40] (2) edge (3);
+        \node[scale =3] at (1.1,-4.5) {$\times$};
+        \node[scale =3] at (-1.1,-4.5) {$\times$};
+    \end{tikzpicture}
+    }
+    \caption{Example of case 1.2.}
+    \label{fig.examplecase1.2}
+\end{figure}
 
-By \eqref{eq.nnenlnle}, we know that $n_{\textit{fx}}+n_{\textit{fr}}$ is an even number, so it must equal to $2$. Then we know that $n_{\textit{fx}}=n_{\textit{fr}}=1$ and $\mathcal{C}$ has one legs $\mathfrak{l}$ and one leaf edges $\mathfrak{l}\mathfrak{e}$. The other two edges $\mathfrak{e}', \mathfrak{e}''$ from $\mathfrak{n}_*$ should be connected to $\mathcal{C}_2$.
+We cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_{\mathfrak{n}}$, $\mathcal{C}_1=\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ be two components after cutting.
 
-Unlike case 1.1 we cannot simply apply induction assumption to bound $\# Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}_2}\})$. Because in this case $\mathcal{C}_2$ does not have leaf edges ($n_{\textit{fx}}=2$, $n_{\textit{fr}}=0$). See Figure \ref{fig.examplecase1.2}.
+By \eqref{eq.nnenlnle}, we know that $n_{\textit{fx}}+n_{\textit{fr}}$ is an even number, so it must equal to $2$. Then we know that $n_{\textit{fx}}=n_{\textit{fr}}=1$ and $\mathcal{C}$ has one fixed leg $\mathfrak{l}$ and one free leg $\mathfrak{l}\mathfrak{e}$. The other two edges $\mathfrak{e}', \mathfrak{e}''$ from $\mathfrak{n}_*$ should be connected to $\mathcal{C}_1$.
+
+Unlike case 1.1 we cannot simply apply induction assumption to bound $\# Eq(\mathcal{C}_1, \{c_{\mathfrak{l}_2}\})$. Because in this case $\mathcal{C}_1$ does not have free legs ($n_{\textit{fx}}=2$, $n_{\textit{fr}}=0$). See Figure \ref{fig.examplecase1.2}.
 
 As in Lemma \ref{lem.Eq(C)cutting}, $\mathfrak{e}', \mathfrak{e}''$ are cut into $\mathfrak{e}'^{(1)}, \mathfrak{e}''^{(1)}$
-and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}$. $\mathfrak{e}'^{(1)}, \mathfrak{e}''^{(1)}\in \mathcal{C}_1$ are leaf edges and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}\in \mathcal{C}_2$ are legs, then applying Lemma \ref{lem.Eq(C)cutting} \eqref{eq.Eq(C)cutting} gives
+and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}$. $\mathfrak{e}'^{(1)}, \mathfrak{e}''^{(1)}\in \mathcal{C}_{\mathfrak{n}}$ are free legs and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}\in \mathcal{C}_1$ are fixed legs, then applying Lemma \ref{lem.Eq(C)cutting} \eqref{eq.Eq(C)cutting} gives
 \begin{equation}
-    Eq(\mathcal{C},c_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,c_{\mathfrak{l}}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \left\{k_{\mathfrak{e}'^{(1)}}, k_{\mathfrak{e}''^{(1)}}\right\}_{i}\right)\right\}.
+    Eq(\mathcal{C},c_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_{\mathfrak{n}},c_{\mathfrak{l}}),\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_1, \left\{k_{\mathfrak{e}'^{(1)}}, k_{\mathfrak{e}''^{(1)}}\right\}_{i}\right)\right\}.
 \end{equation}
 
 By \eqref{eq.momentumconservation}, we know that $k_{\mathfrak{e}'^{(1)}}=k_{\mathfrak{e}''^{(1)}}$. Therefore, we have 
 \begin{equation}\label{eq.case1.2expand}
-    Eq(\mathcal{C},c_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_1,c_{\mathfrak{l}})\cap \{k_{\mathfrak{e}'^{(1)}}=k_{\mathfrak{e}''^{(1)}}\},\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_{2}, \left\{k_{\mathfrak{e}'^{(1)}}, k_{\mathfrak{e}''^{(1)}}\right\}_{i}\right)\right\}.
+    Eq(\mathcal{C},c_{\mathfrak{l}})=\left\{(k_{\mathfrak{e}_1},k_{\mathfrak{e}_{2}}):\ k_{\mathfrak{e}_1}\in Eq(\mathcal{C}_{\mathfrak{n}},c_{\mathfrak{l}})\cap \{k_{\mathfrak{e}'^{(1)}}=k_{\mathfrak{e}''^{(1)}}\},\  k_{\mathfrak{e}_{2}}\in Eq\left(\mathcal{C}_1, \left\{k_{\mathfrak{e}'^{(1)}}, k_{\mathfrak{e}''^{(1)}}\right\}_{i}\right)\right\}.
 \end{equation}
 
 By definition, we know that  
 \begin{equation}
 \begin{split}
-    Eq(\mathcal{C}_1,c_{\mathfrak{l}})=&\{(k_{\mathfrak{l}}, k_{\mathfrak{l}\mathfrak{f}}, k_{\mathfrak{e}'}, k_{\mathfrak{e}''}):  |k_{\mathfrak{l}}|, |k_{\mathfrak{l}\mathfrak{f}}|, |k_{\mathfrak{e}'}|, |k_{\mathfrak{e}''}| \lesssim L^+,\ MC_{\mathfrak{n}_*},\  EC_{\mathfrak{n}_*},\ k_{\mathfrak{l}}=c_{\mathfrak{l}}\}
+    Eq(\mathcal{C}_{\mathfrak{n}},c_{\mathfrak{l}})=&\{(k_{\mathfrak{l}}, k_{\mathfrak{l}\mathfrak{f}}, k_{\mathfrak{e}'}, k_{\mathfrak{e}''}):  |k_{\mathfrak{l}}|, |k_{\mathfrak{l}\mathfrak{f}}|, |k_{\mathfrak{e}'}|, |k_{\mathfrak{e}''}| \lesssim L^+,\ MC_{\mathfrak{n}_*},\  EC_{\mathfrak{n}_*},\ k_{\mathfrak{l}}=c_{\mathfrak{l}}\}
     \\
     =&\{(k_{\mathfrak{l}}, k_{\mathfrak{l}\mathfrak{f}}, k_{\mathfrak{e}'}, k_{\mathfrak{e}''}):   |k_{\mathfrak{l}\mathfrak{f}}|, |k_{\mathfrak{e}'}|, |k_{\mathfrak{e}''}| \lesssim L^+,
     \\
     &\ k_{\mathfrak{e}'}-k_{\mathfrak{e}''}+k_{\mathfrak{l}\mathfrak{f}}-k_{\mathfrak{l}}=0,\ k_{\mathfrak{l}\mathfrak{f}}\ne k_{\mathfrak{e}'}\ne k_{\mathfrak{e}''},\ \text{or}\ k_{\mathfrak{e}'}= k_{\mathfrak{e}''}=k_{\mathfrak{l}\mathfrak{f}}=k_{\mathfrak{l}}
     \\
-    &\  \Lambda_{k_{\mathfrak{e}'}}-\Lambda_{k_{\mathfrak{e}''}}+\Lambda_{k_{\mathfrak{l}\mathfrak{f}}}-\Lambda_{k_{\mathfrak{l}}} =\sigma_{\mathfrak{n}}+O(\alpha),\ k_{\mathfrak{l}}=c_{\mathfrak{l}}\}
+    &\  \Lambda_{k_{\mathfrak{e}'}}-\Lambda_{k_{\mathfrak{e}''}}+\Lambda_{k_{\mathfrak{l}\mathfrak{f}}}-\Lambda_{k_{\mathfrak{l}}} =\sigma_{\mathfrak{n}}+O(\omega),\ k_{\mathfrak{l}}=c_{\mathfrak{l}}\}
 \end{split}
 \end{equation}
 Therefore, we have
 \begin{equation}
-    Eq(\mathcal{C}_1,c_{\mathfrak{l}})\cap \{k_{\mathfrak{e}'^{(1)}}=k_{\mathfrak{e}''^{(1)}}\}=\{(k_{\mathfrak{l}}, k_{\mathfrak{l}\mathfrak{f}}, k_{\mathfrak{e}'}, k_{\mathfrak{e}''}):k_{\mathfrak{e}'}=k_{\mathfrak{e}''}=k_{\mathfrak{l}\mathfrak{f}}=k_{\mathfrak{l}}=c_{\mathfrak{l}}\}.
+    Eq(\mathcal{C}_{\mathfrak{n}},c_{\mathfrak{l}})\cap \{k_{\mathfrak{e}'^{(1)}}=k_{\mathfrak{e}''^{(1)}}\}=\{(k_{\mathfrak{l}}, k_{\mathfrak{l}\mathfrak{f}}, k_{\mathfrak{e}'}, k_{\mathfrak{e}''}):k_{\mathfrak{e}'}=k_{\mathfrak{e}''}=k_{\mathfrak{l}\mathfrak{f}}=k_{\mathfrak{l}}=c_{\mathfrak{l}}\}.
 \end{equation}
 
 By \eqref{eq.case1.2expand}, we have
 \begin{equation}
-    \#Eq(\mathcal{C},c_{\mathfrak{l}})=\#Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}}, c_{\mathfrak{l}}\}).
+    \#Eq(\mathcal{C},c_{\mathfrak{l}})=\#Eq(\mathcal{C}_1, \{c_{\mathfrak{l}}, c_{\mathfrak{l}}\}).
 \end{equation}
 
-Let $\widehat{\mathcal{C}_2}$ be the couple obtained by replacing a leg by a leaf edge in $\mathcal{C}_{2}$. Using a similar argument to \eqref{eq.stephatC} and \eqref{eq.stephatC'} and then applying the induction assumption, we get
+Let $\widehat{\mathcal{C}_1}$ be the couple obtained by replacing a fixed leg by a free leg in $\mathcal{C}_1$. Using a similar argument to \eqref{eq.stephatC} and \eqref{eq.stephatC'} and then applying the induction assumption, we get
 \begin{equation}\label{eq.case1.2expand'}
 \begin{split}
-    \#Eq(\mathcal{C},c_{\mathfrak{l}})=&\#Eq(\mathcal{C}_{2}, \{c_{\mathfrak{l}}, c_{\mathfrak{l}}\})=\#Eq(\widehat{\mathcal{C}_{2}}, \{c_{\mathfrak{l}}\})
+    \#Eq(\mathcal{C},c_{\mathfrak{l}})=&\#Eq(\mathcal{C}_1, \{c_{\mathfrak{l}}, c_{\mathfrak{l}}\})=\#Eq(\widehat{\mathcal{C}_1}, \{c_{\mathfrak{l}}\})
     \\
-    \lesssim& L^{O(\theta)} Q^{\chi(\widehat{\mathcal{C}_{2}})}=L^{O(\theta)} Q^{\chi(\mathcal{C})-1}\le L^{O(\theta)} Q^{\chi(\mathcal{C})}
+    \lesssim& L^{O(\theta)} Q^{\chi(\widehat{\mathcal{C}_1})}=L^{O(\theta)} Q^{\chi(\mathcal{C})-1}\le L^{O(\theta)} Q^{\chi(\mathcal{C})}
 \end{split}
 \end{equation}
-Here the last step is because $\chi(\mathcal{C})=\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2)=2+\chi(\mathcal{C}_2)=1+\chi(\widehat{\mathcal{C}_{2}})$.
+Here the last step is because $\chi(\mathcal{C})=\chi(\mathcal{C}_{\mathfrak{n}})+\chi(\mathcal{C}_1)=2+\chi(\mathcal{C}_1)=1+\chi(\widehat{\mathcal{C}_1})$.
 
 \textbf{Case 2.} Assume that for for some $\mathfrak{n}_*\in \mathcal{N}_{leg}$, after cutting $\mathfrak{n}_*$, $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ has exactly three components. One example of this case is shown in Figure \ref{fig.examplecase2}
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of case 2.}
-        \centering
-        \label{fig.examplecase2}
-    \end{figure}
+    \centering
+    \scalebox{0.4}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (10,0) (1) {};% ($(1)+(0, -3))$)
+        \node[fillcirc] at (10,-3) (2) {};
+        \node[scale = 1.7, draw, circle, minimum size=1cm, scale=1.5] at (6,-7) (3) {$\mathcal{C}_1$};
+        \node[scale = 1.7, draw, circle, minimum size=1cm, scale=1.5] at (10,-7) (5) {$\mathcal{C}_2$};
+        \node[scale = 1.7, draw, circle, minimum size=1cm, scale=1.5] at (14,-7) (4) {$\mathcal{C}_3$};
+        \draw[-{Stealth[length=5mm, width=3mm]}] (1) edge (2);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (4);
+        \draw[{Stealth[length=5mm, width=3mm]}-] (2) edge (5);
+
+        \node[scale =3] at (8.5,-4.7) {$\times_1$};
+        \node[scale =3] at (10.2,-4.7) {$\times_2$};
+        \node[scale =3] at (11.83,-4.7) {$\times_2$};
+    \end{tikzpicture}
+    }
+    \caption{Example of case 2. $\times_1$ and $\times_2$ indicate the edges cut in the first and second time respectively.}
+    \label{fig.examplecase2}
+\end{figure}
 
 We cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_1$, $\mathcal{C}_2$, $\mathcal{C}_3$ be the three components of $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ after cutting.
 
-Since $\mathfrak{n}_*\in \mathcal{N}_{leg}$, there should be a leg $\mathfrak{l}$ that is connected to $\mathfrak{n}_*$. The other three edges $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ from $\mathfrak{n}_*$ should be connected to $\mathcal{C}_1$, $\mathcal{C}_2$, $\mathcal{C}_3$ respectively.  
+Since $\mathfrak{n}_*\in \mathcal{N}_{leg}$, there should be a fixed leg $\mathfrak{l}$ that is connected to $\mathfrak{n}_*$. The other three edges $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ from $\mathfrak{n}_*$ should be connected to $\mathcal{C}_1$, $\mathcal{C}_2$, $\mathcal{C}_3$ respectively.  
 
-Since there exists at least one leaf edge in $\mathcal{C}$  ($n_{\textit{fr}}\ne 0$), at least one of $\mathcal{C}_1$, $\mathcal{C}_2$, $\mathcal{C}_3$ contain a leaf edge. Without loss of generality let us assume that $\mathcal{C}_1$ contains a leaf edge.
+Since there exists at least one free leg in $\mathcal{C}$  ($n_{\textit{fr}}\ne 0$), at least one of $\mathcal{C}_1$, $\mathcal{C}_2$, $\mathcal{C}_3$ contain a free leg. Without loss of generality let us assume that $\mathcal{C}_1$ contains a free leg.
 
-Let us first cut $\mathfrak{e}'$ into $\mathfrak{e}'^{(1)}\in  \mathcal{C}\backslash\mathcal{C}_1=\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2\cup \mathcal{C}_3$ and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$. Let $\mathfrak{e}'^{(1)}$ be a leaf edge and $\mathfrak{e}'^{(2)}$ be a leg. Therefore, $\mathcal{C}_1$ contains both leaf edges and legs. Applying Lemma \ref{lem.Eq(C)cutting} gives
+Let us first cut $\mathfrak{e}'$ into $\mathfrak{e}'^{(1)}\in  \mathcal{C}\backslash\mathcal{C}_1=\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2\cup \mathcal{C}_3$ and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$. Let $\mathfrak{e}'^{(1)}$ be a free leg and $\mathfrak{e}'^{(2)}$ be a fixed leg. Therefore, $\mathcal{C}_1$ contains both fixed and free legs. Applying Lemma \ref{lem.Eq(C)cutting} gives
 \begin{equation}\label{eq.case2expand}
 \begin{split}
     \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})\le&
@@ -2520,9 +2506,9 @@ Let us first cut $\mathfrak{e}'$ into $\mathfrak{e}'^{(1)}\in  \mathcal{C}\backs
     \lesssim&  L^{O(\theta)} Q^{\chi(\mathcal{C}_1)}\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}\backslash\mathcal{C}_1)} } \# Eq(\mathcal{C}\backslash\mathcal{C}_1,\{c_{\mathfrak{l}_1}\}).
 \end{split}
 \end{equation}
-Here in the second inequality, we can apply the induction assumption to $\mathcal{C}_1$ because it contains both leaf edges and legs.
+Here in the second inequality, we can apply the induction assumption to $\mathcal{C}_1$ because it contains both fixed and free legs.
 
-Then we cut $\mathfrak{e}''$ into $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_3$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}''^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}''^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_2$ contains a leaf edge (or a leg). Therefore, $\mathcal{C}_2$ contains both leaf edges and legs. Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand} gives
+Then we cut $\mathfrak{e}''$ into $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_3$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}''^{(1)}$ be a free leg (or fix leg) and $\mathfrak{e}''^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_2$ contains a free leg (or a fixed leg). Therefore, $\mathcal{C}_2$ contains both fixed and free legs. Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand} gives
 \begin{equation}\label{eq.case2expand'}
 \begin{split}
     &\sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
@@ -2533,9 +2519,9 @@ Then we cut $\mathfrak{e}''$ into $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfr
     \lesssim& L^\theta Q^{\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2)}\sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_3)} } \# Eq(\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_3,\{c_{\mathfrak{l}_1}\}) 
 \end{split}
 \end{equation}
-Here in the third inequality, we can apply the induction assumption to $\mathcal{C}_2$ because it contains both leaf edges and legs.
+Here in the third inequality, we can apply the induction assumption to $\mathcal{C}_2$ because it contains both fixed and free legs.
 
-The argument for $\mathcal{C}_3$ is similar to that of $\mathcal{C}_2$. We cut $\mathfrak{e}'''$ into $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_3$. Let $\mathfrak{e}'''^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}'''^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_3$ contains a leaf edge (or a leg). Therefore, $\mathcal{C}_3$ contains both leaf edges and legs. Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand'} gives
+The argument for $\mathcal{C}_3$ is similar to that of $\mathcal{C}_2$. We cut $\mathfrak{e}'''$ into $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_3$. Let $\mathfrak{e}'''^{(1)}$ be a free leg (or a fixed leg) and $\mathfrak{e}'''^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_3$ contains a free leg (or a fixedleg). Therefore, $\mathcal{C}_3$ contains both fixed and free legs. Applying Lemma \ref{lem.Eq(C)cutting} and \eqref{eq.case2expand'} gives
 \begin{equation}
 \begin{split}
     \sup_{\{c_{\mathfrak{l}}\}_{\mathfrak{l}}}\#Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
@@ -2546,23 +2532,38 @@ The argument for $\mathcal{C}_3$ is similar to that of $\mathcal{C}_2$. We cut $
     \lesssim& L^{O(\theta)} Q^{\chi(\mathcal{C}_1)+\chi(\mathcal{C}_2)} L^{O(\theta)} Q^{\chi(\mathcal{C}_{\mathfrak{n}_*})} L^\theta Q^{\chi(\mathcal{C}_3)} 
 \end{split}
 \end{equation}
-Here in the third inequality, we can apply Lemma \ref{lem.countingbdunit} and the induction assumption to $\mathcal{C}_{\mathfrak{n}_*}$ and $\mathcal{C}_3$ because they contains both leaf edges and legs. $\mathcal{C}_{\mathfrak{n}_*}$ contains legs (or leaf edges) because $\mathfrak{n}_*\in\mathcal{N}_{leg}$ (or $\mathfrak{e}'^{(1)}$ is a leaf edges from $\mathfrak{n}_*$).
+Here in the third inequality, we can apply Lemma \ref{lem.countingbdunit} and the induction assumption to $\mathcal{C}_{\mathfrak{n}_*}$ and $\mathcal{C}_3$ because they contains both fixed and free legs. $\mathcal{C}_{\mathfrak{n}_*}$ contains fixed legs (or free legs) because $\mathfrak{n}_*\in\mathcal{N}_{leg}$ (or $\mathfrak{e}'^{(1)}$ is a free legs from $\mathfrak{n}_*$).
 
 \textbf{Case 3.} Assume that for all $\mathfrak{n}\in \mathcal{N}_{leg}$, after cutting $\mathfrak{n}$, $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ has exactly two components.
 
-Choose arbitrarily $\mathfrak{n}_*\in \mathcal{N}_{leg}$. We cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_1$, $\mathcal{C}_2$ be the three components of $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ after cutting. Since $\mathfrak{n}_*\in \mathcal{N}_{leg}$, there should be a leg $\mathfrak{l}$ that is connected to $\mathfrak{n}_*$. There are several possiblities of the distribution of other three edges $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ from $\mathfrak{n}_*$.  
+Choose arbitrarily $\mathfrak{n}_*\in \mathcal{N}_{leg}$. We cut $\mathfrak{n}_*$ from $\mathcal{C}$. Let $\mathcal{C}_1$, $\mathcal{C}_2$ be the three components of $\mathcal{C}\backslash \mathcal{C}_{\mathfrak{n}}$ after cutting. Since $\mathfrak{n}_*\in \mathcal{N}_{leg}$, there should be a fixed leg $\mathfrak{l}$ that is connected to $\mathfrak{n}_*$. There are several possiblities of the distribution of other three edges $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ from $\mathfrak{n}_*$.  
 
-\textbf{Case 3.1.} One of  $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ connects $\mathfrak{n}_*$ and $\mathcal{C}_1$ (w.l.o.g. assume that it's $\mathfrak{e}'$), another one connects $\mathfrak{n}_*$ and $\mathcal{C}_2$ (w.l.o.g. assume that it's $\mathfrak{e}''$) and the last one is an leaf edge or leg (w.l.o.g. assume that it's $\mathfrak{e}'''$). One example of this case is shown in Figure \ref{fig.examplecase3.1}
+\textbf{Case 3.1.} One of  $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ connects $\mathfrak{n}_*$ and $\mathcal{C}_1$ (w.l.o.g. assume that it's $\mathfrak{e}'$), another one connects $\mathfrak{n}_*$ and $\mathcal{C}_2$ (w.l.o.g. assume that it's $\mathfrak{e}''$) and the last one is a leg (w.l.o.g. assume that it's $\mathfrak{e}'''$). One example of this case is shown in Figure \ref{fig.examplecase3.1}
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of case 3.1.}
-        \centering
-        \label{fig.examplecase3.1}
-    \end{figure}
+    \centering
+    \scalebox{0.4}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (-2.5,0) (0) {};
+        \node[fillstar] at (2.5,0) (1) {};
+        \node[fillcirc] at (0, -3) (2) {};
+        \node[scale = 1.3, draw, circle, minimum size=1cm, scale=2] at (-3,-7) (3) {$\mathcal{C}_1$};
+        \node[scale = 1.3, draw, circle, minimum size=1cm, scale=2] at (3,-7) (4) {$\mathcal{C}_2$};
+        \draw[-{Stealth[length=5mm, width=3mm]}] (0) edge (2);
+        \draw[{Stealth[length=5mm, width=3mm]}-] (1) edge (2);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (4);
+        \node[scale =3, rotate = 44] at (-1.18,-4.5) {$\times$};
+        \node[scale =3, rotate = 44] at (1.18,-4.5) {$\times$};
+    \end{tikzpicture}
+    }
+    \caption{Example of case 3.1.}
+    \label{fig.examplecase3.1}
+\end{figure}
     
-\textbf{Case 3.1.1.} Assume that $\mathfrak{e}'''$ is an leg. Then one of $\mathcal{C}_1$ and $\mathcal{C}_2$ contains a leaf edge (w.l.o.g. assume that it's $\mathcal{C}_1$). 
+\textbf{Case 3.1.1.} Assume that $\mathfrak{e}'''$ is an fixed leg. Then one of $\mathcal{C}_1$ and $\mathcal{C}_2$ contains a free leg (w.l.o.g. assume that it's $\mathcal{C}_1$). 
 
-We apply the same argument as case 2 in this case. Cut $\mathfrak{e}'$ (resp. $\mathfrak{e}''$) into $\mathfrak{e}'^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$ and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$ (resp. $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$). Let $\mathfrak{e}'^{(1)}$ be a leaf edge and $\mathfrak{e}'^{(2)}$ be a leg. Let $\mathfrak{e}''^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}''^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_2$ contains a leaf edge (or a leg). Cutting in this way, all couples contain both leaf edges and legs
+We apply the same argument as case 2 in this case. Cut $\mathfrak{e}'$  into $\mathfrak{e}'^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$, and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$ and then cut $\mathfrak{e}''$ into $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}'^{(1)}$ be a free leg and $\mathfrak{e}'^{(2)}$ be a fixed leg. Let $\mathfrak{e}''^{(1)}$ be a free leg (or a fixed leg) and $\mathfrak{e}''^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_2$ contains a free leg (or a fixed leg). Cutting in this way, all couples contain both fixed and free legs.
+
 As in case 2, we have
 \begin{equation}
 \begin{split}
@@ -2578,9 +2579,10 @@ As in case 2, we have
 \end{split}
 \end{equation}
 
-\textbf{Case 3.1.2.} Assume that $\mathfrak{e}'''$ is an leaf edge. 
+\textbf{Case 3.1.2.} Assume that $\mathfrak{e}'''$ is an free leg. 
 
-We apply the same argument as case 2 and case 3.1.1 in this case. Cut $\mathfrak{e}'$ (resp. $\mathfrak{e}''$) into $\mathfrak{e}'^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$ and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$ (resp. $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$). Let $\mathfrak{e}'^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}'^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_1$ contains a leaf edge (or a leg). Let $\mathfrak{e}''^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}''^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_2$ contains a leaf edge (or a leg). Cutting in this way, all couples contain both leaf edges and legs
+We apply the same argument as case 2 and case 3.1.1 in this case. Cut $\mathfrak{e}'$ into $\mathfrak{e}'^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$ and $\mathfrak{e}'^{(2)}\in  \mathcal{C}_1$, and then cut $\mathfrak{e}''$ into $\mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}'^{(1)}$ be a free leg (or a fixed leg) and $\mathfrak{e}'^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_1$ contains a free leg (or a fixed leg). Let $\mathfrak{e}''^{(1)}$ be a free leg (or a fixed leg) and $\mathfrak{e}''^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_2$ contains a free leg (or a fixed leg). Cutting in this way, all couples contain both fixed and free legs.
+
 As in case 3.1.1, we have
 \begin{equation}
 \begin{split}
@@ -2596,19 +2598,34 @@ As in case 3.1.1, we have
 \end{split}
 \end{equation}
 
-\textbf{Case 3.2.} Two of  $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ (w.l.o.g. assume that they are $\mathfrak{e}'$, $\mathfrak{e}''$) connects $\mathfrak{n}_*$ and one of the two components (w.l.o.g. assume that it's $\mathcal{C}_1$). The last one (w.l.o.g. assume that it's $\mathfrak{e}'''$) connects $\mathfrak{n}_*$ and the last components (w.l.o.g. assume that it's $\mathcal{C}_2$). In this case $\mathcal{C}_2$ must contain a leg or a leaf edge by \eqref{eq.nnenlnle}.
+\textbf{Case 3.2.} Two of  $\mathfrak{e}'$, $\mathfrak{e}''$, $\mathfrak{e}'''$ (w.l.o.g. assume that they are $\mathfrak{e}'$, $\mathfrak{e}''$) connects $\mathfrak{n}_*$ and one of the two components (w.l.o.g. assume that it's $\mathcal{C}_1$). The last one (w.l.o.g. assume that it's $\mathfrak{e}'''$) connects $\mathfrak{n}_*$ and the last components (w.l.o.g. assume that it's $\mathcal{C}_2$). In this case $\mathcal{C}_2$ must contain a leg by \eqref{eq.nnenlnle}.
 
 One example of this case is shown in Figure \ref{fig.examplecase3.2}
 \begin{figure}[H]
-        %\includegraphics[scale=0.25]{components_cutted.png}
-        \caption{Example of case 3.2.}
-        \centering
-        \label{fig.examplecase3.2}
-    \end{figure}
+    \centering
+    \scalebox{0.4}{
+    \begin{tikzpicture}[level distance=80pt, sibling distance=100pt]
+        \node[] at (0,0) (1) {};
+        \node[fillcirc] at (0, -3) (2) {};
+        \node[scale = 1.3, draw, circle, minimum size=1cm, scale=2] at (-3,-7) (3) {$\mathcal{C}_1$};
+        \node[scale = 1.3, draw, circle, minimum size=1cm, scale=2] at (3,-7) (4) {$\mathcal{C}_2$};
+        \draw[-{Stealth[length=5mm, width=3mm]}] (1) edge (2);
+        \draw[{Stealth[length=5mm, width=3mm]}-, bend left = 30] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}, bend right = 30] (2) edge (3);
+        \draw[-{Stealth[length=5mm, width=3mm]}] (2) edge (4);
+        \node[scale =3, rotate = 44] at (-0.4,-5.2) {$\times$};
+        \node[scale =3, rotate = 44] at (-1.8,-3.8) {$\times$};
+        \node[scale =3, rotate = 44] at (1.18,-4.5) {$\times$};
+    \end{tikzpicture}
+    }
+    \caption{Example of case 3.2.}
+    \label{fig.examplecase3.2}
+\end{figure}
     
-\textbf{Case 3.2.1.} Assume that $\mathcal{C}_1$ contains an leg or an leaf edge. 
+\textbf{Case 3.2.1.} Assume that $\mathcal{C}_1$ contains a leg. 
 
-We apply the same argument as case 2 or case 3.1 in this case. Cut $\mathfrak{e}'$, $\mathfrak{e}''$ (resp. $\mathfrak{e}'''$) into $\mathfrak{e}'^{(1)}, \mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$ and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}\in  \mathcal{C}_1$ (resp. $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_2$). Let $\mathfrak{e}'^{(1)}$, $\mathfrak{e}''^{(1)}$ be leaf edges (or legs) and $\mathfrak{e}'^{(2)}$, $\mathfrak{e}''^{(2)}$ be legs (or a leaf edges) if $\mathcal{C}_1$ contains a leaf edge (or a leg). Let $\mathfrak{e}'''^{(1)}$ be a leaf edge (or a leg) and $\mathfrak{e}'''^{(2)}$ be a leg (or a leaf edge) if $\mathcal{C}_2$ contains a leaf edge (or a leg). Cutting in this way, all couples contain both leaf edges and legs
+We apply the same argument as case 2 or case 3.1 in this case. Cut $\mathfrak{e}'$, $\mathfrak{e}''$ into $\mathfrak{e}'^{(1)}, \mathfrak{e}''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_2$ and $\mathfrak{e}'^{(2)}, \mathfrak{e}''^{(2)}\in  \mathcal{C}_1$, and then cut $\mathfrak{e}'''$ into $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}'^{(1)}$, $\mathfrak{e}''^{(1)}$ be free legs (or fixed legs) and $\mathfrak{e}'^{(2)}$, $\mathfrak{e}''^{(2)}$ be fixed legs (or a free legs) if $\mathcal{C}_1$ contains a free leg (or a fixed leg). Let $\mathfrak{e}'''^{(1)}$ be a free leg (or a fixed leg) and $\mathfrak{e}'''^{(2)}$ be a fixed leg (or a free leg) if $\mathcal{C}_2$ contains a free leg (or a fixed leg). Cutting in this way, all couples contain both fixed and free legs.
+
 As in case 3.1, we have
 \begin{equation}
 \begin{split}
@@ -2624,9 +2641,10 @@ As in case 3.1, we have
 \end{split}
 \end{equation}
 
-\textbf{Case 3.2.2.} Assume that $\mathcal{C}_1$ contains no legs or leaf edges. Then $\mathcal{C}_2$ must contain leaf edges, since $\mathcal{C}$ contains leaf edges. 
+\textbf{Case 3.2.2.} Assume that $\mathcal{C}_1$ contains no legs. Then $\mathcal{C}_2$ must contain free legs, since $\mathcal{C}$ contains free legs. 
 
-We apply the same argument as case 2 and case 3.1. Cut $\mathfrak{e}'''$ into $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}'''^{(1)}$ be a leaf edge and $\mathfrak{e}'''^{(2)}$ be a leg. Cutting in this way, all couples contain both leaf edges and legs
+We apply the same argument as case 2 and case 3.1. Cut $\mathfrak{e}'''$ into $\mathfrak{e}'''^{(1)}\in  \mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ and $\mathfrak{e}'''^{(2)}\in  \mathcal{C}_2$. Let $\mathfrak{e}'''^{(1)}$ be a free leg and $\mathfrak{e}'''^{(2)}$ be a fixed leg. Cutting in this way, all couples contain both fixed and free legs.
+
 As in case 3.1, we have
 \begin{equation}\label{eq.case3.2.2expand}
 \begin{split}
@@ -2638,7 +2656,7 @@ As in case 3.1, we have
 \end{split}
 \end{equation}
 
-$\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ has only one leaf edges $\mathfrak{e}'''^{(1)}$ and a leg $\mathfrak{l}$ and both of these two edges are connected to $\mathfrak{n}_*$. Therefore, $\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ satisfies exactly the condition of case 1.2. Applying the conclusion there gives
+$\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ has only one free leg $\mathfrak{e}'''^{(1)}$ and a fixed leg $\mathfrak{l}$ and both of these two edges are connected to $\mathfrak{n}_*$. Therefore, $\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1$ satisfies exactly the condition of case 1.2. Applying the conclusion there gives
 \begin{equation}\label{eq.case3.2.2expand'}
     \sup_{\{c_{\mathfrak{l}_1}\}_{\mathfrak{l}_1\in \text{leg}(\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1)} } \# Eq(\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1,\{c_{\mathfrak{l}_1}\})\lesssim L^{O(\theta)} Q^{\chi(\mathcal{C}_{\mathfrak{n}_*}\cup \mathcal{C}_1)}.
 \end{equation}
@@ -2664,218 +2682,389 @@ Therefore, we complete the proof of Proposition \ref{prop.countingind} and thus 
 
 
 
-\subsection{An upper bound of tree terms}\label{sec.treetermsupperbound}
-In this section, we prove the following upper bound of the variance of $\mathcal{J}_{T,k}$.
 
-\begin{prop}\label{prop.treetermsvariance}
-Assume that $L^{-d}\le \alpha\le L^{-2}$. For any $\theta>0$ and sufficiently large $p$, we have
-\begin{equation}
-    \sup_k\langle k\rangle^p\, \mathbb{E}|(\mathcal{J}_T)_k|^2\le L^{O(\theta)} \rho^{l(T)}.
-\end{equation}
-Here $\rho=\alpha^3t^2$.
-\end{prop}
-\begin{proof}
-By \eqref{eq.termTp} and \eqref{eq.termexp}, we know that $\mathcal{J}_{T,k}$ is a linear combination of $Term(T,p)$.
-\begin{equation}
-\begin{split}
-    \mathbb{E}|\mathcal{J}_{T,k}|^2=\left(\frac{\lambda^2}{L^{2d}}\right)^{2l(T)}
-    \sum_{p\in \mathcal{P}_F(\{k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1}\})} Term(T, p).
-\end{split}
+% \subsection{An upper bound of tree terms}\label{sec.treetermsupperbound}
+% In this section, we prove the following upper bound of the variance of $\mathcal{J}_{T,k}$.
+
+% \begin{prop}\label{prop.treetermsvariance}
+% Assume that $L^{-d}\le \alpha\le L^{-2}$. For any $\theta>0$ and sufficiently large $p$, we have
+% \begin{equation}
+%     \sup_k\langle k\rangle^p\, \mathbb{E}|(\mathcal{J}_T)_k|^2\le L^{O(\theta)} \rho^{l(T)}.
+% \end{equation}
+% Here $\rho=\alpha^3t^2$.
+% \end{prop}
+% \begin{proof}
+% By \eqref{eq.termTp} and \eqref{eq.termexp}, we know that $\mathcal{J}_{T,k}$ is a linear combination of $Term(T,p)$.
+% \begin{equation}
+% \begin{split}
+%     \mathbb{E}|\mathcal{J}_{T,k}|^2=\left(\frac{\lambda^2}{L^{2d}}\right)^{2l(T)}
+%     \sum_{p\in \mathcal{P}_F(\{k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1}\})} Term(T, p).
+% \end{split}
+% \end{equation}
+
+% Since $\alpha=\frac{\lambda^2}{L^{d}}$, so $\frac{\lambda^2}{L^{2d}}=\alpha L^{-d}$. Since the number of elements in $\mathcal{P}_F$ can be bounded by a constant, by Lemma \ref{lem.Tpvariance} proved below, we get
+% \begin{equation}\label{eq.proptreetermsvariance1}
+% \begin{split}
+%     \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim (\alpha L^{-d})^{2l(T)}
+%     L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)} \langle k\rangle^{-q}.
+% \end{split}
+% \end{equation}
+
+% By definition, $n$ and $n_d$ are total number of $\bullet$ nodes and $\circ$ nodes respectively of the two paired trees. The two paired trees of the same type $T$ contains $2l(T)$ branching nodes in total (each one contains $l(T)$). We thus get $2l(T)=n+n_d$. Replacing $2l(T)$ by $n+n_d$ in \eqref{eq.proptreetermsvariance1}, we get
+% \begin{equation}
+% \begin{split}
+%     \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim& (\alpha L^{-d})^{n+n_d}
+%     L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{n+n_d} \langle k\rangle^{-q}
+%     \\
+%     =& L^{O(\theta)} (\alpha L^{-d} Qt)^{n} (\alpha L^{-d}L^{\frac{1}{2} d}t)^{n_d}\langle k\rangle^{-q}
+%     \\
+%     =& L^{O(\theta)} (\alpha^{3/2} t)^{n} (t\alpha L^{-d/2})^{n_d}\langle k\rangle^{-q}
+%     \\
+%     \lesssim& L^{O(\theta)} (\alpha^{3/2} t)^{n+n_d} \langle k\rangle^{-q}= L^{O(\theta)} (\alpha^{3} t^2)^{l(T)}. \langle k\rangle^{-q}
+% \end{split}
+% \end{equation}
+% Here in the last step, we use the fact that $t\alpha L^{-d/2}\le \alpha^{3/2} t$ if $\alpha\ge L^{-d} $.
+
+% Therefore, we complete the proof of this proposition.
+% \end{proof}
+
+
+% \begin{lem}\label{lem.Tpvariance} Assume that $\alpha\le L^{-2}$ and the initial data satisfies $\sqrt{n_{\textrm{in}}(k)}\lesssim \langle k\rangle^{-q}$. Let $\mathcal{C}$ be the couple constructed from tree $T$ and pairing $p$. Then for any $\theta>0$ and sufficiently large $q$ depending on $T$, we have
+% \begin{equation}
+%     \sup_k\langle k\rangle^q\, |(Term(T,p))_k|\le L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)}.
+% \end{equation}
+% Here $n$, $n_d$ are defined in Proposition \ref{prop.counting}
+% \end{lem}
+% \begin{proof} By \eqref{eq.termTp}, we get
+
+% \begin{equation}
+% \begin{split}
+%     Term(T, p)=&\sum_{k_1,\, k_2,\, \cdots,\, k_{2l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{2l(T)+1}} H^T_{k_1\cdots k_{2l(T)+1}} H^{T}_{k'_1\cdots k'_{2l(T)+1}}
+%     \\
+%     & \delta_{p}(k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1})\sqrt{n_{\textrm{in}}(k_1)}\cdots\sqrt{n_{\textrm{in}}(k'_1)}\cdots
+% \end{split}
+% \end{equation}
+
+% By \eqref{eq.boundcoef}, we get
+% \begin{equation}
+%     H^T_{k_1\cdots k_{2l+1}}\lesssim \sum_{\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T'}\in Q}\prod_{\mathfrak{n}\in T'}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T'} S_{\mathfrak{n}}}.
+% \end{equation}
+
+% By \eqref{eq.q_n}, $q_{\mathfrak{n}}$ is a linear combination of $\Omega_{\mathfrak{n}}$, so there exists constants $c_{\mathfrak{n},\mathfrak{n}'}$ such that $q_{\mathfrak{n}}=\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}\Omega_{\mathfrak{n}'}$. Let $c$ be the matrix $[c_{\mathfrak{n},\mathfrak{n}'}]$ and $\mathscr{M}$ be the set of all possible such matrices, then the number of elements in $\mathscr{M}$ can be bounded by a constant. Let $c(\Omega)$ be the vector $\{\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}}$
+
+% With this notation, we know that $q_{\mathfrak{n}}=c(\Omega)_{\mathfrak{n}}$ and the right hand side of above inequality becomes $\sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T'} \frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha}$. Therefore, we have
+% \begin{equation}
+% \begin{split}
+%     Term(T, p)\lesssim& \sum_{k_1,\, \cdots,\, k_{2l(T)+1},\, k'_1,\, \cdots,\, k'_{2l(T)+1}} \sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}} \sum_{c'\in \mathscr{M}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\Omega)_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S'_{\mathfrak{n}}} 
+%     \\
+%     &\delta_{p}(k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1})\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots 
+% \end{split}
+% \end{equation}
+% Here we have used the assumption that $\sqrt{n_{\textrm{in}}(k)}\le \langle k\rangle^{-q}$.
+
+% Given tree $T$ and pairing $p$, we can construct a couple $\mathcal{C}$. Assigning a number $\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}$ for each node $\mathfrak{n}$ and a number $k\in \mathbb{Z}_{L}$ for the legs, we can define the assoicated equation $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$
+% \begin{equation}
+%     \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\}
+% \end{equation}
+% $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ is the same as $Eq(\mathcal{C})$ defined in \eqref{eq.diophantineeqpairedsigma'}, except that $k_{\mathfrak{e}}$ may not satisfy $|k_{\mathfrak{e}}| \lesssim L^+$ . With this definition, we know that 
+% \begin{equation}
+%     \sum_{k_1,\, \cdots,\, k_{2l(T)+1},\, k'_1,\, \cdots,\, k'_{2l(T)+1}}=\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)},
+% \end{equation}
+% which implies that
+% \begin{equation}
+%     Term(T, p)\lesssim \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)} \sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha} \sum_{c'\in \mathscr{M}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\Omega)_{\mathfrak{n}}|+\alpha} \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right).
+% \end{equation}
+% Since $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ contains equations in $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}}$, $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S'_{\mathfrak{n}}}$ and $\delta_{p}$, so we may remove the three indicator functions from above sum.
+
+% In $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|\le C\alpha$ and then we have $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\lesssim C\alpha$. We have the freedom of choosing $C$ and we take it sufficiently small so that $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\le \frac{1}{2}\alpha$. This implies that $|c(\Omega)_{\mathfrak{n}}|+\alpha\gtrsim |c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha$, so we have
+% \begin{equation}\label{eq.lemboundtermTp}
+% \begin{split}
+%     &Term(T, p)
+%     \\
+%     \lesssim& \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)} \sum_{c,c'\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
+%     \\
+%     =&\sum_{c,c'\in \mathscr{M} } \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \underbrace{\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)}_{\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}
+% \end{split}
+% \end{equation}
+
+% Let us prove an upper bound for $\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$. By definition of $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ and $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, we know that $\{k_{\mathfrak{e}}\}\in \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\backslash Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ if and only if for some $\mathfrak{e}_{*}$, $|k_{\mathfrak{e}_*}|\gtrsim L^+$. Since $k_{\mathfrak{e}}$ are linear combinations of $k_1$, $\cdots$, $k_{2l(T)+1}$, $|k_{\mathfrak{e}_*}|\gtrsim L^+$ implies that for some $j_{*}$, $|k_{j_*}|\gtrsim L^+$. Then we have
+% \begin{equation}
+%     \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\subseteq Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\cup \{\{k_{\mathfrak{e}}\}: |k_{j_*}|\gtrsim L^+\, \text{for some }j_*\}.
+% \end{equation}
+
+% Take $q$ sufficiently large so that $(L^+)^{-q}\le L^{-10d\, l(T)-10d}$. We get
+% \begin{equation}\label{eq.lemboundtermTpsum}
+% \begin{split}
+%     &\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
+%     \\
+%     \le & \sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)+\sum_{|k_{j_*}|\gtrsim L^+\, \text{for some }j_*}
+%     \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
+%     \\
+%     \le &\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)+O(L^{-8d\, l(T)-8d})
+%     \\
+%     \le &O(L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d})+O(L^{-8d\, l(T)-8d}).
+% \end{split}
+% \end{equation}
+% Here in the last inequality we applied \eqref{eq.countingbd1} and $n$, $n_d$ were defined in Proposition \ref{prop.counting}.
+
+% Combining \eqref{eq.lemboundtermTp} and \eqref{eq.lemboundtermTpsum}, we get
+% \begin{equation}
+% \begin{split}
+%     &Term(T, p)
+%     \\
+%     \lesssim&\sum_{c,c'\in \mathscr{M} } \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} (\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)+O(L^{-8d\, l(T)-8d}))
+%     \\
+%     \lesssim & L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d}\sum_{c,c'\in \mathscr{M} } \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}  + O(L^{-6d\, l(T)-6d})
+% \end{split}
+% \end{equation}
+% Here $|\sigma_{\mathfrak{n}}|\lesssim L^+$ in the sum in the third line comes from the fact that $\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=0$ if some $\sigma_{\mathfrak{n}}\gtrsim L^+$. This fact is true because in $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, all $|k_{\mathfrak{e}}|\lesssim L^+$
+
+% We claim that 
+% \begin{equation}\label{eq.lemTpvarianceclaim}
+%      \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}\lesssim t^{2l(T)}
+% \end{equation}
+
+% Given this claim, we know that 
+% \begin{equation}
+%     Term(T, p)\lesssim L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)},
+% \end{equation}
+% which proves the lemma.
+
+% \textbf{Correct error!!}
+
+% Now prove the claim. In a tree $T$, there are $l(T)$ branching nodes, so there are $l(T)$ nodes in $T_{\text{in}}$. Label these nodes by $h=1,\cdots,l(T)$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{\alpha^{-1}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=\alpha m_{h}$. \eqref{eq.lemTpvarianceclaim} is thus equivalent to 
+% \begin{equation}\label{eq.lemTpvarianceclaim1}
+%     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t}{|c(\{m_{h}\})_{h}|+1} \prod_{h=1}^{l(T)}\frac{t}{|c'(\{m_{h}\})_{h}|+1}\lesssim t^{2l(T)}
+% \end{equation}
+
+% Before proving \eqref{eq.lemTpvarianceclaim1}, let's first look at one of its special case. If $c,c'=Id$, then $c(\{m_{h}\})_{h}=c'(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1} becomes
+% \begin{equation}
+% \begin{split}
+%     t^{2l(T)}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{1}{(|m_{h}|+1)^2} = t^{2l(T)}\prod_{h=1}^{l(T)}\left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \frac{1}{(|m_{h}|+1)^2}\right)
+%     \lesssim t^{2l(T)}.
+% \end{split}
+% \end{equation}
+% Here the inequality is because $\sum_{\substack{j\in \mathbb{Z}\\ |j|\lesssim \alpha^{-1}}} \frac{1}{(|j|+1)^2}\le 2$.
+
+% Now we prove \eqref{eq.lemTpvarianceclaim1}. Use Cauchy inequality we get
+% \begin{equation}
+% \begin{split}
+%     &\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t}{|c(\{m_{h}\})_{h}|+1} \prod_{h=1}^{l(T)}\frac{t}{|c'(\{m_{h}\})_{h}|+1}
+%     \\
+%     \lesssim & \left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t^2}{(|c(\{m_{h}\})_{h}|+1)^2} \right)^{\frac{1}{2}} 
+%     \left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t^2}{(|c'(\{m_{h}\})_{h}|+1)^2} \right)^{\frac{1}{2}}.
+% \end{split}
+% \end{equation}
+
+% Therefore, we just need to show that 
+% \begin{equation}
+%     \sum_{m_{h}\in \mathbb{Z}} \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\lesssim 1 
+% \end{equation}
+
+% By Euler-Maclaurin formula and change of variable formula, we get
+% \begin{equation}
+% \begin{split}
+%     \sum_{m_{h}\in \mathbb{Z}} \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\le& \int  \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\prod_{h=1}^{l(T)} dm_{h}
+%     \\
+%     =& \int  \prod_{h=1}^{l(T)}\frac{1}{(|m_{h}|+1)^2}|\text{det}\ c|\prod_{h=1}^{l(T)}  dm_{h}
+%     \\
+%     =&\prod_{h=1}^{l(T)}\int \frac{1}{(|m_{h}|+1)^2}  dm_{h}
+%     \\
+%     \lesssim & 1
+% \end{split}
+% \end{equation}
+
+% Now we complete the proof of the claim and thus the proof of the lemma.
+% \end{proof}
+
+% \textbf{{Large deviation of polynomials of Gaussians}
+% }
+
+
+
+\subsection{An upper bound of coefficients in expansion series}\label{sec.uppcoef} In this section, we derive an upper bound for coefficients $H^T_{k_1\cdots k_{2l+1}}$.
+
+Notice that in \eqref{eq.coefterm}, $H^T_{k_1\cdots k_{l+1}}$ are integral of some oscillatory functions. An upper bound can be derived by the standard integration by parts arguments.
+
+Associate each $\mathfrak{n}\in T_{\text{in}}$ with two variables $a_{\mathfrak{n}}$, $b_{\mathfrak{n}}$. Then we define
+\begin{equation}\label{eq.defF_T}
+F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}})=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}} a_{\mathfrak{n}} - \nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})b_{\mathfrak{n}}} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}} 
 \end{equation}
 
-Since $\alpha=\frac{\lambda^2}{L^{d}}$, so $\frac{\lambda^2}{L^{2d}}=\alpha L^{-d}$. Since the number of elements in $\mathcal{P}_F$ can be bounded by a constant, by Lemma \ref{lem.Tpvariance} proved below, we get
-\begin{equation}\label{eq.proptreetermsvariance1}
-\begin{split}
-    \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim (\alpha L^{-d})^{2l(T)}
-    L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)} \langle k\rangle^{-q}.
-\end{split}
+\begin{lem}\label{lem.boundcoef'}
+If $c'(t_{\mathfrak{n}})\lesssim 1$, then we have the following upper bound for $F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})$,
+\begin{equation}\label{eq.boundcoef'}
+    \sup_{\{b_{\mathfrak{n}}\}_{\mathfrak{n}}\lesssim 1} |F_{T}(t,\{a_{\mathfrak{n}}\}_{\mathfrak{n}},\{b_{\mathfrak{n}}\}_{\mathfrak{n}})|\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}.
 \end{equation}
-
-By definition, $n$ and $n_d$ are total number of $\bullet$ nodes and $\circ$ nodes respectively of the two paired trees. The two paired trees of the same type $T$ contains $2l(T)$ branching nodes in total (each one contains $l(T)$). We thus get $2l(T)=n+n_d$. Replacing $2l(T)$ by $n+n_d$ in \eqref{eq.proptreetermsvariance1}, we get
-\begin{equation}
-\begin{split}
-    \mathbb{E}|\mathcal{J}_{T,k}|^2\lesssim& (\alpha L^{-d})^{n+n_d}
-    L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{n+n_d} \langle k\rangle^{-q}
+Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the sequence $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by the following recursive formula
+\begin{equation}\label{eq.q_n'}
+    q_{\mathfrak{n}}=
+    \begin{cases}
+    a_{\mathfrak{r}}, \qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
     \\
-    =& L^{O(\theta)} (\alpha L^{-d} Qt)^{n} (\alpha L^{-d}L^{\frac{1}{2} d}t)^{n_d}\langle k\rangle^{-q}
-    \\
-    =& L^{O(\theta)} (\alpha^{3/2} t)^{n} (t\alpha L^{-d/2})^{n_d}\langle k\rangle^{-q}
-    \\
-    \lesssim& L^{O(\theta)} (\alpha^{3/2} t)^{n+n_d} \langle k\rangle^{-q}= L^{O(\theta)} (\alpha^{3} t^2)^{l(T)}. \langle k\rangle^{-q}
-\end{split}
+    a_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if }\mathfrak{n}\neq\mathfrak{r}\textit{ and }\mathfrak{n}'\textit{ is the parent of }\mathfrak{n}.
+    \end{cases}
 \end{equation}
-Here in the last step, we use the fact that $t\alpha L^{-d/2}\le \alpha^{3/2} t$ if $\alpha\ge L^{-d} $.
 
-Therefore, we complete the proof of this proposition.
-\end{proof}
-
-
-\begin{lem}\label{lem.Tpvariance} Assume that $\alpha\le L^{-2}$ and the initial data satisfies $\sqrt{n_{\textrm{in}}(k)}\lesssim \langle k\rangle^{-q}$. Let $\mathcal{C}$ be the couple constructed from tree $T$ and pairing $p$. Then for any $\theta>0$ and sufficiently large $q$ depending on $T$, we have
-\begin{equation}
-    \sup_k\langle k\rangle^q\, |(Term(T,p))_k|\le L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)}.
-\end{equation}
-Here $n$, $n_d$ are defined in Proposition \ref{prop.counting}
+% \begin{equation}
+% Q=\{\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}:q_{\mathfrak{n}}= q_{\mathfrak{n}}(),\ \forall\mathfrak{n}\in T_{\text{in}}\}    
+% \end{equation}
+% and the set $Q_{\mathfrak{n}}$ is defined inductively by 
+% \begin{equation}\label{eq.treeterm}
+%     Q_{\mathfrak{n}}=
+%     \begin{cases}
+%     \{a_{\mathfrak{r}}\}, \qquad\qquad\qquad\qquad \textit{ if $\mathfrak{n}=$ the root $\mathfrak{r}$.}
+%     \\
+%     \mathcal{T}_1(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}}, \mathcal{J}_{T_{\mathfrak{n}_3}}), \textit{ if $\mathfrak{n}\neq\mathfrak{r}$.}
+%     \end{cases}
+% \end{equation}
 \end{lem}
-\begin{proof} By \eqref{eq.termTp}, we get
+\begin{proof} The lemma is proved by induction. 
 
+For a tree $T$ contains only one node $\mathfrak{r}$, $F_{T}=1$ and \eqref{eq.boundcoef'} is obviously true.
+
+Assume that \eqref{eq.boundcoef'} is true for trees with $\le n-1$ nodes. We prove the $n$ nodes case. 
+
+For general $T$, let $T_1$, $T_2$, $T_3$ be the three subtrees and $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ be the three children of the root $\mathfrak{r}$, then by the definition of $F_T$\eqref{eq.defF_T}, we get
 \begin{equation}
 \begin{split}
-    Term(T, p)=&\sum_{k_1,\, k_2,\, \cdots,\, k_{2l(T)+1}}\sum_{k'_1,\, k'_2,\, \cdots,\, k'_{2l(T)+1}} H^T_{k_1\cdots k_{2l(T)+1}} H^{T}_{k'_1\cdots k'_{2l(T)+1}}
+    &F_{T}(t)=\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})} \prod_{\mathfrak{n}\in T_{\text{in}}} dt_{\mathfrak{n}}    
     \\
-    & \delta_{p}(k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1})\sqrt{n_{\textrm{in}}(k_1)}\cdots\sqrt{n_{\textrm{in}}(k'_1)}\cdots
+    =&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
+    \\
+    =&\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in \mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
 \end{split}
 \end{equation}
 
-By \eqref{eq.boundcoef}, we get
-\begin{equation}
-    H^T_{k_1\cdots k_{2l+1}}\lesssim \sum_{\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T'}\in Q}\prod_{\mathfrak{n}\in T'}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T'} S_{\mathfrak{n}}}.
-\end{equation}
+We do integration by parts in above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are four inequality constrains, $t_{\mathfrak{r}}\le t$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}, t_{\mathfrak{n}_3}$. 
 
-By \eqref{eq.q_n}, $q_{\mathfrak{n}}$ is a linear combination of $\Omega_{\mathfrak{n}}$, so there exists constants $c_{\mathfrak{n},\mathfrak{n}'}$ such that $q_{\mathfrak{n}}=\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}\Omega_{\mathfrak{n}'}$. Let $c$ be the matrix $[c_{\mathfrak{n},\mathfrak{n}'}]$ and $\mathscr{M}$ be the set of all possible such matrices, then the number of elements in $\mathscr{M}$ can be bounded by a constant. Let $c(\Omega)$ be the vector $\{\sum_{\mathfrak{n}'}c_{\mathfrak{n},\mathfrak{n}'}\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}}$
 
-With this notation, we know that $q_{\mathfrak{n}}=c(\Omega)_{\mathfrak{n}}$ and the right hand side of above inequality becomes $\sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T'} \frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha}$. Therefore, we have
-\begin{equation}
-\begin{split}
-    Term(T, p)\lesssim& \sum_{k_1,\, \cdots,\, k_{2l(T)+1},\, k'_1,\, \cdots,\, k'_{2l(T)+1}} \sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}} \sum_{c'\in \mathscr{M}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\Omega)_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S'_{\mathfrak{n}}} 
+% \begin{equation}\label{eq.lemboundcoefexpand}
+% \begin{split}
+%     F_{T}(t)=&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
+%     \\
+%     &\qquad\qquad\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
+%     \\
+%     =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) 
+%     \\
+%     &\qquad\qquad\qquad e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
+%     \\
+%     -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
+%     \\
+%     &\qquad\qquad\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
+%     \\
+%     =& \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II})
+% \end{split}
+% \end{equation}
+
+\begingroup
+\allowdisplaybreaks
+\begin{align}\label{eq.lemboundcoefexpand}
+    &F_{T}(t)=\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} \notag
     \\
-    &\delta_{p}(k_1,\cdots, k_{2l(T)+1}, k'_1,\cdots, k'_{2l(T)+1})\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots 
-\end{split}
-\end{equation}
-Here we have used the assumption that $\sqrt{n_{\textrm{in}}(k)}\le \langle k\rangle^{-q}$.
+    &\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)\notag
+    \\
+    =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) \notag
+    \\
+    & e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) 
+    \\
+    -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} \notag
+    \\
+    &\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) \notag
+    \\
+    =& \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II})\notag
+\end{align}
+\endgroup
 
-Given tree $T$ and pairing $p$, we can construct a couple $\mathcal{C}$. Assigning a number $\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}$ for each node $\mathfrak{n}$ and a number $k\in \mathbb{Z}_{L}$ for the legs, we can define the assoicated equation $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$
+
+
+
+
+
+
+
+% \begin{equation}\label{eq.lemboundcoefexpand}
+%     \begin{split}
+%         F_{T}(t)=&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} \frac{d}{dt_{\mathfrak{r}}}e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} 
+%         \\
+%         &\qquad\qquad\qquad\qquad\qquad e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right)
+%     \end{split}
+%     \end{equation}
+%     \begin{flalign*}
+%     \hspace{1.3cm}
+%     =&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\left(\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_1}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_2}}-\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_3}}\right) &&
+%     \\
+%     &\qquad\qquad\qquad e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) &&
+%     \end{flalign*}
+%     \begin{flalign*}
+%     \hspace{1.3cm}
+%     -&\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha\, \text{sgn}(a_{\mathfrak{r}}))} &&
+%         \\
+%         &\qquad\qquad\qquad\qquad\qquad \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} e^{-i\sum_{\mathfrak{n}\in T_{1,\text{in}}\cup T_{2,\text{in}}\cup T_{3,\text{in}}} (t_{\mathfrak{n}}a_{\mathfrak{n}}+\alpha c(t_{\mathfrak{n}}) b_{\mathfrak{n}})}  \left(dt_{\mathfrak{r}}\prod_{j=1}^3\prod_{\mathfrak{n}\in T_{j,\text{in}}}dt_{\mathfrak{n}}  \right) &&
+%     \end{flalign*}
+%     \begin{flalign*}
+%     \hspace{1.3cm}
+%     = \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}}) }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{T^{(3)}}-F_{II}) &&
+%     \end{flalign*}
+
+
+Here $T^{(j)}$, $j=1,2,3$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges that connecting $\mathfrak{n}_j$ with other two nodes and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand}, so the last equality of \eqref{eq.lemboundcoefexpand} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
+
+We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
+
+A direct calculation gives that 
 \begin{equation}
-    \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=\{k_{\mathfrak{e}}\in \mathbb{Z}^d,\ \forall \mathfrak{e}\in \mathcal{C}:MC_{\mathfrak{n}},\  EC_{\mathfrak{n}},\ \forall \mathfrak{n}\in \mathcal{C}.\ k_{\mathfrak{l}}=k_{\mathfrak{l}}'=k.\}
+    F_{I}(t)=e^{-i(ta_{\mathfrak{r}}+\alpha c(t)b_{\mathfrak{r}})} F_{T_1}(t)F_{T_2}(t)F_{T_3}(t).
 \end{equation}
-$\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ is the same as $Eq(\mathcal{C})$ defined in \eqref{eq.diophantineeqpairedsigma'}, except that $k_{\mathfrak{e}}$ may not satisfy $|k_{\mathfrak{e}}| \lesssim L^+$ . With this definition, we know that 
+Then the induction assumption implies that $\frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{I}$ can be bounded by the right hand side of \eqref{eq.boundcoef'}.
+
+Another direct calculation gives that 
 \begin{equation}
-    \sum_{k_1,\, \cdots,\, k_{2l(T)+1},\, k'_1,\, \cdots,\, k'_{2l(T)+1}}=\sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)},
+    F_{II}(t)=\int^t_0 e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} \frac{d}{dt_{\mathfrak{r}}}e^{-i\alpha(c(t_{\mathfrak{n}}) b_{\mathfrak{n}}- \text{sgn}(a_{\mathfrak{r}}))} F_{T_1}(t_{\mathfrak{r}})F_{T_2}(t_{\mathfrak{r}})F_{T_3}(t_{\mathfrak{r}}) dt_{\mathfrak{r}}.
 \end{equation}
-which implies that
-\begin{equation}
-    Term(T, p)\lesssim \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)} \sum_{c\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\Omega)_{\mathfrak{n}}|+\alpha} \sum_{c'\in \mathscr{M}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\Omega)_{\mathfrak{n}}|+\alpha} \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right).
-\end{equation}
-Since $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ contains equations in $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}}$, $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S'_{\mathfrak{n}}}$ and $\delta_{p}$, so we may remove the three indicator functions from above sum.
-
-In $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|\le C\alpha$ and then we have $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\lesssim C\alpha$. We have the freedom of choosing $C$ and we take it sufficiently small so that $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\le \frac{1}{2}\alpha$. This implies that $|c(\Omega)_{\mathfrak{n}}|+\alpha\gtrsim |c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha$, so we have
-\begin{equation}\label{eq.lemboundtermTp}
-\begin{split}
-    &Term(T, p)
-    \\
-    \lesssim& \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}}\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)} \sum_{c,c'\in \mathscr{M} }\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
-    \\
-    =&\sum_{c,c'\in \mathscr{M} } \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \underbrace{\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)}_{\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}
-\end{split}
-\end{equation}
-
-Let us prove an upper bound for $\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$. By definition of $\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ and $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, we know that $\{k_{\mathfrak{e}}\}\in \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\backslash Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$ if and only if for some $\mathfrak{e}_{*}$, $|k_{\mathfrak{e}_*}|\gtrsim L^+$. Since $k_{\mathfrak{e}}$ are linear combinations of $k_1$, $\cdots$, $k_{2l(T)+1}$, $|k_{\mathfrak{e}_*}|\gtrsim L^+$ implies that for some $j_{*}$, $|k_{j_*}|\gtrsim L^+$. Then we have
-\begin{equation}
-    \widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\subseteq Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)\cup \{\{k_{\mathfrak{e}}\}: |k_{j_*}|\gtrsim L^+\, \text{for some }j_*\}.
-\end{equation}
-
-Take $q$ sufficiently large so that $(L^+)^{-q}\le L^{-10d\, l(T)-10d}$. We get
-\begin{equation}\label{eq.lemboundtermTpsum}
-\begin{split}
-    &\widetilde{\text{sum}}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=\sum_{\widetilde{Eq}(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
-    \\
-    \le & \sum_{Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)}\left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)+\sum_{|k_{j_*}|\gtrsim L^+\, \text{for some }j_*}
-    \left(\langle k_1\rangle^{-q}\cdots\langle k_1'\rangle^{-q}\cdots\right)
-    \\
-    \le &\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)+O(L^{-8d\, l(T)-8d})
-    \\
-    \le &O(L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d})+O(L^{-8d\, l(T)-8d}).
-\end{split}
-\end{equation}
-Here in the last inequality we applied \eqref{eq.countingbd1} and $n$, $n_d$ were defined in Proposition \ref{prop.counting}.
-
-Combining \eqref{eq.lemboundtermTp} and \eqref{eq.lemboundtermTpsum}, we get
-\begin{equation}
-\begin{split}
-    &Term(T, p)
-    \\
-    \lesssim&\sum_{c,c'\in \mathscr{M} } \sum_{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} (\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)+O(L^{-8d\, l(T)-8d}))
-    \\
-    \lesssim & L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d}\sum_{c,c'\in \mathscr{M} } \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}  + O(L^{-6d\, l(T)-6d})
-\end{split}
-\end{equation}
-Here $|\sigma_{\mathfrak{n}}|\lesssim L^+$ in the sum in the third line comes from the fact that $\#Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)=0$ if some $\sigma_{\mathfrak{n}}\gtrsim L^+$. This fact is true because in $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}},k)$, all $|k_{\mathfrak{e}}|\lesssim L^+$
-
-We claim that 
-\begin{equation}\label{eq.lemTpvarianceclaim}
-     \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{\alpha^{-1}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}\lesssim t^{2l(T)}
-\end{equation}
-
-Given this claim, we know that 
-\begin{equation}
-    Term(T, p)\lesssim L^{O(\theta)} Q^{n} L^{\frac{1}{2} dn_d} t^{2l(T)},
-\end{equation}
-which proves the lemma.
-
-\textbf{Correct error!!}
-
-Now prove the claim. In a tree $T$, there are $l(T)$ branching nodes, so there are $l(T)$ nodes in $T_{\text{in}}$. Label these nodes by $h=1,\cdots,l(T)$ and denote $\sigma_{\mathfrak{n}}$ by $\sigma_{h}$ if $\mathfrak{n}$ is labelled by $h$. Since $\sigma_{h}\in \mathbb{Z}_{\alpha^{-1}}$, there exists $m_{h}\in \mathbb{Z}$ such that $\sigma_{h}=\alpha m_{h}$. \eqref{eq.lemTpvarianceclaim} is thus equivalent to 
-\begin{equation}\label{eq.lemTpvarianceclaim1}
-    \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t}{|c(\{m_{h}\})_{h}|+1} \prod_{h=1}^{l(T)}\frac{t}{|c'(\{m_{h}\})_{h}|+1}\lesssim t^{2l(T)}
-\end{equation}
-
-Before proving \eqref{eq.lemTpvarianceclaim1}, let's first look at one of its special case. If $c,c'=Id$, then $c(\{m_{h}\})_{h}=c'(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1} becomes
+Applying the induction assumption
 \begin{equation}
 \begin{split}
-    t^{2l(T)}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{1}{(|m_{h}|+1)^2} = t^{2l(T)}\prod_{h=1}^{l(T)}\left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \frac{1}{(|m_{h}|+1)^2}\right)
-    \lesssim t^{2l(T)}.
+    \left| \frac{i}{a_{\mathfrak{r}}+\alpha \text{sgn}(a_{\mathfrak{r}})} F_{II}(t)\right|\le& \frac{\alpha t}{|a_{\mathfrak{r}}|+\alpha}\prod_{j=1}^3\left(\sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{j,\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{j,\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\right)
+    \\
+    \le& \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}.
 \end{split}
-\end{equation}
-Here the inequality is because $\sum_{\substack{j\in \mathbb{Z}\\ |j|\lesssim \alpha^{-1}}} \frac{1}{(|j|+1)^2}\le 2$.
+\end{equation}.
 
-Now we prove \eqref{eq.lemTpvarianceclaim1}. Use Cauchy inequality we get
-\begin{equation}
-\begin{split}
-    &\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t}{|c(\{m_{h}\})_{h}|+1} \prod_{h=1}^{l(T)}\frac{t}{|c'(\{m_{h}\})_{h}|+1}
-    \\
-    \lesssim & \left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t^2}{(|c(\{m_{h}\})_{h}|+1)^2} \right)^{\frac{1}{2}} 
-    \left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim \alpha^{-1}}} \prod_{h=1}^{l(T)}\frac{t^2}{(|c'(\{m_{h}\})_{h}|+1)^2} \right)^{\frac{1}{2}}.
-\end{split}
-\end{equation}
-
-Therefore, we just need to show that 
-\begin{equation}
-    \sum_{m_{h}\in \mathbb{Z}} \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\lesssim 1 
-\end{equation}
-
-By Euler-Maclaurin formula and change of variable formula, we get
-\begin{equation}
-\begin{split}
-    \sum_{m_{h}\in \mathbb{Z}} \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\le& \int  \prod_{h=1}^{l(T)}\frac{1}{(|c(\{m_{h}\})_{h}|+1)^2}\prod_{h=1}^{l(T)} dm_{h}
-    \\
-    =& \int  \prod_{h=1}^{l(T)}\frac{1}{(|m_{h}|+1)^2}|\text{det}\ c|\prod_{h=1}^{l(T)}  dm_{h}
-    \\
-    =&\prod_{h=1}^{l(T)}\int \frac{1}{(|m_{h}|+1)^2}  dm_{h}
-    \\
-    \lesssim & 1
-\end{split}
-\end{equation}
-
-Now we complete the proof of the claim and thus the proof of the lemma.
+Combining the bounds of $F_{I}$, $F_{T^{(1)}}$, $F_{T^{(2)}}$, $F_{T^{(3)}}$, $F_{II}$, we conclude that $F_T$ can be bounded by the right hand side of \eqref{eq.boundcoef'} and thus complete the proof of Lemma \ref{lem.boundcoef'}.
 \end{proof}
-
-\textbf{{Large deviation of polynomials of Gaussians}
-}
-
-
-
-\subsection{Norm estimate of random matrices} \label{sec.randommatrices}
+ 
+% For general $T$, let $T_1$, $T_2$, $T_3$ be the three subtrees of the root, then we have the following recursive formula for $F_{T}$
+% \begin{equation}\label{eq.lemboundcoefrecur}
+%     F_{T}(t)=\int^t_0 e^{-i(t_{\mathfrak{r}}a_{\mathfrak{r}}+\alpha c(t_{\mathfrak{r}})b_{\mathfrak{r}})} F_{T_1}(t_{\mathfrak{r}})F_{T_2}(t_{\mathfrak{r}})F_{T_3}(t_{\mathfrak{r}}) dt_{\mathfrak{r}}.
+% \end{equation}
 
 
 
 
 
+A straight forward application of above lemma gives following upper bound of the coefficients $H^T_{k_1\cdots k_{2l+1}}$. 
+
+\begin{lem}\label{lem.boundcoef}
+Let $m(t)=\mathbb{E}M(t)$, then by mass conservation $m(t_{\mathfrak{n}})\lesssim 1$ for all $t_{\mathfrak{n}}$. We have the following upper bound for $H^T_{k_1\cdots k_{2l+1}}$,
+\begin{equation}\label{eq.boundcoef}
+    H^T_{k_1\cdots k_{2l+1}}\lesssim \sum_{\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}\in\{0,1\}^{l(T)}}\prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|q_{\mathfrak{n}}|+\alpha}\ \delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} S_{\mathfrak{n}}}.
+\end{equation}
+Fix a sequence $\{d_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ whose elements $d_{\mathfrak{n}}$ takes boolean values $\{0,1\}$. We define the sequence $\{q_{\mathfrak{n}}\}_{\mathfrak{n}\in T_{\text{in}}}$ by the following recursive formula
+\begin{equation}\label{eq.q_n}
+    q_{\mathfrak{n}}=
+    \begin{cases}
+    \Omega_{\mathfrak{r}}, \qquad\qquad \textit{ if }\mathfrak{n}=\textit{ the root }\mathfrak{r}.
+    \\
+    \Omega_{\mathfrak{n}}+d_{\mathfrak{n}}q_{\mathfrak{n}'},\ \ \textit{ if }\mathfrak{n}\neq\mathfrak{r}\textit{ and }\mathfrak{n}'\textit{ is the parent of }\mathfrak{n}.
+    \end{cases}
+\end{equation}
 
 
-
-
-In this section 
-  
-\textbf{leg}
+\end{lem}
+\begin{proof}
+This is a direct corollary of Lemma \ref{eq.boundcoef'} if we take $a_{\mathfrak{n}}=\Omega_{\mathfrak{n}}$, $b_{\mathfrak{n}}=\widetilde{\Omega}_{\mathfrak{n}}/(2\alpha \int^t_{0}m(s) ds)$ and $c(t_{\mathfrak{n}})=2\int^t_{0}m(s) ds$. 
+\end{proof}
 
 
 

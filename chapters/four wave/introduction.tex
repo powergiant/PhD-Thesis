@@ -5,24 +5,24 @@
 
 In this chapter, we study the wave turbulence theory for the following Klein-Gordon type equation
 \begin{equation}\tag{NKLG}\label{eq.NKLG}
-    \begin{cases}
-    i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-\frac{1}{2}}\left(|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\psi\right),\\[.6em]
-    \psi(0,x) = \psi_{\textrm{in}}(x), \quad x\in \mathbb{T}^d_{L_1\cdots L_d}.
-    \end{cases}    
+ \begin{cases}
+ i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-\frac{1}{2}}\left(|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\psi\right),\\[.6em]
+ \psi(0,x) = \psi_{\textrm{in}}(x), \quad x\in \mathbb{T}^d_{L_1\cdots L_d}.
+ \end{cases} 
 \end{equation}
 as an example of general four wave systems. Here $\Lambda(\xi)\coloneqq\sqrt{1+|\xi|^2}$.
 
-Here $\psi$ is a complex value function. We consider the periodic boundary condition, which implies that the spatial domain is a torus $\mathbb{T}^d_{L}=[0,L]^d$. 
+Here $\psi$ is a complex value function. We consider the periodic boundary condition, which implies that the spatial domain is a torus $\mathbb{T}^d_{L}=[0, L]^d$. 
 
 We know that the Fourier coefficients of $\psi$ lie on the lattice $\mathbb{Z}_L^d = \{k=\frac{K}{L}:K\in \mathbb{Z}^d\}$. Let $n_{\textrm{in}}$ be a known function, we assume that
 \begin{equation}\label{eq.wellprepared}
-\psi_{\textrm{in}}(x)=\frac{1}{L^d}\sum_{k\in\mathbb{Z}^d_L}\sqrt{n_{\textrm{in}}(k)} \eta_k(\omega)\,  e^{2\pi i kx}
+\psi_{\textrm{in}}(x)=\frac{1}{L^d}\sum_{k\in\mathbb{Z}^d_L}\sqrt{n_{\textrm{in}}(k)} \eta_k(\omega)\, e^{2\pi i kx}
 \end{equation}
 where $\eta_k(\omega)$ are mean-zero and identically distributed complex Gaussian random variables satisfying $\mathbb E |\eta_k|^2=1$. To ensure $\psi_{\textrm{in}}$ to be a real value function, we assume that $n_{\textrm{in}}(k)=n_{\textrm{in}}(-k)$ and $\eta_k=\overline{\eta_{-k}}$. Finally, we assume that $\eta_k$ is independent of $\{\eta_{k'}\}_{k'\ne k,-k}$.
 
-The energy spectrum $n(t,k)$ mentioned in previous section is defined to be $\mathbb E |\widehat \psi(t, k)|^2$, where $\psi(t, k)$ are Fourier coefficients of the solution. Although the initial data is assumed to be the Gaussian random field, it is possible to develop a theory for other types of random initial data.
+The energy spectrum $n(t,k)$ mentioned in the previous section is defined to be $\mathbb E |\widehat \psi(t, k)|^2$, where $\psi(t, k)$ are Fourier coefficients of the solution. Although the initial data is assumed to be the Gaussian random field, it is possible to develop a theory for other types of random initial data.
 
-In the wave turbulence, the energy distribution $n(k)$ is supposed to evolve according to the following wave kinetic equation
+In wave turbulence, the energy distribution $n(k)$ is supposed to evolve according to the following wave kinetic equation
 \[
 \tag{WKE}\label{eq.WKE_KG}
 \begin{split}
@@ -34,32 +34,32 @@ In the wave turbulence, the energy distribution $n(k)$ is supposed to evolve acc
 \]
 
 
-Now we explain the idea of deriving above wave kinetic equation. The derivation also uses Feynman diagram expansion. Note that in this thesis, we only consider the upper bound for most difficult terms in the diagram expansion. Therefore, the proof in this thesis is \textbf{incomplete}. We believe that all other terms can be handled by the existing technique developed by Deng-Hani \cite{} and we leave the full proof to be a future project.
+Now we explain the idea of deriving the above wave kinetic equation. The derivation also uses Feynman diagram expansion. Note that in this thesis, we only consider the upper bound for the most difficult terms in the diagram expansion. Therefore, the proof in this thesis is \textbf{incomplete}. We believe that all other terms can be handled by the existing technique developed by Deng-Hani \cite{} and we leave the full proof to be a future project.
 
 
 
 
 
-\subsection{Outline of this chapter} As in the previous chapter, in order to apply the Deng-Hani's argument to derive the \eqref{eq.WKE_KG}, we need to analyze the perturbative expansion series. In this section, we explain the special structure of NLS and the difficulties of Deng-Hani's argument to general dispersive equation without this special structure. 
+\subsection{Outline of this chapter} As in the previous chapter, in order to apply Deng-Hani's argument to derive the \eqref{eq.WKE_KG}, we need to analyze the perturbative expansion series. In this section, we explain the special structure of NLS and the difficulties of Deng-Hani's argument to the general dispersive equation without this special structure. 
 
 \subsubsection{The special structure of NLS}\label{sec.specialintro} The NLS is given by the following equation
 \begin{equation}
-    i\partial_t\psi-\Delta\psi=\lambda^2 |\psi|^2\psi
+ i\partial_t\psi-\Delta\psi=\lambda^2 |\psi|^2\psi
 \end{equation}
 Here we consider the focusing NLS and the sign of the nonlinear is not relevant to the argument below.
 
 Its nonlinearity is given by $|u|^2u$. The Fourier coefficients of this nonlinearity are given by
 
 \begin{equation}
-    \frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} \psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+ \frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} \psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3}
 \end{equation}
 
-In order to prove \eqref{eq.WKE_KG}, we need to show that the nonlinearity is small compared to the linear term. To show the smallness, we have to exploit the the square root cancellation given by randomness of $u_k$.
+In order to prove \eqref{eq.WKE_KG}, we need to show that the nonlinearity is small compared to the linear term. To show the smallness, we have to exploit the square root cancellation given by the randomness of $u_k$.
 But in $\sum_{k_1=k_2,k_3=k}$ or $\sum_{k_1=k,k_2=k_3}$, which are equal to $ (\sum_{k_1}|u_{k_1}|^2) u_k$, we do not have the desired square root cancellation.
 
 In NLS, $ \sum_{k_1}|\psi_{k_1}|^2 = \fint_{\mathbb{T}_L^d}|\psi|^2$ is just the $L^2$ mass which is a conservative quantity. We just need to rewrite the NLS into the following form 
 \begin{equation}
-    i\partial_t\psi-\Delta\psi =  2\bigg(\lambda^2\fint_{\mathbb{T}_L^d}|\psi|^2\bigg)\psi + \lambda^2\bigg(|\psi|^2-2\fint_{\mathbb{T}_L^d}|\psi|^2\bigg)\psi
+ i\partial_t\psi-\Delta\psi = 2\bigg(\lambda^2\fint_{\mathbb{T}_L^d}|\psi|^2\bigg)\psi + \lambda^2\bigg(|\psi|^2-2\fint_{\mathbb{T}_L^d}|\psi|^2\bigg)\psi
 \end{equation}
 Due to the conservativeness and multiplier-freeness, the first term $2\lambda^2\fint_{\mathbb{T}_L^d}|\psi|^2\psi$ can be removed completely by a simple change phase argument $\psi \rightarrow e^{-2i\lambda^2\fint_{\mathbb{T}_L^d}|\psi|^2t}\cdot \psi$. 
 
@@ -68,16 +68,16 @@ After doing the change phase, $\lambda^2\bigg(|\psi|^2-2\fint_{\mathbb{T}_L^d}|\
 However, the Klein-Gordon equation (or many other PDEs from physics) does not have such a good structure. The Fourier coefficients of the nonlinearity $\lambda^2 \Lambda(\nabla)^{-\frac{1}{2}}|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\psi$ are given by
 
 \begin{equation}
-    \frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-\frac{1}{2}}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+ \frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-\frac{1}{2}}\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3}
 \end{equation}
 
 The sum $\sum_{k_1=k_2,k_3=k}$ or $\sum_{k_1=k,k_2=k_3}$ now equals to $ (\sum_{k_1}\Lambda_{k_1}^{-1}|u_{k_1}|^2) \Lambda_{k}^{-1}u_k$. The corresponding $L^2$ term in this case equals to $\sum_{k_1}\Lambda_{k_1}^{-1}|u_{k_1}|^2$, which is not a conservative quantity. Even worse, this terms equals to $\bigg(\fint_{\mathbb{T}_L^d}|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\bigg)\Lambda(\nabla)^{-1}\psi $, which contains derivative. 
 
 
-Therefore, the change phase argument does not work for \eqref{eq.NKLG}, since in the analogous change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}M(s) ds}  \psi_k(t)$ the quantity $M(t)=\sum_{k_1}\Lambda_{k_1}^{-1}|\psi_{k_1}|^2$ is not a conservative quantity. More importantly, after change of variable the nonlinearity becomes
+Therefore, the change phase argument does not work for \eqref{eq.NKLG}, since in the analogous change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}M(s) ds} \psi_k(t)$ the quantity $M(t)=\sum_{k_1}\Lambda_{k_1}^{-1}|\psi_{k_1}|^2$ is not a conservative quantity. More importantly, after a change of variable, the nonlinearity becomes
 
 \begin{equation}
-\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\  k_1\ne k_2,\ k_3 \ne k}} \psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3} e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}M(s) ds\left(\Lambda(k_1)^{-1}-\Lambda(k_2)^{-1}+\Lambda(k_3)^{-1}-\Lambda(k)^{-1}\right)} 
+\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\ k_1\ne k_2,\ k_3 \ne k}} \psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3} e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}M(s) ds\left(\Lambda(k_1)^{-1}-\Lambda(k_2)^{-1}+\Lambda(k_3)^{-1}-\Lambda(k)^{-1}\right)} 
 \end{equation}
 Due to randomness of $M$, the additional phase factor $e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}M(s) ds(\cdots)}$ is a random variable which cause a serious problem. 
 
@@ -85,112 +85,115 @@ Due to randomness of $M$, the additional phase factor $e^{- \frac{2i\lambda^2}{L
 \subsubsection{The renormalized approximation series} \label{sec.appsol}%\label{sec.renormintro} 
 
 
-In order to solve above problem we introduce a new change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}m(s) ds}  \psi_k(t)$, where $m(t)=\mathbb{E}M(t)$. After doing this, the phase factor $e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}m(s) ds(\cdots)}$ is not a random variable. 
+In order to solve the above problem we introduce a new change of variable $\psi_k(t)\rightarrow e^{\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-1}\int^t_{0}m(s) ds} \psi_k(t)$, where $m(t)=\mathbb{E}M(t)$. After doing this, the phase factor $e^{- \frac{2i\lambda^2}{L^{d}} \int^t_{0}m(s) ds(\cdots)}$ is not a random variable. 
 
-Our change of variable solves the problem coming from the randomness of $M$. The problem from time dependence of $M$ will be solved later.
+Our change of variable solves the problem coming from the randomness of $M$. The problem of the time dependence of $M$ will be solved later.
 
 %\subsubsection{The approximate solution}\label{sec.appsol} 
-After the renormalization it can be shown that  $\sum_{k_1=k_2,k_3=k}$ and $\sum_{k_1=k,k_2=k_3}$ is small, so in this section we ignore the contribution from them. For simplicity we also ignore the effect of renormalization. Then the equation of Fourier coefficients becomes
+After the renormalization, it can be shown that $\sum_{k_1=k_2,k_3=k}$ and $\sum_{k_1=k,k_2=k_3}$ is small, so in this section, we ignore the contribution from them. For simplicity, we also ignore the effect of renormalization. Then the equation of Fourier coefficients becomes
 \begin{equation}\label{eq.renormalizedintro}
-    \begin{split}
-    i \dot{\psi}_{k} 
-    =  \bigg(\Lambda(k)&+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-2}\bigg) \psi_k
-    +\frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0}  \Lambda_{k_1k_2k_3k}^{-1}\,\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
-    \\
-    &+\frac{2\lambda^2}{L^{2d}} \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-2}\Big(|\psi_{k_1}|^2-\mathbb{E} |\psi_{k_1}|^2\Big) \right) \Lambda_{k}^{-2}\psi_{k}    
-    \end{split}
-    \end{equation}
+ \begin{split}
+ i \dot{\psi}_{k} 
+ = \bigg(\Lambda(k)&+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-2}\bigg) \psi_k
+ +\frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0} \Lambda_{k_1k_2k_3k}^{-1}\,\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3}
+ \\
+ &+\frac{2\lambda^2}{L^{2d}} \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-2}\Big(|\psi_{k_1}|^2-\mathbb{E} |\psi_{k_1}|^2\Big) \right) \Lambda_{k}^{-2}\psi_{k} 
+ \end{split}
+ \end{equation}
 
 % \begin{equation}\label{eq.Fourierintro}
-%     i \dot{\psi}_{k} =  \Lambda(k) \psi_k+\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\  k_1\ne k_2,\ k_3 \ne k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+% i \dot{\psi}_{k} = \Lambda(k) \psi_k+\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{k - k_1 + k_2 -k_3 = 0 \\ k_1\ne k_2,\ k_3 \ne k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3}
 % \end{equation}
 
 
-Define new dynamical variable $e^{i\Lambda(k) t+\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-2}\int^t_{0}m(s) ds}  \psi_k(t)$ and integrate \eqref{eq.renormalizedintro} in time. Then  (\ref{eq.NKLG}) with initial data (\ref{eq.wellprepared}) becomes
+Define new dynamical variable $e^{i\Lambda(k) t+\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-2}\int^t_{0}m(s) ds} \psi_k(t)$ and integrate \eqref{eq.renormalizedintro} in time. Then (\ref{eq.NKLG}) with initial data (\ref{eq.wellprepared}) becomes
 
 \begin{equation}\label{eq.intmainintro}
-    \begin{split}
-        \phi_k =\xi_k
-        &\underbrace{-  \frac{i\lambda^2}{L^{2d}} \sum\limits^{\times}_{S_3=0} \int^{t}_0  \Lambda_{k_1k_2k_3k}^{-1}\,\phi_{k_1}\overline{\phi}_{k_2}  \phi_{k_3}e^{- i (\Omega_3t+\widetilde{\Omega}_3)} ds}_{\mathcal{T}_1(\phi,\phi,\phi)_k}
-        \\
-        &\underbrace{-  \frac{2i\lambda^2}{L^{2d}}  \int^{t}_0 \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-2}:|\phi_{k_1}|^2: \right) \Lambda_{k}^{-1}\phi_{k} ds}_{\mathcal{T}_2(\phi,\phi,\phi)_k}.
-    \end{split}
-    \end{equation}
+ \begin{split}
+ \phi_k =\xi_k
+ &\underbrace{- \frac{i\lambda^2}{L^{2d}} \sum\limits^{\times}_{S_3=0} \int^{t}_0 \Lambda_{k_1k_2k_3k}^{-1}\,\phi_{k_1}\overline{\phi}_{k_2} \phi_{k_3}e^{- i (\Omega_3t+\widetilde{\Omega}_3)} ds}_{\mathcal{T}_1(\phi,\phi,\phi)_k}
+ \\
+ &\underbrace{- \frac{2i\lambda^2}{L^{2d}} \int^{t}_0 \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-2}:|\phi_{k_1}|^2: \right) \Lambda_{k}^{-1}\phi_{k} ds}_{\mathcal{T}_2(\phi,\phi,\phi)_k}.
+ \end{split}
+ \end{equation}
 % \begin{equation}\label{eq.intmainintro}
-%     \psi_k=\xi_k-\frac{i\lambda^2}{L^{2d}} \sum\limits_{\substack{S_{3,k} \\  k_1\ne k_2,\ k_3 \ne k}}
-%     \int^t_0 e^{- is \Omega_{3,k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3} ds
+% \psi_k=\xi_k-\frac{i\lambda^2}{L^{2d}} \sum\limits_{\substack{S_{3,k} \\ k_1\ne k_2,\ k_3 \ne k}}
+% \int^t_0 e^{- is \Omega_{3,k}} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1}\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3} ds
 % \end{equation}
 Here we introduce $S_{3,k}=k_1-k_2+k_3-k$, $\Omega_{3,k}=\Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)-\Lambda(k)$, $\widetilde{\Omega}'_3(k_1,k_2,k_3,k)=\frac{2\lambda^2}{L^{d}} \int^t_{0}M(s) ds\left(\Lambda(k_1)^{-2}-\Lambda(k_2)^{-2}+\Lambda(k_3)^{-2}-\Lambda(k)^{-2}\right)$. $\xi_k$ are the Fourier coefficients of the initial data of $\psi$ defined by $\xi_k=\sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega)$.
 
-The right hand side by $\mathcal{F}(\psi)_k=\xi_k+\mathcal{T}_1(\psi,\psi,\psi)_k + \mathcal{T}_2(\psi,\psi,\psi)_k$ As in three wave models in previous chapter, we can construct an approximate series by iteration. $\psi=\mathcal{F}(\psi)=\mathcal{F}(\mathcal{F}(\psi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\psi)))=\cdots$
+The right hand side by $\mathcal{F}(\psi)_k=\xi_k+\mathcal{T}_1(\psi,\psi,\psi)_k + \mathcal{T}_2(\psi,\psi,\psi)_k$ As in three wave models in the previous chapter, we can construct an approximate series by iteration. $\psi=\mathcal{F}(\psi)=\mathcal{F}(\mathcal{F}(\psi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\psi)))=\cdots$
 
 % Denote the second term of right hand side by $\mathcal{T}(\psi,\psi,\psi)_k$ and the right hand side by $\mathcal{F}(\psi)_k=\xi_k+\mathcal{T}(\psi,\psi,\psi)_k$. Then the equation is $\psi=\mathcal{F}(\psi)_k$. A common way of constructing the approximation is iteration: $\psi=\mathcal{F}(\psi)=\mathcal{F}(\mathcal{F}(\psi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\psi)))=\cdots$. 
 
-Define the approximate solution by $\psi_{app}=\mathcal{F}^{N}(\xi)$. By recursively expanding  $\mathcal{F}^{N}$, we get  
+Define the approximate solution by $\psi_{app}=\mathcal{F}^{N}(\xi)$. By recursively expanding $\mathcal{F}^{N}$, we get 
 \begin{equation*}
 \begin{split}
-    \psi_{app}=&\mathcal{F}^{N}(\xi)=\xi+\mathcal{T}_1(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi)) + \mathcal{T}_2(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi))
-    \\
-    =&\xi+\mathcal{T}_1(\xi,\xi,\xi)+ \mathcal{T}_2(\xi,\xi,\xi) +\mathcal{T}_1(\mathcal{T}_1(\xi,\xi,\xi),\xi,\xi)
-    +\cdots
-\end{split}    
+ \psi_{app}=&\mathcal{F}^{N}(\xi)=\xi+\mathcal{T}_1(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi)) + \mathcal{T}_2(\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi),\mathcal{F}^{N-1}(\xi))
+ \\
+ =&\xi+\mathcal{T}_1(\xi,\xi,\xi)+ \mathcal{T}_2(\xi,\xi,\xi) +\mathcal{T}_1(\mathcal{T}_1(\xi,\xi,\xi),\xi,\xi)
+ +\cdots
+\end{split} 
 \end{equation*}
 
 Since $\mathcal{T}_2$ contains the renormalization symbol $:\cdot:$, $\psi_{app}$ is not a polynomial of $\xi$. Instead, it is a renormalized polynomial as defined by Definition \ref{def.renorm} (3).
 
-We need a good upper bound for each terms of $\psi_{app}$. To get this, we analyze Feynman diagrams. 
+We need a good upper bound for each term of $\psi_{app}$. To get this, we analyze Feynman diagrams. 
 
-\subsubsection{The perturbative analysis}\label{sec.pert intro} The analysis in previous section suggests that $\psi_{app}$ should be a good approximation of $\psi$. In other words, the error of this approximation $w=\psi-\psi_{app}$ is very small. The strategy of proving this is the same as in previous chapter.
+\subsubsection{The perturbative analysis}\label{sec.pert intro} The analysis in previous section suggests that $\psi_{app}$ should be a good approximation of $\psi$. In other words, the error of this approximation $w=\psi-\psi_{app}$ is very small. The strategy for proving this is the same as in the previous chapter.
 
 We use the follow equation of $w$ which can be derived from (\ref{eq.intmainintro}):
 \begin{equation}\label{eq.eqwintro}
-    w= Err(\xi)+Lw+B(w,w)+C(w,w,w)
+ w= Err(\xi)+Lw+B(w,w)+C(w,w,w)
 \end{equation}
 Here $Err(\xi)$ is a polynomial of $\xi$ whose degree $\le N+1$ monomials vanish. $Lw$, $B(w,w)$, $C(w,w,w)$ are linear, quadratic, cubic in $w$ respectively.
 
-We prove the smallness of $w$ using boostrap method.
+We prove the smallness of $w$ using the boostrap method.
 
-Define $||w||_{X^p}=\sup_{k} \langle k\rangle^{p} |w_k|$. Starting from the assumption that $\sup_t||w||_{X^p}\le CL^{-M}$ ($C,M\gg 1$), in order to close the boostrap, we need to prove that $\sup_t||w||_{X^p}\le (1+C/2)L^{-M}<CL^{-M}$. To prove $||w||_{X^p}\le (1+C/2)L^{-2}$, we use (\ref{eq.eqwintro}), which gives
+Define $||w||_{X^p}=\sup_{k} \langle k\rangle^{p} |w_k|$. Starting from the assumption that $\sup_t||w||_{X^p}\le CL^{-M}$ ($C,M\gg 1$), in order to close the bootstrap, we need to prove that $\sup_t||w||_{X^p}\le (1+C/2)L^{-M}<CL^{-M}$. To prove $||w||_{X^p}\le (1+C/2)L^{-2}$, we use (\ref{eq.eqwintro}), which gives
 \begin{equation}\label{eq.ineqw}
-    ||w||_{X^p}\le ||Err(\xi)||_{X^p}+||Lw||_{X^p}+||B(w,w)||_{X^p}+||C(w,w,w)||_{X^p}
+ ||w||_{X^p}\le ||Err(\xi)||_{X^p}+||Lw||_{X^p}+||B(w,w)||_{X^p}+||C(w,w,w)||_{X^p}
 \end{equation}
 
 In the rest part of the proof, we show that 
 \begin{equation}
-    ||Err(\xi)||_{X^p}\le L^{-M},
-    \quad ||B(w,w)||_{X^p}\le C^2L^{O_d(1)-2M},
-    \quad||C(w,w,w)||_{X^p}\le C^3L^{O_d(1)-3M}.
+ ||Err(\xi)||_{X^p}\le L^{-M},
+ \quad ||B(w,w)||_{X^p}\le C^2L^{O_d(1)-2M},
+ \quad||C(w,w,w)||_{X^p}\le C^3L^{O_d(1)-3M}.
 \end{equation}
 Combining with a special treatment of $Lw$, above estimates imply that $||w||_{X^p}\le (1+C/2)L^{-M}$, which closes the boostrap.
 
-The proof of inequalities of $B(w,w)$ and $C(w,w,w)$ is eas and will be given in later part of this section. The proof of inequalities of $Err(\xi)$ and $Lw$ requires a complete analysis of terms in diagram expansion. As mentioned before, in this thesis, \textbf{we only consider the upper bound for those terms that are related to the issue of renormalization}, which should be the most difficult terms in the diagram expansion. We leave it a future project to adapt the the existing technique developed by Deng-Hani to get a full proof of the wave kinetic equation.
+The proof of inequalities of $B(w,w)$ and $C(w,w,w)$ is easy and will be given in the later part of this section. The proof of inequalities of $Err(\xi)$ and $Lw$ requires a complete analysis of terms in diagram expansion. As mentioned before, in this thesis, \textbf{we only consider the upper bound for those terms that are related to the issue of renormalization}, which should be the most difficult terms in the diagram expansion. We leave it a future project to adapt the existing technique developed by Deng-Hani to get full proof of the wave kinetic equation.
 
 
-\subsubsection{Lattice points counting and $||Err(\xi)||_{X^p}$}\label{sec.latticeintro} In this section we explain the idea of proving upper bound of $||Err(\xi)||_{X^p}$.
+\subsubsection{Lattice points counting and $||Err(\xi)||_{X^p}$}\label{sec.latticeintro} In this section we explain the idea of proving the upper bound of $||Err(\xi)||_{X^p}$.
 
 $(Err(\xi))_{k}$ is a sum of terms of the form
 \begin{equation}\label{eq.Errsumterms}
 \begin{split}
-    &\mathcal{J}_k^0(\xi)=  \xi_k, \quad \mathcal{J}_k^1(\xi)=\frac{\lambda^2}{L^{2d}} \sum_{k_1-k_2+k_3-k=0} H^1_{k_1k_2k_3}  [\xi_{k_1}\bar{\xi}_{k_2}\xi_{k_3}] , \quad\cdots  \\
-    &\mathcal{J}_k^l(\xi)=\left(\frac{\lambda^2}{L^{2d}}\right)^l\sum_{k_1-k_2+\cdots+k_{2l+1}-k=0} H^l_{k_1\cdots k_{2l+1}}  [\xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}], \quad\cdots 
+ &\mathcal{J}_k^0(\xi)= \xi_k, \quad \mathcal{J}_k^1(\xi)=\frac{\lambda^2}{L^{2d}} \sum_{k_1-k_2+k_3-k=0} H^1_{k_1k_2k_3} [\xi_{k_1}\bar{\xi}_{k_2}\xi_{k_3}] , \quad\cdots \\
+ &\mathcal{J}_k^l(\xi)=\left(\frac{\lambda^2}{L^{2d}}\right)^l\sum_{k_1-k_2+\cdots+k_{2l+1}-k=0} H^l_{k_1\cdots k_{2l+1}} [\xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}], \quad\cdots 
 \end{split}
 \end{equation}
-Here the $[\cdot]$ indicates that this is a renormalized polynomial whose precise definition is given in Definition \ref{def.renorm}. According to section \ref{sec.appFey}, each terms correspond to a Feynman diagram and their coefficient can be calculated from these diagrams. 
+Here the $[\cdot]$ indicates that this is a renormalized polynomial whose precise definition is given in Definition \ref{def.renorm}. According to section \ref{sec.appFey}, each term corresponds to a Feynman diagram, and their coefficient can be calculated from these diagrams. 
 
-As in the three wave case, from the Feynman diagram representation in section \ref{sec.appFey}, we know that $H^l$ is large near a surface given by $2l$ equations $S=\{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0\}$. Then in order to estimate $\mathcal{J}_k^l(\xi)$ it suffices to upper bound the number of lattice points near this surface. Unlike the three wave case, we cannot obtain strong enough number theory estimate without renormalization symbol $[\cdot]$.
+\underline{Difficulties of four wave models}: As in the three wave case, from the Feynman diagram representation in section \ref{sec.appFey}, we know that $H^l$ is large near a surface given by $2l$ equations $S=\{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0\}$. Then in order to estimate $\mathcal{J}_k^l(\xi)$, it suffices to upper bound the number of lattice points near this surface. Unlike the three wave case, we cannot obtain a strong enough number theory estimate without renormalization symbol $[\cdot]$.
 
 
 
-By the large deviation principle, to obtain upper bounds of Gaussian polynomials $\mathcal{J}_{T,k}^l(\xi)$, it suffices to calculate their variance. To calculate the variance of \eqref{eq.Errsumterms}, we just need to calculate $\mathbb{E}[\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}]$. This calculation is done in section \ref{sec.coupwick}, where we introduce a novel renormalized Wick theorem (Theorem \ref{th.wickr_informal} or Theorem \ref{th.wickr}).
+By the large deviation principle, to obtain the upper bounds of Gaussian polynomials $\mathcal{J}_{T,k}^l(\xi)$, it suffices to calculate their variance. To calculate the variance of \eqref{eq.Errsumterms}, we just need to calculate $\mathbb{E}[\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}]$. This calculation is done in section \ref{sec.coupwick}, where we introduce a novel renormalized Wick theorem (Theorem \ref{th.wickr_informal} or Theorem \ref{th.wickr}).
 
-The usual Wick theorem says that $\mathbb{E}\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}=\sum_{p\in \mathcal{P}}\delta_p$ where $\mathcal{P}$ is a set of pairing whose definition will be given in Definition \ref{def.pairing}. Our renormalized Wick theorem says that with the Renormalization symbol $\mathbb{E}[\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}]=\sum_{p\in \mathcal{P}_F}\delta_p$ where $\mathcal{P}_F$ is a subset of all pairing which exclude many bad pairings.
+\underline{The renormalized Wick theorem}: The usual Wick theorem says that $\mathbb{E}\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}=\sum_{p\in \mathcal{P}}\delta_p$ where $\mathcal{P}$ is a set of pairing whose definition will be given in Definition \ref{def.pairing}. Our renormalized Wick theorem says that with the renormalization symbol $\mathbb{E}[\xi_{k_1}\bar{\xi}_{k_2}\cdots\bar{\xi}_{k_{2l}}]=\sum_{p\in \mathcal{P}_F}\delta_p$ where $\mathcal{P}_F$ is a subset of all pairings which excludes many bad pairings.
+
+\underline{Wick theorem solves these difficulties}: In the Feynman diagram expansion, \textbf{pairing}, \textbf{circle nodes sibling pairing}, \textbf{closed couple contains only one circle node} \textbf{wick theorem says the number of good couples is more than the number of bad couples if no long chain of circle nodes}, \textbf{there no long regular chain of circle nodes due to cancellation}, 
+
 
 Combining the heuristic argument in section \ref{} and a cancellation identity \eqref{}, we can get upper bounds for all diagram terms.
 
 In conclusion, combining lattice points counting and renormalization argument we can show that, for any $M$, we can take $N$ large enough so that $||Err(\xi)||_{X^p}\le L^{-M}$.
 
 % \begin{equation}
-%     P(T)=\sum_{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0} \xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}.
+% P(T)=\sum_{S_{3}(T)=0,\Omega_{3}(T)=0,\cdots,\Omega_{2l+1}(T)=0,\Omega_{2l+1}(T)=0} \xi_{k_1}\bar{\xi}_{k_2}\cdots\xi_{k_{2l+1}}.
 % \end{equation}
 
 
@@ -198,36 +201,36 @@ In conclusion, combining lattice points counting and renormalization argument we
 
 \subsubsection{Upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$} $||B(w,w)||_{X^p}$ is a sum of terms of the form
 \begin{equation}
-    \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s)  \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}
+ \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s) \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}
 \end{equation}
 $||C(w,w,w)||_{X^p}$ is a cubic polynomial of $w$ of the form
 \begin{equation}
-    \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s)  w_{k_1}\bar{w}_{k_2}w_{k_3}
+ \frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s) w_{k_1}\bar{w}_{k_2}w_{k_3}
 \end{equation}
 
-By assumptions and proofs in this paper, we know that $t\le \alpha^{-3/2}\le L^{O_d(1)}$,  $|B_{k_1k_2k_3}(s)|, |C_{k_1k_2k_3}(s)|\lesssim 1$ and $|\mathcal{J}^{l}_{k_1}(\xi)|\lesssim \langle k\rangle^{-p}$. By boostrap assumption, $\sup_{k} \langle k\rangle^{p} |w_k|\le CL^{-M}$. Therefore we have following estimate of $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$
+By assumptions and proofs in this paper, we know that $t\le \alpha^{-3/2}\le L^{O_d(1)}$, $|B_{k_1k_2k_3}(s)|, |C_{k_1k_2k_3}(s)|\lesssim 1$ and $|\mathcal{J}^{l}_{k_1}(\xi)|\lesssim \langle k\rangle^{-p}$. By boostrap assumption, $\sup_{k} \langle k\rangle^{p} |w_k|\le CL^{-M}$. Therefore we have following estimate of $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$
 \begin{equation}
 \begin{split}
-    ||B(w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s)  \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}\right|    
-    \\
-    \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^{O_d(1)} \sum_{k_1-k_2+k_3-k=0} \langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
-    \\
-    \le& C^2 L^{O_d(1)-2M},
+ ||B(w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} B_{k_1k_2k_3}(s) \mathcal{J}^{l}_{k_1}(\xi)\bar{w}_{k_2}w_{k_3}\right| 
+ \\
+ \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^{O_d(1)} \sum_{k_1-k_2+k_3-k=0} \langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
+ \\
+ \le& C^2 L^{O_d(1)-2M},
 \end{split}
 \end{equation}
 \begin{equation}
 \begin{split}
-    ||C(w,w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s)  w_{k_1}\bar{w}_{k_2}w_{k_3}\right|
-    \\
-    \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^{O_d(1)} \sum_{k_1-k_2+k_3-k=0} L^{-M}\langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
-    \\
-    \le& C^3 L^{O_d(1)-3M}
+ ||C(w,w,w)||_{X^p}=&\sup_{k} \langle k\rangle^{p} \left|\frac{\lambda^2}{L^{2d}} \int^{t}_0\sum_{k_1-k_2+k_3-k=0} C_{k_1k_2k_3}(s) w_{k_1}\bar{w}_{k_2}w_{k_3}\right|
+ \\
+ \lesssim& \sup_{k} \langle k\rangle^{p} \frac{\lambda^2}{L^{2d}} L^{O_d(1)} \sum_{k_1-k_2+k_3-k=0} L^{-M}\langle k_1\rangle^{-p} L^{-M}\langle k_2\rangle^{-p} L^{-M}\langle k_3\rangle^{-p}
+ \\
+ \le& C^3 L^{O_d(1)-3M}
 \end{split}
 \end{equation}
 
 Therefore, we get the desire upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$.
 
-\subsubsection{A random matrix bound and $Lw$ and proof of the main theorem}\label{sec.randmatintro} This part of the proof is the same as the three wave case, if we can control all diagram terms.
+\subsubsection{A random matrix bound and $Lw$ and proof of the main theorem}\label{sec.randmatintro} This part of the proof is the same as the three wave case if we can control all diagram terms.
 
 
 
@@ -236,18 +239,19 @@ Therefore, we get the desire upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)
 
 \subsection{Informal statement of the main theorems}
 
-Now we introduce the main theorems of this chapter.
+Now we introduce the informal version of the main theorems of this chapter.
 
-\begin{thm}\label{th.wickr_informal} this is the informal version, the formal version can be founed in ...
+
+\begin{thm}\label{th.wickr_informal} this is the informal version, the formal version can be found in ...
 \end{thm}
 
-\begin{thm}\label{th.cancellation_informal} this is the informal version, the formal version can be founed in ...
+\begin{thm}\label{th.cancellation_informal} this is the informal version, the formal version can be found in ...
 \end{thm}
 
-\begin{thm}\label{th.loop_informal} this is the informal version, the formal version can be founed in ...
+\begin{thm}\label{th.loop_informal} this is the informal version, the formal version can be found in ...
 \end{thm}
 
-\begin{thm}\label{th.enough_informal} this is the informal version, the formal version can be founed in ...
+\begin{thm}\label{th.enough_informal} this is the informal version, the formal version can be found in ...
 \end{thm}
  
 
@@ -268,7 +272,7 @@ Now we introduce the main theorems of this chapter.
 
 \underline{Universal constants:} In this paper, universal constants are constants that just depend on dimension $d$, diameter $D$ of the support of $n_{\text{in}}$. 
 
-\underline{$O(\cdot)$, $\ll$, $\lesssim$, $\sim$:} Throughout this paper, we frequently use the notation, $O(\cdot)$, $\ll$, $\lesssim$. $A=O(B)$ or $A\lesssim B$ means that there exists $C$ such that $A\lesssim CB$. $A\ll B$ means that there exists a small constant $c$ such that $A\lesssim cB$. $A\sim B$ means that there exist two constant $c$, $C$ such that $cB\lesssim A\lesssim CB$. Here the meaning of constant depends on the context. If they appear in conditions involving $k$, $\Lambda$, $\Omega$, etc., like $|k|\lesssim 1$, $\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0$, then they are universal constants. If these constants appear in an estimate which gives upper bound of some quantity, like $||L^K||_{X^p\rightarrow X^p}\ll 1$ or $\sup_t\sup_k  |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$, then in addition to the quantities that universal constants depend, they can also depend on the quantities $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.
+\underline{$O(\cdot)$, $\ll$, $\lesssim$, $\sim$:} Throughout this paper, we frequently use the notation, $O(\cdot)$, $\ll$, $\lesssim$. $A=O(B)$ or $A\lesssim B$ means that there exists $C$ such that $A\lesssim CB$. $A\ll B$ means that there exists a small constant $c$ such that $A\lesssim cB$. $A\sim B$ means that there exist two constant $c$, $C$ such that $cB\lesssim A\lesssim CB$. Here the meaning of constant depends on the context. If they appear in conditions involving $k$, $\Lambda$, $\Omega$, etc., like $|k|\lesssim 1$, $\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0$, then they are universal constants. If these constants appear in an estimate which gives an upper bound of some quantity, like $||L^K||_{X^p\rightarrow X^p}\ll 1$ or $\sup_t\sup_k |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}$, then in addition to the quantities that universal constants depend, they can also depend on the quantities $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.
 
 \underline{Order of constants:} Here is the order of all constants which can appear in the exponential or superscript of $L$. These constants are $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$.%, $D$, $l_{d}$.
 
@@ -289,12 +293,9 @@ u_k=\int_{\mathbb{T}^d_L} u(x) e^{-2\pi i k\cdot x},\quad \mathrm{\; so \,that \
 \end{equation}
 Given any function $F$, let $F_k$ or $(F)_k$ be its Fourier coefficients.
 
-\underline{Order of $L$:} In this paper, $L$ is assumed to be a constant which is much larger than all the universal constants and $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$. 
+\underline{Order of $L$:} In this paper, $L$ is assumed to be a constant that is much larger than all the universal constants, and $\theta$, $\varepsilon$, $K$, $M$, $N$, $\epsilon_1$. 
 
-\underline{$L$-certainty:} If some statement $S$ involving $\omega$ is true with probability $\geq 1-O_{\theta}(e^{-L^\theta})$, then we say this statement $S$ is $L$-certain.
-
-
-
+% \underline{$L$-certainty:} If some statement $S$ involving $\omega$ is true with probability $\geq 1-O_{\theta}(e^{-L^\theta})$, then we say this statement $S$ is $L$-certain.
 
 
 

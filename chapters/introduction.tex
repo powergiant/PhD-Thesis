@@ -1,124 +1,13 @@
-\section{The physics of interacting wave}
+\chapter{Introduction}
 
-
-\section{The energy cascade phenomenon}
-
-\section{The statistical description of interacting wave}
-
-\section{The Feynmand diagram expansion}
-
-analyze each terms
-
-loss of derivative
-
-\section{Wave kinetic theory for three wave models}
-
-\section{Wave kinetic theory for four wave models}
-
-renormalization
-
-
-In this section we introduce the new variable $\psi$ and rewrite \eqref{eq.NKLG} into the standard form of a dispersive equation. 
+% \import{introduction/}{dispersive.tex}
+\import{introduction/}{physics.tex}
+\import{introduction/}{feynman.tex}
+\import{introduction/}{threewave.tex}
+\import{introduction/}{fourwave.tex}
+\import{introduction/}{survey.tex}
 
 
 
-Notice that in \eqref{eq.NKLG} $\partial_{tt} u - \Delta u +u = -\lambda^2 u^3$, the operator
-$\partial_{tt}-\Delta +1$ can be factorized into $(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_t+\Lambda(\nabla))$, where $\Lambda(\nabla)$ is the Fourier multiplier with symbol $\Lambda(\xi)=\sqrt{1+|\xi|^2}$. Therefore the equation can be simplified by introducing a new variable
-\begin{equation}
-    \psi=i\partial_tu+\Lambda(\nabla)u.
-\end{equation}
-Then we have
-\begin{equation}\label{eq.firstorderderivation}
-    (-i\partial_t+\Lambda(\nabla))\psi=(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_tu+\Lambda(\nabla))u=-\lambda^2 u^3.
-\end{equation} 
-
-We can solve $u$ in terms of $\psi$, $\bar{\psi}$
-\begin{equation}\label{eq.defpsi}
-    u=(2\Lambda(\nabla))^{-1}(\psi+\bar{\psi}).
-\end{equation} 
-We can derive the equation of $\psi$ by substituting \eqref{eq.defpsi} into the right hand side of \eqref{eq.firstorderderivation}
-
-\begin{equation}\label{eq.firstorder}
-    i\partial_t\psi-\Lambda(\nabla)\psi=\frac{\lambda^2}{8} \Big(\Lambda(\nabla)^{-1}\psi+\Lambda(\nabla)^{-1}\bar{\psi}\Big)^3.
-\end{equation} 
-
-
-In this section we explain the renormalization argument.
-Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equation (\ref{eq.firstorder}) becomes
-
-\begin{equation}\label{eq.mainfourier'}
-\begin{split}
-i \dot{\psi}_{k} =& \Lambda_k u_k+\frac{\lambda^2}{8L^{2d}} \sum_{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3} m^{3}_{k_1k_2k_3}\psi_{k_1}\psi_{k_2}  \psi_{k_3}
-+m^{2}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
-\\
-&+m^{1}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3}
-+m^{0}_{k_1k_2k_3}\overline{\psi}_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3},
-\end{split}
-\end{equation}
-where 
-\begin{equation}
-\begin{cases}
-m^{3}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 = k}
-\\
-m^{2}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 +k_3 = k}
-\\
-m^{1}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 -k_3 = k}
-\\
-m^{0}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 + k =0}
-\end{cases}
-\end{equation}
-
-According to \eqref{eq.wellprepared}, the initial data of \eqref{eq.mainfourier'} can be written as 
-
-\begin{equation}
-    \psi_k(0) =  \sqrt{n_{\textrm{in}}(k)/2} \,(\alpha_k+i\beta_k)
-\end{equation}
-To keep the notation simpler we define
-\begin{equation}
-\begin{split}
-    &\eta_{k}(\omega)=\frac{1}{\sqrt{2}}(\alpha_k+i\beta_k),
-    \\
-    &\xi_k = \psi_k(0) = \sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega).
-\end{split}
-\end{equation}
-Therefore $\eta_{k}(\omega)$ are i.i.d complex normal distributions and $\xi_k$ are Fourier coefficients of the initial data of $\psi$.
-
-As explained in Appendix \ref{app.rem}, the random data Cauchy problem of defocusing Klein-Gordon equation \eqref{eq.NKLG'} is almost equivalent to above equation after change of variable $\psi=i\partial_tu+\Lambda(\nabla)u$.
-\begin{equation}\label{eq.NKLG'}
-\begin{cases}
-\partial_{tt} u = \Delta u -u - \lambda^2 u^3,  \quad x\in \mathbb{T}^d_{L_1\cdots L_d},   \\[.6em]
-u(0,x) = u_{\textrm{in}}(x).
-\\[.6em]
-\partial_tu(0,x) = u^{1}_{\textrm{in}}(x)
-\end{cases}    
-\end{equation}
-
-
-
-\section{Previous research}
-
-several staffilani tran 
-
-\subsection{A short survey of previous papers} (1) \underline{Results about the ZK equation:} ZK equation was introduced in \cite{zakharov1974three} as an asymptotic model to describe the propagation of nonlinear ionic-sonic waves in a magnetized plasma. For a good reference about the physical background, see the book \cite{davidson2012methods}. For rigorous results about wellposedness and derivation from the Euler-Poisson system see \cite{lannes2013cauchy} and references therein.
-
-(2) \underline{Previous papers about wave turbulence theory:} There are numerous physics papers about the derivation of wave kinetic equation. In particular, the wave kinetic equation for the ZK equation is derived in \cite{kuznetsov1972turbulence}. For general references, see the books \cite{zakharov2012kolmogorov} and \cite{nazarenko2011wave}, and the review paper \cite{newell2011wave}. 
-
-%Peierls \cite{Peierls1}, \cite{Peierls2}, ZaslavskiiSagdeev [110], Hasselmann [59, 60], Benney-Saffman-Newell [6, 7], 
-
-The WKE was rigorously verified for the Gibbs measure initial data by Lukkarinen and Spohn \cite{lukkarinen2011weakly}. Then the basic concepts of general wave turbulence were rigorously formulated by Buckmaster, Germain, Hani, Shatah \cite{buckmaster2021onset} and a non-trivial result that verified WKE for a short time scale was also proved by them. The WKE was proved for almost sharp time scale independently by Deng and Hani \cite{deng2021derivation} and Collot and Germain \cite{collot2019derivation}, \cite{collot2020derivation} using the ideas from the study of randomly initialized PDE. The full WKE for the sharp time was proved independently by the deep works of Deng and Hani \cite{deng2021full} and Staffilani and Tran \cite{staffilani2021wave} for a four-wave problem and a three-wave problem respectively. One key contribution of \cite{deng2021full} and \cite{staffilani2021wave} was the classification of Feynman diagrams in the contexts of normal form expansion and Liouville equation respectively. WKE for the space-inhomogeneous case was derived by Ampatzoglou, Collot, and Germain \cite{ampatzoglou2021derivation} for almost sharp time scale. The higher order correlation functions were studied by Deng and Hani \cite{deng2021propagation}. A linearized wave kinetic equation near the Rayleigh-Jeans spectrum was derived by Faou \cite{faou2020linearized}. The discrete wave turbulence was studied by Dymov and Kuksin \cite{dymov2021formal}, \cite{dymov2020zakharov}, \cite{dymov2023formal}, \cite{dymov2021large}.
-%But the most physically interesting solution of WKE, the Kolmogorov-Zakharov spectrum, are not Gibbs measure.  
- 
-
-Among the above papers, \cite{staffilani2021wave} is the only one working on ZK equation. \cite{staffilani2021wave} derived the wave kinetic equation for lattice ZK equation with random force for $t\le T_{\text{kin}}$, while our paper is for dissipative continuous ZK equation for $t\le L^{-\varepsilon}T_{\text{kin}}$.
-
-% Compared to their lattice model case, the degeneracy of resonance surfaces in our dissipative continuous setting can be handled using the multiplier $k_{x_1}$ in the equation. 
-
-% The main conclusion of this paper is similar to the random force free case of the first arXiv version of Staffilani-Tran \cite{ST}. Compared to this version of \cite{ST}, the assumption on dimension $d$ of this paper is better while the time scale is shorter. We also mention that a few days before the first submission of this paper, Staffilani and Tran also submitted a new arXiv version of \cite{ST} which obtained some results about the low dimensional KZ equation. Compared to our paper, their new results need to add random force into the KZ equation, while our paper does not have this problem. 
-
-(3) \underline{Previous papers about the dynamics of WKE:} There are also many papers about the dynamics of WKE itself. For references, see \cite{germain2020optimal}, \cite{gamba2020wave}, \cite{soffer2018dynamics}, \cite{soffer2020energy} and the reference therein.
-
-%(4) numerical simulation
-
-%(4) about boltzmann equation and randomized initial data
 
 

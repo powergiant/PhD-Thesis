@@ -1,7 +1,7 @@
 \section{Lattice points counting and convergence results}
 
 \section{Lattice points counting and convergence results}
-In this section, we prove Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} which gives upper bounds for tree terms $\mathcal{J}_{T,k}$ and the linearization operator $\mathcal{P}_T$. As explained before, these results are crucial in the proof of the main theorem. The proof of is divided into several steps.
+In this section, we prove Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} which gives upper bounds for tree terms $\mathcal{J}_{T,k}$ and the linearization operator $\mathcal{P}_T$. As explained before, these results are crucial in the proof of the main theorem. The proof is divided into several steps.
 
 In section \ref{sec.refexp}, we calculate the coefficients of $\mathcal{J}_{T,k}$ as polynomials of Gaussian random variables.
 
@@ -11,7 +11,7 @@ Large deviation theory suggests that an upper bound of a Gaussian polynomial can
 
 In section \ref{sec.coupwick}, we introduce the concept of couples which is a graphical method of calculating the expectation of Gaussian polynomials.
 
-In section \ref{sec.numbertheory}, we use couple to establish an lattice points counting result.
+In section \ref{sec.numbertheory}, we use couple to establish a lattice point counting result.
 
 In section \ref{sec.treetermsupperbound} and section \ref{sec.randommatrices}, we apply the lattice points counting result to derive upper bounds for  $\mathcal{J}_{T,k}$ and $\mathcal{P}_T$ respectively. This finishes the proof of Proposition \ref{prop.treetermsupperbound} and \ref{prop.operatorupperbound} and therefore the proof of the main theorem.
 
@@ -48,7 +48,7 @@ Notice that all non-leaf nodes other than the root in a tree have degree $3$. Fo
     \end{figure}
 
 
-We also need following concepts about trees.
+We also need the following concepts about trees.
 \begin{defn}\label{def.treemore}
 \begin{enumerate}
     \item \textbf{Nodes and children of an edge:} As in Figure \ref{fig.childrenofedge}, let $\mathfrak{n}_{u}$ and $\mathfrak{n}_{l}$ be two endpoints of an edge $\mathfrak{e}$ and assume that $\mathfrak{n}_{l}$ is a children of $\mathfrak{n}_{u}$. We define $\mathfrak{n}_{u}$ (resp. $\mathfrak{n}_{l}$) to the \underline{upper node} (resp. \underline{lower node}) of $\mathfrak{e}$. Let $\mathfrak{n}_1$, $\mathfrak{n}_2$ be the two children of $\mathfrak{n}_{l}$ and let $\mathfrak{e}_1$(resp. $\mathfrak{e}_2$) be the edge between two nodes $\mathfrak{n}_{l}$ and $\mathfrak{n}_1$(resp. $\mathfrak{n}_2$). $\mathfrak{e}_1$, $\mathfrak{e}_2$ are defined to be the two \underline{children edges} of $\mathfrak{e}$. 
@@ -76,7 +76,7 @@ We also need following concepts about trees.
         \caption{Children $\mathfrak{e}_1$, $\mathfrak{e}_2$ of an edge $\mathfrak{e}$}
         \label{fig.childrenofedge}
     \end{figure}
-    \item \textbf{Direction of an edge:} As in Figure \ref{fig.orientation}, each edge $\mathfrak{e}$ is  assigned with a \underline{direction}. This concept is mostly used to decide the value of variables $\iota_{\mathfrak{e}}\in\{\pm\}$ that will be defined later. Although it can be shown that the final result does not depend on the choices of direction of each edge, for definiteness, we assign downward direction to each edge. The orientation in Figure \ref{fig.orientation} is one example of this choices.
+    \item \textbf{Direction of an edge:} As in Figure \ref{fig.orientation}, each edge $\mathfrak{e}$ is  assigned with a \underline{direction}. This concept is mostly used to decide the value of variables $\iota_{\mathfrak{e}}\in\{\pm\}$ that will be defined later. Although it can be shown that the final result does not depend on the choices of the direction of each edge, for definiteness, we assign a downward direction to each edge. The orientation in Figure \ref{fig.orientation} is one example of this choice.
     \begin{figure}[H]
     \centering
     \scalebox{0.5}{
@@ -102,7 +102,7 @@ We also need following concepts about trees.
         \caption{Children $\mathfrak{e}_1$, $\mathfrak{e}_2$ of an edge $\mathfrak{e}$}
         \label{fig.orientation}
     \end{figure}
-    \item \textbf{Labelling of leaves:} As in Figure \ref{fig.orientation}, each leaf is labelled by $1$, $2$, $\cdots$, $l(T)+1$ from left to right. An edge pointing to a leaf $\mathfrak{n}$ is also labelled by $j$ if $\mathfrak{n}$ is labelled by $j$.
+    \item \textbf{Labelling of leaves:} As in Figure \ref{fig.orientation}, each leaf is labelled by $1$, $2$, $\cdots$, $l(T)+1$ from left to right. An edge pointing to a leaf $\mathfrak{n}$ is also labeled by $j$ if $\mathfrak{n}$ is labeled by $j$.
 \end{enumerate}
 
 \end{defn}
@@ -147,7 +147,7 @@ For root node $\mathfrak{r}$, we impose the constrain that $k_{\mathfrak{r}}=k$ 
 \end{lem}
 
 \begin{proof}
-We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by a direct substitution, so they are the unique solution of that recursive formula, and this proves Lemma \ref{lem.treeterms}.
+We can check that $\mathcal{J}_T$ is defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by direct substitution, so they are the unique solution of that recursive formula, and this proves Lemma \ref{lem.treeterms}.
 \end{proof}
 
 
@@ -216,7 +216,7 @@ For general $T$, let $T_1$, $T_2$ be the two subtrees and $\mathfrak{n}_1$, $\ma
 
 
 
-We do integration by parts in the above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are three inequality constrains, $t_{\mathfrak{r}}\le t$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. 
+We do integration by parts in the above integrals using the Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are three inequality constrains, $t_{\mathfrak{r}}\le t$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. 
 
 
 % \begin{equation}\label{eq.lemboundcoefexpand.threewave}
@@ -260,7 +260,7 @@ We do integration by parts in the above integrals using Stokes formula. Notice t
 = \frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }(F_{I}-F_{T^{(1)}}-F_{T^{(2)}}-F_{II}) &&
 \end{flalign*}
 
-Here $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T.threewave}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand.threewave}, so the last equality of \eqref{eq.lemboundcoefexpand.threewave} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
+Here $T^{(j)}$, $j=1,2$ are trees that are obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_T.threewave}. It can be shown that $F_{T^{(j)}}$ defined in this way is the same as the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}}$ term in the second equality of \eqref{eq.lemboundcoefexpand.threewave}, so the last equality of \eqref{eq.lemboundcoefexpand.threewave} is true. $F_{I}$ is the $\int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}},\ t_{\mathfrak{r}}=t}$ term and $F_{II}$ is the last term containing $\frac{d}{dt_{\mathfrak{r}}}$.
 
 We can apply the induction assumption to $F_{T^{(j)}}$ and show that $\frac{1}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } F_{T^{(j)}}$ can be bounded by the right hand side of \eqref{eq.boundcoef'.threewave}.
 
@@ -297,7 +297,7 @@ Combining the bounds of $F_{I}$, $F_{T^{(1)}}$, $F_{T^{(2)}}$, $F_{II}$, we conc
 
 
 
-A straight forward application of the above lemma gives following upper bound of the coefficients $H^T_{k_1\cdots k_{l+1}}$. 
+A straightforward application of the above lemma gives the following upper bound of the coefficients $H^T_{k_1\cdots k_{l+1}}$. 
 
 \begin{lem}\label{lem.boundcoef}
 We have the following upper bound for $H^T_{k_1\cdots k_{l+1}}$,
@@ -385,7 +385,7 @@ The goal of the next two sections is to count the number of solutions of a modif
 
 \subsection{Couples and the Wick theorem}\label{sec.coupwick} In this section, we calculate $\mathbb{E}|\mathcal{J}_{T,k}|^2$ using Wick theorem. We also introduce another type of diagrams, the couple diagrams, to represent the result.
 
-By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{l+1}}$ concentrate near the surface $q_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq''.threewave}. 
+By the upper bound in the last section, the coefficients $H^T_{k_1\cdots k_{l+1}}$ concentrate near the surface $q_{\mathfrak{n}}=0$, $\forall \mathfrak{n}$. But to get an upper bound of $\mathcal{J}_{T,k}$, we need an upper bound of their variance $\mathbb{E}|\mathcal{J}_{T,k}|^2$. The coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ also concentrate near a surface whose expression is similar to \eqref{eq.diophantineeq''.threewave}. 
 
 Let's derive the expression of the coefficients of $\mathbb{E}|\mathcal{J}_{T,k}|^2$ and its concentration surface.
 
@@ -499,7 +499,7 @@ As in the case of \eqref{eq.diophantineeq'.threewave}, there is a graphical repr
 %It turns out we can find a very compact formula for them. To do this, we need to introduce the concept of couples.
 
 
-\begin{defn}[Construction of couples]\label{def.conple} Given two trees $T$ and $T'$, we flip the orientation of all edges in $T'$ (as in the two left trees in Figure \ref{fig.treepairing}). We also label their leaves by $1, 2, \cdots, l(T)+1$ and $1, 2, \cdots, l(T')+1$ so that the corresponding variables of these leaves are $k_1, k_2, \cdots, k_{l(T)+1}$ and $k_1, k_2, \cdots, k_{l(T')+1}$. Assume that we have a pairing $p$ of the set $\{k_1, k_2, \cdots, k_{l(T)+1}, k_1, k_2, \cdots, k_{l(T')+1}\}$, then this pairing induces a pairing between leaves (if $k_i\sim_p k_j$ then define $\textit{the $i$-th leaf}\sim_p \textit{the $j$-th leaf}$). Given this pairing of leaves, we define the following procedure which glues two trees $T$ and $T'$ into a couple  $\mathcal{C}(T,T,p)$. Some example of pairing can be find in Figure \ref{fig.treepairing}. 
+\begin{defn}[Construction of couples]\label{def.conple} Given two trees $T$ and $T'$, we flip the orientation of all edges in $T'$ (as in the two left trees in Figure \ref{fig.treepairing}). We also label their leaves by $1, 2, \cdots, l(T)+1$ and $1, 2, \cdots, l(T')+1$ so that the corresponding variables of these leaves are $k_1, k_2, \cdots, k_{l(T)+1}$ and $k_1, k_2, \cdots, k_{l(T')+1}$. Assume that we have a pairing $p$ of the set $\{k_1, k_2, \cdots, k_{l(T)+1}, k_1, k_2, \cdots, k_{l(T')+1}\}$, then this pairing induces a pairing between leaves (if $k_i\sim_p k_j$ then define $\textit{the $i$-th leaf}\sim_p \textit{the $j$-th leaf}$). Given this pairing of leaves, we define the following procedure which glues two trees $T$ and $T'$ into a couple  $\mathcal{C}(T,T,p)$. Some examples of pairing can be found in Figure \ref{fig.treepairing}. 
 
 \begin{figure}[H]
     \centering
@@ -572,7 +572,7 @@ As in the case of \eqref{eq.diophantineeq'.threewave}, there is a graphical repr
     \end{figure}
 
 \begin{enumerate}
-    \item \textbf{Merging edges connected to leaves:} Given two edges with opposite orientation connected to two paired leaves, these two edges can be \underline{merged} into one edge as in Figure \ref{fig.pairingleaves}.
+    \item \textbf{Merging edges connected to leaves:} Given two edges with opposite orientations connected to two paired leaves, these two edges can be \underline{merged} into one edge as in Figure \ref{fig.pairingleaves}.
     \begin{figure}[H]
     \centering
     \scalebox{0.5}{
@@ -645,18 +645,18 @@ As in the case of \eqref{eq.diophantineeq'.threewave}, there is a graphical repr
         \label{fig.couple}
     \end{figure}
     
-    We know that each edge connected to leaf corresponds to a variable $k_i$. A pairing $p$ of $\{k_1,k_2,\cdots,k_{2m}\}$ in \eqref{eq.diophantineeqpaired.threewave} induces a pairing of edges connected to leaves. Merging paired edges corresponds to $k_{i}=-k'_{j}$ for all $k_{i}\sim_{p}k'_{j}$ in \eqref{eq.diophantineeqpaired.threewave}. 
+    We know that each edge connected to a leaf corresponds to a variable $k_i$. A pairing $p$ of $\{k_1,k_2,\cdots,k_{2m}\}$ in \eqref{eq.diophantineeqpaired.threewave} induces a pairing of edges connected to leaves. Merging paired edges corresponds to $k_{i}=-k'_{j}$ for all $k_{i}\sim_{p}k'_{j}$ in \eqref{eq.diophantineeqpaired.threewave}. 
 \end{enumerate}
 \end{defn}
 
-The following proposition introduce the graphical representation of \eqref{eq.diophantineeqpaired.threewave}.
+The following proposition introduces the graphical representation of \eqref{eq.diophantineeqpaired.threewave}.
 
 \begin{prop}\label{prop.couple}
 \eqref{eq.diophantineeqpaired.threewave} can be read from a couple diagram $\mathcal{C}(T,T,p)$. Each edge corresponds to a variable $k_{\mathfrak{e}}$. The leg $\mathfrak{l}$ corresponds to equation $k_{\mathfrak{l}}=k$. Each node corresponds to a momentum conservation equation
 \begin{equation}
     \iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}=0,
 \end{equation} 
-and a energy conservation equation \begin{equation}
+and an energy conservation equation \begin{equation}
     \iota_{\mathfrak{e}_1}\Lambda_{k_{\mathfrak{e}_1}}+\iota_{\mathfrak{e}_2}\Lambda_{k_{\mathfrak{e}_2}}+\iota_{\mathfrak{e}}\Lambda_{k_{\mathfrak{e}}} = O(T^{-1}_{\text{max}}).
 \end{equation}  
 \end{prop}
@@ -757,7 +757,7 @@ To explain the counting argument in this paper, we need the following definition
 \end{enumerate}
 \end{defn}
 
-The main goal of this section is to prove an upper bound of $\#Eq(\mathcal{C})$. The main idea of proving this is to decompose a large couple $\mathcal{C}$ into smaller pieces and then prove this for smaller piece using induction hypothesis. To explain the idea, let us first focus on an example. Let $\mathcal{C}$ be the left couple in the following picture. (The corresponding variables of each edge are labelled near these edges.)
+The main goal of this section is to prove an upper bound of $\#Eq(\mathcal{C})$. The main idea of proving this is to decompose a large couple $\mathcal{C}$ into smaller pieces and then prove this for the smaller piece using the induction hypothesis. To explain the idea, let us first focus on an example. Let $\mathcal{C}$ be the left couple in the following picture. (The corresponding variables of each edge are labeled near these edges.)
 \begin{figure}[H]
     \centering
     \scalebox{0.4}{
@@ -872,7 +872,7 @@ We know that \eqref{eq.cuttingexmaple.threewave} can be rewritten into the form 
 
 Since an upper bound of $\# Eq(\mathcal{C})$ can be derived from upper bounds of $\# A$, $\# B_{a,e}$, we just need to consider $A$, $B_{a,e}$ which are systems of equations of smaller size. We can reduce the size of systems of equations in this way and prove upper bounds by induction.
 
-One problem of applying induction argument is that $A$, $B_{a,e}$ cannot be represented by couple defined by Definition \ref{def.conple} that can contain at most two legs (an edge just connected to one node). In Definition \ref{def.conple}, a leg is used to represent a variable which is fixed, as in the condition $k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k$ in \eqref{eq.diophantineeqpairedsigma'.threewave}. The definition of $\# B_{a,e}$ contains three fixed variables $a$, $e$, $k$ which cannot be represented by just two legs. Therefore, we has to define a new type of couple that allows multiple legs.
+One problem of applying an induction argument is that $A$, $B_{a,e}$ cannot be represented by couple defined by Definition \ref{def.conple} that can contain at most two legs (an edge just connected to one node). In Definition \ref{def.conple}, a leg is used to represent a variable that is fixed, as in the condition $k_{\mathfrak{l}} = - k_{\mathfrak{l}}'= k$ in \eqref{eq.diophantineeqpairedsigma'.threewave}. The definition of $\# B_{a,e}$ contains three fixed variables $a$, $e$, $k$ which cannot be represented by just two legs. Therefore, we have to define a new type of couple that allows multiple legs.
 
 Except for the lack of legs, we also have the problem of representing free variables. We know that the couple representation of $A$ should contain one node and three edges if we insist on the rule that a node corresponds to an equation and the variables in the equation correspond to edges connected to this node. All these edges are legs, but two of three edges correspond to variable $a$, $b$ which are not fixed. Therefore, we have to define a type of legs that can correspond to unfixed variables.
 
@@ -881,8 +881,8 @@ To solve the above problems, we introduce the following definition.
 \begin{defn}\label{def.couplemultileg}
 \begin{enumerate}
     \item \textbf{Couples with multiple legs:} A graph in which all nodes have degree $1$ or $3$ is called a \underline{couples with multiple legs}. The graph $A$ and $B_{a,e}$ in Figure \ref{fig.exampleofcuttingidea} are examples of this definition.
-    \item \textbf{Legs:} In a couple with multiple leg, an edge connected to a degree one node is called a \underline{leg}. Remember that we have encounter this concept in the second paragraph of section \ref{sec.refexp} and in what follows we call the leg defined there the \underline{root leg} of a tree.   
-    \item \textbf{Free legs and fixed legs:} In a couple with multiple leg, we use two types of node decoration for degree $1$ nodes as in Figure \ref{fig.decorationdegreeone}. One is $\star$ and the other one is \underline{invisible}. 
+    \item \textbf{Legs:} In a couple with multiple legs, an edge connected to a degree one node is called a \underline{leg}. Remember that we have encountered this concept in the second paragraph of section \ref{sec.refexp} and in what follows we call the leg defined there the \underline{root leg} of a tree.   
+    \item \textbf{Free legs and fixed legs:} In a couple with multiple legs, we use two types of node decoration for degree $1$ nodes as in Figure \ref{fig.decorationdegreeone}. One is $\star$ and the other one is \underline{invisible}. 
     \begin{figure}[H]
     \centering
     \scalebox{0.5}{
@@ -897,13 +897,13 @@ To solve the above problems, we introduce the following definition.
             
     \end{tikzpicture}
     }
-        \caption{Node decoration of degree one nodes}
+        \caption{Node decoration of degree one node}
         \label{fig.decorationdegreeone}
     \end{figure}
     An edge connected to a $\star$ or invisible nodes is called a \underline{free leg} or \underline{fixed leg} respectively. 
     
     
-    \item \textbf{Equations of a couple $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$:} We define the corresponding equations for a couples with multiple legs.
+    \item \textbf{Equations of a couple $Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})$:} We define the corresponding equations for couples with multiple legs.
     \begin{equation}\label{eq.Eq(C,c).threewave}
     \begin{split}
         &Eq(\mathcal{C},\{c_{\mathfrak{l}}\}_{\mathfrak{l}})
@@ -918,16 +918,16 @@ To solve the above problems, we introduce the following definition.
 With the above definition, it's easy to show that the couple $A$ and $B_{a,e}$ in Figure \ref{fig.exampleofcuttingidea} correspond to the system of equations \eqref{eq.couplequationA.threewave} and \eqref{eq.couplequationB.threewave} respectively.
 
 
-Using the above argument, we can prove the following proposition which gives an upper bound of number of solutions of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}).
+Using the above argument, we can prove the following proposition which gives an upper bound of a number of solutions of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}).
 
 \begin{prop}\label{prop.counting}
-Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be an connected couple with exactly one free and one fixed leg, $n$ be the total number of nodes in $\mathcal{C}$ and $Q=L^{d}T^{-1}_{\text{max}}$. We fix $k\in \mathbb{R}$ for the legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave}. Then the number of solutions $M$ of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}) is bounded by 
+Let $\mathcal{C}=\mathcal{C}(T,T',p)$ be a connected couple with exactly one free and one fixed leg, $n$ be the total number of nodes in $\mathcal{C}$ and $Q=L^{d}T^{-1}_{\text{max}}$. We fix $k\in \mathbb{R}$ for the legs $\mathfrak{l}$, $\mathfrak{l}'$ and $\sigma_{\mathfrak{n}}\in\mathbb{R}$ for each $\mathfrak{n}\in \mathcal{C}$. Assume that $\alpha$ satisfies \eqref{eq.conditionalpha.threewave}. Then the number of solutions $M$ of \eqref{eq.diophantineeqpairedsigma.threewave} (or \eqref{eq.diophantineeqpairedsigma'.threewave}) is bounded by 
 \begin{equation}\label{eq.countingbd0.threewave}
 M\leq L^{O(n\theta)} Q^{\frac{n}{2}}\ \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa^{-1}_{\mathfrak{e}}.
 \end{equation}
 \end{prop}
 \begin{proof} 
-The proof is lengthy and therefore divided into several steps. The main idea of the proof is to use the operation of edge cutting to decompose the couple $\mathcal{C}$ into smaller ones $\mathcal{C}_1$, $\mathcal{C}_2$, then apply Lemma \ref{lem.Eq(C)cutting} which relates $\#Eq(\mathcal{C})$ and $\#Eq(\mathcal{C}_i)$. The desire upper bounds of $\#Eq(\mathcal{C})$ can be obtained from that of $\#Eq(\mathcal{C}_i)$ inductively.
+The proof is lengthy and therefore divided into several steps. The main idea of the proof is to use the operation of edge cutting to decompose the couple $\mathcal{C}$ into smaller ones $\mathcal{C}_1$, $\mathcal{C}_2$, then apply Lemma \ref{lem.Eq(C)cutting} which relates $\#Eq(\mathcal{C})$ and $\#Eq(\mathcal{C}_i)$. The desired upper bounds of $\#Eq(\mathcal{C})$ can be obtained from that of $\#Eq(\mathcal{C}_i)$ inductively.
 
 
 \textbf{Step 1.} In this step, we explain the cutting edge argument and prove the Lemma \ref{lem.Eq(C)cutting} which relates $\#Eq(\mathcal{C}_1)$, $\#Eq(\mathcal{C}_2)$ and $\#Eq(\mathcal{C})$.
@@ -968,7 +968,7 @@ Here is the formal definition of cutting
     \end{figure}
 
     \item \textbf{Cut:} A \underline{cut} $c$ of a couple $\mathcal{C}$ is a set of edges such that $\mathcal{C}$ is disconnected after cutting all edges in $c$. A \underline{refined cut} is a cut together with a map $\text{rc}:c\rightarrow \{\text{left}, \text{right}\}$. For each $\mathfrak{e}\in c$, if $\text{rc}(\mathfrak{e})=\text{left}$ (resp. right), then as in Figure \ref{fig.cutedge} the left node (resp. right node) produced by cutting $\mathfrak{e}$ is a $\star$ node (resp. invisible node). The map $\text{rc}$ describes which one should be the free or fixed leg in the two legs produced by cutting an edge.
-    \item \textbf{$c(\mathfrak{e})$, $c(\mathfrak{n})$ and $c(\mathfrak{l})$:} Given an edge $\mathfrak{e}$ that is not a leg, define  $c(\mathfrak{l})$ to be the cut that contains only one edge $\mathfrak{e}$. Given a node $\mathfrak{n}\in \mathcal{C}$, let $\{\mathfrak{e}_{i}\}$ be edges that are connected to $\mathfrak{n}$, then define $c(\mathfrak{n})$ to be the cut that consists of edges $\{\mathfrak{e}_{i}\}$. Given an leg $\mathfrak{l}$, let $\mathfrak{n}$ be the unique node connected to it, then define  $c(\mathfrak{e})$ to be the cut $c(\mathfrak{n})$. An example of cutting $c(\mathfrak{e})$ is give by Figure \ref{fig.cutedge}. The following picture gives an example of cutting $c(\mathfrak{n})$ or $c(\mathfrak{l})$ (in this picture $\mathfrak{n}=\mathfrak{n}_1$ and $\mathfrak{l}$ is the leg labelled by $k$.)
+    \item \textbf{$c(\mathfrak{e})$, $c(\mathfrak{n})$ and $c(\mathfrak{l})$:} Given an edge $\mathfrak{e}$ that is not a leg, define  $c(\mathfrak{l})$ to be the cut that contains only one edge $\mathfrak{e}$. Given a node $\mathfrak{n}\in \mathcal{C}$, let $\{\mathfrak{e}_{i}\}$ be edges that are connected to $\mathfrak{n}$, then define $c(\mathfrak{n})$ to be the cut that consists of edges $\{\mathfrak{e}_{i}\}$. Given a leg $\mathfrak{l}$, let $\mathfrak{n}$ be the unique node connected to it, then define  $c(\mathfrak{e})$ to be the cut $c(\mathfrak{n})$. An example of cutting $c(\mathfrak{e})$ is given by Figure \ref{fig.cutedge}. The following picture gives an example of cutting $c(\mathfrak{n})$ or $c(\mathfrak{l})$ (in this picture $\mathfrak{n}=\mathfrak{n}_1$ and $\mathfrak{l}$ is the leg labelled by $k$.)
     
     \begin{figure}[H]
     \centering
@@ -1144,7 +1144,7 @@ This proves \eqref{eq.Eq(C)cuttingcounting.threewave}.
 
 \textbf{Step 2.} In this step, we specify the cutting procedure. 
 
-Notice that Proposition \ref{prop.countingind}, the multiple leg analog of Proposition \ref{prop.counting}, is only true for couples satisfying the "property P". When designing the cutting procedure, we must make sure that all couples generated during the execution of this procedure satisfy the "property P". The following proposition guarantees the existence of such procedure.
+Notice that Proposition \ref{prop.countingind}, the multiple leg analog of Proposition \ref{prop.counting}, is only true for couples satisfying the "property P". When designing the cutting procedure, we must make sure that all couples generated during the execution of this procedure satisfy the "property P". The following proposition guarantees the existence of such a procedure.
 
 \begin{prop}\label{prop.cuttingalgorithm}
 There exists a recursive algorithm that repeatedly decomposes $\mathcal{C}$ into smaller pieces and satisfies the following requirements. In the rest of this paper, we will call this algorithm "the cutting algorithm".
@@ -1183,7 +1183,7 @@ There exists a recursive algorithm that repeatedly decomposes $\mathcal{C}$ into
         \label{fig.2possibilities}
     \end{figure}
     
-(4) The cutting algorithm satisfies the requirement that the all connected components in (2) generated in each step satisfy property P, where property P is defined below
+(4) The cutting algorithm satisfies the requirement that all connected components in (2) generated in each step satisfy property P, where property P is defined below
 
 \underline{Property P of a couple $\widetilde{\mathcal{C}}$}: $\widetilde{\mathcal{C}}$ is connected and contains exactly one free leg and at least one fixed normal leg.
 
@@ -1213,7 +1213,7 @@ The couple $\mathcal{C}$ does not satisfy the property P because it does not hav
 
 \medskip 
 
-\ \ \ \textbf{Step 0.} The input $\mathcal{C}(0)$ of this step is $\mathcal{C}$. In this step, we replace one of the two fixed legs of $\mathcal{C}$ by a free leg to obtain a new couple $\widehat{\mathcal{C}}$. By Lemma \ref{lem.freeleg} (3), $\#Eq(\mathcal{C})=\#Eq(\widehat{\mathcal{C}})$. The output $\mathcal{C}(1)$ of this step is $\widehat{\mathcal{C}}$. An example of step 0 can be found in the following picture.
+\ \ \ \textbf{Step 0.} The input $\mathcal{C}(0)$ of this step is $\mathcal{C}$. In this step, we replace one of the two fixed legs of $\mathcal{C}$ with a free leg to obtain a new couple $\widehat{\mathcal{C}}$. By Lemma \ref{lem.freeleg} (3), $\#Eq(\mathcal{C})=\#Eq(\widehat{\mathcal{C}})$. The output $\mathcal{C}(1)$ of this step is $\widehat{\mathcal{C}}$. An example of step 0 can be found in the following picture.
 \begin{figure}[H]
     \centering
     \scalebox{0.4}{
@@ -1249,9 +1249,9 @@ The couple $\mathcal{C}$ does not satisfy the property P because it does not hav
         \label{fig.step0}
     \end{figure}
 
-\textbf{Step $k$.} Assume that the step $k-1$ have been finished. The input $\mathcal{C}(k)$ of step $k$ is the output of step $k-1$. (If there are two output couples from step $k-1$, apply step $k$ to these two couples separately.)
+\textbf{Step $k$.} Assume that the step $k-1$ have been finished. The input $\mathcal{C}(k)$ of step $k$ is the output of step $k-1$. (If there are two output couples from step $k-1$, apply to step $k$ to these two couples separately.)
 
-By property P, there exists a fixed normal leg in $\mathcal{C}(k)$. Choose one such leg $\mathfrak{l}$ and define $\mathcal{C}(k)_{\mathfrak{l}}$ to be the component which contains $\mathfrak{l}$ after cutting $c(\mathfrak{l})$ and define $\mathcal{C}(k)'=\mathcal{C}(k)\backslash \mathcal{C}(k)_{\mathfrak{l}}$. Check how many components does $\mathcal{C}(k)'$ have. Jump to case 1 if number of components equals to 1, otherwise jump to case 2. Examples of case 1 and case 2 can be found in the following picture.
+By property P, there exists a fixed normal leg in $\mathcal{C}(k)$. Choose one such leg $\mathfrak{l}$ and define $\mathcal{C}(k)_{\mathfrak{l}}$ to be the component which contains $\mathfrak{l}$ after cutting $c(\mathfrak{l})$ and define $\mathcal{C}(k)'=\mathcal{C}(k)\backslash \mathcal{C}(k)_{\mathfrak{l}}$. Check how many components $\mathcal{C}(k)'$ have. Jump to case 1 if the number of components is equal to 1, otherwise, jump to case 2. Examples of case 1 and case 2 can be found in the following picture.
 \begin{figure}[H]
     \centering
     \scalebox{0.4}{
@@ -1282,7 +1282,7 @@ By property P, there exists a fixed normal leg in $\mathcal{C}(k)$. Choose one s
 
 If $\mathcal{C}(k)_1$ satisfies the property P, define $\mathcal{C}(k+1)=\mathcal{C}(k)_1$ to be the output of step $k$ and apply step $k+1$ to $\mathcal{C}(k+1)$. 
 
-Otherwise by Lemma \ref{lem.normleg} (2) there exist exactly one free normal leg and at least one fixed leg. By Lemma \ref{lem.freeleg}, we can define a new couple $\widehat{\mathcal{C}}$ such that the free normal leg becomes fixed and the fixed leg becomes free.  Finally, define $\mathcal{C}(k+1)=\widehat{\mathcal{C}}$ to be the output. 
+Otherwise, by Lemma \ref{lem.normleg} (2) there exists exactly one free normal leg and at least one fixed leg. By Lemma \ref{lem.freeleg}, we can define a new couple $\widehat{\mathcal{C}}$ such that the free normal leg becomes fixed and the fixed leg becomes free.  Finally, define $\mathcal{C}(k+1)=\widehat{\mathcal{C}}$ to be the output. 
 
 Examples of cutting in case 1.1 can be found in the following picture.
 \begin{figure}[H]
@@ -1383,7 +1383,7 @@ If $\mathcal{C}(k)_2$ contains free legs, define $\mathfrak{e}_{2}^{(2)}\in \mat
 
 In the case that $\mathcal{C}(k)_2$ contains free legs, define the output $\mathcal{C}(k+1)$ to be $\mathcal{C}(k)_2$ or $\mathcal{C}(k)_3$ and apply step $k+1$ to them separately. 
 
-In the case that $\mathcal{C}(k)_2$ contains no free legs, $\mathfrak{e}_{2}^{(2)}$ is the only normal legs and it is defined to be free. Use Lemma \ref{lem.freeleg} (2) to construct a new couple $\widehat{\mathcal{C}}_2$ by assigning $\mathfrak{e}_2^{(2)}$ to be fixed and another leg to be free. Then define $\mathcal{C}(k+1)$ to be $\widehat{\mathcal{C}}_2$ or $\widehat{\mathcal{C}}_3$ and apply step $k+1$ to them separately. 
+In the case that $\mathcal{C}(k)_2$ contains no free legs, $\mathfrak{e}_{2}^{(2)}$ is the only normal leg and it is defined to be free. Use Lemma \ref{lem.freeleg} (2) to construct a new couple $\widehat{\mathcal{C}}_2$ by assigning $\mathfrak{e}_2^{(2)}$ to be fixed and another leg to be free. Then define $\mathcal{C}(k+1)$ to be $\widehat{\mathcal{C}}_2$ or $\widehat{\mathcal{C}}_3$ and apply step $k+1$ to them separately. 
 
 Examples of cutting in case 2 can be found in the following picture.
     \begin{figure}[H]
@@ -1444,7 +1444,7 @@ Examples of cutting in case 2 can be found in the following picture.
 % $\mathfrak{e}_{2}$, $\mathfrak{e}_{3}$ into $\{\mathfrak{e}_{2}^{(1)},\mathfrak{e}_{3}^{(1)}\}\subseteq \mathcal{C}_{\mathfrak{l}}$ and $\mathfrak{e}_{2}^{(2)}\in \mathcal{C}_2$, $\mathfrak{e}_{3}^{(2)}\in \mathcal{C}_3$. By Lemma \ref{lem.normleg} (i), there should be at least one normal legs and two legs in $\mathcal{C}_2$, $\mathcal{C}_3$. By symmetry, we can just consider $\mathcal{C}_2$. If $\mathcal{C}_2$ contains free legs, then define  $\mathfrak{e}_{2}^{(2)}\in \mathcal{C}_2$ to be fixed, otherwise define $\mathfrak{e}_{2}^{(2)}$ to be free. In this case, jump to (2) and apply (2)-(4) to $\mathcal{C}_2$, $\mathcal{C}_3$ separately. If in $\mathcal{C}_2$ $\mathfrak{e}_{2}^{(2)}$ is the only normal legs and it's free, then use Lemma \ref{lem.freeleg} (i) to construct a new couple $\widehat{\mathcal{C}}_2$ by assigning $\mathfrak{e}^{(2)}$ to be fixed and another leg to be free. Then jump to (2) and apply (2)-(4) to $\widehat{\mathcal{C}}_2$, $\widehat{\mathcal{C}}_3$ separately.
 
 (1), (3) are true by definition. (2) is true because
-$\#Eq(\mathcal{C})=\#Eq(\widehat{\mathcal{C}})$ as explained in step $0$ of the algorithm. Since in step $0$, we just replace a fixed leg by a free leg, $\mathcal{C}_{\text{norm}}$ should not change, so we get $\mathcal{C}_{\text{norm}}(1)=\mathcal{C}_{\text{norm}}$. 
+$\#Eq(\mathcal{C})=\#Eq(\widehat{\mathcal{C}})$ as explained in step $0$ of the algorithm. Since in step $0$, we just replace a fixed leg with a free leg, $\mathcal{C}_{\text{norm}}$ should not change, so we get $\mathcal{C}_{\text{norm}}(1)=\mathcal{C}_{\text{norm}}$. 
 
 The only non-trivial part is (4), which is a corollary of Lemma \ref{lem.normleg} below.
 
@@ -1460,7 +1460,7 @@ Given a connected couple $\mathcal{C}$ with multiple legs, then we have the foll
     \sum_{i=1}^{n_{\text{leg}}} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}=0,
 \end{equation}
 
-(2) Assume that there is exactly one free leg $\mathfrak{l}_{i_0}$ in $\mathcal{C}$ and all other variables $\{k_{\mathfrak{l}_{i}}\}_{i\ne i_0}$ corresponding to fix legs are fixed to be constants $\{c_{\mathfrak{l}_{i}}\}_{i\ne i_0}$. For any $i_{1}=1,\cdots,n_{\text{leg}}$, we can construct a new couple $\widehat{\mathcal{C}}$ by replacing the $i_0$ leg by a fix leg and $i_1$ leg by a free leg. If $i\ne i_0, i_1$, fix $k_{\mathfrak{l}_{i}}$ to be the constant $c_{\mathfrak{l}_{i}}$, if $i=i_0$, fix $k_{\mathfrak{l}_{i_0}}$ to be the constant $-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}$. Under the above assumptions, we have
+(2) Assume that there is exactly one free leg $\mathfrak{l}_{i_0}$ in $\mathcal{C}$ and all other variables $\{k_{\mathfrak{l}_{i}}\}_{i\ne i_0}$ corresponding to fix legs are fixed to be constants $\{c_{\mathfrak{l}_{i}}\}_{i\ne i_0}$. For any $i_{1}=1,\cdots,n_{\text{leg}}$, we can construct a new couple $\widehat{\mathcal{C}}$ by replacing the $i_0$ leg by a fixed leg and $i_1$ leg by a free leg. If $i\ne i_0, i_1$, fix $k_{\mathfrak{l}_{i}}$ to be the constant $c_{\mathfrak{l}_{i}}$, if $i=i_0$, fix $k_{\mathfrak{l}_{i_0}}$ to be the constant $-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}$. Under the above assumptions, we have
 \begin{equation}
     Eq(\mathcal{C}, \{c_{\mathfrak{l}_{i}}\}_{i\ne i_0})=Eq\left(\widehat{\mathcal{C}}, \{c_{\mathfrak{l}_{i}}\}_{i\ne i_0, i_1}\cup \{-\iota_{\mathfrak{l}_{i_0}}\sum_{i\ne i_0} \iota_{\mathfrak{l}_i}k_{\mathfrak{l}_i}\}\right).
 \end{equation}
@@ -1531,7 +1531,7 @@ If (4) is wrong, then $\mathcal{C}$ just has one leg $\mathfrak{l}$. By \eqref{e
 \begin{lem}\label{lem.normleg} %Normal leg lemma \textbf{need connectivity}
 (1) The output $\mathcal{C}(k+1)$ of step $k$ of the cutting algorithm satisfies the property P.
 
-(2) All the intermediate results $\mathcal{C}(k)_1$, $\mathcal{C}(k)_2$, $\mathcal{C}(k)_3$ satisfy the weak property P: either they satisfy the property P or they contain exactly one free normal leg and at least one fixed leg. Notice that the weak property implies that these couples contain at least one normal legs and two legs.
+(2) All the intermediate results $\mathcal{C}(k)_1$, $\mathcal{C}(k)_2$, $\mathcal{C}(k)_3$ satisfy the weak property P: either they satisfy the property P or they contain exactly one free normal leg and at least one fixed leg. Notice that the weak property implies that these couples contain at least one normal leg and two legs.
 \end{lem}
 \begin{proof}
 We prove the following stronger result by induction.
@@ -1554,9 +1554,9 @@ We show that $\mathcal{C}(0)$ satisfies (1) -- (4) of the above claim.
 
 Let $\mathcal{C}$ be the input couple of step $0$ obtained by pairing two copies of $T$. In step $0$, $\mathcal{C}(0)$ is obtained by replacing a fixed leg by a free leg. Therefore, if we define $T^{(0)}_{1}=T$ and $T^{(0)}_{2}$ to be the tree obtained by replacing the fixed root leg in $T$ by a free leg, then $\mathcal{C}(0)$ is the couple obtained by pairing $T^{(0)}_{1}$ and $T^{(0)}_{2}$. Here the pairing is $p$ and $\text{leaf}_1(0)=\text{leaf}(0)$ and $\text{leaf}_2(0)=\emptyset$. Therefore, (1) is true for $\mathcal{C}(0)$.
 
-The two fixed legs in $\mathcal{C}$ are all normal edges, because they come from the two root legs which belong to $T_{\text{in}}$. Therefore, the two legs in $\mathcal{C}(1)$ are also normal. Since the two legs in $\mathcal{C}(1)$ come from the root legs in $T^{(0)}_{1}$ and $T^{(0)}_{2}$, (2) is also true.
+The two fixed legs in $\mathcal{C}$ are all normal edges because they come from the two root legs which belong to $T_{\text{in}}$. Therefore, the two legs in $\mathcal{C}(1)$ are also normal. Since the two legs in $\mathcal{C}(1)$ come from the root legs in $T^{(0)}_{1}$ and $T^{(0)}_{2}$, (2) is also true.
 
-Since in step $0$, we replace a fixed leg by a free leg, $\mathcal{C}(0)$ contains exactly one free and one fixed leg which are all normal. Therefore, the output $\mathcal{C}(0)$ of step $0$ satisfies property P and (3) is proved.
+Since in step $0$, we replace a fixed leg with a free leg, $\mathcal{C}(0)$ contains exactly one free and one fixed leg which are all normal. Therefore, the output $\mathcal{C}(0)$ of step $0$ satisfies property P and (3) is proved.
 
 In step $0$, (4) does not need any proof.
 
@@ -1566,63 +1566,63 @@ Assume that $\mathcal{C}(k)$ satisfies (1) -- (4) of the above claim, then we pr
 
 Remember that in step $k$ of the algorithm, the input is $\mathcal{C}(k)$. The induction assumption implies that $\mathcal{C}(k)$ is obtained by pairing $T^{(k)}_1$, $T^{(k)}_2$, $\cdots$, $T^{(k)}_{m^{(k)}}$. There are several different cases in step $k$ and we treat them separately.
 
-\underline{In case 1.1 of the cutting algorithm}, we cut $c(\mathfrak{l})$ into $\{\mathfrak{e}_{i}^{(1)}\}_{i=1,2}$ and $\{\mathfrak{e}_{i}^{(2)}\}_{i=1,2}$. By (2) $\mathfrak{l}$ is the root leg of some subtree $T^{(k)}_{j_0}$. Assume that in $T^{(k)}_{j_0}$ the two subtrees of the root are $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$. After cutting $c(\mathfrak{l})$, $T^{(k)}_{j_0}$ becomes two trees $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$ and $T^{(k)}_{j}$ $(j\ne j_0)$ do not change. We treat three different case separately.
+\underline{In case 1.1 of the cutting algorithm}, we cut $c(\mathfrak{l})$ into $\{\mathfrak{e}_{i}^{(1)}\}_{i=1,2}$ and $\{\mathfrak{e}_{i}^{(2)}\}_{i=1,2}$. By (2) $\mathfrak{l}$ is the root leg of some subtree $T^{(k)}_{j_0}$. Assume that in $T^{(k)}_{j_0}$ the two subtrees of the root are $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$. After cutting $c(\mathfrak{l})$, $T^{(k)}_{j_0}$ becomes two trees $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$ and $T^{(k)}_{j}$ $(j\ne j_0)$ do not change. We treat three different cases separately.
 
-\underline{Case 1.1 (i).} (Both $T^{(k)}_{j_0,1}$ and $T^{(k)}_{j_0,2}$ are one node trees.) In this case all edges in $\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j< j_0$ and $T^{(k+1)}_{j}=T^{(k)}_{j+1}$ for $j> j_0$, then $\mathcal{C}(k)_1$ can be constructed from these trees with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$. Remember that in the case 1.1 of the algorithm, the final result $\mathcal{C}(k+1)$ is obtained by replace (or not) some free normal leg by fixed normal leg in $\mathcal{C}(k)_1$. Therefore, if we change some free root leg of $\{T^{(k)}_{j}\}$ to be fixed, then $\mathcal{C}(k+1)$ can also be obtained from pairing these trees. Therefore, (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$.
+\underline{Case 1.1 (i).} (Both $T^{(k)}_{j_0,1}$ and $T^{(k)}_{j_0,2}$ are one node trees.) In this case all edges in $\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j< j_0$ and $T^{(k+1)}_{j}=T^{(k)}_{j+1}$ for $j> j_0$, then $\mathcal{C}(k)_1$ can be constructed from these trees with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$. Remember that in case 1.1 of the algorithm, the final result $\mathcal{C}(k+1)$ is obtained by replacing (or not) some free normal leg with a fixed normal leg in $\mathcal{C}(k)_1$. Therefore, if we change some free root leg of $\{T^{(k)}_{j}\}$ to be fixed, then $\mathcal{C}(k+1)$ can also be obtained from pairing these trees. Therefore, (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$.
 
 Since both the sets of root legs and normal legs are deleted by one element $\mathfrak{l}$ and in step $k-1$ they are the same, they continue to be the same in step $k$. In case 1.1 (i), $\text{leaf}_2(k+1)=\text{leaf}_2(k)\cup \{\mathfrak{e}_{i}^{(2)}\}_{i=1,2}$ and the set of leaf legs in $\mathcal{C}(k)$ also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-We prove (4) by contradiction. The weak property P is equivalent to that $\mathcal{C}(k)_i$ contains exactly one free leg and at least one normal leg. In case 1.1 (i), $i=1$, assume that the weak property P is not true, then either $\mathcal{C}(k)_1$ does not any contain normal leg or the number of free leg is not 1. If $\mathcal{C}(k)_1\ne \emptyset$, then the number of $\{T^{(k)}_{j}\}$ is not zero. Because the root of $\{T^{(k)}_{j}\}$ are normal legs, there exists at least one normal leg in $\mathcal{C}(k)_1$. By our hypothesis that weak property P is wrong, the number of free leg is not 1. Since $\mathcal{C}(k)_1$ is obtained from $\mathcal{C}(k)$ by cutting a fixed leg, the number of free legs in $\mathcal{C}(k)_1$ equals to  $\mathcal{C}(k)$ which is one. Therefore, we find a contradiction.
+We prove (4) by contradiction. The weak property P is equivalent to that $\mathcal{C}(k)_i$ contains exactly one free leg and at least one normal leg. In case 1.1 (i), $i=1$, assume that the weak property P is not true, then either $\mathcal{C}(k)_1$ does not contain normal leg or the number of free legs is not 1. If $\mathcal{C}(k)_1\ne \emptyset$, then the number of $\{T^{(k)}_{j}\}$ is not zero. Because the root of $\{T^{(k)}_{j}\}$ are normal legs, there exists at least one normal leg in $\mathcal{C}(k)_1$. By our hypothesis that weak property P is wrong, the number of free legs is not 1. Since $\mathcal{C}(k)_1$ is obtained from $\mathcal{C}(k)$ by cutting a fixed leg, the number of free legs in $\mathcal{C}(k)_1$ equals to  $\mathcal{C}(k)$ which is one. Therefore, we find a contradiction.
 
-Notice that in the case 1.1 of the algorithm we change the free normal leg in $\mathcal{C}(k)_1$ to be fixed if $\mathcal{C}(k)_1$ does not satisfy the property P. The result $\mathcal{C}(k+1)$ must satisfy the property P, so we proves (3). 
+Notice that in case 1.1 of the algorithm, we change the free normal leg in $\mathcal{C}(k)_1$ to be fixed if $\mathcal{C}(k)_1$ does not satisfy the property P. The result $\mathcal{C}(k+1)$ must satisfy the property P, so we prove (3). 
 
-\underline{Case 1.1 (ii).} (One of $T^{(k)}_{j_0,1}$ or $T^{(k)}_{j_0,2}$ is an one node tree.) Without loss of generality assume that $T^{(k)}_{j_0,2}$ is an one node tree. In this case, $\mathfrak{e}_{2}^{(1)}$, $\mathfrak{e}_{2}^{(2)}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j\ne j_0$ and $T^{(k+1)}_{j_0}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$.
+\underline{Case 1.1 (ii).} (One of $T^{(k)}_{j_0,1}$ or $T^{(k)}_{j_0,2}$ is a one node tree.) Without loss of generality assume that $T^{(k)}_{j_0,2}$ is a one node tree. In this case, $\mathfrak{e}_{2}^{(1)}$, $\mathfrak{e}_{2}^{(2)}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j\ne j_0$ and $T^{(k+1)}_{j_0}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$.
 
 By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 1.1 (ii), $\text{leaf}_2(k+1)=\text{leaf}_2(k)\cup \{ \mathfrak{e}_{2}^{(2)}\}$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 1.1 (ii) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 1.1 (ii) is the same as that in case 1.1 (i).
 
 
 \underline{Case 1.1 (iii).} (Neither $T^{(k)}_{j_0,1}$ or $T^{(k)}_{j_0,2}$ is an one node tree.) In this case, no edge in $\{\mathfrak{e}_{1}^{(1)}, \mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{1}^{(2)}, \mathfrak{e}_{2}^{(2)}\}$ is leaf edge of $T_{j}^{(k)}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j\le j_0$, $T^{(k+1)}_{j}=T^{(k)}_{j-1}$ for $j\ge j_0+2$, $T^{(k+1)}_{j_0}=T^{(k)}_{j_0,1}$ and $T^{(k+1)}_{j_0+1}=T^{(k)}_{j_0,2}$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)$.
 
 By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 1.1 (iii), $\text{leaf}_2(k+1)=\text{leaf}_2(k)$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 1.1 (iii) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 1.1 (iii) is the same as that in case 1.1 (i).
 
 \underline{In case 1.2 of the cutting algorithm}, we cut $\mathfrak{e}$ into $\{\mathfrak{e}^{(1)},\mathfrak{e}^{(2)}\}$. By (2), $\mathfrak{l}$ and $\mathfrak{l}_{fr}$ are the root leg and leaf of some subtrees $T^{(k)}_{j_0}$. Assume that in $T^{(k)}_{j_0}$ one subtree of the root is $T^{(k)}_{j_0,1}$ and the other one is a one node tree with edge $\mathfrak{l}_{fr}$. After cutting $c(\mathfrak{l})$, $T^{(k)}_{j_0}$ becomes $T^{(k)}_{j_0,1}$ and $T^{(k)}_{j}$ $(j\ne j_0)$ do not change. 
-We treat two different case separately.
+We treat two different cases separately.
 
 \underline{Case 1.2 (i).} ($T^{(k)}_{j_0,1}$ is an one node trees.) In this case $\mathfrak{e}^{(1)}$, $\mathfrak{e}^{(2)}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j< j_0$ and $T^{(k+1)}_{j}=T^{(k)}_{j+1}$ for $j> j_0$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}^{(1)}, \mathfrak{e}^{(2)}\}$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)\backslash\{\mathfrak{e}^{(1)}, \mathfrak{e}^{(2)}\}$.
 
 By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 1.2 (i), $\text{leaf}_2(k+1)=\text{leaf}_2(k)\cup \{ \mathfrak{e}^{(2)}\}$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 1.2 (i) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 1.2 (i) is the same as that in case 1.1 (i).
 
 
-\underline{Case 1.2 (ii).} ($T^{(k)}_{j_0,1}$ is not an one node trees.) In this case $\mathfrak{e}^{(1)}$, $\mathfrak{e}^{(2)}$ are not leaf edges of any trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j\ne j_0$ and $T^{(k+1)}_{j_0}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)$.
+\underline{Case 1.2 (ii).} ($T^{(k)}_{j_0,1}$ is not a one node trees.) In this case $\mathfrak{e}^{(1)}$, $\mathfrak{e}^{(2)}$ are not leaf edges of any trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j\ne j_0$ and $T^{(k+1)}_{j_0}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_1$ can be constructed from these trees with  $\text{leaf}_1(k+1)=\text{leaf}_1(k)$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$ with $\text{leaf}_1(k+1)=\text{leaf}_1(k)$.
 
 By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 1.2 (ii), $\text{leaf}_2(k+1)=\text{leaf}_2(k)$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 1.2 (ii) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 1.2 (ii) is the same as that in case 1.1 (i).
 
-\underline{In case 2 of the cutting algorithm}, we cut $c(\mathfrak{l})=\{\mathfrak{e}_2,\mathfrak{e}_3\}$ into $\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{3}^{(1)}\}$ and $\{\mathfrak{e}_{2}^{(2)}, \mathfrak{e}_{3}^{(2)}\}$. By (2), $\mathfrak{l}$ is the root leg of some subtree $T^{(k)}_{j_0}$. Assume that in $T^{(k)}_{j_0}$ the two subtrees of the root are $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$. After cutting $c(\mathfrak{l})$, $T^{(k)}_{j_0}$ becomes two trees $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$ and $T^{(k)}_{j}$ $(j\ne j_0)$ do not change. Since $\mathcal{C}(k)_{2}$ and $\mathcal{C}(k)_{3}$ are disjoint, for each $j\ne j_0$, $T^{(k)}_{j}$ should be a subset of one of these couples. Without loss of generality we assume that $j_0=1$ and $T^{(k)}_2, \cdots, T^{(k)}_{m^{(k)'}}\subseteq \mathcal{C}(k)_{2}$ and $T^{(k)}_{m^{(k)'}+1}, \cdots, T^{(k)}_{m^{(k)}}\subseteq \mathcal{C}(k)_{3}$. Since the output $\mathcal{C}(k+1)$ either comes from $\mathcal{C}(k)_{2}$ or $\mathcal{C}(k)_{3}$, without loss of generality we assume that the output comes from $\mathcal{C}(k)_{2}$. We treat two different case separately.
+\underline{In case 2 of the cutting algorithm}, we cut $c(\mathfrak{l})=\{\mathfrak{e}_2,\mathfrak{e}_3\}$ into $\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{3}^{(1)}\}$ and $\{\mathfrak{e}_{2}^{(2)}, \mathfrak{e}_{3}^{(2)}\}$. By (2), $\mathfrak{l}$ is the root leg of some subtree $T^{(k)}_{j_0}$. Assume that in $T^{(k)}_{j_0}$ the two subtrees of the root are $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$. After cutting $c(\mathfrak{l})$, $T^{(k)}_{j_0}$ becomes two trees $T^{(k)}_{j_0,1}$, $T^{(k)}_{j_0,2}$ and $T^{(k)}_{j}$ $(j\ne j_0)$ do not change. Since $\mathcal{C}(k)_{2}$ and $\mathcal{C}(k)_{3}$ are disjoint, for each $j\ne j_0$, $T^{(k)}_{j}$ should be a subset of one of these couples. Without loss of generality we assume that $j_0=1$ and $T^{(k)}_2, \cdots, T^{(k)}_{m^{(k)'}}\subseteq \mathcal{C}(k)_{2}$ and $T^{(k)}_{m^{(k)'}+1}, \cdots, T^{(k)}_{m^{(k)}}\subseteq \mathcal{C}(k)_{3}$. Since the output, $\mathcal{C}(k+1)$ either comes from $\mathcal{C}(k)_{2}$ or $\mathcal{C}(k)_{3}$, without loss of generality we assume that the output comes from $\mathcal{C}(k)_{2}$. We treat two different cases separately.
 
-\underline{Case 2 (i).} ($T^{(k)}_{j_0,1}$ is an one node trees.) In this case, all edges in $\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j+1}$, then $\mathcal{C}(k)_2$ can be constructed from $T^{(k)}_2, \cdots, T^{(k)}_{m^{(k)'}}$ with $\text{leaf}_1(k+1)=\{\text{all leaves in }T^{(k)}_2, \cdots,$ $T^{(k)}_{m^{(k)'}}\}$. Remember that in the case 2 of the algorithm, the final result $\mathcal{C}(k+1)$ is obtained by replace (or not) some free normal leg by fixed normal leg in $\mathcal{C}(k)_2$, so by the same argument as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$.
+\underline{Case 2 (i).} ($T^{(k)}_{j_0,1}$ is a one node tree.) In this case, all edges in $\{\mathfrak{e}_{2}^{(1)}, \mathfrak{e}_{2}^{(2)}\}$ are leaf edges of some trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j+1}$, then $\mathcal{C}(k)_2$ can be constructed from $T^{(k)}_2, \cdots, T^{(k)}_{m^{(k)'}}$ with $\text{leaf}_1(k+1)=\{\text{all leaves in }T^{(k)}_2, \cdots,$ $T^{(k)}_{m^{(k)'}}\}$. Remember that in case 2 of the algorithm, the final result $\mathcal{C}(k+1)$ is obtained by replacing (or not) some free normal leg wtih a fixed normal leg in $\mathcal{C}(k)_2$, so by the same argument as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$.
 
 By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 2 (i), in the output $\mathcal{C}(k+1)$ coming from $\mathcal{C}(k)_2$, $\text{leaf}_2(k+1)=(\text{leaf}_1(k+1)\cap \mathcal{C}(k)_2)\cup \{ \mathfrak{e}_{2}^{(2)}\}$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 2 (i) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 2 (i) is the same as that in case 1.1 (i).
 
-\underline{Case 2 (ii).} ($T^{(k)}_{j_0,1}$ is not an one node trees.) In this case $\{\mathfrak{e}_{2}^{(1)}$, $\mathfrak{e}_{2}^{(2)}\}$ are not leaf edges of any trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j>1$ and $T^{(k+1)}_{1}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_2$ can be constructed from $T^{(k+1)}_1, \cdots, T^{(k+1)}_{m^{(k)'}}$ with $\text{leaf}_1(k+1)=\{\text{all leaves in }T^{(k+1)}_1, \cdots, T^{(k+1)}_{m^{(k)'}}\}$. By the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$.
+\underline{Case 2 (ii).} ($T^{(k)}_{j_0,1}$ is not a one node tree.) In this case $\{\mathfrak{e}_{2}^{(1)}$, $\mathfrak{e}_{2}^{(2)}\}$ are not leaf edges of any trees in $\{T_{j}^{(k)}\}$. Define $T^{(k+1)}_{j}=T^{(k)}_{j}$ for $j>1$ and $T^{(k+1)}_{1}=T^{(k)}_{j_0,1}$, then $\mathcal{C}(k)_2$ can be constructed from $T^{(k+1)}_1, \cdots, T^{(k+1)}_{m^{(k)'}}$ with $\text{leaf}_1(k+1)=\{\text{all leaves in }T^{(k+1)}_1, \cdots, T^{(k+1)}_{m^{(k)'}}\}$. For the same reason as in case 1.1 (i), (1) is true for $\mathcal{C}(k+1)$.
 
-By the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 2 (ii), in the output $\mathcal{C}(k+1)$ coming from $\mathcal{C}(k)_2$, $\text{leaf}_2(k+1)=(\text{leaf}_1(k+1)\cap \mathcal{C}(k)_2)$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
+For the same reason as in case 1.1 (i), the set of root legs and the set of normal legs continue to be the same in step $k$. In case 2 (ii), in the output $\mathcal{C}(k+1)$ coming from $\mathcal{C}(k)_2$, $\text{leaf}_2(k+1)=(\text{leaf}_1(k+1)\cap \mathcal{C}(k)_2)$ and the set of leaf legs also changes in this way, so they continue to be the same in step $k$. Therefore, (2) is true.
 
-The proof of (3), (4) in case 2 (i) is the same as that in case 1.1 (i).
+The proof of (3), and (4) in case 2 (i) is the same as that in case 1.1 (i).
 \end{proof}
 
 
 
-\textbf{Step 3.} In this step, we state Proposition \ref{prop.countingind} which is a stronger version of Proposition \ref{prop.counting} and derive Proposition \ref{prop.counting} from it. In the end, we prove part (1), (2) and the 1 node case of part (3) of Proposition \ref{prop.countingind}.
+\textbf{Step 3.} In this step, we state Proposition \ref{prop.countingind} which is a stronger version of Proposition \ref{prop.counting} and derive Proposition \ref{prop.counting} from it. In the end, we prove parts (1), (2) and the 1 node case of part (3) of Proposition \ref{prop.countingind}.
 
 
 \begin{prop}\label{prop.countingind}
@@ -1671,14 +1671,14 @@ In the second equality, $\sum_{\mathfrak{e}\in \mathcal{C}: \mathfrak{n} \textit
 Switch the order of summation, we get 
 \begin{equation}
 \begin{split}
-\#\mathcal{S}=&\sum_{\mathfrak{e} \textit{ is a non-leg edges}}\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an end point of }\mathfrak{e}}} 1+\sum_{\mathfrak{e} \textit{ is a leg}}\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an end point of }\mathfrak{e}}} 1
+\#\mathcal{S}=&\sum_{\mathfrak{e} \textit{ is a non-leg edges}}\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an endpoint of }\mathfrak{e}}} 1+\sum_{\mathfrak{e} \textit{ is a leg}}\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an endpoint of }\mathfrak{e}}} 1
 \\
 =&\sum_{\mathfrak{e} \textit{ is a non-leg edges}} 2+\sum_{\mathfrak{e} \textit{ is a leg}} 1
 \\
 =& 2n_e(\mathcal{C})+n_{fx}(\mathcal{C})+n_{\textit{fr}}(\mathcal{C})
 \end{split}
 \end{equation}
-In the second equality, $\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an end point of }\mathfrak{e}}} 1$ equals to $1$ or $2$ because for each non-leg edge (resp. leg) there are $2$ (resp. 1) nodes connected to it.
+In the second equality, $\sum_{\substack{\mathfrak{n}\in \mathcal{C}\\ \mathfrak{n} \textit{ is an endpoint of }\mathfrak{e}}} 1$ equals to $1$ or $2$ because for each non-leg edge (resp. leg) there are $2$ (resp. 1) nodes connected to it.
 
 Because the value of $\#\mathcal{S}$ does not depend on the order of summation, we conclude that $2n_e(\mathcal{C})+n_{fx}(\mathcal{C})+n_{\textit{fr}}(\mathcal{C})=3n(\mathcal{C})$, which proves Proposition \ref{prop.countingind} (1).
 
@@ -1726,7 +1726,7 @@ Given $c_1$, the equation of $\mathcal{C}_{I}$ is
     \Lambda_{k_{\mathfrak{e}_1}}+\Lambda_{k_{\mathfrak{e}_2}}-\Lambda_{k_{\mathfrak{e}}}=\sigma_{\mathfrak{n}}+O(T^{-1}_{\text{max}})
     \end{cases}
 \end{equation}
-By Theorem \ref{th.numbertheory1}, the number of solutions of the above system of equations can be bounded by $L^\theta L^dT^{-1}_{\text{max}}|k_{\mathfrak{e}x}|^{-1}\lesssim L^\theta Q\kappa^{-1}_{\mathfrak{e}}$
+By Theorem \ref{th.numbertheory1.threewave}, the number of solutions of the above system of equations can be bounded by $L^\theta L^dT^{-1}_{\text{max}}|k_{\mathfrak{e}x}|^{-1}\lesssim L^\theta Q\kappa^{-1}_{\mathfrak{e}}$
 
 Therefore, we complete the proof of this lemma.
 \end{proof}
@@ -1737,7 +1737,7 @@ Therefore, we complete the proof of this lemma.
 
 If $\mathcal{C}$ has only one node ($n=1$), then $\mathcal{C}$ equals to $\mathcal{C}_{I}$ or $\mathcal{C}_{II}$ and Proposition \ref{prop.countingind} (3) in this case follows from Lemma \ref{lem.countingbdunit}.
 
-Suppose that Proposition \ref{prop.countingind} (3) holds true for couples with number of nodes $\le n-1$. We prove it for couples with number of nodes $n$. 
+Suppose that Proposition \ref{prop.countingind} (3) holds true for couples with the number of nodes $\le n-1$. We prove it for couples with the number of nodes $n$. 
 
 Given the couple $\mathcal{C}(k)$ which is the output of the $k-1$-th step, apply the cutting algorithm to $\mathcal{C}(k)$. Then according to Proposition \ref{prop.cuttingalgorithm}, $\mathcal{C}(k)$ (2) is decomposed into 2 or 3 components.
 
@@ -1761,7 +1761,7 @@ Then applying Lemma \ref{lem.Eq(C)cutting} gives
 \end{split}
 \end{equation}
 
-Here the second inequality follows from induction assumption and Lemma \ref{lem.countingbdunit}. The last equality follows from Proposition \ref{prop.countingind} (2).
+Here the second inequality follows from the induction assumption and Lemma \ref{lem.countingbdunit}. The last equality follows from Proposition \ref{prop.countingind} (2).
 
 
 \textbf{Case 2.} Assume that there are three components after cutting. One example of this case is the right couple in Figure \ref{fig.step1case}.
@@ -1927,7 +1927,7 @@ Given a tree $T$ and pairing $p$, we can construct a couple $\mathcal{C}$. We sh
 \end{equation}
 
 
-Remember that $\mathcal{C}$ is constructed by glueing two copies of $T$ by $p$. In \eqref{eq.termlemmaeq2.threewave}, $\mathfrak{n}$, $\mathfrak{e}$, $\mathfrak{n}'$, $\mathfrak{e}'$ denote nodes and edges in the first or second copy respectively. Since all nodes in $\mathcal{C}$ come from the two copies of $T$, we get $\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}$ and $\cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}$. Remember that $T_{\text{in}}$ is the tree formed by all non-leaf nodes, so edges of $\mathcal{C}_{\text{norm}}$ all come from the two copies of $T_{\text{in}}$. Therefore $\prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}$. Given two matrix $c$, $c'$, we can construct a new matrix $c\oplus c'$ as the following. Consider two vectors $\Omega=\{\Omega_{\mathfrak{n}}\}_{\mathfrak{n}'\in T}$, $\Omega'=\{\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}'\in T}$, then define $\Omega\oplus\Omega'\coloneqq \{\Omega_{\mathfrak{n}},\Omega_{\mathfrak{n}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. We know that $c(\Omega)=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ and $c(\Omega')=\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}$. Define $c\oplus c'$ to be the linear map whose domain is all vector of the form $\Omega\oplus\Omega'$ and whose action is $c\oplus c'(\Omega\oplus\Omega')=\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}},\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. Define $\mathscr{M}(\mathcal{C})=\{c\oplus c':c, c'\in \mathscr{M}(T)\}$, then we get $\sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) }$.
+Remember that $\mathcal{C}$ is constructed by gluing two copies of $T$ by $p$. In \eqref{eq.termlemmaeq2.threewave}, $\mathfrak{n}$, $\mathfrak{e}$, $\mathfrak{n}'$, $\mathfrak{e}'$ denote nodes and edges in the first or second copy respectively. Since all nodes in $\mathcal{C}$ come from the two copies of $T$, we get $\prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}$ and $\cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}$. Remember that $T_{\text{in}}$ is the tree formed by all non-leaf nodes, so edges of $\mathcal{C}_{\text{norm}}$ all come from the two copies of $T_{\text{in}}$. Therefore $\prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}$. Given two matrices $c$, and $c'$, we can construct a new matrix $c\oplus c'$ as the following. Consider two vectors $\Omega=\{\Omega_{\mathfrak{n}}\}_{\mathfrak{n}'\in T}$, $\Omega'=\{\Omega_{\mathfrak{n}'}\}_{\mathfrak{n}'\in T}$, then define $\Omega\oplus\Omega'\coloneqq \{\Omega_{\mathfrak{n}},\Omega_{\mathfrak{n}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. We know that $c(\Omega)=\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}}$ and $c(\Omega')=\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}$. Define $c\oplus c'$ to be the linear map whose domain is all vector of the form $\Omega\oplus\Omega'$ and whose action is $c\oplus c'(\Omega\oplus\Omega')=\{\sum_{\widetilde{\mathfrak{n}}}c_{\mathfrak{n},\widetilde{\mathfrak{n}}}\Omega_{\widetilde{\mathfrak{n}}},\sum_{\widetilde{\mathfrak{n}}'}c_{\mathfrak{n}',\widetilde{\mathfrak{n}}'}\Omega_{\widetilde{\mathfrak{n}}'}\}_{\mathfrak{n},\mathfrak{n}'\in T}$. Define $\mathscr{M}(\mathcal{C})=\{c\oplus c':c, c'\in \mathscr{M}(T)\}$, then we get $\sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) }$.
 
 
 
@@ -1956,7 +1956,7 @@ which implies that
 % \end{equation}
 %Since $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)$ contains equations in $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, $\delta_{\cap_{\mathfrak{n}'\in T_{\text{in}}} \{S_{\mathfrak{n}'}=0\}}$ and $\delta_{p}$, so we may remove the three indicator functions from the above sum. 
 
-Remember in the definition of $Eq(\mathcal{C})$, we have conditions that $|k_{\mathfrak{e}}|\lesssim 1$. These conditions come from the fact that on the support of $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, if $k_1,\cdots,k_{l(T)+1}$ are bounded, then $|k_{\mathfrak{e}}|$ are also bounded. Recall that by \eqref{eq.defnS_n.threewave}, $S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}$. The conditions that $S_{\mathfrak{n}}=0$ imply that the variables $k_{\mathfrak{e}}$ of the parent edge $\mathfrak{e}$ are linear combinations of the variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$ of children edges $\mathfrak{e}_1$, $\mathfrak{e}_2$. The variables of children edges $\mathfrak{e}_j$ are again a linear combinations of the variables of their children. We may iterate this argument to show that all variables $k_{\mathfrak{e}}$ are linear combinations of variables of leaves $k_1,\cdots,k_{l(T)+1}$. Because $k_1,\cdots,k_{l(T)+1}$ are bounded, then their linear combinations $k_{\mathfrak{e}}$ are also bounded.
+Remember in the definition of $Eq(\mathcal{C})$, we have conditions that $|k_{\mathfrak{e}}|\lesssim 1$. These conditions come from the fact that on the support of $\delta_{\cap_{\mathfrak{n}\in T_{\text{in}}} \{S_{\mathfrak{n}}=0\}}$, if $k_1,\cdots,k_{l(T)+1}$ are bounded, then $|k_{\mathfrak{e}}|$ are also bounded. Recall that by \eqref{eq.defnS_n.threewave}, $S_{\mathfrak{n}}=\iota_{\mathfrak{e}_1}k_{\mathfrak{e}_1}+\iota_{\mathfrak{e}_2}k_{\mathfrak{e}_2}+\iota_{\mathfrak{e}}k_{\mathfrak{e}}$. The conditions that $S_{\mathfrak{n}}=0$ imply that the variables $k_{\mathfrak{e}}$ of the parent edge $\mathfrak{e}$ are linear combinations of the variables $k_{\mathfrak{e}_1}$, $k_{\mathfrak{e}_2}$ of children edges $\mathfrak{e}_1$, $\mathfrak{e}_2$. The variables of children edge $\mathfrak{e}_j$ is again a linear combination of the variables of their children. We may iterate this argument to show that all variables $k_{\mathfrak{e}}$ are linear combinations of variables of leaves $k_1,\cdots,k_{l(T)+1}$. Because $k_1,\cdots,k_{l(T)+1}$ are bounded, then their linear combinations $k_{\mathfrak{e}}$ are also bounded.
 
 In the definition of $Eq(\mathcal{C}, \{\sigma_{\mathfrak{n}}\}_{\mathfrak{n}}, \{\kappa_{\mathfrak{e}}\}_{\mathfrak{e}},k)$,
 $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$ and $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$. Denote the constant in $O(T^{-1}_{\text{max}})$ by $\delta$ and then we have $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|\le \delta T^{-1}_{\text{max}}$. Therefore, we have $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\lesssim \delta T^{-1}_{\text{max}}$. We have the freedom of choosing $\delta$ in the definition and we take it sufficiently small so that $|c(\Omega)_{\mathfrak{n}}-c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|\le \frac{1}{2}T^{-1}_{\text{max}}$. This implies that $|c(\Omega)_{\mathfrak{n}}|+T^{-1}_{\text{max}}\gtrsim |c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}$. Since we also have $|k_{\mathfrak{e}x}| \sim \kappa_{\mathfrak{e}}$, by \eqref{eq.termlemmaeq6.threewave} we get
@@ -1973,7 +1973,7 @@ $|\Omega_{\mathfrak{n}}-\sigma_{\mathfrak{n}}|=O(T^{-1}_{\text{max}})$ and $|k_{
     \lesssim &\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}}\prod_{\mathfrak{n}\in \mathcal{C}}\frac{1}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}} \left(\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}}\kappa_{\mathfrak{e}}\right)L^{O(n\theta)} Q^{\frac{n}{2}}\ \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa^{-1}_{\mathfrak{e}}
 \end{split}
 \end{equation}
-Here in the last inequality we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
+Here in the last inequality, we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
 
 After simplification, \eqref{eq.lemboundtermTp.threewave} gives us 
 \begin{equation}\label{eq.lemboundtermTpsimplify.threewave}
@@ -2012,7 +2012,7 @@ Now prove the claim. Notice that there are $n$ nodes in $\mathcal{C}$. We label 
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{T_{\text{max}}}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(n\theta)}T^{n}_{\text{max}}
 \end{equation}
 
-Before proving \eqref{eq.lemTpvarianceclaim1.threewave}, let's first look at one of its special case. If $c=Id$, then $c(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1.threewave} becomes
+Before proving \eqref{eq.lemTpvarianceclaim1.threewave}, let's first look at one of its special cases. If $c=Id$, then $c(\{m_{h}\})_{h}=m_h$. The right hand side of \eqref{eq.lemTpvarianceclaim1.threewave} becomes
 \begin{equation}
 \begin{split}
     T^{n}_{\text{max}}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \prod_{h=1}^{n}\frac{1}{|m_{h}|+1} = T^{n}_{\text{max}}\prod_{h=1}^{n}\left(\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim  T_{\text{max}}}} \frac{1}{|m_{h}|+1}\right)
@@ -2042,7 +2042,7 @@ By Euler-Maclaurin formula \eqref{eq.EulerMaclaurin.threewave} and change of var
 We complete the proof of the claim and thus the proof of the lemma.
 \end{proof}
 
-Now we prove Proposition \ref{prop.treetermsupperbound}. To start with, recall the large deviation estimate for Gaussian polynomial.
+Now we prove Proposition \ref{prop.treetermsupperbound}. To start with, recall the large deviation estimate for the Gaussian polynomial.
 
 \begin{lem}[Large deviation for Gaussian polynomial]\label{lem.largedev}
 Let $\{\eta_k(\omega)\}$ be i.i.d. complex Gaussian variables with mean $0$ and variance $1$. Let $F=F(\omega)$ be an degree $n$ polynomial of $\{\eta_k(\omega)\}$ defined by \begin{equation}\label{indp}
@@ -2052,7 +2052,7 @@ where $a_{k_1\cdots k_n}$ are constants, then we have
 \begin{equation}\label{largedevest}\mathbb{P}\left(|F(\omega)|\geq A\cdot \left(\mathbb{E}|F(\omega)|^2\right)^{\frac{1}{2}}\right)\leq Ce^{-cA^{\frac{2}{n}}}
 \end{equation} 
 \end{lem}
-\begin{proof} This is a corollary of the hypercontractivity of Ornstein-Uhlenbeck semigroup. A good reference of this topic is \cite{oh2015ornstein}. \eqref{largedevest} is equivalent to (B.9) in \cite{oh2015ornstein}.
+\begin{proof} This is a corollary of the hypercontractivity of Ornstein-Uhlenbeck semigroup. A good reference for this topic is \cite{oh2015ornstein}. \eqref{largedevest} is equivalent to (B.9) in \cite{oh2015ornstein}.
 \end{proof}
 
 Proposition \ref{prop.treetermsupperbound} is a corollary of the above large deviation estimate and Proposition \ref{prop.treetermsvariance}.
@@ -2160,7 +2160,7 @@ Now we prove \eqref{eq.operatornorm.threewave}. Because $L=\sum_{1\le l(T)\le N}
 \begin{equation}
      \left|\left|L^K\right|\right|_{L_t^{\infty}X^p\rightarrow L_t^{\infty}X^p}\lesssim L^{O(1)} \sum_{1\le l(T_1),\cdots l(T_K)\le N} (L^{O(\theta)}\rho)^{\sum_{j=1}^K l(T_j)}\le L^{O\left(1+\theta \sum_{j=1}^K l(T_j)\right)} \rho^{K}
 \end{equation}
-Here in the last step we use the fact that $l(T_j)\ge 1$ for all $j$ and there are bounded many trees satisfy $1\le l(T_1),\cdots l(T_K)\le N$.
+Here in the last step, we use the fact that $l(T_j)\ge 1$ for all $j$ and there are bounded many trees satisfy $1\le l(T_1),\cdots l(T_K)\le N$.
 
 Therefore, we complete the proof of Proposition \ref{prop.operatorupperbound}.
 \end{proof}
@@ -2173,7 +2173,7 @@ $\mathcal{P}^{l}_{T}$ is almost the same as $\mathcal{P}_{T}$ except for the lim
 
 %as in section \ref{sec.connection}.
 
-By \eqref{eq.treeterm.threewave}, we know that $\mathcal{J}_{T}=\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}})$ corresponds to the tree $T$ in which the two subtrees of the root nodes are $T_{\mathfrak{n}_1}$ and $T_{\mathfrak{n}_2}$. Taking $T_{\mathfrak{n}_2}$ to be an one node tree, as the left tree in Figure \ref{fig.T(J,xi)andT(J,w)}, then this graph represents a term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \xi)$. The right tree in Figure \ref{fig.T(J,xi)andT(J,w)} represents the term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, w)$, because as in section \ref{sec.connection}, the $\Box$ node represents a function $w$ (in section \ref{sec.connection} the function is $\phi$).
+By \eqref{eq.treeterm.threewave}, we know that $\mathcal{J}_{T}=\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \mathcal{J}_{T_{\mathfrak{n}_2}})$ corresponds to the tree $T$ in which the two subtrees of the root nodes are $T_{\mathfrak{n}_1}$ and $T_{\mathfrak{n}_2}$. Taking $T_{\mathfrak{n}_2}$ to be a one node tree, as the left tree in Figure \ref{fig.T(J,xi)andT(J,w)}, then this graph represents a term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, \xi)$. The right tree in Figure \ref{fig.T(J,xi)andT(J,w)} represents the term $\mathcal{T}(\mathcal{J}_{T_{\mathfrak{n}_1}}, w)$, because as in section \ref{sec.connection}, the $\Box$ node represents a function $w$ (in section \ref{sec.connection} the function is $\phi$).
 
  \begin{figure}[H]
     \centering
@@ -2202,7 +2202,7 @@ By \eqref{eq.treeterm.threewave}, we know that $\mathcal{J}_{T}=\mathcal{T}(\mat
         \label{fig.T(J,xi)andT(J,w)}
     \end{figure}
 
-Let's find the tree representation for $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}$ or $\prod_{j=1}^K\mathcal{P}_{T_j}$. Recall the expansion process in section \ref{sec.connection}: the replacement of $\Box$ by a branching node indicates the substitution of $\phi$ by $\mathcal{T}(\xi, \xi)$. The action of composition $\mathcal{P}_{T_1}\circ \mathcal{P}_{T_2}(w)=\mathcal{T}(\mathcal{J}_{T_{1}}, \mathcal{T}(\mathcal{J}_{T_{2}}, w))$ is the substitution of $\cdot$ by $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$ in $\mathcal{T}(\mathcal{J}_{T_{1}},\cdot)$. As in Figure \ref{fig.substitution}, if $\mathcal{P}_{T_1}=\mathcal{T}(\mathcal{J}_{T_{1}},\cdot)$ is represented by the left tree, then as an analog that a $\Box$ node is replaced by a branching node, the substitution of $\cdot$ by $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$ should correspond to the operation that the $\Box$ node in the left tree is replaced by the middle tree corresponding to $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$, and the finally resulting right tree should correspond to $\mathcal{P}_{T_1}\circ \mathcal{P}_{T_2}(w)$.
+Let's find the tree representation for $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}$ or $\prod_{j=1}^K\mathcal{P}_{T_j}$. Recall the expansion process in section \ref{sec.connection}: the replacement of $\Box$ by a branching node indicates the substitution of $\phi$ by $\mathcal{T}(\xi, \xi)$. The action of composition $\mathcal{P}_{T_1}\circ \mathcal{P}_{T_2}(w)=\mathcal{T}(\mathcal{J}_{T_{1}}, \mathcal{T}(\mathcal{J}_{T_{2}}, w))$ is the substitution of $\cdot$ by $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$ in $\mathcal{T}(\mathcal{J}_{T_{1}},\cdot)$. As in Figure \ref{fig.substitution}, if $\mathcal{P}_{T_1}=\mathcal{T}(\mathcal{J}_{T_{1}},\cdot)$ is represented by the left tree, then as an analog that a $\Box$ node is replaced by a branching node, the substitution of $\cdot$ by $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$ should correspond to the operation that the $\Box$ node in the left tree is replaced by the middle tree corresponding to $\mathcal{T}(\mathcal{J}_{T_{2}}, w)$, and the final resulting right tree should correspond to $\mathcal{P}_{T_1}\circ \mathcal{P}_{T_2}(w)$.
 
 \begin{figure}[H]
     \centering
@@ -2318,12 +2318,12 @@ With above definition of $T_1\circ \cdots \circ T_{K}$ and $\mathcal{J}_T$, we h
 \end{equation}
 \end{lem}
 \begin{proof}
-This lemma follows from the above explanation .
+This lemma follows from the above explanation.
 \end{proof}
 
 To get a good upper bound, we need a better formula of $\prod_{j=1}^K\mathcal{P}^{\tau_j}_{T_j}(w)$ which is an analog of Lemma \ref{lem.treeterms}. 
 
-\begin{lem}\label{lem.treetermsoperator} (1) Using the same notation as Lemma \ref{lem.treeterms}. Given a tree $T$ with $\Box$ nodes and substitution nodes. Assume that the root $\mathfrak{r}$ is a substitution nodes of index $\tau_{1}$. Let $\mathcal{J}_T$ be terms defined in Definition \ref{def.treetermsoperator}, then their Fourier coefficients $\mathcal{J}_{T,k}$ are degree $l$ polynomials of $\xi$ and $w$ given by the following formula
+\begin{lem}\label{lem.treetermsoperator} (1) Using the same notation as Lemma \ref{lem.treeterms}. Given a tree $T$ with $\Box$ nodes and substitution nodes. Assume that the root $\mathfrak{r}$ is a substitution node of index $\tau_{1}$. Let $\mathcal{J}_T$ be terms defined in Definition \ref{def.treetermsoperator}, then their Fourier coefficients $\mathcal{J}_{T,k}$ are degree $l$ polynomials of $\xi$ and $w$ given by the following formula
 
 \begin{equation}\label{eq.coeftermoperator.threewave}
 \mathcal{J}_{T,k}=\left(\frac{i\lambda}{L^{d}}\right)^l\sum_{k_1,\, k_2,\, \cdots,\, k_{l+1}} \int_{\cup_{\mathfrak{n}\in T_{\text{in}}} A_{\mathfrak{n}}} e^{\sum_{\mathfrak{n}\in T_{\text{in}}} it_{\mathfrak{n}}\Omega_{\mathfrak{n}}-\nu(t_{\widehat{\mathfrak{n}}}-t_{\mathfrak{n}})|k_{\mathfrak{e}}|^2} \prod_{j=1}^{l+1} (\xi|w)_{k_j} %(\xi|w)_{k_1}(\xi|w)_{k_2}\cdots(\xi|w)_{k_{l+1}}    
@@ -2413,7 +2413,7 @@ Here $k_1,\cdots,k_{l}$ are all variables corresponding to $\star$ leaves, $k'$ 
 \end{equation}
 \end{lem}
 \begin{proof}
-Lemma \ref{lem.treetermsoperator} (1) can be proved by the same method as Lemma \ref{lem.treeterms}. We can check that $\mathcal{J}_T$ defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by a direct substitution, so they are the unique solution of that recursive formula, and this proves (1).
+Lemma \ref{lem.treetermsoperator} (1) can be proved by the same method as Lemma \ref{lem.treeterms}. We can check that $\mathcal{J}_T$ is defined by \eqref{eq.coefterm.threewave} and \eqref{eq.coef.threewave} satisfies the recursive formula \eqref{eq.treeterm.threewave} by direct substitution, so they are the unique solution of that recursive formula, and this proves (1).
 
 (2) is a corollary of (1).
 \end{proof}
@@ -2426,7 +2426,7 @@ We have
 \end{equation}
 \end{lem}
 \begin{proof}
-This lemma follows from the above explanation .
+This lemma follows from the above explanation.
 \end{proof}
 
 
@@ -2479,7 +2479,7 @@ H^{\tau_1\cdots \tau_{K}}_{Tk_1\cdots k_{l}kk'}(t,s)=\int_{\cup_{\mathfrak{n}\in
 
 For any edge $\mathfrak{e}$, assume that the two end points of $\mathfrak{e}$ are $\mathfrak{n}_1$ and $\mathfrak{n}_2$. If neither $\mathfrak{n}_1$ and $\mathfrak{n}_2$ is a substitution node, then we claim that $|k_{\mathfrak{e}}|\lesssim 1$. 
 
-This is because if no end point of $\mathfrak{e}$ is a substitution node, then the subtree $T_{\mathfrak{e}}$ rooted at the upper end points of $\mathfrak{e}$ does not contain the $\Box$ node as its leaf. Therefore, the momentum conservation (Lemma \ref{lem.freeleg}) is applicable which implies that $k_{\mathfrak{e}}$ is a linear combination of $k_1,\cdots,k_{l}$. By $|k_1|, \cdots, |k_{l}|\lesssim 1$, we get $|k_{\mathfrak{e}}|\lesssim 1$. 
+This is because if no endpoint of $\mathfrak{e}$ is a substitution node, then the subtree $T_{\mathfrak{e}}$ rooted at the upper endpoints of $\mathfrak{e}$ does not contain the $\Box$ node as its leaf. Therefore, the momentum conservation (Lemma \ref{lem.freeleg}) is applicable which implies that $k_{\mathfrak{e}}$ is a linear combination of $k_1,\cdots,k_{l}$. By $|k_1|, \cdots, |k_{l}|\lesssim 1$, we get $|k_{\mathfrak{e}}|\lesssim 1$. 
 
 Since $|k_{\mathfrak{e}}|\lesssim 1$, we get $\left|\prod_{\mathfrak{e}\in T_{\text{in}}}\iota_{\mathfrak{e}}k_{\mathfrak{e},x}\right|\lesssim \prod^K_{j=1}|k_{s_j,x}|$. Here $s_1, \cdots, s_K$ are all substitution nodes and $k_{s_j}$ are corresponding variables of edges pointing towards $s_j$.
 
@@ -2511,7 +2511,7 @@ Using the same calculation as \eqref{eq.lemboundcoef'1.threewave}, we get
 
 
 
-We do integration by parts in above integrals using Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are four inequality constrains, $t_{\mathfrak{r}}\le t-2^{-\tau_{1}}T_{\text{max}}$, $t_{\mathfrak{r}}\ge t-2^{-\tau_{1}-1}T_{\text{max}}$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. Notice that the first two come from $(t-t_{\mathfrak{r}})/T_{\text{max}}\in [2^{-\tau_{1}},2^{-\tau_{1}-1}]$.
+We do integration by parts in the above integrals using the Stokes formula. Notice that for $t_{\mathfrak{r}}$, there are four inequality constrains, $t_{\mathfrak{r}}\le t-2^{-\tau_{1}}T_{\text{max}}$, $t_{\mathfrak{r}}\ge t-2^{-\tau_{1}-1}T_{\text{max}}$ and $t_{\mathfrak{r}}\ge t_{\mathfrak{n}_1},t_{\mathfrak{n}_2}$. Notice that the first two come from $(t-t_{\mathfrak{r}})/T_{\text{max}}\in [2^{-\tau_{1}},2^{-\tau_{1}-1}]$.
 
 
 \begin{equation}\label{eq.lemboundcoefexpandop.threewave}
@@ -2561,9 +2561,9 @@ The argument of $F_{I}$ and $F_{I'}$ is very similar, so we just consider $F_{I}
         =&O\left(\frac{(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} }{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}} |F_{T_1}(t)| |F_{T_2}(t)|\frac{|k_{s_1,x}|}{|k_{s_1,x}|+1}\right)=O\left(\frac{2^{-\frac{\tau_{1}}{2}}|F_{T_1}(t)| |F_{T_2}(t)|}{|q_{\mathfrak{r}}|+T^{-1}_{\text{max}}}p_{\mathfrak{e}}\right)
     \end{split}
 \end{equation}
-Here in the last line we use the fact that $b_{\mathfrak{r}}=|k_{s_1}|^2$, $\nu T_{\text{max}}\gtrsim 1$ \eqref{eq.conditionnu.threewave} and $(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} \lesssim 2^{-\frac{\tau_{1}}{2}}$. By above equation and the induction assumption, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }F_{I}(t)$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator.threewave}.
+Here in the last line we use the fact that $b_{\mathfrak{r}}=|k_{s_1}|^2$, $\nu T_{\text{max}}\gtrsim 1$ \eqref{eq.conditionnu.threewave} and $(|k_{s_1,x}|+1)e^{- 2^{-\tau_{1}}|k_{s_1}|^2} \lesssim 2^{-\frac{\tau_{1}}{2}}$. By the above equation and the induction assumption, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }F_{I}(t)$ can be bounded by the right hand side of \eqref{eq.boundcoefoperator.threewave}.
 
-Now we find upper bounds of $\widetilde{F}_{T^{(1)}}$ and $\widetilde{F}_{T^{(2)}}$. Let $T^{(j)}$, $j=1,2$ are trees that is obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_Toperator.threewave}. By a direct calculation, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }\widetilde{F}_{T^{(1)}}(t)$ equals to
+Now we find upper bounds of $\widetilde{F}_{T^{(1)}}$ and $\widetilde{F}_{T^{(2)}}$. Let $T^{(j)}$, $j=1,2$ are trees that are obtained by deleting the root $\mathfrak{r}$, adding edges connecting $\mathfrak{n}_j$ with another node and defining $\mathfrak{n}_j$ to be the new root. For $T^{(j)}$, we can define the term $F_{T^{(j)}}$ by \eqref{eq.defF_Toperator.threewave}. By a direct calculation, we know that $\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} }\widetilde{F}_{T^{(1)}}(t)$ equals to
 \begin{equation}
     \begin{split}
         &\frac{|k_{s_1,x}|}{ia_{\mathfrak{r}}+iT^{-1}_{\text{max}} \text{sgn}(a_{\mathfrak{r}})+\nu b_{\mathfrak{r}} } \int_{\cup_{\mathfrak{n}\in T_{\text{in}}} B_{\mathfrak{n}},\ t_{\mathfrak{r}}=t_{\mathfrak{n}_j}} e^{it_{\mathfrak{r}}(a_{\mathfrak{r}}+T^{-1}_{\text{max}}\, \text{sgn}(a_{\mathfrak{r}}))- \nu(t-t_{\mathfrak{r}})b_{\mathfrak{r}}} e^{-iT^{-1}_{\text{max}}t_{\mathfrak{r}} \text{sgn}(a_{\mathfrak{r}})} 
@@ -2711,7 +2711,7 @@ Switch the order of summations and products in \eqref{eq.termlemmaeq3.threewave}
 \end{split}
 \end{equation}
 
-Consider a tree $T$ with a $\Box$ nodes and a pairing $p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)}, k'_1,\cdots, k'_{l(T)}\})$. $p$ can be viewed as a pairing of all star nodes of two copies of $T$. A couple $\mathcal{C}$ can be constructed by merging all paired star nodes according $p$ and merging the two $\Box$ nodes. As in \eqref{eq.termlemmaeq4.threewave}, we can show that
+Consider a tree $T$ with a $\Box$ nodes and a pairing $p\in \mathcal{P}(\{k_1,\cdots, k_{l(T)}, k'_1,\cdots, k'_{l(T)}\})$. $p$ can be viewed as a pairing of all star nodes of two copies of $T$. A couple $\mathcal{C}$ can be constructed by merging all paired star nodes according to $p$ and merging the two $\Box$ nodes. As in \eqref{eq.termlemmaeq4.threewave}, we can show that
 \begin{equation}\label{eq.termlemmaeq4op'.threewave}
 \sum_{c, c'\in \mathscr{M}(T) }=\sum_{c\in \mathscr{M}(\mathcal{C}) },\qquad \prod_{\mathfrak{n}, \mathfrak{n}'\in T_{\text{in}}}=\prod_{\mathfrak{n}\in \mathcal{C}}, \qquad \prod_{\mathfrak{e},\mathfrak{e}'\in T_{\text{in}}}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}},\qquad \cap_{\mathfrak{n},\mathfrak{n}'\in T_{\text{in}}}=\cap_{\mathfrak{n}\in \mathcal{C}}.    
 \end{equation}
@@ -2750,7 +2750,7 @@ As \eqref{eq.lemboundtermTp.threewave}, we get
     \lesssim &\sum_{c\in \mathscr{M}(\mathcal{C}) }\sum_{\kappa_{\mathfrak{e}}\in \mathcal{D}(\alpha,1)}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}}\prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}} L^{O(n\theta)} Q^{\frac{n}{2}} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}
 \end{split}
 \end{equation}
-Here in the last inequality we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
+Here in the last inequality, we applied \eqref{eq.countingbd0.threewave} in Proposition \ref{prop.counting}.
 
 After simplification, \eqref{eq.lemboundtermTpop.threewave} gives us 
 \begin{equation}
@@ -2771,14 +2771,14 @@ After simplification, \eqref{eq.lemboundtermTpop.threewave} gives us
 %     \lesssim & L^{O(n\theta)} Q^{n} L^{\frac{1}{2} dn_d}\sum_{c,c'\in \mathscr{M}(T) } \sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha} \prod_{\mathfrak{n}\in T_{\text{in}}}\frac{t\alpha}{|c'(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+\alpha}  + O(L^{-6d\, l(T)-6d})
 % \end{split}
 % \end{equation}
-Here in the first step we use the fact that $\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{1}{\kappa_{\mathfrak{e}}+1}\le 1$. The reason for other steps can be find in the derivation of \eqref{eq.lemboundtermTpsimplify.threewave}.
+Here in the first step we use the fact that $\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{\kappa_{\mathfrak{e}}}{\kappa_{\mathfrak{e}}+1} \prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \kappa_{\mathfrak{e}}^{-1}=\prod_{\mathfrak{e}\in \mathcal{C}_{\text{norm}}} \frac{1}{\kappa_{\mathfrak{e}}+1}\le 1$. The reason for other steps can be found in the derivation of \eqref{eq.lemboundtermTpsimplify.threewave}.
 
 We claim that 
 \begin{equation}\label{eq.lemTpvarianceclaimop.threewave}
      \sup_{c}\sum_{\substack{\sigma_{\mathfrak{n}}\in \mathbb{Z}_{T_{\text{max}}}\\ |\sigma_{\mathfrak{n}}|\lesssim 1}} \prod_{\mathfrak{n}\in \mathcal{C}}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{\sigma_{\mathfrak{n}}\})_{\mathfrak{n}}|+T^{-1}_{\text{max}}}\lesssim L^{O(l(T)\theta)}2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} T^{2l(T)}_{\text{max}}
 \end{equation}
 
-Since there are only bounded many matrices in $\mathscr{M}(\mathcal{C})$.  Given above claim, we know that 
+Since there are only bounded many matrices in $\mathscr{M}(\mathcal{C})$.  Given the above claim, we know that 
 \begin{equation}
     |Term(T, p)_{op,k,k'}|\lesssim L^{O(l(T)\theta)} 2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} Q^{\frac{n}{2}} T^{2l(T)}_{\text{max}},
 \end{equation}
@@ -2789,7 +2789,7 @@ Now prove the claim. In a tree $T$, there are $l(T)$ branching nodes, so there a
     T^{2l(T)}_{\text{max}}\sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim T_{\text{max}}}} \prod_{h=1}^{2l(T)}\frac{2^{-\frac{\tau_{\mathfrak{n}}}{2}}}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(l(T)\theta)}2^{-\frac{1}{2}\sum_{j=1}^K \tau_{j}} T^{2l(T)}_{\text{max}}
 \end{equation}
 
-To we prove \eqref{eq.lemTpvarianceclaim1op.threewave}. We just need to show that 
+To prove \eqref{eq.lemTpvarianceclaim1op.threewave}. We just need to show that 
 \begin{equation}
     \sum_{\substack{m_{h}\in \mathbb{Z}\\ |m_{h}|\lesssim T_{\text{max}}}} \prod_{h=1}^{2l(T)}\frac{1}{|c(\{m_{h}\})_{h}|+1}\lesssim L^{O(l(T)\theta)}
 \end{equation}
@@ -3009,7 +3009,7 @@ By \eqref{eq.psi(12)app.threewave}, we know that
     \le& \frac{2\epsilon_1^2\lambda^2}{L^{2d}} \max(|k_x|^2,D^2) T_{\text{max}} L^dD^{d-1}=2\epsilon_1^2 \max(|k_x|^2,D^2) T_{\text{max}} T^{-1}_{\text{kin}}D^{d-1} 
 \end{split}   
 \end{equation}
-Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
+Here in the second inequality, we apply the Wick theorem to calculate the expectation. In the third inequality, we apply \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory.threewave} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
 
 By \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}, we know that 
 \begin{equation}\label{eq.psi(11)(12)bound.threewave}
@@ -3024,7 +3024,7 @@ By \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}, we know 
     \le& \frac{2\epsilon_1\lambda^2}{L^{2d}} \max(|k_x|^2,D^2) T_{\text{max}} L^d=\epsilon_1 \max(|k_x|^2,D^2) T_{\text{max}} T^{-1}_{\text{kin}} D^{d-1}
 \end{split}   
 \end{equation}
-Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
+Here in the second inequality we apply the Wick theorem to calculate the expectation. In the third inequality we apply \eqref{eq.H(11)bound.threewave} and \eqref{eq.H(12)bound.threewave}. In the last line we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory.threewave} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$ and $F(k_1)=n(k_1) n(k-k_1)$. In the last line we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$, $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$.
 
 \eqref{eq.psi(12)bound.threewave} and \eqref{eq.psi(11)(12)bound.threewave} give desire upper bounds of $\mathbb E \left|\psi^{(12)}_{app,k}\right|^2$ and $\text{Re}\ \mathbb E \left(\psi^{(11)}_{app,k}\overline{\psi^{(12)}_{app,k}}\right)$.
 
@@ -3072,7 +3072,7 @@ We find upper bound of $\text{Re}\,\left(H^{(22)}_{k_1,-k_1,k,k}\right)$ using i
 \end{split}
 \end{equation}
 
-The first term on the right hands side equals to $0$ after taking the real part. Using the same integration by parts argument as in \eqref{eq.H(11)bound.threewave}, the second term can be bounded by 
+The first term on the right hand side equals $0$ after taking the real part. Using the same integration by parts argument as in \eqref{eq.H(11)bound.threewave}, the second term can be bounded by 
 \begin{equation}\label{eq.H(22)secondterm.threewave}
     \frac{|k|^2|k_x|(|k_{1x}|+|k_x|)\nu T_{\text{max}}}{(|\Omega(k_1,k-k_1,k)|+T^{-1}_{\text{max}})^2}.
 \end{equation}
@@ -3110,7 +3110,7 @@ Substitute into \eqref{eq.H(22)wick.threewave}, then we have
     &\lesssim \epsilon_1\frac{T_{\text{max}}}{T_{\text{kin}}}\max(D^{d+1},|k_x|^2D^{d-1}+|k_x|D^{d})
 \end{split}
 \end{equation}
-In the second inequality, we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$ and $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$. In the last inequality we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$, $F(k_1)=n(k_1) n(k-k_1)$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$. 
+In the second inequality, we also use the facts that $|k|\le \epsilon_1 l_{d}^{-1}=\epsilon_1 (\nu T_{\text{max}})^{-\frac{1}{2}}$ and $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$. In the last inequality we apply \eqref{eq.asymptoticsbound.threewave} in Theorem \ref{th.numbertheory.threewave} by taking $t=T_{\text{max}}$, $g(x)=\frac{1}{(1+|x|)^2}$, $F(k_1)=n(k_1) n(k-k_1)$ and $|k_x|\le |k_{x1}|+|k_{x2}|\lesssim D$. 
 
 
 Combining \eqref{eq.psi(12)bound.threewave}, \eqref{eq.psi(11)(12)bound.threewave} and \eqref{eq.psi(22)bound.threewave}, we get the following upper bound
@@ -3172,7 +3172,7 @@ Combining \eqref{eq.psi(12)bound.threewave}, \eqref{eq.psi(11)(12)bound.threewav
     =&\frac{t}{T_{\text{kin}}}\mathcal{K}(n)(k)+O\left(L^{-\theta}\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)
 \end{split}
 \end{equation}
-Here in the third equality we apply \eqref{eq.numbertheory1.threewave} in Theorem \ref{th.numbertheory} by taking $t\rightarrow\frac{t}{2}$, $g(x)=\frac{\sin^2(x)}{x^2}$ and $F(k_1)=n(k_1) n(k-k_1)$ or $F(k_1)=n(k_1)$. In the third equality we also use the facts that  $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$.
+Here in the third equality we apply \eqref{eq.numbertheory1.threewave} in Theorem \ref{th.numbertheory.threewave} by taking $t\rightarrow\frac{t}{2}$, $g(x)=\frac{\sin^2(x)}{x^2}$ and $F(k_1)=n(k_1) n(k-k_1)$ or $F(k_1)=n(k_1)$. In the third equality we also use the facts that  $T_{\text{kin}}=\frac{1}{8\pi\alpha^2}=\frac{L^{d}}{8\pi\lambda^2}$.
 
 Combining \eqref{eq.n(12)final.threewave} and \eqref{eq.n(11)asym.threewave}, we complete the prove of the first case in \eqref{eq.n1.threewave}.
 \end{proof}

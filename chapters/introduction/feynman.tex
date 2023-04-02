@@ -1,0 +1,136 @@
+\section{The Feynman diagram expansion}
+Using Duhamel's formula, we can rewrite the NLS into the following form.
+\begin{equation}
+    \phi = \xi + \mathcal{T}(\phi,\phi,\phi)
+\end{equation}
+\begin{equation}
+    \mathcal{T}(\phi,\phi,\phi)_k = \frac{i\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_3) \in (\mathbb{Z}^d_L)^3 \\ S(k_1,k_2,k_3,k) = 0}}\int_{0}^{t} \phi_{k_1} \overline{\phi_{k_2}} \phi_{k_3}e^{2\pi i \Omega(k_1,k_2,k_3,k)s} ds
+\end{equation}
+where
+\begin{equation}
+\begin{split}
+    &S(k_1,k_2,k_3,k) = k_1 - k_2 + k_3 - k,
+    \\
+    &\Omega(k_1,k_2,k_3,k) =\Lambda(k_1)-\Lambda(k_2)+\Lambda(k_3)-\Lambda(k).
+\end{split}
+\end{equation}
+
+The WKE is proved in several steps.
+
+\textbf{Step 1.} Iterate the equation to obtain an approximation series $\phi = \sum_{l(T)\le N} J_{T}$.
+
+Given an equation, $\phi= \xi + C(\phi,\phi,\phi)$, we can find an approximation series by iteration,
+\begin{equation}\label{eq.treeintro}
+    \begin{split}
+        \phi&= \xi + C(\phi,\phi,\phi) 
+        \\
+        &=\xi + C(\xi,\xi,\xi) + C(C(\xi,\xi,\xi),\xi,\xi) + C(\xi,C(\xi,\xi,\xi),\xi)+\cdots
+        \\
+        &= \sum_{l(T)\le N} J_{T}
+    \end{split}
+\end{equation}
+
+Each term is a polynomial of $\xi$ that can be represented by a tree diagram $T$. The detail of the tree diagram expansion can be found in the next two chapters.
+
+\textbf{Step 2.} Calculate the expectation of $|\phi_k|^2$ and compare terms in the expectation with the iteration of WKE.
+
+
+
+Here is the detail of the second step. Integrate and iterate the WKE 
+\begin{equation}
+    \partial_\tau n(\tau, k) =\mathcal K\left(n, n, n\right),
+\end{equation}
+then we get
+\begin{equation}
+\begin{split}
+    n(\tau, k) =& n_{\text{in}} + \tau\mathcal K(n_{\text{in}}, n_{\text{in}}, n_{\text{in}}) + \frac{\tau^2}{2}\mathcal K(\mathcal K(n_{\text{in}}, n_{\text{in}}, n_{\text{in}}), n_{\text{in}}, n_{\text{in}}) + \cdots
+    \\
+    =& \mathcal K^{(0)} + \mathcal K^{(1)} + \cdots 
+\end{split}
+\end{equation}
+
+By $\phi= \sum_{l(T)\le N} J_{T}$, we know that
+\begin{equation}
+    E|\phi_{k}(t)|^2=\sum_{n}\sum_{l(T)+ l(T') = n}E(J_{T,k}\overline{J_{T',k}})
+\end{equation}
+
+To prove WKE, we just need to show that 
+
+\begin{equation}\label{eq.treetowke}
+    \sum_{l(T)+ l(T') = n}E(J_{T,k}\overline{J_{T',k}})\rightarrow K^{(n)}
+\end{equation}
+
+All tree terms are Gaussian polynomials. (For a precise statement, see Lemma \ref{lem.treeterms})
+    \begin{equation}\label{eq.treetermintro}
+        \mathcal{J}_{T,k}=\left(\frac{i\lambda}{L^{d}}\right)^{2d}\sum_{k_1,\, k_2,\, \cdots,\, k_{2d+1}} H^T_{k_1\cdots k_{2d+1}}  \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{2d+1}}   
+    \end{equation}
+
+We can show that the coefficients $H^T_{k_1\cdots k_{2d+1}}$ concentrate near the resonance surface $A=\{S_{\mathfrak{n}_1}(T)=0,\Omega_{\mathfrak{n}_1}(T)=0,\cdots,S_{\mathfrak{n}_{n}}(T)(T)=0,\Omega_{\mathfrak{n}_n}(T)=0\}$. (For a precise statement, see Lemma \ref{lem.boundcoef})
+
+To calculate $E(J_{T,k}\overline{J_{T',k}})$, we just need to know how to calculate 
+\begin{equation}
+    \mathbb{E}\Big(\xi_{k_1}\overline{\xi_{k_2}}\cdots\xi_{k_{l(T)+1}}\xi_{k'_1}\xi_{k'_2}\cdots\xi_{k'_{l(T)+1}}\Big)
+\end{equation}
+This is done by applying the Wick theorem, Theorem \ref{th.wick}.
+
+
+\textbf{Step 3.} Analyze the size of $E(J_{T,k}\overline{J_{T',k}})$.
+
+To prove \eqref{eq.treetowke}, it suffices to get a good estimate on $E(J_{T,k}\overline{J_{T',k}})$. 
+
+The effect of applying the Wick theorem to Gaussian polynomials is the following square root cancellation principle. (Notice that in the Wick theorem, Lemma \ref{th.wick}, paired indices are equal to each other, which means that half of the indices can be eliminated, so the size of the sum is the square root of the trivial bound) 
+
+Since the coefficients $H$ in \eqref{eq.treetermintro} concentrate near the resonance surface $A$, we have the following heuristic 
+
+\begin{equation}\label{eq.treeheuristic}
+    \begin{split}
+        \mathcal{J}_{T,k}=&\left(\frac{i\lambda}{L^{d}}\right)^{2d}\sum_{k_1,\, k_2,\, \cdots,\, k_{2d+1}} H^T_{k_1\cdots k_{2d+1}}  \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{2d+1}} 
+        \\
+        \sim&  \left(\frac{it\lambda}{L^{d}}\right)^{2d}\sum_{k_1,\, k_2,\, \cdots,\, k_{2d+1}\in A}   \xi_{k_1}\xi_{k_2}\cdots\xi_{k_{2d+1}}
+    \end{split}
+\end{equation}
+
+Given a sum of Gaussian monomials, its size is of order $O((\# A)^{\frac{1}{2}})$. 
+    \begin{equation}
+        \sum_{(k_1,k_2,\cdots,k_{2l+1}) \in A}\xi_{k_1} \overline{\xi_{k_2}}\cdots \xi_{k_{2l+1}}
+    \end{equation}
+
+
+Therefore, to get a good estimate of $\mathcal{J}_{T,k}$, we just need to count the number of lattice points near the resonance surface. This can be done using the following volume principle. Given a set $A\subseteq (\mathbb{R}^d_L)^{l}$, the number of lattice points in this set is of order $\text{Vol}(A)/\text{Vol}(\text{cell})$. In our case, 
+    \begin{equation}
+        A=\{(k_1,k_2,k_3) \in (\mathbb{Z}^d_L)^3: k_1 - k_2 + k_3 = k, |\Omega(k_1,k_2,k_3,k)|\le t^{-1}\}.
+    \end{equation}
+Therefore, $\text{Vol}(A) = t^{-1}$ and $\text{Vol}(\text{cell}) = L^{-2d}$. The number of solutions $\# A = L^{2d}/t$ 
+
+For a precise statement of the count estimate, see Proposition \ref{prop.counting}.
+
+As long as we get the desired counting estimate, the WKE is almost proven.
+
+\textbf{An example of applying the square root cancellation and volume principle.} We can calculate the order of magnitude of the first two terms in \eqref{eq.treeintro}.
+
+The first term $\xi_k$ is of order $O(1)$. We hope that the second term is a lower order term, which implies that $\frac{\lambda^2}{L^{d}} t^{\frac{1}{2}}\le O(1)$ and $t\le \left(\frac{L^{d}}{\lambda^2} \right)^2$. This is why we call $\frac{L^{d}}{\lambda^2}$ the wave kinetic time.
+\begin{equation}
+    \begin{split}
+        & \frac{i\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_3) \in (\mathbb{Z}^d_L)^3 \\ k_1 - k_2 + k_3 = k}}\int_{0}^{t} \xi_{k_1} \overline{\xi_{k_2}} \xi_{k_3}\underbrace{e^{2\pi i \Omega(k_1,k_2,k_3,k)s}}_{=1} ds 
+        \\
+        \approx & \frac{i\lambda^2t}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_3) \in (\mathbb{Z}^d_L)^3 \\ k_1 - k_2 + k_3 = k\\ |\Omega(k_1,k_2,k_3,k)|\le t^{-1}}} \xi_{k_1} \overline{\xi_{k_2}} \xi_{k_3}
+        \\
+        = & \frac{\lambda^2t}{L^{2d}}O\left(\#\left\{\begin{array}{cc}
+             k_1 - k_2 + k_3 = k  \\
+             |\Omega(k_1,k_2,k_3,k)|\le t^{-1}
+        \end{array}\right\}\right)^{\frac{1}{2}}
+        \\
+        =& \frac{\lambda^2t}{L^{2d}} (L^{2d}/t)^{\frac{1}{2}} = \frac{\lambda^2}{L^{d}} t^{\frac{1}{2}}
+    \end{split}
+\end{equation}
+
+When executing the above steps, we will encounter several problems.
+
+\begin{enumerate}
+    \item \textit{The loss of derivative problem.} If the nonlinearity contains a derivative, we have the loss of derivative problem.
+    \item \textit{The degeneracy problem.} In the above analysis of the second order term of the NLS equation, we actually cheated because we have the $k_1=k_2$, $k_3=k$ terms. A similar problem also arises in three wave models.
+\end{enumerate}
+
+The first problem is solved by suitably taking advantage of the viscosity term in the equation. This argument given in section \ref{sec.randommatrices} can solve the loss of derivative problem for most PDEs.
+
+The second problems in the three wave and four wave models setting are very different from each other. In the next two sections, we will discuss these two cases separately.

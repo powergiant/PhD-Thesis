@@ -1,0 +1,184 @@
+\section{Wave kinetic theory for four wave models}\label{sec.introfourwave}
+
+\subsection{The phase problem}
+
+The resonance surfaces for four wave problems is 
+\begin{equation}
+    k_1 - k_2 +k_3 = k,\ |k_1|^2 - |k_2|^2 +|k_3|^2 = |k|^2 + O(T^{-1})
+\end{equation}
+
+It degenerates seriously near the diagonal $k_1 = k_2$, $k_3 = k$. Notice that in $\sum_{ k_1 - k_2 + k_3 = k}$ of NLS, the sum over diagonal $\sum_{k_1 = k_2,\ k_3 = k}$ is   
+\begin{equation}
+    \sum\limits_{k_1 = k_2,\ k_3 = k} \psi_{k_1} \overline{\psi_{k_2}} \psi_{k_3} = \left(\sum\limits_{k_1} |\psi_{k_1}|^2\right) \psi_{k}\approx L^d
+\end{equation}
+
+This term is of order $L^d$ which is much larger than
+
+\begin{equation}
+\sum\limits_{\substack{ k_1 - k_2 + k_3 = k\\ |\Omega(k_1,k_2,k_3,k)|\le t^{-1}}} \xi_{k_1} \overline{\xi_{k_2}} \xi_{k_3} \approx L^{d}t^{-\frac{1}{2}}
+\end{equation}
+
+
+
+In NLS case, this diagonal term $\sum |\psi_{k_1}|^2$ is the conservative $L^2$ mass. Therefore, a change of phase argument $\psi_k\rightarrow \psi_ke^{i|k|^2t+it\alpha ||\psi||_{2}^2}$ can remove this term completely.
+\begin{equation}
+    \sum\limits_{k_1 = k_2,\ k_3 = k} \psi_{k_1} \overline{\psi_{k_2}} \psi_{k_3} = \left(\sum\limits_{k_1} |\psi_{k_1}|^2\right) \psi_{k}
+\end{equation}
+
+However, for general equations, the diagonal is of the form $\sum m_{k_1}|\psi_{k_1}|^2$ which is not a conservative quantity and cannot be removed by a naive change of phase argument.
+
+For example, consider the following Klein-Gordon type equation. 
+\begin{equation}\label{eq.NKLGintro}
+    i\partial_t\psi-\Lambda(\nabla)\psi=\lambda^2 \Lambda(\nabla)^{-\frac{1}{2}}|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\psi 
+\end{equation}
+
+The diagonal term is $\left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}|\psi_{k_1}|^2 \right)\Lambda_{k}^{-1}\psi_{k}$ and $\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}|\psi_{k_1}|^2$ is not a conservative quantity.
+
+\subsection{The renormalization argument}
+
+In terms of Fourier coefficients, the equation \eqref{eq.NKLGintro} becomes
+\begin{equation}\label{eq.underrenormintro}
+    i \dot{\psi}_{k} 
+    = \left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} M(t)\Lambda(k)^{-1}\right) \psi_k
+    +\frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3}\Lambda_{k})^{-\frac{1}{2}}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+\end{equation}
+where $\sum^{\times}=\sum\limits_{\substack{k_1, k_3\neq k \\ S_3=0}}-\sum_{k_1=k_2=k_3=k}$ and $M(t)=\frac{1}{L^{d}} \sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}|\psi_{k_1}|^2$.
+
+
+The linear term $\left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} M(t)\Lambda(k)^{-1}\right) \psi_k$ cannot be removed by changing phase. Because $M(t)$ is a random variable.
+    
+To solve this issue, we propose a renormalization method. Instead of merging $M(t)$ into the linear part, we merge $m(t)=\mathbb{E}M(t)$  
+\begin{equation}\label{eq.renormalized'intro}
+    \begin{split}
+    i \dot{\psi}_{k} 
+    =  \bigg(\Lambda(k)&+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-1}\bigg) \psi_k
+    +\frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0} (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3}\Lambda_{k})^{-\frac{1}{2}}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+    \\
+    &+\frac{2\lambda^2}{L^{2d}} \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}\Big(|\psi_{k_1}|^2-\mathbb{E} |\psi_{k_1}|^2\Big) \right) \Lambda_{k}^{-1}\psi_{k}    
+    \end{split}
+\end{equation}
+    
+Now the linear term $\bigg(\Lambda(k)+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-1}\bigg) \psi_k$ can be removed by changing phase. The renormalized $L^2$ term $\left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}\Big(|\psi_{k_1}|^2-\mathbb{E} |\psi_{k_1}|^2\Big) \right) \Lambda_{k}^{-1}\psi_{k}$ do not have a phase problem due to the renormalized Wick theorem, Theorem \ref{th.wickr.fourwave}.
+    
+%     Integrate the \eqref{eq.renormalized'} gives
+%     \begin{equation}\label{eq.intrenorm}
+%         \begin{split}
+%             \varphi_k =\xi_k
+%             &\underbrace{-  \frac{i\lambda^2}{L^{2d}} \sum\limits^{\times}_{S_3=0} \int^{t}_0 (\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3}\Lambda_{k})^{-\frac{1}{2}}\varphi_{k_1}\overline{\varphi}_{k_2}  \varphi_{k_3}e^{- i (\Omega_3t+\widetilde{\Omega}_3)} ds}_{\mathcal{T}_1(\varphi,\varphi,\varphi)_k}
+%             \\
+%             &\underbrace{-  \frac{2i\lambda^2}{L^{2d}}  \int^{t}_0 \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-1}:|\varphi_{k_1}|^2: \right) \Lambda_{k}^{-1}\varphi_{k} ds}_{\mathcal{T}_2(\varphi,\varphi,\varphi)_k}.
+%         \end{split}
+%         \end{equation}
+% Here we define $:X:=X-\mathbb{E}X$, so $:|\varphi_{k_1}|^2: = |\varphi_{k_1}|^2-\mathbb{E} |\varphi_{k_1}|^2$. We also define
+
+% \begin{equation}
+%     \textbf{TODO}
+% \end{equation}
+
+
+
+\subsection{From the Klein-Gordon type equation to the original Klein-Gordon equation}
+
+In this section, we explain the connection between the equation \eqref{eq.NKLGintro} and the Klein-Gordon equation \eqref{eq.KG}.
+
+% In this section, we introduce the new variable $\psi$ and rewrite \eqref{eq.NKLG} into the standard form of a dispersive equation. 
+
+Notice that in \eqref{eq.KG} $\partial_{tt} u - \Delta u +u = -\lambda^2 u^3$, the operator
+$\partial_{tt}-\Delta +1$ can be factorized into $(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_t+\Lambda(\nabla))$, where $\Lambda(\nabla)$ is the Fourier multiplier with symbol $\Lambda(\xi)=\sqrt{1+|\xi|^2}$. Therefore the equation can be simplified by introducing a new variable
+\begin{equation}
+    \psi=\Lambda(\nabla)^{-\frac{1}{2}}(i\partial_tu+\Lambda(\nabla)u).
+\end{equation}
+Then we have
+\begin{equation}\label{eq.firstorderderivation}
+    (-i\partial_t+\Lambda(\nabla))\psi=(-i\partial_t+\Lambda(\nabla))\cdot(i\partial_tu+\Lambda(\nabla))u=-\lambda^2 \Lambda(\nabla)^{-\frac{1}{2}} u^3.
+\end{equation} 
+
+We can solve $u$ in terms of $\psi$, $\bar{\psi}$
+\begin{equation}\label{eq.defpsi}
+    u=(2\Lambda(\nabla))^{-\frac{1}{2}}(\psi+\bar{\psi}).
+\end{equation} 
+We can derive the equation of $\psi$ by substituting \eqref{eq.defpsi} into the right hand side of \eqref{eq.firstorderderivation}
+
+\begin{equation}\label{eq.firstorder}
+    i\partial_t\psi-\Lambda(\nabla)\psi=\frac{\lambda^2}{8} \Lambda(\nabla)^{-\frac{1}{2}}\Big(\Lambda(\nabla)^{-\frac{1}{2}}\psi+\Lambda(\nabla)^{-\frac{1}{2}}\bar{\psi}\Big)^3.
+\end{equation} 
+
+There are four terms in the nonlinearity, 
+\begin{equation}
+    \begin{split}
+        &\Lambda(\nabla)^{-\frac{1}{2}}(\Lambda(\nabla)^{-\frac{1}{2}}\psi)^3,
+        \\
+        &\Lambda(\nabla)^{-\frac{1}{2}}(|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\psi),
+        \\
+        &\Lambda(\nabla)^{-\frac{1}{2}}(|\Lambda(\nabla)^{-\frac{1}{2}}\psi|^2\Lambda(\nabla)^{-\frac{1}{2}}\bar{\psi}),
+        \\
+        &\Lambda(\nabla)^{-\frac{1}{2}}(\Lambda(\nabla)^{-\frac{1}{2}}\bar{\psi})^3.
+    \end{split}
+\end{equation}
+
+The corresponding resonance surface of these terms are 
+\begin{equation}
+    \begin{split}
+        &\Lambda(k_1)+ \Lambda(k_2)+\Lambda(k_3)-\Lambda(k)=0,
+        \\
+        &\Lambda(k_1)- \Lambda(k_2)+\Lambda(k_3)-\Lambda(k)=0,
+        \\
+        &\Lambda(k_1)- \Lambda(k_2)-\Lambda(k_3)-\Lambda(k)=0,
+        \\
+        &\Lambda(k_1)+ \Lambda(k_2)+\Lambda(k_3)+\Lambda(k)=0.
+    \end{split}
+\end{equation}
+
+
+%In this section, we explain the renormalization argument.
+% Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equation (\ref{eq.firstorder}) becomes
+
+% \begin{equation}\label{eq.mainfourier'}
+% \begin{split}
+% i \dot{\psi}_{k} =& \Lambda_k u_k+\frac{\lambda^2}{8L^{2d}} \sum_{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3} m^{3}_{k_1k_2k_3}\psi_{k_1}\psi_{k_2}  \psi_{k_3}
+% +m^{2}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \psi_{k_3}
+% \\
+% &+m^{1}_{k_1k_2k_3}\psi_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3}
+% +m^{0}_{k_1k_2k_3}\overline{\psi}_{k_1}\overline{\psi}_{k_2}  \overline{\psi}_{k_3},
+% \end{split}
+% \end{equation}
+% where 
+% \begin{equation}
+% \begin{cases}
+% m^{3}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 = k}
+% \\
+% m^{2}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 +k_3 = k}
+% \\
+% m^{1}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 - k_2 -k_3 = k}
+% \\
+% m^{0}_{k_1k_2k_3}=(\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3})^{-1} \delta_{k_1 + k_2 +k_3 + k =0}
+% \end{cases}
+% \end{equation}
+
+The resonance surface of the second term is the only one that contains degeneracy $k_1=k_2$, $k_3=k$.
+
+% According to \eqref{eq.wellprepared}, the initial data of \eqref{eq.mainfourier'} can be written as 
+
+% \begin{equation}
+%     \psi_k(0) =  \sqrt{n_{\textrm{in}}(k)/2} \,(\alpha_k+i\beta_k)
+% \end{equation}
+% To keep the notation simpler we define
+% \begin{equation}
+% \begin{split}
+%     &\eta_{k}(\omega)=\frac{1}{\sqrt{2}}(\alpha_k+i\beta_k),
+%     \\
+%     &\xi_k = \psi_k(0) = \sqrt{n_{\textrm{in}}(k)} \, \eta_{k}(\omega).
+% \end{split}
+% \end{equation}
+% Therefore $\eta_{k}(\omega)$ are i.i.d complex normal distributions and $\xi_k$ are Fourier coefficients of the initial data of $\psi$.
+
+% As explained in Appendix \ref{app.rem}, the random data Cauchy problem of defocusing Klein-Gordon equation \eqref{eq.NKLG'} is almost equivalent to above equation after change of variable $\psi=i\partial_tu+\Lambda(\nabla)u$.
+% \begin{equation}\label{eq.NKLG'}
+% \begin{cases}
+% \partial_{tt} u = \Delta u -u - \lambda^2 u^3,  \quad x\in \mathbb{T}^d_{L_1\cdots L_d},   \\[.6em]
+% u(0,x) = u_{\textrm{in}}(x).
+% \\[.6em]
+% \partial_tu(0,x) = u^{1}_{\textrm{in}}(x)
+% \end{cases}    
+% \end{equation}
+

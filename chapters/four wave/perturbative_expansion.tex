@@ -4,8 +4,8 @@ In this section, we calculate the renormalized approximate series and introduce 
 
 \subsection{The renormalization argument} In this section, we derive the equation for Fourier coefficients and specify the renormalization argument mentioned in the introduction.
 
-Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equation (\ref{eq.NKLG}) becomes
-\begin{equation}\label{eq.mainfourier}
+Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equation (\ref{eq.NKLG.fourwave}) becomes
+\begin{equation}\label{eq.mainfourier.fourwave}
 \begin{cases}
  i \dot{\psi}_{k} = \Lambda(k) \psi_k
  +\frac{\lambda^2}{L^{2d}} \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}} \Lambda_{k_1k_2k_3k}^{-1}\,\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3} \\[2em]
@@ -14,7 +14,7 @@ Let $\psi_k$ be the Fourier coefficient of $\psi$. Then in term of $\psi_k$ equa
 \end{equation}
 where $\Lambda_{k_1k_2k_3k}=\Lambda_{k_1}\Lambda_{k_2}\Lambda_{k_3}\Lambda_{k}$.
 
-As explained in section \ref{sec.appsol}, the contribution from $\sum_{k_1=k_2,k_3=k}$ or $\sum_{k_1=k,k_2=k_3}$ is very large. This suggests us split the sum in (\ref{eq.mainfourier}) into
+As explained in section \ref{sec.appsol.fourwave}, the contribution from $\sum_{k_1=k_2,k_3=k}$ or $\sum_{k_1=k,k_2=k_3}$ is very large. This suggests us split the sum in (\ref{eq.mainfourier.fourwave}) into
 \begin{equation}
 \begin{split}
 \sum\limits_{\substack{(k_1,k_2,k_{3}) \in (\mathbb{Z}^d_L)^3 \\ k - k_1 + k_2 -k_3 = 0}}
@@ -25,9 +25,9 @@ As explained in section \ref{sec.appsol}, the contribution from $\sum_{k_1=k_2,k
 \end{equation}
 Here in the second equality, we use symmetry to conclude that $\sum_{k_1=k_2,k_3=k}=\sum_{k_1=k,k_2=k_3}$.
 
-Apply this splitting to (\ref{eq.mainfourier}),
+Apply this splitting to (\ref{eq.mainfourier.fourwave}),
 
-\begin{equation}\label{eq.underrenorm}
+\begin{equation}\label{eq.underrenorm.fourwave}
 \begin{split}
 i \dot{\psi}_{k} =& \Lambda(k) \psi_k
 +\frac{2\lambda^2}{L^{2d}} \left(\sum\limits_{k_1\in \mathbb{Z}^d_L} \Lambda_{k_1}^{-2}|\psi_{k_1}|^2 \right) \Lambda_{k}^{-2}\psi_{k}
@@ -43,7 +43,7 @@ Here we have introduced the notation $\Lambda_{k_1k_2k_3k}=\Lambda_{k_1}\Lambda_
 
 \underline{Change phase argument in previous paper:} In \cite{deng2021derivation}, the $L^2$ phase problem was trivial and was solved by a simple change phase argument. Let us explain why this argument does not work for general four wave systems.
 
-In \cite{deng2021derivation}, the authors view $\left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} M(t)\Lambda(k)^{-2}\right) \psi_k$ as the linear part of (\ref{eq.underrenorm}) and remove it by rewriting the equation in term of the linear profile $\phi_k(t):= e^{i\Lambda(k) t+\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-2}\int^t_{0}M(s) ds} \psi_k(t)$.
+In \cite{deng2021derivation}, the authors view $\left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} M(t)\Lambda(k)^{-2}\right) \psi_k$ as the linear part of (\ref{eq.underrenorm.fourwave}) and remove it by rewriting the equation in term of the linear profile $\phi_k(t):= e^{i\Lambda(k) t+\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-2}\int^t_{0}M(s) ds} \psi_k(t)$.
  
  
  \begin{equation}
@@ -64,19 +64,19 @@ where
 \end{split}
 \end{equation}
 
-Unlike \cite{deng2021derivation}, in the Klein-Gordon equation, $M$ is not a conservative quantity, and the linear term of $M$ contains a multiplier $\Lambda(k)^{-2}$. Due to these facts, we have an additional resonant phase $\widetilde{\Omega}'_3$. As explained in section \ref{sec.appsol}, since this resonant phase is a random variable (it contains $M$ which is a random variable), we can't apply the Wick theorem to calculate the correlation functions in the perturbative expansion.
+Unlike \cite{deng2021derivation}, in the Klein-Gordon equation, $M$ is not a conservative quantity, and the linear term of $M$ contains a multiplier $\Lambda(k)^{-2}$. Due to these facts, we have an additional resonant phase $\widetilde{\Omega}'_3$. As explained in section \ref{sec.appsol.fourwave}, since this resonant phase is a random variable (it contains $M$ which is a random variable), we can't apply the Wick theorem to calculate the correlation functions in the perturbative expansion.
 
 \underline{Our renormalization method:} To avoid the above difficulties, we define $m(t)=\mathbb{E}M(t)$. Notice that a good approximation of a random variable is its expectation, so we can decompose $M$ into $m+(M-m)$. Therefore, we can replace $M$ with $m$ in the definition of the linear profile. Then we remove the randomness of $\widetilde{\Omega}'_3$ at the cost of introducing an error $M-m$ in the equation. 
 
-We now explain the renormalization method. Decomposing $M$ in \eqref{eq.underrenorm} gives
-\begin{equation}\label{eq.underrenorm'}
+We now explain the renormalization method. Decomposing $M$ in \eqref{eq.underrenorm.fourwave} gives
+\begin{equation}\label{eq.underrenorm'.fourwave}
 i \dot{\psi}_{k} 
 = \left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-2}\right) \psi_k
 +\frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0} \Lambda_{k_1k_2k_3k}^{-1}\,\psi_{k_1}\overline{\psi}_{k_2} \psi_{k_3}+\frac{2\lambda^2}{L^{d}} (M(t)-m(t))\Lambda(k)^{-2} \psi_k
 \end{equation}
 By the definition of $M$ and $m$, the above equation is equivalent to 
 
-\begin{equation}\label{eq.renormalized'}
+\begin{equation}\label{eq.renormalized'.fourwave}
 \begin{split}
 i \dot{\psi}_{k} 
 = \bigg(\Lambda(k)&+\frac{2\lambda^2}{L^{d}} m(t)\Lambda(k)^{-2}\bigg) \psi_k
@@ -91,9 +91,9 @@ View $\left(\Lambda(k)+\frac{2\lambda^2}{L^{d}} M(t)\Lambda(k)^{-2}\right) \psi_
 \phi_k(t):= e^{i\Lambda(k) t+\frac{2\lambda^2}{L^{d}} i \Lambda(k)^{-2}\int^t_{0}m(s) ds} \psi_k(t) 
 \end{equation}
 
-Rewriting \eqref{eq.renormalized'} in terms of $\phi_k$ gives 
+Rewriting \eqref{eq.renormalized'.fourwave} in terms of $\phi_k$ gives 
 
-\begin{equation}\label{eq.renormalized}
+\begin{equation}\label{eq.renormalized.fourwave}
 \begin{split}
 i \dot{\phi}_{k} 
 = \frac{\lambda^2}{L^{2d}} \sum^{\times}\limits_{S_3=0} & \Lambda_{k_1k_2k_3k}^{-1}\,\phi_{k_1}\overline{\phi}_{k_2} \phi_{k_3}e^{- i (\Omega_3t+\widetilde{\Omega}_3)(k_1,k_2,k_3,k)}
@@ -106,15 +106,15 @@ where
  \widetilde{\Omega}_3(k_1,k_2,k_3,k)=\frac{2\lambda^2}{L^{d}} \int^t_{0}m(s) ds\left(\Lambda(k_1)^{-2}-\Lambda(k_2)^{-2}+\Lambda(k_3)^{-2}-\Lambda(k)^{-2}\right)
 \end{equation}
 
-We will work with the renormalized equation (\ref{eq.renormalized}) in the rest part of this paper. 
+We will work with the renormalized equation (\ref{eq.renormalized.fourwave}) in the rest part of this paper. 
 
-\subsection{The approximation series and Feynman diagrams}\label{sec.appFey} In this section, we construct the approximate solution. 
+\subsection{The approximation series and Feynman diagrams}\label{sec.appFey.fourwave} In this section, we construct the approximate solution. 
 
 For ease of notation, we define $:X:=X-\mathbb{E}X$.
 
-Integrating (\ref{eq.renormalized}) gives
+Integrating (\ref{eq.renormalized.fourwave}) gives
 
-\begin{equation}\label{eq.intrenorm}
+\begin{equation}\label{eq.intrenorm.fourwave}
 \begin{split}
  \phi_k =\xi_k
  &\underbrace{- \frac{i\lambda^2}{L^{2d}} \sum\limits^{\times}_{S_3=0} \int^{t}_0 \Lambda_{k_1k_2k_3k}^{-1}\,\phi_{k_1}\overline{\phi}_{k_2} \phi_{k_3}e^{- i (\Omega_3t+\widetilde{\Omega}_3)} ds}_{\mathcal{T}_1(\phi,\phi,\phi)_k}
@@ -124,19 +124,19 @@ Integrating (\ref{eq.renormalized}) gives
 \end{equation}
 
 
-Denote the second and the third term of the right hand side by $\mathcal{T}_1(\phi,\phi,\phi)_k$, $\mathcal{T}_2(\phi,\phi,\phi)_k$ respectively. Then the right hand side equals to $\mathcal{F}(\phi)_k=\xi_k+\mathcal{T}_1(\phi,\phi,\phi)_k+\mathcal{T}_2(\phi,\phi,\phi)_k$. With these notations, \eqref{eq.intrenorm} becomes $\phi=\mathcal{F}(\phi)_k$. 
+Denote the second and the third term of the right hand side by $\mathcal{T}_1(\phi,\phi,\phi)_k$, $\mathcal{T}_2(\phi,\phi,\phi)_k$ respectively. Then the right hand side equals to $\mathcal{F}(\phi)_k=\xi_k+\mathcal{T}_1(\phi,\phi,\phi)_k+\mathcal{T}_2(\phi,\phi,\phi)_k$. With these notations, \eqref{eq.intrenorm.fourwave} becomes $\phi=\mathcal{F}(\phi)_k$. 
 
 We construct the approximation series by iteration: $\phi=\mathcal{F}(\phi)=\mathcal{F}(\mathcal{F}(\phi))=\mathcal{F}(\mathcal{F}(\mathcal{F}(\phi)))=\cdots$. To estimate this approximation series, we need a compact graphical notation to represent the huge amount of terms generated from iteration. This is done by introducing the concept of Feynman diagrams.
 
 \subsubsection{Some basic definitions from graph theory} In this section, we introduce the concept of ternary trees used in this paper. Some concepts below may be hard to understand, but we will 
-%discuss their motivations after the proof of Lemma \ref{lem.treeterms}, where 
-provide a dictionary between these concepts and coefficients of series expansion in Table \ref{tab.dict}, from which the motivation of these concepts should be obvious.
+%discuss their motivations after the proof of Lemma \ref{lem.treeterms.fourwave}, where 
+provide a dictionary between these concepts and coefficients of series expansion in Table \ref{tab.dict.fourwave}, from which the motivation of these concepts should be obvious.
 
 %branching nodes, leaves, subtrees, node decoration, expanding leaves, name of children, the direction of edges and label of leaves.
 
-\begin{defn}\label{def.tree} In this paper, we use following concepts from the graph theory
+\begin{defn}\label{def.tree.fourwave} In this paper, we use following concepts from the graph theory
 \begin{enumerate}
- \item \textbf{Ternary trees:} A \underline{ternary tree} $T$ is a tree in which each node has $3$ or $0$ children. An example of ternary trees used in this paper is shown in Figure \ref{fig.decsub}.
+ \item \textbf{Ternary trees:} A \underline{ternary tree} $T$ is a tree in which each node has $3$ or $0$ children. An example of ternary trees used in this paper is shown in Figure \ref{fig.decsub.fourwave}.
  
  \begin{figure}[H]
  \centering
@@ -173,35 +173,35 @@ provide a dictionary between these concepts and coefficients of series expansion
  \end{tikzpicture}
  }
  \caption{Subtrees and node decoration.}
- \label{fig.decsub}
+ \label{fig.decsub.fourwave}
  \end{figure}
  
- \item \textbf{Root and children:} The \underline{root} of a trees and \underline{children} of nodes are defined in the usual way. The three children from left to right of a node are called the \underline{primary}, \underline{secondary}, and \underline{tertiary} child respectively. For example, in Figure \ref{fig.decsub}, the node $\mathfrak{r}$ is the root, and nodes $1$, $2$, $3$ are the primary, secondary, and tertiary child of $\mathfrak{n}$ respectively.
- \item \textbf{Branching nodes:} A \underline{branching node} in a ternary tree is a node which has $3$ children. The number of all branching nodes in a tree $T$ is denoted by $l(T)$. In Figure \ref{fig.decsub}, $\mathfrak{r}$ and $\mathfrak{n}$ are branching nodes and $l(T)=2$.
- \item \textbf{Leaves and leaf edges:} A \underline{leaf} of a tree $T$ is a node which has no children. An edge connected to a leaf is called a \underline{leaf edge}. In Figure \ref{fig.decsub}, all $\star$ nodes and $\Box$ nodes are leaves and the edges connected to them are leaf edges.
- \item \textbf{Subtrees:} If any child of any node in a subset $T'$ of a tree $T$ is also contained in $T'$ then $T' $ also forms a tree, we call $T'$ a \underline{subtree} of $T$. If the root node of $T'$ is $\mathfrak{n}\in T$, we say $T'$ is the \underline{subtree rooted at $\mathfrak{n}$} or \underline{subtree of $\mathfrak{n}$} and denote it by $T_\mathfrak{n}$. In Figure \ref{fig.decsub}, the tree inside the box is the subtree rooted at node $\mathfrak{n}$.
- \item \textbf{Node decoration:} In Figure \ref{fig.decsub}, each node is associated with a symbol in $\{\bullet,\ \circ,\ \star,\ \Box\}$. If a node $\mathfrak{n}$ has pattern $\bullet$ (similarly $ \circ,\ \star,\ \Box$), we say $\mathfrak{n}$ is decorated by $\bullet$ ($ \circ,\ \star,\ \Box$) or $\mathfrak{n}$ has decoration $\bullet$ ($ \circ,\ \star,\ \Box$). In what follows, we adopt the convention that leaves always have decoration $\star$ or $\Box$ and nodes other than leaves always have decoration $\bullet$ or $\circ$.
+ \item \textbf{Root and children:} The \underline{root} of a trees and \underline{children} of nodes are defined in the usual way. The three children from left to right of a node are called the \underline{primary}, \underline{secondary}, and \underline{tertiary} child respectively. For example, in Figure \ref{fig.decsub.fourwave}, the node $\mathfrak{r}$ is the root, and nodes $1$, $2$, $3$ are the primary, secondary, and tertiary child of $\mathfrak{n}$ respectively.
+ \item \textbf{Branching nodes:} A \underline{branching node} in a ternary tree is a node which has $3$ children. The number of all branching nodes in a tree $T$ is denoted by $l(T)$. In Figure \ref{fig.decsub.fourwave}, $\mathfrak{r}$ and $\mathfrak{n}$ are branching nodes and $l(T)=2$.
+ \item \textbf{Leaves and leaf edges:} A \underline{leaf} of a tree $T$ is a node which has no children. An edge connected to a leaf is called a \underline{leaf edge}. In Figure \ref{fig.decsub.fourwave}, all $\star$ nodes and $\Box$ nodes are leaves and the edges connected to them are leaf edges.
+ \item \textbf{Subtrees:} If any child of any node in a subset $T'$ of a tree $T$ is also contained in $T'$ then $T' $ also forms a tree, we call $T'$ a \underline{subtree} of $T$. If the root node of $T'$ is $\mathfrak{n}\in T$, we say $T'$ is the \underline{subtree rooted at $\mathfrak{n}$} or \underline{subtree of $\mathfrak{n}$} and denote it by $T_\mathfrak{n}$. In Figure \ref{fig.decsub.fourwave}, the tree inside the box is the subtree rooted at node $\mathfrak{n}$.
+ \item \textbf{Node decoration:} In Figure \ref{fig.decsub.fourwave}, each node is associated with a symbol in $\{\bullet,\ \circ,\ \star,\ \Box\}$. If a node $\mathfrak{n}$ has pattern $\bullet$ (similarly $ \circ,\ \star,\ \Box$), we say $\mathfrak{n}$ is decorated by $\bullet$ ($ \circ,\ \star,\ \Box$) or $\mathfrak{n}$ has decoration $\bullet$ ($ \circ,\ \star,\ \Box$). In what follows, we adopt the convention that leaves always have decoration $\star$ or $\Box$ and nodes other than leaves always have decoration $\bullet$ or $\circ$.
  
  \item \textbf{Expanding and final leaves:} Leaves denoted by $\Box$ are called \underline{expanding leaves}. Other leaves denoted by $\star$ are called \underline{final leaves}. The notion of expanding leaves is useful in the construction of trees, in which the presence of $\Box$ means that the construction is not finishing and $\Box$ denotes leaves that may be replaced by a branching node later.
  
- The concept of expanding leaves and $\Box$ is only used in section \ref{sec.connection}, so the readers can safely forget it after that section.
+ The concept of expanding leaves and $\Box$ is only used in section \ref{sec.connection.fourwave}, so the readers can safely forget it after that section.
 
- \item \textbf{Leg:} The edge that is only connected to the root node is called the \underline{leg} of the tree. In Figure \ref{fig.decsub}, the edge on top of the tree is the leg.
+ \item \textbf{Leg:} The edge that is only connected to the root node is called the \underline{leg} of the tree. In Figure \ref{fig.decsub.fourwave}, the edge on top of the tree is the leg.
  
- \item \textbf{Nodes and children of an edge:} Let $\mathfrak{n}_{u}$ and $\mathfrak{n}_{l}$ be two endpoints of an edge $\mathfrak{e}$ and assume that $\mathfrak{n}_{l}$ is a children of $\mathfrak{n}_{u}$. We define $\mathfrak{n}_{u}$ (resp. $\mathfrak{n}_{l}$) to the \underline{upper node} (resp. \underline{lower node}) of $\mathfrak{e}$. Let $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ be the three nodes of $\mathfrak{n}_{l}$ and let $\mathfrak{e}_1$(resp. $\mathfrak{e}_2$, $\mathfrak{e}_3$) be the edge between two nodes $\mathfrak{n}_{l}$ and $\mathfrak{n}_1$(resp. $\mathfrak{n}_2$, $\mathfrak{n}_3$). $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$ are defined to be the three \underline{children edges} of $\mathfrak{e}$. We also define the \underline{primary}, \underline{secondary} and \underline{tertiary} children in the same way as in Definition \ref{def.tree} (2).
+ \item \textbf{Nodes and children of an edge:} Let $\mathfrak{n}_{u}$ and $\mathfrak{n}_{l}$ be two endpoints of an edge $\mathfrak{e}$ and assume that $\mathfrak{n}_{l}$ is a children of $\mathfrak{n}_{u}$. We define $\mathfrak{n}_{u}$ (resp. $\mathfrak{n}_{l}$) to the \underline{upper node} (resp. \underline{lower node}) of $\mathfrak{e}$. Let $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ be the three nodes of $\mathfrak{n}_{l}$ and let $\mathfrak{e}_1$(resp. $\mathfrak{e}_2$, $\mathfrak{e}_3$) be the edge between two nodes $\mathfrak{n}_{l}$ and $\mathfrak{n}_1$(resp. $\mathfrak{n}_2$, $\mathfrak{n}_3$). $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$ are defined to be the three \underline{children edges} of $\mathfrak{e}$. We also define the \underline{primary}, \underline{secondary} and \underline{tertiary} children in the same way as in Definition \ref{def.tree.fourwave} (2).
  
- For example, in Figure \ref{fig.decsub}, if we take $\mathfrak{e}$ to be the edge between $\mathfrak{r}$ and $\mathfrak{n}$, then $\mathfrak{n}_{u} = \mathfrak{r}$ (resp. $\mathfrak{n}_{l} = \mathfrak{n}$) are the upper node (resp. lower node of $\mathfrak{e}$). $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$ are the three children edges of $\mathfrak{e}$, which are primary, secondary and tertiary respectively.
+ For example, in Figure \ref{fig.decsub.fourwave}, if we take $\mathfrak{e}$ to be the edge between $\mathfrak{r}$ and $\mathfrak{n}$, then $\mathfrak{n}_{u} = \mathfrak{r}$ (resp. $\mathfrak{n}_{l} = \mathfrak{n}$) are the upper node (resp. lower node of $\mathfrak{e}$). $\mathfrak{e}_1$, $\mathfrak{e}_2$, $\mathfrak{e}_3$ are the three children edges of $\mathfrak{e}$, which are primary, secondary and tertiary respectively.
 
- \item \textbf{Direction of edges and conjugated tree:} In Figure \ref{fig.decsub}, each edge is assoicated with a \underline{direction} by the following rule. 
+ \item \textbf{Direction of edges and conjugated tree:} In Figure \ref{fig.decsub.fourwave}, each edge is assoicated with a \underline{direction} by the following rule. 
  
  The leg is chosen to point downwards (or upwards) to the root. The primary and tertiary children edges have the opposite direction as their parent, while the secondary child edge has the same direction.
 
- The tree in Figure \ref{fig.decsub} is an example of this rule. By default, the leg in most trees in this paper points downwards, except when we pair two trees in Definition \ref{def.couple}. Two isomorphic trees with opposite direction association are called \underline{conjugated}.
+ The tree in Figure \ref{fig.decsub.fourwave} is an example of this rule. By default, the leg in most trees in this paper points downwards, except when we pair two trees in Definition \ref{def.couple.fourwave}. Two isomorphic trees with opposite direction association are called \underline{conjugated}.
 
- \item \textbf{Labelling of leaves:} Each leaves are labelled by $1$, $2$, $\cdots$, $2l(T)+1$ from left to right. An edge from a leaf $\mathfrak{l}$ is also labeled by $j$ if $\mathfrak{l}$ is labeled by $j$. The tree in Figure \ref{fig.decsub} is an example of this labeling rule.
+ \item \textbf{Labelling of leaves:} Each leaves are labelled by $1$, $2$, $\cdots$, $2l(T)+1$ from left to right. An edge from a leaf $\mathfrak{l}$ is also labeled by $j$ if $\mathfrak{l}$ is labeled by $j$. The tree in Figure \ref{fig.decsub.fourwave} is an example of this labeling rule.
 
 
- \item \textbf{Sign of edges and leaves:} Each edge $\mathfrak{e}$ in a tree can be assigned with a \underline{sign} $\iota_{\mathfrak{e}}\in\{\pm\}$ by following rule. If the edge points downwards (resp. upwards), then the edge is associated with a $+$ sign (a $-$ sign). The sign of a leaf equals the sign of the edge connected to it. For example, in Figure \ref{fig.decsub}, leaves labelled by $1$, $3$, $5$ are assigned with a $+$ sign, while leaves labelled by $2$, $4$ are assigned with a $-$ sign.
+ \item \textbf{Sign of edges and leaves:} Each edge $\mathfrak{e}$ in a tree can be assigned with a \underline{sign} $\iota_{\mathfrak{e}}\in\{\pm\}$ by following rule. If the edge points downwards (resp. upwards), then the edge is associated with a $+$ sign (a $-$ sign). The sign of a leaf equals the sign of the edge connected to it. For example, in Figure \ref{fig.decsub.fourwave}, leaves labelled by $1$, $3$, $5$ are assigned with a $+$ sign, while leaves labelled by $2$, $4$ are assigned with a $-$ sign.
  
  % inductively. First we choose a sign $\iota_{\mathfrak{l}}\in\{\pm\}$ for the leg $\mathfrak{l}$.
  % %and in what follows we choose $+$ unless explicitly mentioned.
@@ -220,7 +220,7 @@ provide a dictionary between these concepts and coefficients of series expansion
 
 
 
-\subsubsection{Connection between iteration and trees}\label{sec.connection} In this section, we explain non-rigorously the connection between perturbation expansion and trees. The rigorous argument can be found in the next section. 
+\subsubsection{Connection between iteration and trees}\label{sec.connection.fourwave} In this section, we explain non-rigorously the connection between perturbation expansion and trees. The rigorous argument can be found in the next section. 
 
 For the ease of notation, we first assume that $\mathcal{F}(\phi)_k=\xi_k+\mathcal{T}(\phi,\phi,\phi)_k$.
 %and ignore the node sign. 
@@ -241,7 +241,7 @@ In this case, we do not need the decoration $\circ$. We will explain how to deal
 \end{split} 
 \end{equation*}
 In the above iteration, we recursively choose one $\phi$, replace it by $\xi+\mathcal{T}(\phi,\phi,\phi)$ and use the linearity of $\mathcal{T}$ to expand into two terms.
-\begin{equation}\label{eq.termgeneration}
+\begin{equation}\label{eq.termgeneration.fourwave}
 \begin{split}
  &\mathcal{T}\Big(\cdots,\mathcal{T}(\cdots,\mathcal{T}(\xi,\underline{\phi},\cdots),\cdots),\cdots\Big)\rightarrow \mathcal{T}\Big(\cdots,\mathcal{T}(\cdots,\mathcal{T}(\xi,\underline{\xi+\mathcal{T}(\phi,\phi,\phi)},\cdots),\cdots),\cdots\Big)
  \\
@@ -255,7 +255,7 @@ In summary, all terms in the expansion can be generated by following the steps
 
 \begin{itemize}
  \item \textbf{Step $0$.} Add a term $\phi$ in the summation $\mathcal{J}$.
- \item \textbf{Step $i$ ($i\ge 1$).} Assume that \textbf{Step $i-1$} has been finished which produce a sum of terms $\mathcal{J}$, then choose a term in $\mathcal{J}$ which has least number of $\xi$ and $\phi$, remove this term from $\mathcal{J}$ and add the two terms in $\mathcal{J}$ constructed in \eqref{eq.termgeneration}.
+ \item \textbf{Step $i$ ($i\ge 1$).} Assume that \textbf{Step $i-1$} has been finished which produce a sum of terms $\mathcal{J}$, then choose a term in $\mathcal{J}$ which has least number of $\xi$ and $\phi$, remove this term from $\mathcal{J}$ and add the two terms in $\mathcal{J}$ constructed in \eqref{eq.termgeneration.fourwave}.
 \end{itemize}
 
 This process is very similar to the construction of ternary trees, in which we recursively replace a chosen branching node with a leaf or branch.
@@ -263,7 +263,7 @@ This process is very similar to the construction of ternary trees, in which we r
 \begin{itemize}
  \item \textbf{Step $0$.} Start from a branching root node $\Box$.
  
- \item \textbf{Step $i$ ($i\ge 1$).} Assume that we have finish the \textbf{Step $i-1$} which produce a collection of trees $\mathscr{T}$, then choose a tree in $\mathscr{T}$ which has least number of expanding leaves $\Box$ and final leaves $\star$, remove this tree from $\mathscr{T}$ and add two new trees in $\mathscr{T}$. In these two new trees, we replace an expanding leaf $\Box$ with a final leaf $\star$ or a branched node $\bullet$ with three branching children leaves $\Box$. This construction is illustrated by Figure \ref{fig.construction}.
+ \item \textbf{Step $i$ ($i\ge 1$).} Assume that we have finish the \textbf{Step $i-1$} which produce a collection of trees $\mathscr{T}$, then choose a tree in $\mathscr{T}$ which has least number of expanding leaves $\Box$ and final leaves $\star$, remove this tree from $\mathscr{T}$ and add two new trees in $\mathscr{T}$. In these two new trees, we replace an expanding leaf $\Box$ with a final leaf $\star$ or a branched node $\bullet$ with three branching children leaves $\Box$. This construction is illustrated by Figure \ref{fig.construction.fourwave}.
  \begin{figure}[H]
  \centering
  \scalebox{0.5}{
@@ -292,7 +292,7 @@ This process is very similar to the construction of ternary trees, in which we r
  \end{tikzpicture}
  }
  \caption{One step in the construction of binary trees}
- \label{fig.construction}
+ \label{fig.construction.fourwave}
  \end{figure}
  % \begin{figure}
  % \begin{forest}[$\bullet$ [$\times$] [$*$] [$*$] ]
@@ -328,7 +328,7 @@ By comparing the above two processes, we can make the connection between terms a
 We have the following recursive formula for calculating a term $\mathcal{J}_T$ from a ternary tree $T$. 
 
 If $T$ has only one node then $\mathcal{J}_T=\xi$. Otherwise let $\bullet_1$, $\bullet_2$, $\bullet_3$ be three children of the root node $\bullet$, let $T_{\bullet_1}$, $T_{\bullet_2}$, $T_{\bullet_3}$ be the subtrees of $T$ rooted at above nodes. If $\mathcal{J}_{T_{\bullet_1}}$, $\mathcal{J}_{T_{\bullet_2}}$, $\mathcal{J}_{T_{\bullet_3}}$ have been recursively calculated, then $\mathcal{J}_T$ can be calculated by
-\begin{equation}\label{eq.treeterm'}
+\begin{equation}\label{eq.treeterm'.fourwave}
  \mathcal{J}_T=\mathcal{T}(\mathcal{J}_{T_{\bullet_1}}, \mathcal{J}_{T_{\bullet_2}}, \mathcal{J}_{T_{\bullet_3}}).
 \end{equation}
 
@@ -340,17 +340,17 @@ Now we explain how to generalize the above ideas to the case in which two nonlin
 %and take node sign into consideration. 
 Notice that in above argument, each node decorated by $\bullet$ corresponds to a $\mathcal{T}(\cdots,\cdots,\cdots)$ in a term $\mathcal{J}_{T}$. In present case, we shall introduce two decoration $\bullet$, $\circ$ correspond to $\mathcal{T}_1$ and $\mathcal{T}_2$ respectively. 
 %If the sign of $\bullet$ is not $+$, we should take complex conjugate on the equation. 
-To adapt these changes, we should generalize the recursive formula \eqref{eq.treeterm'} to \eqref{eq.treeterm} introduced in the next section.
+To adapt these changes, we should generalize the recursive formula \eqref{eq.treeterm'.fourwave} to \eqref{eq.treeterm.fourwave} introduced in the next section.
 
 
 \subsubsection{Feynman diagrams and construction of the approximation solution} In this section we present the rigorous argument equivalent to that in the above section. 
 
 In the construction of trees, finally all $\Box$ nodes will be replaced by $\bullet$, $\circ$, $\star$, so in what follows, we only consider trees whose nodes are decorated by $\bullet$, $\circ$, $\star$.
 
-\begin{defn}\label{def.treeterms} Given a ternary tree $T$ whose nodes are decorated by $\bullet$, $\circ$, $\star$,
+\begin{defn}\label{def.treeterms.fourwave} Given a ternary tree $T$ whose nodes are decorated by $\bullet$, $\circ$, $\star$,
 % if the sign of the root is $+$, 
 we inductively define the quantity $\mathcal{J}_T$ by:
-\begin{equation}\label{eq.treeterm}
+\begin{equation}\label{eq.treeterm.fourwave}
  \mathcal{J}_T=
  \begin{cases}
  \xi, \qquad\qquad\qquad\qquad \textit{ if }T\textit{ has only one node }\star.
@@ -365,19 +365,19 @@ Here $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ are three children of 
 
 \begin{defn}
 Given a large number $N$, define the approximate solution $\phi_{app}$ by
-\begin{equation}\label{eq.approxsol}
+\begin{equation}\label{eq.approxsol.fourwave}
  \phi_{app}=\sum_{l(T)\le N} \mathcal{J}_T
 \end{equation}
 \end{defn}
 
-Section \ref{sec.connection} explains why the approximation series should equal to \eqref{eq.approxsol}, a sum of many tree terms, but if we know this fact, we can directly prove it, and forget all the motivations. The lemma below proves that $\phi_{app}$ defined by the above expression is an approximate solution. 
+Section \ref{sec.connection.fourwave} explains why the approximation series should equal to \eqref{eq.approxsol.fourwave}, a sum of many tree terms, but if we know this fact, we can directly prove it, and forget all the motivations. The lemma below proves that $\phi_{app}$ defined by the above expression is an approximate solution. 
 
-\begin{lem}\label{lem.approxerror} Define 
+\begin{lem}\label{lem.approxerror.fourwave} Define 
 \begin{equation}
  Err=\mathcal{F}(\phi_{app})-\phi_{app},
 \end{equation}
 then we have 
-\begin{equation}\label{eq.approxerror}
+\begin{equation}\label{eq.approxerror.fourwave}
  Err=\sum_{T\in \mathcal{T}_{>N}^*} \mathcal{J}_T,
 \end{equation}
 where $\mathcal{T}_{>N}^*$ is defined by
@@ -387,7 +387,7 @@ where $\mathcal{T}_{>N}^*$ is defined by
  l(T_{\mathfrak{n}_2})\le N,
  l(T_{\mathfrak{n}_3})\le N,
  \\
- &T_{\mathfrak{n}_1},\ T_{\mathfrak{n}_2},\ T_{\mathfrak{n}_3}\textit{ are the subtrees defined in Definition \ref{def.treeterms}} \}
+ &T_{\mathfrak{n}_1},\ T_{\mathfrak{n}_2},\ T_{\mathfrak{n}_3}\textit{ are the subtrees defined in Definition \ref{def.treeterms.fourwave}} \}
 \end{split}
 \end{equation}
 \end{lem}
@@ -396,8 +396,8 @@ where $\mathcal{T}_{>N}^*$ is defined by
 Notice that all terms in $\sum_{T\in \mathcal{T}_{>N}^*}$ are polynomials of degree $>N$. Therefore, the approximation error of $\phi_{app}$ is of very high order, which proves that $\phi_{app}$ is an appropriate approximation solution. 
 \end{rem}
 
-\begin{proof} By \eqref{eq.approxsol}, we get
-\begin{equation}\label{eq.lemapproxerror}
+\begin{proof} By \eqref{eq.approxsol.fourwave}, we get
+\begin{equation}\label{eq.lemapproxerror.fourwave}
 \begin{split}
  Err=&\mathcal{F}(\phi_{app})-\phi_{app} 
  \\
@@ -409,7 +409,7 @@ Notice that all terms in $\sum_{T\in \mathcal{T}_{>N}^*}$ are polynomials of deg
 
 Let $T$ be a tree constructed by connecting the root nodes $\mathfrak{n}_1$, $\mathfrak{n}_2$, $\mathfrak{n}_3$ of $T_1$, $T_2$, $T_3$ to a new node $\mathfrak{r}$. We define $\mathfrak{r}$ to be the root node of $T$.
 
-Then by \eqref{eq.treeterm}, we have
+Then by \eqref{eq.treeterm.fourwave}, we have
 \begin{equation}
  \mathcal{J}_T=
  \begin{cases}
@@ -423,7 +423,7 @@ and
  \sum_{l(T_1),l(T_2),l(T_3)\le N} \Big(\mathcal{T}_1(\mathcal{J}_{T_1},\mathcal{J}_{T_2},\mathcal{J}_{T_3})+\mathcal{T}_2(\mathcal{J}_{T_1},\mathcal{J}_{T_2},\mathcal{J}_{T_3})\Big)=\sum_{\substack{l(T)\ge 1\\ l(T_1),l(T_2),l(T_3)\le N}} \mathcal{J}_{T}
 \end{equation}
 
-By \eqref{eq.lemapproxerror}, we get
+By \eqref{eq.lemapproxerror.fourwave}, we get
 \begin{equation}
 \begin{split}
  Err=&\xi+\sum_{\substack{l(T)\ge 1\\ l(T_1),l(T_2),l(T_3)\le N}} \mathcal{J}_{T}-\sum_{l(T)\le N} \mathcal{J}_T
@@ -437,22 +437,3 @@ Here in the second equality, we use the fact that $\sum_{l(T)\le N}=\sum_{\subst
 
 Therefore, we complete the proof of this lemma.
 \end{proof}
-
-\subsubsection{Estimates of tree terms} By \eqref{eq.approxerror}, in order to control the approximation error $Err$, it suffices to get upper bounds of tree terms $\mathcal{J}_T$. We state the upper bound in the proposition below and delay its proof to section \ref{sec.treetermsupperbound}.
-
-Let us introduce a definition before stating the proposition.
-
-\begin{defn}
-Given a property $A$, we say $A$ happens $L$-certainly if the probability that $A$ happens satisfies $P(A)\ge 1-Ke^{-L^\theta}$ for some $K, \theta>0$.
-\end{defn}
-
-\begin{prop}\label{prop.treetermsupperbound}
-We have $L$-certainly that 
-\begin{equation}
- \sup_t\sup_k |(\mathcal{J}_T)_k|\lesssim L^{O(l(T)\theta)} \rho^{l(T)}.
-\end{equation}
-Here $(\mathcal{J}_T)_k$ is the Fourier coefficients of $\mathcal{J}_T$ and 
-\begin{equation}
- \rho=\min(\alpha^{\frac{3}{2}}t^2,\alpha L).
-\end{equation}
-\end{prop}

@@ -2,79 +2,85 @@
 \contentsline {section}{Acknowledgements}{iii}{Doc-Start}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}The physics of interacting wave}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The energy cascade phenomenon}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}The statistical description of interacting wave}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}The Feynmand diagram expansion}{1}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Wave kinetic theory for three wave models}{1}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Wave kinetic theory for four wave models}{1}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Previous research}{3}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}A short survey of previous papers}{3}{subsection.1.7.1}%
-\contentsline {chapter}{\numberline {2}Analysis of three wave models}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Statement of the results}{5}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Ideas of the proof}{8}{subsection.2.1.2}%
-\contentsline {subsubsection}{The approximate solution}{8}{section*.2}%
-\contentsline {subsubsection}{The perturbative analysis}{9}{section*.3}%
-\contentsline {subsubsection}{Couple diagrams, lattice points counting and $||Err(\xi )||_{X^p}$}{9}{section*.4}%
-\contentsline {subsubsection}{Upper bounds for $||B(w,w)||_{X^p}$}{10}{section*.5}%
-\contentsline {subsubsection}{A random matrix bound and $Lw$}{10}{section*.6}%
-\contentsline {subsubsection}{Proof of the main theorem}{11}{section*.7}%
-\contentsline {subsection}{\numberline {2.1.3}Notations}{12}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}The Perturbation Expansion}{13}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}The approximation series and Feynman diagrams}{13}{subsection.2.2.1}%
-\contentsline {subsubsection}{The Equation of Fourier coefficients}{13}{section*.8}%
-\contentsline {subsubsection}{Some basic definitions from graph theory}{14}{section*.9}%
-\contentsline {subsubsection}{Connection between iteration and trees}{15}{section*.11}%
-\contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{17}{section*.13}%
-\contentsline {subsection}{\numberline {2.2.2}Estimates of the approximation solution}{18}{subsection.2.2.2}%
-\contentsline {subsubsection}{Estimates of tree terms}{18}{section*.14}%
-\contentsline {subsubsection}{Linearization around the approximation solution}{19}{section*.15}%
-\contentsline {subsection}{\numberline {2.2.3}Bound the error of the approximation}{20}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Proof of the main theorem}{21}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Lattice points counting and convergence results}{23}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Lattice points counting and convergence results}{23}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Refined expression of coefficients}{23}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}An upper bound of coefficients in expansion series}{25}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Couples and the Wick theorem}{30}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Counting lattice points}{34}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}An upper bound of tree terms}{54}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Norm estimate of random matrices}{61}{subsection.2.4.6}%
-\contentsline {subsubsection}{Dyadic decomposition of $\mathcal {P}_{T}$}{61}{section*.33}%
-\contentsline {subsubsection}{Formulas for product of random matrices $\mathcal {P}^l_{T_j}$}{63}{section*.34}%
-\contentsline {subsubsection}{The upper bound for coefficients}{67}{section*.38}%
-\contentsline {subsubsection}{The upper bound for expectation of entries}{72}{section*.39}%
-\contentsline {subsubsection}{Proof of the operator norm bound}{76}{section*.40}%
-\contentsline {subsection}{\numberline {2.4.7}Asymptotics of the main terms}{77}{subsection.2.4.7}%
-\contentsline {chapter}{\numberline {3}Analysis of four wave models}{85}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{85}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Basic set-ups}{85}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Outline of this chapter}{86}{subsection.3.1.2}%
-\contentsline {subsubsection}{The special structure of NLS}{86}{section*.41}%
-\contentsline {subsubsection}{The renormalized approximation series}{87}{section*.42}%
-\contentsline {subsubsection}{The perturbative analysis}{89}{section*.43}%
-\contentsline {subsubsection}{Lattice points counting and $||Err(\xi )||_{X^p}$}{90}{section*.44}%
-\contentsline {subsubsection}{Upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$}{91}{section*.45}%
-\contentsline {subsubsection}{A random matrix bound and $Lw$ and proof of the main theorem}{91}{section*.46}%
-\contentsline {subsection}{\numberline {3.1.3}Informal statement of the main theorems}{91}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Notations}{92}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}The Perturbation Expansion}{93}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The renormalization argument}{93}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The approximation series and Feynman diagrams}{95}{subsection.3.2.2}%
-\contentsline {subsubsection}{Some basic definitions from graph theory}{96}{section*.47}%
-\contentsline {subsubsection}{Connection between iteration and trees}{98}{section*.49}%
-\contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{100}{section*.51}%
-\contentsline {subsubsection}{Estimates of tree terms}{102}{section*.52}%
-\contentsline {section}{\numberline {3.3}Lattice points counting and convergence results}{102}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Refined expression of coefficients}{103}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Couples and the renormalized Wick theorem}{108}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Counting lattice points}{119}{subsection.3.3.3}%
-\contentsline {subsubsection}{Basic ideas for counting lattice points}{119}{section*.63}%
-\contentsline {subsubsection}{The cutting operation and its properties}{122}{section*.66}%
-\contentsline {subsubsection}{Combinatorial properties of couples}{124}{section*.69}%
-\contentsline {subsubsection}{Counting results and their proof}{131}{section*.73}%
-\contentsline {subsection}{\numberline {3.3.4}A heuristic explanation of the derivation of the wave kinetic equation}{144}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}An upper bound of coefficients in expansion series}{144}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Counting results in wave kinetic theory}{147}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Number theoretic results in three wave models}{147}{section.4.1}%
-\contentsline {section}{\numberline {4.2}High Dimensional Euler-Maclaurin Formula}{152}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Number theoretic results in four wave models}{153}{section.4.3}%
+\contentsline {subsection}{\numberline {1.1.1}Dispersive PDEs}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}The energy cascade phenomenon}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}The statistical description of interacting wave}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Scale of turbulence}{4}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Three-wave and four-wave models}{5}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}The Feynman diagram expansion}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Wave kinetic theory for three wave models}{9}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Wave kinetic theory for four wave models}{10}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}The phase problem}{10}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}The renormalization argument}{11}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}From the Klein-Gordon type equation to the original Klein-Gordon equation}{12}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Previous research}{13}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Analysis of three wave models}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Statement of the results}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Ideas of the proof}{18}{subsection.2.1.2}%
+\contentsline {subsubsection}{The approximate solution}{18}{section*.4}%
+\contentsline {subsubsection}{The perturbative analysis}{19}{section*.5}%
+\contentsline {subsubsection}{Couple diagrams, lattice points counting and $||Err(\xi )||_{X^p}$}{19}{section*.6}%
+\contentsline {subsubsection}{Upper bounds for $||B(w,w)||_{X^p}$}{20}{section*.7}%
+\contentsline {subsubsection}{A random matrix bound and $Lw$}{20}{section*.8}%
+\contentsline {subsubsection}{Proof of the main theorem}{21}{section*.9}%
+\contentsline {subsection}{\numberline {2.1.3}Notations}{22}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}The Perturbation Expansion}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}The approximation series and Feynman diagrams}{23}{subsection.2.2.1}%
+\contentsline {subsubsection}{The Equation of Fourier coefficients}{23}{section*.10}%
+\contentsline {subsubsection}{Some basic definitions from graph theory}{24}{section*.11}%
+\contentsline {subsubsection}{Connection between iteration and trees}{25}{section*.13}%
+\contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{27}{section*.15}%
+\contentsline {subsection}{\numberline {2.2.2}Estimates of the approximation solution}{28}{subsection.2.2.2}%
+\contentsline {subsubsection}{Estimates of tree terms}{28}{section*.16}%
+\contentsline {subsubsection}{Linearization around the approximation solution}{29}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.3}Bound the error of the approximation}{30}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Proof of the main theorem}{31}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Lattice points counting and convergence results}{33}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Lattice points counting and convergence results}{33}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Refined expression of coefficients}{33}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}An upper bound of coefficients in expansion series}{35}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Couples and the Wick theorem}{40}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Counting lattice points}{44}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}An upper bound of tree terms}{64}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Norm estimate of random matrices}{71}{subsection.2.4.6}%
+\contentsline {subsubsection}{Dyadic decomposition of $\mathcal {P}_{T}$}{71}{section*.35}%
+\contentsline {subsubsection}{Formulas for product of random matrices $\mathcal {P}^l_{T_j}$}{73}{section*.36}%
+\contentsline {subsubsection}{The upper bound for coefficients}{77}{section*.40}%
+\contentsline {subsubsection}{The upper bound for expectation of entries}{82}{section*.41}%
+\contentsline {subsubsection}{Proof of the operator norm bound}{86}{section*.42}%
+\contentsline {subsection}{\numberline {2.4.7}Asymptotics of the main terms}{87}{subsection.2.4.7}%
+\contentsline {chapter}{\numberline {3}Analysis of four wave models}{95}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{95}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Basic set-ups}{95}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Outline of this chapter}{96}{subsection.3.1.2}%
+\contentsline {subsubsection}{The special structure of NLS}{96}{section*.43}%
+\contentsline {subsubsection}{The renormalized approximation series}{97}{section*.44}%
+\contentsline {subsubsection}{The perturbative analysis}{99}{section*.45}%
+\contentsline {subsubsection}{Lattice points counting and $||Err(\xi )||_{X^p}$}{100}{section*.46}%
+\contentsline {subsubsection}{Upper bounds for $||B(w,w)||_{X^p}$ and $||C(w,w,w)||_{X^p}$}{101}{section*.47}%
+\contentsline {subsubsection}{A random matrix bound and $Lw$ and proof of the main theorem}{101}{section*.48}%
+\contentsline {subsubsection}{Main results of this chapter}{102}{section*.49}%
+\contentsline {subsection}{\numberline {3.1.3}Notations}{102}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}The Perturbation Expansion}{103}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The renormalization argument}{103}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The approximation series and Feynman diagrams}{105}{subsection.3.2.2}%
+\contentsline {subsubsection}{Some basic definitions from graph theory}{106}{section*.50}%
+\contentsline {subsubsection}{Connection between iteration and trees}{108}{section*.52}%
+\contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{110}{section*.54}%
+\contentsline {section}{\numberline {3.3}Lattice points counting and convergence results}{112}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Refined expression of coefficients}{113}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Couples and the renormalized Wick theorem}{118}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Counting lattice points}{129}{subsection.3.3.3}%
+\contentsline {subsubsection}{Basic ideas for counting lattice points}{129}{section*.65}%
+\contentsline {subsubsection}{The cutting operation and its properties}{132}{section*.68}%
+\contentsline {subsubsection}{Combinatorial properties of couples}{134}{section*.71}%
+\contentsline {subsubsection}{Counting results and their proof}{141}{section*.75}%
+\contentsline {subsection}{\numberline {3.3.4}A heuristic explanation of the derivation of the wave kinetic equation}{154}{subsection.3.3.4}%
+\contentsline {subsubsection}{Estimates of tree terms}{154}{section*.82}%
+\contentsline {subsubsection}{The order of magnitude of $Term(T,p)$}{155}{section*.83}%
+\contentsline {subsubsection}{Removing the essential gaps}{155}{section*.84}%
+\contentsline {chapter}{\numberline {4}Counting results in wave kinetic theory}{159}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Number theoretic results in three wave models}{159}{section.4.1}%
+\contentsline {section}{\numberline {4.2}High Dimensional Euler-Maclaurin Formula}{164}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Number theoretic results in four wave models}{165}{section.4.3}%

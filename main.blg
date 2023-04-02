@@ -3,46 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
-Warning--I didn't find a database entry for ""
-You've used 28 entries,
+Warning--empty journal in erdHos2008quantum
+You've used 45 entries,
             2118 wiz_defined-function locations,
-            643 strings with 7849 characters,
-and the built_in function-call counts, 8425 in all, are:
-= -- 840
-> -- 379
-< -- 5
-+ -- 150
-- -- 120
-* -- 548
-:= -- 1451
-add.period$ -- 86
-call.type$ -- 28
-change.case$ -- 141
+            737 strings with 10619 characters,
+and the built_in function-call counts, 13375 in all, are:
+= -- 1344
+> -- 572
+< -- 6
++ -- 227
+- -- 180
+* -- 871
+:= -- 2294
+add.period$ -- 137
+call.type$ -- 45
+change.case$ -- 220
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 326
-empty$ -- 657
-format.name$ -- 120
-if$ -- 1734
+cite$ -- 46
+duplicate$ -- 518
+empty$ -- 1059
+format.name$ -- 180
+if$ -- 2750
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 31
-newline$ -- 143
-num.names$ -- 56
-pop$ -- 134
+int.to.str$ -- 45
+missing$ -- 50
+newline$ -- 228
+num.names$ -- 90
+pop$ -- 209
 preamble$ -- 1
-purify$ -- 116
+purify$ -- 180
 quote$ -- 0
-skip$ -- 232
+skip$ -- 367
 stack$ -- 0
-substring$ -- 492
-swap$ -- 51
-text.length$ -- 5
+substring$ -- 837
+swap$ -- 76
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 106
-warning$ -- 0
-while$ -- 85
-width$ -- 30
-write$ -- 302
+type$ -- 170
+warning$ -- 1
+while$ -- 139
+width$ -- 47
+write$ -- 480
 (There was 1 warning)

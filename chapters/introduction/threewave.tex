@@ -1,0 +1,33 @@
+\section{Wave kinetic theory for three wave models}
+
+We take the ZK equation \eqref{eq.ZK} to explain the idea. The resonance surface for the ZK equation is 
+\begin{equation}
+    k_1 + k_2 = k,\ |k_1|^2k_{1x} + |k_2|^2k_{2x} = |k|^2k_{x} + O(T^{-1})
+\end{equation}
+
+From the volume principle, we hope the number of solutions can be bounded by $L^d T^{-1}$.
+
+
+
+However, because of degeneracy near $k_x = 0$, the best estimate of number of solutions is $L^d T^{-1} |k_x|^{-1}$. We use the \textbf{null condition}, the fact that the multiplier $k_x$ in the nonlinearity vanishes near $k_x$, to solve this problem. 
+
+WKE may not be true for equations with no null condition. Think about
+\begin{equation}
+    \partial_t\psi(t,x)+\Delta\partial_{x_1}\psi(t,x)=\pm\lambda \psi^2(t,x).
+\end{equation}
+which either blows up or decays to zero depending on the sign.
+    
+
+As mentioned before, for three wave systems, the resonance surfaces degenerate near $k_1 = \pm k_2 = 0,\ k=0$. In \cite{ampatzoglou2021derivation}, when studying the inhomogeneous wave turbulence of the following equation
+\begin{equation}
+    i\partial_t u + \Lambda(\nabla)u = \lambda M(\nabla)(M(\nabla)\text{Re}\, u)^2
+\end{equation}
+the authors propose a null condition that $M(0) = 0$ and use this property to solve the degeneracy problem.
+    
+
+    
+The nonlinearity in \cite{ampatzoglou2021derivation} roughly equals to $\sum_{k_1+k_2=k}$ $m(k_1)m(k_2)m(k)u_{k_1}u_{k_2}$, in which any of $k_1$, $k_2$, $k$ equals to $0$ implies $m(k_1)m(k_2)m(k)u_{k_1}u_{k_2} = 0$.
+
+Typically, a nonlinearity from physics does not satisfy condition the condition in \cite{ampatzoglou2021derivation}. One example is $u|\nabla|u\sim\sum_{k_1+k_2=k}|k_2|u_{k_1}u_{k_2}$, in which case $|k_2|u_{k_1}u_{k_2}=0$ only if $k_2 = 0$. 
+
+In chapter \ref{chapter.threewave}, we introduce a more complicated combinatorial argument to solve this problem.

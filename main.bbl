@@ -6,11 +6,28 @@ I.~Ampatzoglou, C.~Collot, and P.~Germain.
   problems in the inhomogeneous setting.
 \newblock {\em arXiv preprint arXiv:2107.11819}, 2021.
 
+\bibitem{benney1969random}
+D.~Benney and A.~C. Newell.
+\newblock Random wave closures.
+\newblock {\em Studies in Applied Mathematics}, 48(1):29--53, 1969.
+
+\bibitem{benney1966nonlinear}
+D.~Benney and P.~G. Saffman.
+\newblock Nonlinear interactions of random waves in a dispersive medium.
+\newblock {\em Proceedings of the Royal Society of London. Series A.
+  Mathematical and Physical Sciences}, 289(1418):301--320, 1966.
+
 \bibitem{buckmaster2021onset}
 T.~Buckmaster, P.~Germain, Z.~Hani, and J.~Shatah.
 \newblock Onset of the wave turbulence description of the longtime behavior of
   the nonlinear {S}chr{\"o}dinger equation.
 \newblock {\em Inventiones mathematicae}, 225(3):787--855, 2021.
+
+\bibitem{collot2022stability}
+C.~Collot, H.~Dietert, and P.~Germain.
+\newblock Stability and cascades for the kolmogorov-zakharov spectrum of wave
+  turbulence.
+\newblock {\em arXiv preprint arXiv:2208.00947}, 2022.
 
 \bibitem{collot2019derivation}
 C.~Collot and P.~Germain.
@@ -45,6 +62,11 @@ Y.~Deng and Z.~Hani.
   kinetic theory.
 \newblock {\em arXiv preprint arXiv:2110.04565}, 2021.
 
+\bibitem{deng2022rigorous}
+Y.~Deng and Z.~Hani.
+\newblock Rigorous justification of the wave kinetic theory.
+\newblock {\em arXiv preprint arXiv:2207.08358}, 2022.
+
 \bibitem{deng2023derivation}
 Y.~Deng and Z.~Hani.
 \newblock Derivation of the wave kinetic equation: full range of scaling laws.
@@ -73,6 +95,31 @@ A.~V. Dymov and S.~B. Kuksin.
 \newblock In {\em Doklady Mathematics}, volume 101, pages 102--109. Springer,
   2020.
 
+\bibitem{erdHos2008quantum}
+L.~Erd{\H{o}}s, M.~Salmhofer, and H.-T. Yau.
+\newblock Quantum diffusion of the random schr{\"o}dinger evolution in the
+  scaling limit.
+\newblock 2008.
+
+\bibitem{erdHos2000linear}
+L.~Erd{\H{o}}s and H.-T. Yau.
+\newblock Linear boltzmann equation as the weak coupling limit of a random
+  schr{\"o}dinger equation.
+\newblock {\em Communications on Pure and Applied Mathematics: A Journal Issued
+  by the Courant Institute of Mathematical Sciences}, 53(6):667--735, 2000.
+
+\bibitem{escobedo2015finite}
+M.~Escobedo and J.~Vel{\'a}zquez.
+\newblock Finite time blow-up and condensation for the bosonic nordheim
+  equation.
+\newblock {\em Inventiones mathematicae}, 200:761--847, 2015.
+
+\bibitem{escobedo2015theory}
+M.~Escobedo and J.~J. Vel{\'a}zquez.
+\newblock {\em On the theory of weak turbulence for the nonlinear
+  Schr{\H{o}}dinger equation}.
+\newblock American Mathematical Soc., 2015.
+
 \bibitem{faou2020linearized}
 E.~Faou.
 \newblock Linearized wave turbulence convergence results for three-wave
@@ -90,24 +137,35 @@ P.~Germain, A.~D. Ionescu, and M.-B. Tran.
 \newblock Optimal local well-posedness theory for the kinetic wave equation.
 \newblock {\em Journal of Functional Analysis}, 279(4):108570, 2020.
 
+\bibitem{hannani2022wave}
+A.~Hannani, M.~Rosenzweig, G.~Staffilani, and M.-B. Tran.
+\newblock On the wave turbulence theory for a stochastic kdv type
+  equation--generalization for the inhomogeneous kinetic limit.
+\newblock {\em arXiv preprint arXiv:2210.17445}, 2022.
+
+\bibitem{hasselmann1962non}
+K.~Hasselmann.
+\newblock On the non-linear energy transfer in a gravity-wave spectrum part 1.
+  general theory.
+\newblock {\em Journal of Fluid Mechanics}, 12(4):481--500, 1962.
+
+\bibitem{hasselmann1963non}
+K.~Hasselmann.
+\newblock On the non-linear energy transfer in a gravity wave spectrum part 2.
+  conservation theorems; wave-particle analogy; irrevesibility.
+\newblock {\em Journal of Fluid Mechanics}, 15(2):273--281, 1963.
+
+\bibitem{janssen2008progress}
+P.~A. Janssen.
+\newblock Progress in ocean wave forecasting.
+\newblock {\em Journal of Computational Physics}, 227(7):3572--3594, 2008.
+
 \bibitem{jin2021cancellations}
 K.~Jin and X.~Ma.
 \newblock Cancellations of resonances and long time dynamics of cubic
   {S}chr{\"o}dinger equation on $\mathbb{T}$.
 \newblock {\em Communications in Mathematical Physics}, 381(3):1309--1368,
   2021.
-
-\bibitem{kuznetsov1972turbulence}
-E.~Kuznetsov.
-\newblock Turbulence of ion sound in a plasma located in a magnetic field.
-\newblock {\em Sov. Phys. JETP}, 35:310, 1972.
-
-\bibitem{lannes2013cauchy}
-D.~Lannes, F.~Linares, and J.-C. Saut.
-\newblock The cauchy problem for the euler--poisson system and derivation of
-  the zakharov--kuznetsov equation.
-\newblock {\em Studies in phase space analysis with applications to PDEs},
-  pages 181--213, 2013.
 
 \bibitem{lukkarinen2011weakly}
 J.~Lukkarinen and H.~Spohn.
@@ -119,16 +177,27 @@ S.~Nazarenko.
 \newblock {\em Wave turbulence}, volume 825.
 \newblock Springer Science \& Business Media, 2011.
 
-\bibitem{newell2011wave}
-A.~C. Newell and B.~Rumpf.
-\newblock Wave turbulence.
-\newblock {\em Annual review of fluid mechanics}, 43:59--78, 2011.
-
 \bibitem{oh2015ornstein}
 T.~Oh.
 \newblock Ornstein-uhlenbeck process on abstract wiener spaces,
   hypercontractivity, and logarithmic sobolev inequality.
 \newblock {\em Unpublished notes}, 2015.
+
+\bibitem{world1998guide}
+W.~M. Organization.
+\newblock {\em Guide to wave analysis and forecasting}.
+\newblock Secretariat of the World Meteorological Organization, 1998.
+
+\bibitem{peierls1929kinetischen}
+R.~Peierls.
+\newblock Zur kinetischen theorie der w{\"a}rmeleitung in kristallen.
+\newblock {\em Annalen der Physik}, 395(8):1055--1101, 1929.
+
+\bibitem{rumpf2021wave}
+B.~Rumpf, A.~Soffer, and M.-B. Tran.
+\newblock On the wave turbulence theory: ergodicity for the elastic beam wave
+  equation.
+\newblock {\em arXiv preprint arXiv:2108.13223}, 2021.
 
 \bibitem{soffer2018dynamics}
 A.~Soffer and M.-B. Tran.
@@ -142,20 +211,47 @@ A.~Soffer and M.-B. Tran.
 \newblock {\em Communications in Mathematical Physics}, 376(3):2229--2276,
   2020.
 
+\bibitem{spohn2006phonon}
+H.~Spohn.
+\newblock The phonon boltzmann equation, properties and link to weakly
+  anharmonic lattice dynamics.
+\newblock {\em Journal of statistical physics}, 124:1041--1104, 2006.
+
+\bibitem{spohn2008boltzmann}
+H.~Spohn.
+\newblock On the boltzmann equation for weakly nonlinear wave equations.
+\newblock {\em Boltzmann's legacy, ESI Lect. Math. Phys}, pages 145--159, 2008.
+
 \bibitem{staffilani2021wave}
 G.~Staffilani and M.-B. Tran.
 \newblock On the wave turbulence theory for stochastic and random
   multidimensional {KdV} type equations.
 \newblock {\em arXiv preprint arXiv:2106.09819}, 2021.
 
-\bibitem{zakharov1974three}
-V.~Zakharov and E.~Kuznetsov.
-\newblock On three dimensional solitons.
-\newblock {\em Zhurnal Eksp. Teoret. Fiz}, 66:594--597, 1974.
+\bibitem{staffilani2023wave}
+G.~Staffilani and M.-B. Tran.
+\newblock On the wave turbulence theory for the beam wave equation.
+\newblock {\em arXiv preprint arXiv:2301.07903}, 2023.
+
+\bibitem{vedenov1967theory}
+A.~Vedenov.
+\newblock Theory of a weakly turbulent plasma.
+\newblock {\em Reviews of Plasma Physics: Volume 3}, pages 229--276, 1967.
+
+\bibitem{zakharov1965weak}
+V.~E. Zakharov.
+\newblock Weak turbulence in media with a decay spectrum.
+\newblock {\em Journal of Applied Mechanics and Technical Physics},
+  6(4):22--24, 1965.
 
 \bibitem{zakharov2012kolmogorov}
 V.~E. Zakharov, V.~S. L'vov, and G.~Falkovich.
 \newblock {\em Kolmogorov spectra of turbulence {I}: {W}ave turbulence}.
 \newblock Springer Science \& Business Media, 2012.
+
+\bibitem{zaslavskii1967limits}
+G.~Zaslavskii and R.~Sagdeev.
+\newblock Limits of statistical description of a nonlinear wave field.
+\newblock {\em Soviet physics JETP}, 25:718--724, 1967.
 
 \end{thebibliography}

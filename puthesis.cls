@@ -16,29 +16,20 @@
 %% For distribution of the original source see
 %% the terms for copying and modification in the file  puthesis.dtx.
 %% 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%added by Xiao Ma
-% \RequirePackage[table]{xcolor}
-\RequirePackage{xcolor}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{puthesis-UG}
+\ProvidesClass{puthesis}
          [2011/02/16 v1.4.2 Princeton University Thesis class]
 \RequirePackage{setspace}
-
-
 % the next two lines are needed to make packages using xcolor happy
-%\RequirePackage{xcolor}
-%\def\current@color{ Black}
+\RequirePackage{xcolor}
+\def\current@color{ Black}
 \newcounter{subyear}
 \setcounter{subyear}{\number\year}
 \def\submitted#1{\gdef\@submitted{#1}}
 \def\@submittedyear{\ifnum\month>10 \stepcounter{subyear}\thesubyear
   \else\thesubyear\fi}
 \def\@submittedmonth{\ifnum\month>10 January\else\ifnum\month>8 November
-  \else\ifnum\month>6 September\else June\fi\fi\fi}
+  \else\ifnum\month>6 September\else May\fi\fi\fi}
 \def\adviser#1{\gdef\@adviser{#1}}
 \long\def\@abstract{\@latex@error{No \noexpand\abstract given}\@ehc}
 \newcommand*{\frontmatter}{
@@ -50,12 +41,11 @@
 \newcommand*{\makelos}{}
 \newcommand*{\begincmd}{
 \doublespacing
-\frontmatter\maketitlepage\makeabstract
-\makeacknowledgements\makedeclaration\tableofcontents\clearpage
+\frontmatter\maketitlepage\makecopyrightpage\makeabstract
+\makeacknowledgements\makededication\tableofcontents\clearpage
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter}
 \def\@submitted{\@submittedmonth~\@submittedyear}
-
 \def\@dept{Mathematics}
 \def\@deptpref{Department of}
 \def\departmentprefix#1{\gdef\@deptpref{#1}}
@@ -75,20 +65,33 @@
   \end{center}
   \vspace{.6in}
   \begin{center}
-		\sc a senior thesis submitted in partial fulfillment\\
-		of the requirements for the degree of\\
-		 Bachelor of Arts in Mathematics at\\ Princeton University\\
+    A Dissertation \\
+    Presented to the Faculty \\
+    of Princeton University \\
+    in Candidacy for the Degree \\
+    of Doctor of Philosophy
   \end{center}
   \vspace{.3in}
   \begin{center}
+    Recommended for Acceptance \\
+    by the \@deptpref \\
+    \@dept \\
     Adviser: \@adviser
   \end{center}
   \vspace{.3in}
   \begin{center}
-    \@date
+    \@submitted
   \end{center}
   \clearpage
   }}
+\newcommand*{\makecopyrightpage}{
+  \thispagestyle{empty}
+  \vspace*{0in}
+  \begin{center}
+    \copyright\ Copyright by \@author, \number\year. \\
+    All Rights Reserved
+  \end{center}
+  \clearpage}
 \newcommand*{\makeabstract}{
   \newpage
   \addcontentsline{toc}{section}{Abstract}
@@ -109,15 +112,15 @@
     \clearpage
   \fi
   }
-\def\makedeclaration{
-       \begin{center}
-          {\Large \textbf{Declaration}}
-       \end{center}
-       
-      I declare that I have not violated the Honor Code during the composition of this work. This paper represents my own work in accordance with University regulations. \\
-      
-      I authorize Princeton University to reproduce this thesis by photocopying or by other means, in total or in part, at the request of other institutions or individuals for the purposes of scholarly research.
-  
+\def\makededication{
+  \ifx\@dedication\undefined
+  \else
+    \vspace*{1.5in}
+    \begin{flushright}
+      \@dedication
+    \end{flushright}
+    \clearpage
+  \fi
   }
 \DeclareOption{myorder}{
   \renewcommand*{\begincmd}{\doublespacing}}
@@ -138,7 +141,6 @@
 %% Not necessary to specify the point size - we inherit it from above
 %% \LoadClass[12pt]{report}
 \LoadClass{report}
-\RequirePackage{hyperref}
 \setlength{\oddsidemargin}{.5in}   %{.4375in}
 \setlength{\evensidemargin}{.5in} %{.4375in}
 \setlength{\topmargin}{-.5in}  %{-.5625in}

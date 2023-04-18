@@ -1,25 +1,20 @@
-\documentclass{puthesis-UG}
-%%%%%%%%IMPORTANT INFORMATION%%%%%%%%%%%%%%%%%%%%
-%Using puthesis-UG.cls includes an Honor Code declaration. By using this file you are 
-%decalring that this paper is your own work in accordance with University retgulations.
-%
-%The file puthesis-UG.cls must be downloaded from the math department website and 
-%saved in the same directory as this file.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{puthesis}
 
+\usepackage{epsfig}
+\usepackage{latexsym}
 
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,mathtools,esint}
 
 \usepackage{xcolor}
 
 \usepackage[latin1]{inputenc}
-\usepackage{amsthm,amssymb,mathtools,esint}
+
 % % \usepackage[perpage]{footmisc}
 \definecolor{darkgreen}{rgb}{0.0, 0.6, 0.13}
 \usepackage{caption}
 
-\usepackage{hyperref}
+% \usepackage{hyperref}
 
 \usepackage{float}
 
@@ -49,16 +44,18 @@
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
 \newtheorem{ex}{Example}
-\numberwithin{equation}{section}
+% \numberwithin{equation}{section}
 
 
 
 \title{The wave kinetic theory of three wave and four wave models}
+% \date{\today}
+\submitted{May 2023}
 \author{Xiao Ma}
-\date{\today}
 \adviser{Alexandru Ionescu}
-\abstract{\import{chapters/}{abstract.tex}}
-\acknowledgements{\import{chapters/}{acknowledgements.tex}}
+
+\abstract{\input{chapters/abstract}}
+\acknowledgements{\input{chapters/acknowledgements}}
 
 \begin{document}
 

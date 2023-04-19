@@ -37,19 +37,18 @@
 \contentsline {subsection}{\numberline {2.2.3}Bound the error of the approximation}{38}{}%
 \contentsline {subsection}{\numberline {2.2.4}Proof of the main theorem}{40}{}%
 \contentsline {section}{\numberline {2.3}Lattice points counting and convergence results}{41}{}%
-\contentsline {section}{\numberline {2.4}Lattice points counting and convergence results}{41}{}%
-\contentsline {subsection}{\numberline {2.4.1}Refined expression of coefficients}{42}{}%
-\contentsline {subsection}{\numberline {2.4.2}An upper bound of coefficients in expansion series}{45}{}%
-\contentsline {subsection}{\numberline {2.4.3}Couples and the Wick theorem}{50}{}%
-\contentsline {subsection}{\numberline {2.4.4}Counting lattice points}{55}{}%
-\contentsline {subsection}{\numberline {2.4.5}An upper bound of tree terms}{81}{}%
-\contentsline {subsection}{\numberline {2.4.6}Norm estimate of random matrices}{89}{}%
+\contentsline {subsection}{\numberline {2.3.1}Refined expression of coefficients}{42}{}%
+\contentsline {subsection}{\numberline {2.3.2}An upper bound of coefficients in expansion series}{44}{}%
+\contentsline {subsection}{\numberline {2.3.3}Couples and the Wick theorem}{50}{}%
+\contentsline {subsection}{\numberline {2.3.4}Counting lattice points}{55}{}%
+\contentsline {subsection}{\numberline {2.3.5}An upper bound of tree terms}{81}{}%
+\contentsline {subsection}{\numberline {2.3.6}Norm estimate of random matrices}{89}{}%
 \contentsline {subsubsection}{Dyadic decomposition of $\mathcal {P}_{T}$}{89}{}%
 \contentsline {subsubsection}{Formulas for product of random matrices $\mathcal {P}^l_{T_j}$}{92}{}%
 \contentsline {subsubsection}{The upper bound for coefficients}{97}{}%
 \contentsline {subsubsection}{The upper bound for expectation of entries}{103}{}%
 \contentsline {subsubsection}{Proof of the operator norm bound}{109}{}%
-\contentsline {subsection}{\numberline {2.4.7}Asymptotics of the main terms}{110}{}%
+\contentsline {subsection}{\numberline {2.3.7}Asymptotics of the main terms}{110}{}%
 \contentsline {chapter}{\numberline {3}Analysis of four wave models}{119}{}%
 \contentsline {section}{\numberline {3.1}Introduction}{119}{}%
 \contentsline {subsection}{\numberline {3.1.1}Basic set-ups}{119}{}%
@@ -70,10 +69,10 @@
 \contentsline {subsubsection}{Feynman diagrams and construction of the approximation solution}{138}{}%
 \contentsline {section}{\numberline {3.3}Lattice points counting and convergence results}{141}{}%
 \contentsline {subsection}{\numberline {3.3.1}Refined expression of coefficients}{142}{}%
-\contentsline {subsection}{\numberline {3.3.2}Couples and the renormalized Wick theorem}{148}{}%
-\contentsline {subsection}{\numberline {3.3.3}Counting lattice points}{161}{}%
-\contentsline {subsubsection}{Basic ideas for counting lattice points}{162}{}%
-\contentsline {subsubsection}{The cutting operation and its properties}{165}{}%
+\contentsline {subsection}{\numberline {3.3.2}Couples and the renormalized Wick theorem}{147}{}%
+\contentsline {subsection}{\numberline {3.3.3}Counting lattice points}{160}{}%
+\contentsline {subsubsection}{Basic ideas for counting lattice points}{161}{}%
+\contentsline {subsubsection}{The cutting operation and its properties}{164}{}%
 \contentsline {subsubsection}{Combinatorial properties of couples}{168}{}%
 \contentsline {subsubsection}{Counting results and their proof}{177}{}%
 \contentsline {subsection}{\numberline {3.3.4}A heuristic explanation of the derivation of the wave kinetic equation}{193}{}%

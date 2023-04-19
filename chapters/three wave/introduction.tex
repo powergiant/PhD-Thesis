@@ -46,40 +46,48 @@ Now we introduce the main theorem of this chapter.
 
 
 \begin{thm}\label{th.main}
-Let $d\ge 3$ and $L$ be a large number. Suppose that $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported in a domain whose diameter is bounded by $D$. Assume that $\psi$ is a solution of \eqref{eq.MKDV.threewave} with randomized initial data $\psi_{\mathrm{in}}$ given by \eqref{eq.wellprepared.threewave}. Set $\alpha=\lambda L^{-\frac{d}{2}}$ to be the strength of the nonlinearity and $T_{\mathrm{kin}}=\frac{1}{8\pi\alpha^2}$ to be the wave kinetic time. Fix a small constant $\varepsilon> 0$, set $T_{\text{max}} = L^{-\varepsilon} \alpha^{-2}=O(L^{-\varepsilon}T_{\mathrm{kin}})$. 
+Let $d\ge 3$ and $L$ be a large number. Assume that $\psi$ is a solution of \eqref{eq.MKDV.threewave} with randomized initial data $\psi_{\mathrm{in}}$ given by \eqref{eq.wellprepared.threewave}. Set $\alpha=\lambda L^{-\frac{d}{2}}$ to be the strength of the nonlinearity and $T_{\mathrm{kin}}=\frac{1}{8\pi\alpha^2}$ to be the wave kinetic time. Fix a small constant $\varepsilon> 0$, set $T_{\text{max}} = L^{-\varepsilon} \alpha^{-2}=O(L^{-\varepsilon}T_{\mathrm{kin}})$. 
 
-
-If $\alpha$ satisfies
-\begin{equation}\label{eq.conditionalpha.threewave}
-\alpha^{-1}\le L^{\frac{1}{2}}
-\end{equation}
-and for some small constant $c$, $\nu$ satisfies
-\begin{equation}\label{eq.conditionnu.threewave}
-% \nu\ge L^{\frac{1}{2}C\varepsilon}\alpha^{2}
-\nu\ge c^2T^{-1}_{\text{max}}
-\end{equation}
-then for all $L^{\varepsilon} \leq t \leq T_{\text{max}}$, we have the following conclusions
+We make the following assumptions. 
 \begin{enumerate}
-    \item If $\sup_{k}n_{\mathrm{in}}(k)\le C_{\mathrm{in}}$, then $\mathbb E |\widehat \psi(t, k)|^2$ is bounded by $2C_{\mathrm{in}}$ for $t\le T_{\text{max}}$ and for any $M$, we can construct an approximation series 
+    \item $\alpha$ satisfies
+    \begin{equation}\label{eq.conditionalpha.threewave}
+        \alpha^{-1}\le L^{\frac{1}{2}}
+    \end{equation}
+    \item Define $l_{d}=(\nu T_{\mathrm{max}})^{\frac{1}{2}}$. We assume that for some small constant $c\ge L^{-\varepsilon/2}$.
+    \begin{equation}\label{eq.conditionnu.threewave}
+        % \nu\ge L^{\frac{1}{2}C\varepsilon}\alpha^{2}
+        l_{d}=(\nu T_{\mathrm{max}})^{\frac{1}{2}}\ge c \qquad \text{or}\qquad
+        \nu\ge c^2T^{-1}_{\text{max}}
+    \end{equation}
+    \item The time of evolution $t$ satisfies $L^{\varepsilon} \leq t \leq T_{\text{max}}$.
+    \item Suppose that $n_{\mathrm{in}} \in C^\infty_0(\mathbb{R}^d)$ is compactly supported in a domain whose diameter is bounded by $D\le \epsilon_1l_d^{-1}$, or in other words, $n_{\mathrm{in}}$ is compactly supported in the inertial range $|k|\le \epsilon_1 l_{d}^{-1}$. 
+
+    \item $\sup_{k}n_{\mathrm{in}}(k)\le 1$. This assumption can be removed by rescaling $n_{\mathrm{in}}(k)$.
+\end{enumerate}
+
+Then we have the following conclusions (the constants in $O(\cdot)$ appeared below just depend on the dimension $d$)
+\begin{enumerate}
+    \item $\mathbb E |\widehat \psi(t, k)|^2\le 2$ for $t\le T_{\text{max}}$. In addition to this, for any $M$, we can construct an approximation series 
     \begin{equation}\label{eq.approx1.threewave}
         \mathbb E |\widehat \psi(t, k)|^2=n_{\mathrm{in}}(k)+n^{(1)}(k)+n^{(2)}(k)+\cdots n^{(N)}(k)+O(L^{-M})
     \end{equation}
     where each terms $n^{(i)}(k)$ can be exactly calculated.
-    \item Define $l_{d}=(\nu T_{\mathrm{max}})^{\frac{1}{2}}\ge c$ and  $\theta=C_1\varepsilon$ ($C_1$ just depends on dimension $d$). We assume that $D\le C_2 l_d^{-1}$. Then in the inertial range $|k|\le \epsilon_1 l_{d}^{-1}$ and dissipation range $|k|\ge C_{2}l_d^{-1}$, we have the following estimate respectively
+    \item Let $\theta=O(\varepsilon)$. Then in the inertial range $|k|\le \epsilon_1 l_{d}^{-1}$ and dissipation range $|k|\ge l_d^{-1}$, we have the following estimate respectively
     \begin{equation}\label{eq.n1.threewave}
         n^{(1)}(k)=\left\{
         \begin{aligned}
-            &\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)+O_{\ell^\infty_k}\left(L^{-\theta}\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)+\widetilde{O}_{\ell^\infty_k}\left(\epsilon_1\text{Err}_{D}(k_x)\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)
+            &\frac{t}{T_{\mathrm{kin}}}\mathcal K(n_{\mathrm{in}})(k)+O_{\ell^\infty_k}\left(L^{-\theta}\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)+O_{\ell^\infty_k}\left(\epsilon_1\text{Err}_{D}(k_x)\frac{T_{\text{max}}}{T_{\mathrm {kin}}}\right)
             && \text{if } |k|\le \epsilon_1 l_{d}^{-1},
             \\
-            &0, && \text{if } |k|\ge 2C_{2}  l_{d}^{-1}
+            &0, && \text{if } |k|\ge  l_{d}^{-1}
         \end{aligned}\right.
     \end{equation}%O_{\ell^\infty_k}\left(\frac{T_{\text{max}}}{T_{\mathrm {kin}}}|k|^{-2}\right)
     and 
     \begin{equation}\label{eq.n(j)estimate.threewave}
         n^{(j)}(k)=O_{\ell^\infty_k}\left(L^{-\theta}\frac{t}{T_{\mathrm {kin}}}\right), \qquad j>1
     \end{equation}
-    where $\mathcal K$ is defined in \eqref{eq.WKE.threewave}, and $O_{\ell^\infty_k}(A)$ (resp. $\widetilde{O}_{\ell^\infty_k}(A)$) is a quantity that is bounded by $A$ in $\ell^\infty_k$ by some universal constant (resp. constant just depending on $d$). The definition of universal constant can be found in section \ref{sec.notat}. The definition of $\text{Err}_D$ is 
+    where $\mathcal K$ is defined in \eqref{eq.WKE.threewave}, and $O_{\ell^\infty_k}(A)$ is a quantity that is bounded by $A$ in $\ell^\infty_k$ by some constant just depending on $d$. The definition of $\text{Err}_D$ is 
     \begin{equation}
         \text{Err}_{D}(k_x)=\left\{\begin{aligned}
              &D^{d+1}, && \text{if } |k_x|\le D,

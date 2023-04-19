@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.24)  18 APR 2023 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.24)  19 APR 2023 19:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -754,7 +754,7 @@ Overfull \hbox (12.76872pt too wide) in paragraph at lines 23--24
  []
 
 [19]
-Overfull \hbox (47.32059pt too wide) detected at line 77
+Overfull \hbox (41.04745pt too wide) detected at line 85
 []\OML/cmm/m/it/12 n[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 ) = []
  []
 
@@ -783,272 +783,272 @@ Overfull \hbox (6.35567pt too wide) in paragraph at lines 435--437
 \OT1/cmr/m/n/12 This sug-gests that we may get the ap-prox-i-ma-tion of $\U/msb/m/n/12 E\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; k\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j[]$ \OT1/cmr/m/n/12 by cal-cu-lat-ing $\U/msb/m/n/12 E\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12  []\OMS/cmsy/m/n/12 j[]$\OT1/cmr/m/n/12 . 
  []
 
-[40]) (./chapters//three wave/convergence.tex [41] [42] [43] [44] [45]
-Overfull \hbox (77.91414pt too wide) detected at line 215
+[40]) (./chapters//three wave/convergence.tex [41] [42] [43] [44]
+Overfull \hbox (77.91414pt too wide) detected at line 213
+[]
+ []
+
+[45]
+Overfull \hbox (32.25507pt too wide) detected at line 243
 []
  []
 
 
-Overfull \hbox (32.25507pt too wide) detected at line 245
+Overfull \hbox (46.16272pt too wide) detected at line 249
 []
  []
 
 
-Overfull \hbox (46.16272pt too wide) detected at line 251
-[]
- []
-
-
-Overfull \hbox (64.676pt too wide) detected at line 257
+Overfull \hbox (64.676pt too wide) detected at line 255
 []
  []
 
 [46]
-Overfull \hbox (8.70624pt too wide) in paragraph at lines 265--266
+Overfull \hbox (8.70624pt too wide) in paragraph at lines 263--264
 []\OT1/cmr/m/n/12 We can ap-ply the in-duc-tion as-sump-tion to $\OML/cmm/m/it/12 F[]$ \OT1/cmr/m/n/12 and show that $[]\OML/cmm/m/it/12 F[]$
  []
 
-[47] [48] [49] [50] [51]
-Overfull \hbox (45.95375pt too wide) detected at line 470
+[47] [48] [49] [50]
+Overfull \hbox (45.95375pt too wide) detected at line 468
 []
  []
 
-
-Overfull \hbox (57.041pt too wide) detected at line 484
+[51]
+Overfull \hbox (57.041pt too wide) detected at line 482
 []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[]; k[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Z[]\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 8\U/euf/m/n/12 e\OML/cmm/m/it/12 ; \U/euf/m/n/12 e[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 T \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 
 []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 
 []\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OML/cmm/m/it/12 T[];  S[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 S[] \OT1/cmr/m/n/12 = 0 \OMS/cmsy/m/n/12 8\U/euf/m/n/12 n\OML/cmm/m/it/12 ; \U/euf/m/n/12 n[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 T: k[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 :
  []
 
 
-Overfull \hbox (34.84016pt too wide) detected at line 495
+Overfull \hbox (34.84016pt too wide) detected at line 493
 []
  []
 
-[52] [53] [54]
-Overfull \hbox (46.14508pt too wide) detected at line 684
+[52] [53]
+Overfull \hbox (46.14508pt too wide) detected at line 682
 []
  []
 
-[55]
-Overfull \hbox (48.37773pt too wide) detected at line 744
+[54] [55]
+Overfull \hbox (48.37773pt too wide) detected at line 742
 [][] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Z[]\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 8\U/euf/m/n/12 e \OMS/cmsy/m/n/12 2 C \OT1/cmr/m/n/12 :  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j ^^X \OML/cmm/m/it/12 ^^T[];  \OMS/cmsy/m/n/12 8\U/euf/m/n/12 e \OMS/cmsy/m/n/12 2 C[]\OML/cmm/m/it/12 : MC[];  EC[];  \OMS/cmsy/m/n/12 8\U/euf/m/n/12 n \OMS/cmsy/m/n/12 2 C\OML/cmm/m/it/12 : k[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k:\OMS/cmsy/m/n/12 g
  []
 
 [56]
-Overfull \hbox (27.88312pt too wide) in paragraph at lines 837--838
+Overfull \hbox (27.88312pt too wide) in paragraph at lines 835--836
  [][] 
  []
 
-[57]
-Overfull \hbox (10.85637pt too wide) detected at line 860
+
+Overfull \hbox (10.85637pt too wide) detected at line 858
 []\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a; e \OT1/cmr/m/n/12 :  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 a\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 e\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 a[]\OMS/cmsy/m/n/12 j ^^X \OML/cmm/m/it/12 ^^T[]; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 j ^^X \OML/cmm/m/it/12 ^^T[]; a \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 e \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k;  \OT1/cmr/m/n/12 ^^C(\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 ) + ^^C(\OML/cmm/m/it/12 e\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^C(\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g
  []
 
-[58]
-Overfull \hbox (33.92256pt too wide) detected at line 913
+[57] [58]
+Overfull \hbox (33.92256pt too wide) detected at line 911
 []
  []
 
 
-Overfull \hbox (29.3747pt too wide) detected at line 913
+Overfull \hbox (29.3747pt too wide) detected at line 911
 [][]
  []
 
 [59] [60]
-Overfull \hbox (27.88312pt too wide) in paragraph at lines 1051--1052
+Overfull \hbox (27.88312pt too wide) in paragraph at lines 1049--1050
  [][] 
  []
 
 [61]
-Overfull \hbox (53.29825pt too wide) detected at line 1099
+Overfull \hbox (53.29825pt too wide) detected at line 1097
 []
  []
 
 [62] [63] [64]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1211.
+(mdframed)              on input line 1209.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 1430.
+(mdframed)              on input line 1428.
  [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
-Overfull \hbox (19.58789pt too wide) in paragraph at lines 1608--1609
+Overfull \hbox (19.58789pt too wide) in paragraph at lines 1606--1607
 []$[]$\OT1/cmr/m/n/12 , we cut $\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (\U/euf/m/n/12 l\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\U/euf/m/n/12 e[]\OML/cmm/m/it/12 ; \U/euf/m/n/12 e[]\OMS/cmsy/m/n/12 g$ \OT1/cmr/m/n/12 into $\OMS/cmsy/m/n/12 f\U/euf/m/n/12 e[]\OML/cmm/m/it/12 ; \U/euf/m/n/12 e[]\OMS/cmsy/m/n/12 g$ \OT1/cmr/m/n/12 and $\OMS/cmsy/m/n/12 f\U/euf/m/n/12 e[]\OML/cmm/m/it/12 ; \U/euf/m/n/12 e[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (27.37502pt too wide) in paragraph at lines 1616--1617
+Overfull \hbox (27.37502pt too wide) in paragraph at lines 1614--1615
 \OT1/cmr/m/n/12 be con-structed from $\OML/cmm/m/it/12 T[]; []  ; T[]$ \OT1/cmr/m/n/12 with $[][](\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 + 1) = \OMS/cmsy/m/n/12 f[]\OML/cmm/m/it/12 T[]; []  ; T[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 .
  []
 
 [75]
-Overfull \hbox (8.981pt too wide) in paragraph at lines 1648--1650
-[]$[]$ \OT1/cmr/m/n/12 By Propo-si-tion 2.4.19[] (2),
+Overfull \hbox (8.981pt too wide) in paragraph at lines 1646--1648
+[]$[]$ \OT1/cmr/m/n/12 By Propo-si-tion 2.3.19[] (2),
  []
 
 [76]
-Overfull \hbox (24.69571pt too wide) in paragraph at lines 1660--1661
+Overfull \hbox (24.69571pt too wide) in paragraph at lines 1658--1659
 []$[]$ \OT1/cmr/m/n/12 Con-sider the set $\OMS/cmsy/m/n/12 S \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 (\U/euf/m/n/12 n\OML/cmm/m/it/12 ; \U/euf/m/n/12 e\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 C \OT1/cmr/m/n/12 : \U/euf/m/n/12 n[]e\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 ,
  []
 
 [77]
-Overfull \hbox (11.20041pt too wide) in paragraph at lines 1703--1704
-[]$[]$ \OT1/cmr/m/n/12 We prove the fol-low-ing Lemma 2.4.25[]
+Overfull \hbox (11.20041pt too wide) in paragraph at lines 1701--1702
+[]$[]$ \OT1/cmr/m/n/12 We prove the fol-low-ing Lemma 2.3.25[]
  []
 
 [78] [79]
-Overfull \hbox (47.22682pt too wide) detected at line 1778
+Overfull \hbox (47.22682pt too wide) detected at line 1776
 []
  []
 
 [80] [81]
-Overfull \hbox (23.47069pt too wide) in paragraph at lines 1889--1890
+Overfull \hbox (23.47069pt too wide) in paragraph at lines 1887--1888
 []\OT1/cmr/m/n/12 Since $\OML/cmm/m/it/12 n[]$ \OT1/cmr/m/n/12 are com-pactly sup-ported and there are bounded many of them in $\OML/cmm/m/it/12 Term\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T; p\OT1/cmr/m/n/12 )[]$,
  []
 
 [82]
-Overfull \hbox (6.95633pt too wide) detected at line 1913
+Overfull \hbox (6.95633pt too wide) detected at line 1911
 []
  []
 
 
-Overfull \hbox (6.47372pt too wide) detected at line 1922
+Overfull \hbox (6.47372pt too wide) detected at line 1920
 []
  []
 
 [83]
-Overfull \hbox (1.5737pt too wide) detected at line 1937
+Overfull \hbox (1.5737pt too wide) detected at line 1935
 []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 Term\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T; p\OT1/cmr/m/n/12 )[]\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . [] [] [] [] [] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 ^^N[]
  []
 
 [84] [85] [86]
-Overfull \hbox (34.13927pt too wide) detected at line 2021
+Overfull \hbox (34.13927pt too wide) detected at line 2019
 []
  []
 
 [87]
-Overfull \hbox (24.80603pt too wide) in paragraph at lines 2073--2075
+Overfull \hbox (24.80603pt too wide) in paragraph at lines 2071--2073
 \OML/cmm/m/it/12 ^^Z[]$\OT1/cmr/m/n/12 . There-fore, if $[][] [][] \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 J[]\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 i^^Z[]L[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OML/cmm/m/it/12 L[]^^Z[]$\OT1/cmr/m/n/12 , then $[][] [][] \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 J[]\OT1/cmr/m/n/12 )[](\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \U/msa/m/n/12 .
  []
 
 [88] [89]
-Overfull \hbox (13.20041pt too wide) detected at line 2128
+Overfull \hbox (13.20041pt too wide) detected at line 2126
 [][][] \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 L[]^^Z[]:
  []
 
 [90]
-Overfull \hbox (17.73492pt too wide) in paragraph at lines 2157--2158
+Overfull \hbox (17.73492pt too wide) in paragraph at lines 2155--2156
 [][] \OT1/cmr/m/n/12 im-plies that $[][] \U/msa/m/n/12 . \OML/cmm/m/it/12 L[]^^Z[] [][] \U/msa/m/n/12 . \OML/cmm/m/it/12 L[]^^Z[] [][]$\OT1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (37.4838pt too wide) in paragraph at lines 2159--2160
+Overfull \hbox (37.4838pt too wide) in paragraph at lines 2157--2158
 []\OT1/cmr/m/n/12 Now we prove []. Be-cause $\OML/cmm/m/it/12 L \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 P[]$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 L[] \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 P[] [] P[]$\OT1/cmr/m/n/12 ,
  []
 
 [91] [92] [93]
-Overfull \hbox (65.74084pt too wide) detected at line 2332
+Overfull \hbox (65.74084pt too wide) detected at line 2330
 []\OMS/cmsy/m/n/12 J[] \OT1/cmr/m/n/12 = [][] [] [][] \OML/cmm/m/it/12 e[] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^X\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )[] [] \OML/cmm/m/it/12 dt[] ^^N[]  [] ^^S[]k[]
  []
 
 [94]
-Overfull \hbox (57.06242pt too wide) detected at line 2357
+Overfull \hbox (57.06242pt too wide) detected at line 2355
 []\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = []
  []
 
 [95]
-Overfull \hbox (55.30502pt too wide) detected at line 2413
+Overfull \hbox (55.30502pt too wide) detected at line 2411
 []\OML/cmm/m/it/12 B[] \OT1/cmr/m/n/12 = []
  []
 
 [96] [97] [98]
-Overfull \hbox (31.38126pt too wide) detected at line 2523
+Overfull \hbox (31.38126pt too wide) detected at line 2521
 []
  []
 
 
-Overfull \hbox (93.7677pt too wide) detected at line 2534
+Overfull \hbox (93.7677pt too wide) detected at line 2532
 []
  []
 
 [99]
-Overfull \hbox (41.78171pt too wide) detected at line 2540
+Overfull \hbox (41.78171pt too wide) detected at line 2538
 []
  []
 
 
-Overfull \hbox (5.38974pt too wide) detected at line 2563
+Overfull \hbox (5.38974pt too wide) detected at line 2561
 []
  []
 
 [100] [101]
-Overfull \hbox (29.53224pt too wide) detected at line 2586
+Overfull \hbox (29.53224pt too wide) detected at line 2584
 []\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 e[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 dt[]:
  []
 
 [102]
-Overfull \hbox (34.46251pt too wide) detected at line 2641
+Overfull \hbox (34.46251pt too wide) detected at line 2639
 []
  []
 
 [103]
-Overfull \hbox (34.46251pt too wide) detected at line 2676
+Overfull \hbox (34.46251pt too wide) detected at line 2674
 []
  []
 
 
-Overfull \hbox (43.91353pt too wide) in paragraph at lines 2678--2679
+Overfull \hbox (43.91353pt too wide) in paragraph at lines 2676--2677
 []\OT1/cmr/m/n/12 Since $\OML/cmm/m/it/12 n[]$ \OT1/cmr/m/n/12 are com-pactly sup-ported and there are bounded many of them in $\OML/cmm/m/it/12 Term\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T; p\OT1/cmr/m/n/12 )[]$,
  []
 
 [104]
-Overfull \hbox (2.32924pt too wide) detected at line 2712
+Overfull \hbox (2.32924pt too wide) detected at line 2710
 []
  []
 
 [105]
-Overfull \hbox (1.62778pt too wide) in paragraph at lines 2714--2715
+Overfull \hbox (1.62778pt too wide) in paragraph at lines 2712--2713
 []\OT1/cmr/m/n/12 Consider a tree $\OML/cmm/m/it/12 T$ \OT1/cmr/m/n/12 with a $\U/lasy/m/n/12 2$ \OT1/cmr/m/n/12 nodes and a pair-ing $\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 2 P\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[]; []  ; k[]; k[]; []  ; k[]\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 )$.
  []
 
 
-Overfull \hbox (1.78416pt too wide) detected at line 2736
+Overfull \hbox (1.78416pt too wide) detected at line 2734
 []
  []
 
 [106] [107] [108] [109]
-Overfull \hbox (47.79616pt too wide) detected at line 2869
+Overfull \hbox (41.52303pt too wide) detected at line 2867
 []\OML/cmm/m/it/12 n[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 ) = []
  []
 
 [110]
-Overfull \hbox (16.92467pt too wide) in paragraph at lines 2919--2920
+Overfull \hbox (16.92467pt too wide) in paragraph at lines 2917--2918
 \OT1/cmr/m/n/12 have the de-com-po-si-tion $\OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 = 1 + (\OML/cmm/m/it/12 e[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) = 1 \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 ^^W\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k\OMS/cmsy/m/n/12 j[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 ^^@
  []
 
 
-Overfull \hbox (31.50436pt too wide) detected at line 2928
+Overfull \hbox (31.50436pt too wide) detected at line 2926
 []\OML/cmm/m/it/12  [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2 [][] [] \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^X[]^^X[]^^X[] [][] e[]e[]dsdr
  []
 
 [111]
-Overfull \hbox (18.56612pt too wide) detected at line 2935
+Overfull \hbox (18.56612pt too wide) detected at line 2933
 []
  []
 
 [112]
-Overfull \hbox (37.52887pt too wide) in paragraph at lines 2977--2978
+Overfull \hbox (37.52887pt too wide) in paragraph at lines 2975--2976
 []\OT1/cmr/m/n/12 To de-rive an up-per bound for $\OML/cmm/m/it/12 n[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )$, it suf-fices to con-sider $\U/msb/m/n/12 E [][]$\OT1/cmr/m/n/12 , $[] \U/msb/m/n/12 E []$
  []
 
 [113] [114]
-Overfull \hbox (10.20828pt too wide) detected at line 3046
+Overfull \hbox (10.20828pt too wide) detected at line 3044
 []
  []
 
 [115] [116]
-Overfull \hbox (44.17105pt too wide) detected at line 3174
+Overfull \hbox (44.17105pt too wide) detected at line 3172
 []
  []
 
@@ -1136,107 +1136,104 @@ Overfull \hbox (4.79984pt too wide) detected at line 253
 [][] \OT1/cmr/m/n/12 = []
  []
 
-[144] [145]
-Overfull \vbox (123.39394pt too high) has occurred while \output is active []
-
- [146] [147] [148]
-Overfull \hbox (14.44762pt too wide) in paragraph at lines 446--447
+[144] [145] [146] [147] [148]
+Overfull \hbox (14.44762pt too wide) in paragraph at lines 454--455
 []\OT1/cmr/m/n/12 Assume that $\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a[]; []  ; a[]; b[]; []  ; b[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a[]; []  ; a[]; b[]; []  ; b[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 ,
  []
 
-[149] [150] [151] [152] [153] [154]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 681.
+[149] [150] [151] [152] [153]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 689.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [155]
-Overfull \hbox (18.83893pt too wide) detected at line 734
+) [154]
+Overfull \hbox (18.83893pt too wide) detected at line 742
 []
  []
 
-[156]
-Overfull \hbox (1.88434pt too wide) detected at line 796
+[155]
+Overfull \hbox (1.88434pt too wide) detected at line 804
 []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[]; k[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Z[]\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;  \OMS/cmsy/m/n/12 8\U/euf/m/n/12 e \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 
 []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 
 []\OMS/cmsy/m/n/12 j \U/msa/m/n/12 . \OML/cmm/m/it/12 !;  \OMS/cmsy/m/n/12 8\U/euf/m/n/12 n\OML/cmm/m/it/12 : \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 g[]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 k[]\OMS/cmsy/m/n/12 g[] 2 \[]\OML/cmm/m/it/12 S[]: k[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 :
  []
 
-
-Overfull \hbox (0.41206pt too wide) detected at line 804
+[156]
+Overfull \hbox (0.41206pt too wide) detected at line 812
 []
  []
 
 [157] [158] [159]
-Overfull \hbox (56.83948pt too wide) detected at line 1144
+Overfull \hbox (56.83948pt too wide) detected at line 1152
 []
  []
 
 
-Overfull \hbox (49.73703pt too wide) detected at line 1173
+Overfull \hbox (49.73703pt too wide) detected at line 1181
 []
  []
 
 [160] [161]
-Overfull \hbox (27.88312pt too wide) in paragraph at lines 1295--1296
+Overfull \hbox (27.88312pt too wide) in paragraph at lines 1303--1304
  [][] 
  []
 
-[162] [163] [164] [165]
-Overfull \hbox (27.88312pt too wide) in paragraph at lines 1504--1505
+[162] [163] [164]
+Overfull \hbox (27.88312pt too wide) in paragraph at lines 1512--1513
  [][] 
  []
 
-[166]
-Overfull \hbox (48.36472pt too wide) detected at line 1541
+[165]
+Overfull \hbox (48.36472pt too wide) detected at line 1549
 []
  []
 
 
-Overfull \hbox (48.36472pt too wide) detected at line 1553
+Overfull \hbox (48.36472pt too wide) detected at line 1561
 []
  []
 
-[167] [168] [169] [170] [171] [172] [173]
-Overfull \hbox (23.96318pt too wide) in paragraph at lines 1817--1818
+[166] [167] [168] [169] [170] [171] [172]
+Overfull \hbox (23.96318pt too wide) in paragraph at lines 1825--1826
 []\OT1/cmr/bx/n/12 Chain of bad cir-cle nodes. \OT1/cmr/m/n/12 Given a renor-mal-iza-tion for-est $\OML/cmm/m/it/12 F$\OT1/cmr/m/n/12 , a $[]$
  []
 
-[174] [175] [176] [177]
-Overfull \hbox (17.72273pt too wide) in paragraph at lines 2106--2107
+[173] [174] [175] [176] [177]
+Overfull \hbox (17.72273pt too wide) in paragraph at lines 2114--2115
 []\OT1/cmr/m/it/12 This in-equal-ity is im-por-tant be-cause the or-der of mag-ni-tude of $[]\OML/cmm/m/it/12 Term\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T; T[]; p\OT1/cmr/m/n/12 )$
  []
 
 [178] [179] [180]
-Overfull \hbox (52.56938pt too wide) detected at line 2203
+Overfull \hbox (52.56938pt too wide) detected at line 2211
 []
  []
 
 [181] [182] [183] [184] [185]
-Overfull \hbox (18.52887pt too wide) in paragraph at lines 2425--2426
+Overfull \hbox (18.52887pt too wide) in paragraph at lines 2433--2434
 []\OT1/cmr/m/n/12 Unlike case 1.1 we can-not sim-ply ap-ply in-duc-tion as-sump-tion to bound $#\OML/cmm/m/it/12 Eq\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C[]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 c[]\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 )$.
  []
 
 
-Overfull \hbox (11.17876pt too wide) detected at line 2436
+Overfull \hbox (11.17876pt too wide) detected at line 2444
 []\OML/cmm/m/it/12 Eq\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; c[]\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 :
  []
 
 [186] [187] [188]
-Overfull \hbox (21.24124pt too wide) detected at line 2534
+Overfull \hbox (21.24124pt too wide) detected at line 2542
 []
  []
 
 [189] [190] [191] [192] [193] [194]
-Overfull \hbox (65.2557pt too wide) detected at line 2946
+Overfull \hbox (65.2557pt too wide) detected at line 2954
 []\OML/cmm/m/it/12 Term\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T; p\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 H[]H[]^^N[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k[]; []  ; k[]; k[]; []  ; k[]\OT1/cmr/m/n/12 )[] []
  []
 
 [195] [196] [197]
-Overfull \hbox (10.349pt too wide) detected at line 3283
+Overfull \hbox (10.349pt too wide) detected at line 3291
 []
  []
 
 
-Overfull \hbox (25.52786pt too wide) detected at line 3293
+Overfull \hbox (25.52786pt too wide) detected at line 3301
 []\OT1/cmr/m/n/12 2[] \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; t[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 i []  e[] dt[]dt[]\OT1/cmr/m/n/12 ^^C[]^^C[]^^C[]^^C[]\OML/cmm/m/it/12 :
  []
 
@@ -1288,15 +1285,15 @@ Overfull \hbox (21.89589pt too wide) detected at line 829
 
 ] [220] [221] [222]) [223] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 22316 strings out of 476522
- 474688 string characters out of 5813136
- 880537 words of memory out of 5000000
- 42995 multiletter control sequences out of 15000+600000
+ 22318 strings out of 476522
+ 474707 string characters out of 5813136
+ 872282 words of memory out of 5000000
+ 42997 multiletter control sequences out of 15000+600000
  481480 words of font info for 82 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  99i,29n,94p,2075b,1752s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/xiaom/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk> </Users/xiaom/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/public/esint/esint10.480pk> </Users/xiaom/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/public/esint/esint10.720pk> </Users/xiaom/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (232 pages, 1109760 bytes).
+Output written on main.pdf (232 pages, 1113615 bytes).
 PDF statistics:
  905 PDF objects out of 1000 (max. 8388607)
  605 compressed objects within 7 object streams

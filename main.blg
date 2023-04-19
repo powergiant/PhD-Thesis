@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
 Warning--empty journal in erdHos2008quantum
-You've used 45 entries,
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            737 strings with 10619 characters,
-and the built_in function-call counts, 13375 in all, are:
-= -- 1344
-> -- 572
+            741 strings with 10760 characters,
+and the built_in function-call counts, 13579 in all, are:
+= -- 1364
+> -- 579
 < -- 6
-+ -- 227
-- -- 180
-* -- 871
-:= -- 2294
-add.period$ -- 137
-call.type$ -- 45
-change.case$ -- 220
++ -- 230
+- -- 182
+* -- 879
+:= -- 2333
+add.period$ -- 140
+call.type$ -- 46
+change.case$ -- 224
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 518
-empty$ -- 1059
-format.name$ -- 180
-if$ -- 2750
+cite$ -- 47
+duplicate$ -- 528
+empty$ -- 1076
+format.name$ -- 182
+if$ -- 2791
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 50
-newline$ -- 228
-num.names$ -- 90
-pop$ -- 209
+int.to.str$ -- 46
+missing$ -- 51
+newline$ -- 233
+num.names$ -- 92
+pop$ -- 213
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 183
 quote$ -- 0
-skip$ -- 367
+skip$ -- 374
 stack$ -- 0
-substring$ -- 837
-swap$ -- 76
+substring$ -- 842
+swap$ -- 77
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
+type$ -- 174
 warning$ -- 1
-while$ -- 139
-width$ -- 47
-write$ -- 480
+while$ -- 141
+width$ -- 48
+write$ -- 490
 (There was 1 warning)
